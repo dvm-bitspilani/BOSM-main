@@ -1,0 +1,195 @@
+@font-face {
+    font-family: Zona;
+    src: url(../Assets/Fonts/ZonaPro-Bold.otf);
+}
+
+@font-face {
+    font-family: Striker;
+    src: url(../Assets/Fonts/Striker.otf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-color: #000;
+    position: relative;
+}
+/* NavBar */
+.left,
+.right {
+    margin-block: 1.2rem;
+    margin-inline: 2.4rem;
+}
+
+.left>img {
+    width: 5rem;
+}
+
+.nav {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.right {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-around;
+}
+
+/* Landing Content */
+main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>h2 {
+    font-family: Zona;
+    margin-top: -12rem;
+    font-size: 18rem;
+    background: radial-gradient(77.96% 176.3% at 48.29% -5.99%, #FFFFFF 0%, #CACACA 55.46%, #E5E5E5 69.99%, #32322F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.05em;
+
+    filter: blur(0.04rem);
+}
+
+main>h3 {
+    font-family: Striker;
+    font-size: 48px;
+    margin-top: -2rem;
+    -webkit-text-stroke-color : #FFFFFF;
+    -webkit-text-stroke-width: 1px;
+    color: black;
+    letter-spacing: 0.11em;
+}
+.pictures{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    margin-top: 4rem;
+    justify-content: center;
+    width: 75%;
+}
+.pictures img{
+    width: 85%;
+    margin-top: 4rem;
+}
+.centerImg{
+    margin-top: -9rem;
+}
+.leftImg{
+    margin-right: -8rem;
+}
+.rightImg{
+    margin-left: -7rem;
+}
+
+/* Registration */
+.regist{
+    padding: 10px 20px;
+    border: 1px solid white;
+    margin: 2rem 2.8rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.regist:hover{
+    color: #000;
+    background-color: white;
+}
+
+/* Hamburger */
+.hamburger{
+    width: 25px;
+    margin: 3rem 2rem;
+    background: white;
+    height: 3px;
+    border-radius: 1px;
+    cursor: pointer;
+    position: relative;
+}
+.hamCont{
+    cursor: pointer;
+}
+.hamburger:before{
+    content: '';
+    position: absolute;
+    width: 35px;
+    background: white;
+    height: 3px;
+    right: 0;
+    top: -10px;
+    border-radius: 1px;
+}
+.hamburger:after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    top:10px;
+    right: 0;
+    background: white;
+    height: 3px;
+    border-radius: 1px;
+}
+
+/* Timer */
+.numbers{
+    display: flex;
+}
+.numbers>div{
+    margin-inline: 2rem;
+    font-size: 1.2rem;
+}
+.time{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 2rem 2.5rem;
+}
+.labels{
+    margin-top: 1rem;
+    word-spacing: 2.9rem;
+    margin-left: 1.9rem;
+    font-size: 0.7rem;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 2rem;
+}
+.socials i{
+    margin-block: 0.5rem;
+    font-size: 2rem;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -2rem;
+}
+.scrollNav{
+    display: flex;
+    position: absolute;
+    transform: rotate(-90deg);
+    font-family: 'Montserrat', sans-serif;
+    top:50%;
+    left:-10%;
+}
+.navBut{
+    margin-inline: 1rem;
+    cursor: pointer;
+}
+.active{
+   border-bottom: 3px solid white;
+   padding: 0 0 6px;
+}
