@@ -78,6 +78,7 @@ main > h3 {
   -webkit-text-stroke-width: 1px;
   color: black;
   letter-spacing: 0.11em;
+  z-index: 20;
 }
 
 .pictures {
@@ -256,7 +257,34 @@ footer {
   border-bottom: 3px solid white;
   padding: 0 0 6px;
 }
+
 .socials>a{
     cursor: pointer;
     text-decoration: none;
+}
+
+img.light {
+  margin: 0;
+  position: absolute;
+}
+
+#lightRed {
+  left: 10%;
+  top: 0;
+  height: 105vh;
+  width: 35%;
+}
+
+#lightBlue {
+  left: 35%;
+  top: 0;
+  height: 105vh;
+  width: 30%;
+}
+
+#lightYellow {
+  left: 55%;
+  top: 0;
+  height: 105vh;
+  width: 30%;
 }
