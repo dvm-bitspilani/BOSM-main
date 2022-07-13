@@ -41,6 +41,9 @@ body {
   display: flex;
   font-family: "Montserrat", sans-serif;
   justify-content: space-around;
+  position: relative;
+  z-index: 20;
+  background-color: black;
 }
 
 /* Landing Content */
@@ -93,6 +96,8 @@ main > h3 {
 .pictures img {
   width: 85%;
   margin-top: 4rem;
+  position: relative;
+  z-index: 20;
 }
 
 .centerImg {
@@ -246,6 +251,9 @@ footer {
   font-family: "Montserrat", sans-serif;
   top: 50%;
   left: -10%;
+  background-color: black;
+  padding: 20px;
+  z-index: 20;
 }
 
 .navBut {
@@ -266,6 +274,7 @@ footer {
 img.light {
   margin: 0;
   position: absolute;
+  z-index: 25;
 }
 
 #lightRed {
@@ -287,4 +296,22 @@ img.light {
   top: 0;
   height: 105vh;
   width: 30%;
+}
+
+.star {
+  position: absolute;
+}
+
+.star-type1 {
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.star-type2 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: white;
 }
