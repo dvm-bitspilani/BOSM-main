@@ -256,3 +256,7 @@ footer {
   border-bottom: 3px solid white;
   padding: 0 0 6px;
 }
+.socials>a{
+    cursor: pointer;
+    text-decoration: none;
+}
