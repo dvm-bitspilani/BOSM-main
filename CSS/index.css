@@ -16,6 +16,7 @@
 }
 
 body {
+  user-select: none;
   background-color: #000;
   position: relative;
 }
@@ -81,7 +82,7 @@ main > h3 {
   -webkit-text-stroke-width: 1px;
   color: black;
   letter-spacing: 0.11em;
-  z-index: 20;
+  z-index: 1001;
 }
 
 .pictures {
@@ -266,15 +267,16 @@ footer {
   padding: 0 0 6px;
 }
 
-.socials>a{
-    cursor: pointer;
-    text-decoration: none;
+.socials > a {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 img.light {
   margin: 0;
   position: absolute;
   z-index: 25;
+  animation: flicker 3s;
 }
 
 #lightRed {
@@ -314,4 +316,49 @@ img.light {
   height: 2px;
   border-radius: 50%;
   background-color: white;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.4;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
