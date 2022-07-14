@@ -73,4 +73,4 @@ const add_stars = () => {
   stars_cont.innerHTML = stars;
 };
 
-window.onresize = add_stars();
+add_stars();

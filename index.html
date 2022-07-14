@@ -1,110 +1,207 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>BOSM | Rise To Glory</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="Assets/Logo.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="CSS/index.css" />
-  </head>
+<head>
+	<meta charset="utf-8"/>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<title>BOSM | Rise To Glory</title>
+	<meta content="" name="description"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport"/>
+	<link href="Assets/Logo.png" rel="shortcut icon" type="image/x-icon"/>
+	<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+	/>
+	<link href="https://fonts.googleapis.com" rel="preconnect"/>
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+	<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+			rel="stylesheet"
+	/>
+	<link href="CSS/index.css" rel="stylesheet"/>
+	<link href="CSS/registration.css" rel="stylesheet">
+	<script defer src="Scripts/index.js"></script>
+	<script defer src="Scripts/registration.js"></script>
+</head>
 
-  <body>
-    <nav class="nav">
-      <div class="left">
-        <img src="Assets/Logo.png" alt="" />
-      </div>
+<body>
+	<div id="reg-cont">
+		<form action="post" id="reg-form">
+			<div class="form-header">
+				<div id="form_close"><img alt="" id="form_close_img"
+				                          src="Assets/Back.svg"></div>
+				<h2>REGISTRATION</h2></div>
+			<div class="form-input-cont">
+				<input class="form-input"
+				       id="name"
+				       name="name"
+				       placeholder=" "
+				       required type="text">
+				<label class="form-lbl" for="name">NAME</label>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input" id="sports" list="sport-list" name="sports"
+				       placeholder=" ">
+				<label class="form-lbl" for="sports">SPORTS</label>
+				<datalist id="sport-list"></datalist>
+				<ul id="sport-sel-list">
+				</ul>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input"
+				       id="email"
+				       name="email"
+				       placeholder=" "
+				       required type="email">
+				<label class="form-lbl" for="email">EMAIL</label>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input" id="college" list="college-list"
+				       name="college"
+				       placeholder=" " required>
+				<label class="form-lbl" for="college">COLLEGE</label>
+				<datalist id="college-list"></datalist>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input"
+				       id="phone"
+				       name="phone"
+				       placeholder=" "
+				       required type="number">
+				<label class="form-lbl" for="phone">PHONE</label>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input" id="city" name="city"
+				       placeholder=" " required type="text">
+				<label class="form-lbl" for="city">CITY</label>
+			</div>
+			<div class="form-input-cont" id="gender-cont">
+				<label>GENDER</label>
+				<div>
+					<input class="form-input"
+					       id="male"
+					       name="gender"
+					       placeholder=" "
+					       required
+					       type="radio" value="male">
+					<label class="lbl-small" for="male">MALE</label>
+					<input class="form-input"
+					       id="female"
+					       name="gender"
+					       placeholder=" "
+					       required
+					       type="radio" value="female">
+					<label class="lbl-small" for="female">FEMALE</label>
+					<input class="form-input"
+					       id="other"
+					       name="gender"
+					       placeholder=" "
+					       required
+					       type="radio" value="other">
+					<label class="lbl-small" for="other">OTHER</label>
+				</div>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input" id="state" name="state"
+				       placeholder=" " required>
+				<label class="form-lbl" for="state">STATE</label>
+			</div>
+			<div class="form-input-cont">
+				<input class="form-input" id="yos" name="yos"
+				       placeholder=" " required type="number">
+				<label class="form-lbl" for="yos">YEAR OF STUDY</label>
+			</div>
+			<div class="form-input-cont">
+				<input id="coach" name="coach" placeholder=" " type="checkbox">
+				<label class="lbl-small" for="coach">Are you a coach?</label>
+			</div>
+			<div id="form-submit-cont">
+				<button id="form-submit" type="submit">REGISTER</button>
+			</div>
+		</form>
+	</div>
+	<nav class="nav">
+		<div class="left">
+			<img alt="" src="Assets/Logo.png"/>
+		</div>
 
-      <div class="right">
-        <div class="regist">REGISTRATION</div>
+		<div class="right">
+			<div class="regist" id="reg-btn">REGISTRATION</div>
 
-        <div class="hamCont">
-          <div class="hamburger"></div>
-        </div>
-      </div>
-    </nav>
+			<div class="hamCont">
+				<div class="hamburger"></div>
+			</div>
+		</div>
+	</nav>
 
-    <div class="scrollNav">
-      <div class="navBut" id="sponsors">SPONSORS</div>
-      <div class="navBut" id="contact">CONTACT</div>
-      <div class="navBut" id="events">EVENTS</div>
-      <div class="navBut" id="about">ABOUT</div>
-      <div class="navBut active" id="main">HOME</div>
-    </div>
-    <main>
-      <div class="pictures">
-        <div class="leftImg">
-          <img
-            src="Assets/Red%20Light.png"
-            alt=""
-            class="light"
-            id="lightRed"
-          />
-          <img src="Assets/Red.png" alt="" />
-        </div>
+	<div class="scrollNav">
+		<div class="navBut" id="sponsors">SPONSORS</div>
+		<div class="navBut" id="contact">CONTACT</div>
+		<div class="navBut" id="events">EVENTS</div>
+		<div class="navBut" id="about">ABOUT</div>
+		<div class="navBut active" id="main">HOME</div>
+	</div>
+	<main>
+		<div class="pictures">
+			<div class="leftImg">
+				<img
+						alt=""
+						class="light"
+						id="lightRed"
+						src="Assets/Red%20Light.png"
+				/>
+				<img alt="" src="Assets/Red.png"/>
+			</div>
 
-        <div class="centerImg">
-          <img
-            src="Assets/Blue%20Light.png"
-            alt=""
-            class="light"
-            id="lightBlue"
-          />
-          <img src="Assets/Blue.png" alt="" />
-        </div>
+			<div class="centerImg">
+				<img
+						alt=""
+						class="light"
+						id="lightBlue"
+						src="Assets/Blue%20Light.png"
+				/>
+				<img alt="" src="Assets/Blue.png"/>
+			</div>
 
-        <div class="rightImg">
-          <img
-            src="Assets/Yellow%20Light.png"
-            alt=""
-            class="light"
-            id="lightYellow"
-          />
-          <img src="Assets/Yellow.png" alt="" />
-        </div>
-      </div>
+			<div class="rightImg">
+				<img
+						alt=""
+						class="light"
+						id="lightYellow"
+						src="Assets/Yellow%20Light.png"
+				/>
+				<img alt="" src="Assets/Yellow.png"/>
+			</div>
+		</div>
 
-      <h2>BOSM</h2>
-      <h3>RISE TO GLORY</h3>
-    </main>
-    <footer>
-      <div class="time">
-        <div class="numbers">
-          <div class="card-flip" id="days">00</div>
-          <span>:</span>
-          <div id="hours">00</div>
-          <span>:</span>
-          <div id="mins">00</div>
-        </div>
+		<h2>BOSM</h2>
+		<h3>RISE TO GLORY</h3>
+	</main>
+	<footer>
+		<div class="time">
+			<div class="numbers">
+				<div class="card-flip" id="days">00</div>
+				<span>:</span>
+				<div id="hours">00</div>
+				<span>:</span>
+				<div id="mins">00</div>
+			</div>
 
-        <div class="labels">
-          <div class="label-1">DAYS</div>
-          <div class="label-2">HOURS</div>
-          <div class="label-3">MINUTES</div>
-        </div>
-      </div>
+			<div class="labels">
+				<div class="label-1">DAYS</div>
+				<div class="label-2">HOURS</div>
+				<div class="label-3">MINUTES</div>
+			</div>
+		</div>
 
-      <div class="socials">
-        <a href="https://www.facebook.com/bosmbitspilani"
-          ><i class="fa fa-facebook-square" aria-hidden="true"></i
-        ></a>
-        <a href="https://www.instagram.com/bitsbosm/"
-          ><i class="fa fa-instagram" aria-hidden="true"></i
-        ></a>
-      </div>
-    </footer>
-    <div id="stars-cont"></div>
-  </body>
-  <script src="Scripts/index.js" defer></script>
+		<div class="socials">
+			<a href="https://www.facebook.com/bosmbitspilani"
+			><i aria-hidden="true" class="fa fa-facebook-square"></i
+			></a>
+			<a href="https://www.instagram.com/bitsbosm/"
+			><i aria-hidden="true" class="fa fa-instagram"></i
+			></a>
+		</div>
+	</footer>
+	<div id="stars-cont"></div>
+</body>
 </html>

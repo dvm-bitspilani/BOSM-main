@@ -1,0 +1,174 @@
+#reg-form {
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 90%;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #EEECEC;
+  padding: 20px 50px;
+}
+
+#form_close {
+  cursor: pointer;
+}
+
+#form_close_img {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.form-header {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  height: min-content;
+}
+
+.form-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.form-input-cont {
+  width: 50%;
+  position: relative;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+.form-lbl {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  margin: auto 0;
+  transform: translateY(50%);
+  transition: all 200ms ease;
+  pointer-events: none;
+}
+
+.form-input-cont:focus-within .form-lbl,
+.form-input:not(:placeholder-shown) + .form-lbl {
+  transform: scale(0.8) translateY(calc(-100% - 5px));
+  font-weight: 300;
+}
+
+.lbl-small {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.form-input {
+  font-size: 1.25rem;
+  padding-top: 20px;
+  background-color: rgba(128, 128, 128, 0.1);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #EEECEC;
+  width: 80%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input.form-input[type="radio"] {
+  width: min-content;
+  background: black;
+}
+
+#sport-sel-list {
+  background: rgba(128, 128, 128, 0.1);
+  overflow: scroll;
+  max-height: 200px;
+  width: 80%;
+  padding: 10px 20px;
+}
+
+.sport-item {
+  list-style-type: none;
+  display: inline-block;
+  background-color: rgba(200, 200, 200, 0.4);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#form-submit-cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-submit {
+  padding: 10px 30px;
+  background: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: 2px solid #EEECEC;
+  font-size: 1.5rem;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+#form-submit:hover,
+#form-submit:active {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+#gender-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+#gender-cont label {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .form-header {
+    margin-bottom: 20px;
+  }
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+
+  #form_close_img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form-input-cont {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .lbl-small {
+    font-size: 0.75rem;
+  }
+
+  .form-input {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
