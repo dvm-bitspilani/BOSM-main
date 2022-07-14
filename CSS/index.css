@@ -20,6 +20,9 @@ body {
   user-select: none;
   background-color: #000;
   position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* NavBar */
@@ -29,7 +32,7 @@ body {
   margin-inline: 2.4rem;
 }
 
-.left > img {
+.left>img {
   width: 5rem;
 }
 
@@ -56,35 +59,86 @@ main {
   align-items: center;
 }
 
-main > h2 {
+.line {
+  position: absolute;
+  transform: scale(0.8);
+  top: 20rem;
+  right: 20rem;
+}
+
+#l2 {
+  top: 10rem;
+  right: 36rem;
+}
+
+#l3 {
+  top: 20rem;
+  left: 16rem;
+  filter: hue-rotate(300deg);
+}
+
+#l4 {
+  top: 35rem;
+  left: 24rem;
+  filter: hue-rotate(300deg);
+}
+
+#l5 {
+  top: 34rem;
+  left: 50rem;
+  filter: hue-rotate(200deg);
+}
+
+#l6 {
+  top: 16rem;
+  right: 50rem;
+  filter: hue-rotate(200deg);
+}
+
+#l7 {
+  top: 8rem;
+  left: 30rem;
+  filter: hue-rotate(300deg);
+}
+
+.text>h2 {
   font-family: Zona;
   margin-top: -12rem;
   font-size: 18rem;
-  background: radial-gradient(
-    77.96% 176.3% at 48.29% -5.99%,
-    #ffffff 0%,
-    #cacaca 55.46%,
-    #e5e5e5 69.99%,
-    #32322f 100%
-  );
+  background: radial-gradient(77.96% 176.3% at 48.29% -5.99%,
+      #ffffff 0%,
+      #cacaca 55.46%,
+      #e5e5e5 69.99%,
+      #32322f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 0.05em;
-
+  z-index: 1001;
   filter: blur(0.04rem);
   z-index: 30;
 }
 
-main > h3 {
+.text>h3 {
   font-family: Striker;
-  font-size: 48px;
+  font-size: 3rem;
   margin-top: -2rem;
   -webkit-text-stroke-color: #ffffff;
   -webkit-text-stroke-width: 1px;
   color: black;
   letter-spacing: 0.11em;
   z-index: 1001;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#phoneRegist {
+  display: none;
 }
 
 .pictures {
@@ -174,7 +228,7 @@ main > h3 {
   align-items: center;
 }
 
-.numbers > div {
+.numbers>div {
   margin-inline: 2rem;
   font-size: 1.2rem;
   padding: 0.4rem;
@@ -182,6 +236,7 @@ main > h3 {
 }
 
 .time {
+  z-index: 1001;
   color: white;
   font-family: "Montserrat", sans-serif;
   margin: 2rem 2.5rem;
@@ -189,11 +244,11 @@ main > h3 {
 
 .card-flip {
   animation: card-flip 0.6s;
+  background-color: rgba(1000, 1000, 1000, 0.4);
 }
 
 @keyframes card-flip {
   0% {
-    background-color: rgba(1000, 1000, 1000, 0.4);
     transform: rotateX(0deg);
   }
 
@@ -244,7 +299,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -2rem;
+  /* margin-top: -2rem; */
 }
 
 .scrollNav {
@@ -269,7 +324,7 @@ footer {
   padding: 0 0 6px;
 }
 
-.socials > a {
+.socials>a {
   cursor: pointer;
   text-decoration: none;
 }
@@ -278,19 +333,25 @@ img.light {
   margin: 0;
   position: absolute;
   z-index: 25;
-  animation: flicker 3s;
+  animation: flicker 2s;
   pointer-events: none;
+}
+
+.player {
+  z-index: 1001 !important;
 }
 
 #lightRed {
   left: 10%;
   top: 0;
+  animation-delay: 1s;
   height: 105vh;
   width: 35%;
 }
 
 #lightBlue {
   left: 35%;
+  animation-delay: 1.5s;
   top: 0;
   height: 105vh;
   width: 30%;
@@ -298,6 +359,7 @@ img.light {
 
 #lightYellow {
   left: 55%;
+  animation-delay: 1.3s;
   top: 0;
   height: 105vh;
   width: 30%;
@@ -336,45 +398,62 @@ img.light {
 
 @keyframes flicker {
   0% {
-    opacity: 0.4;
+    filter: blur(5px) brightness(1);
   }
-  5% {
-    opacity: 0.5;
+
+  3% {
+    filter: blur(5px) brightness(0);
   }
+
+  6% {
+    filter: blur(5px) brightness(0);
+  }
+
+  7% {
+    filter: blur(5px) brightness(1);
+  }
+
+  8% {
+    filter: blur(5px) brightness(0);
+  }
+
+  9% {
+    filter: blur(5px) brightness(1);
+  }
+
   10% {
-    opacity: 0.6;
+    filter: blur(5px) brightness(0);
   }
-  15% {
-    opacity: 0.85;
+
+  20% {
+    filter: blur(5px) brightness(1);
   }
-  25% {
-    opacity: 0.5;
+
+  50% {
+    filter: blur(5px) brightness(1);
   }
-  30% {
-    opacity: 1;
+
+  99% {
+    filter: blur(5px) brightness(0);
   }
-  35% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0.25;
-  }
-  45% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.85;
-  }
-  80% {
-    opacity: 0.4;
-  }
-  90% {
-    opacity: 0.5;
-  }
+
   100% {
-    opacity: 1;
+    filter: blur(5px) brightness(1);
+  }
+
+  105% {
+    filter: blur(5px) brightness(0);
+  }
+
+  115% {
+    filter: blur(5px) brightness(1);
+  }
+
+  121% {
+    filter: blur(5px) brightness(0);
+  }
+
+  140% {
+    filter: blur(5px) brightness(1);
   }
 }
