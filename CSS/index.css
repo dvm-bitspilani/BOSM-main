@@ -55,7 +55,7 @@ main {
   align-items: center;
 }
 
-main > h2 {
+.text > h2 {
   font-family: Zona;
   margin-top: -12rem;
   font-size: 18rem;
@@ -74,15 +74,26 @@ main > h2 {
   filter: blur(0.04rem);
 }
 
-main > h3 {
+.text > h3 {
   font-family: Striker;
-  font-size: 48px;
+  font-size: 3rem;
   margin-top: -2rem;
   -webkit-text-stroke-color: #ffffff;
   -webkit-text-stroke-width: 1px;
   color: black;
   letter-spacing: 0.11em;
   z-index: 1001;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#phoneRegist {
+  display: none;
 }
 
 .pictures {
@@ -279,14 +290,14 @@ img.light {
   animation: flicker 2s;
 }
 
-.player{
+.player {
   z-index: 1001 !important;
 }
 
 #lightRed {
   left: 10%;
   top: 0;
-  animation-delay: 1.0s;
+  animation-delay: 1s;
   height: 105vh;
   width: 35%;
 }
