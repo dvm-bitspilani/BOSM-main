@@ -47,30 +47,54 @@ let count = setInterval(() => {
 // Stars spawning randomly
 
 let stars = "";
-const star_count_factor = Math.random() * 0.1 + 0.2;
-let window_height = window.innerHeight;
-let window_width = window.innerWidth;
-let star_count = (window_height * window_width * star_count_factor) / 1000;
+const sc_factor = Math.random() * 0.1 + 0.2;
+let height = window.innerHeight;
+let width = window.innerWidth;
+let star_count = (height * width * sc_factor) / 1000;
+
 const add_stars = () => {
   stars = "";
   for (let i = 0; i < star_count; i++) {
     let class_int = Math.random();
     let offset_x = Math.random() * 0.9 + 0.05;
     let offset_y = Math.random() * 0.9 + 0.05;
+
     if (class_int < 0.5) {
       stars = `${stars}\n
-<div class="star-type1 star" style="left: ${offset_x * window_width}px; top: ${
-        offset_y * window_height
+      <div class="star-type1 star" style="left: ${offset_x * width}px; top: ${
+        offset_y * height
       }px"></div>`;
     } else {
       stars = `${stars}\n
-<div class="star-type2 star" style="left: ${offset_x * window_width}px; top: ${
-        offset_y * window_height
+      <div class="star-type2 star" style="left: ${offset_x * width}px; top: ${
+        offset_y * height
       }px"></div>`;
     }
   }
-
   stars_cont.innerHTML = stars;
 };
 
 window.onresize = add_stars();
+
+// Audio Files
+
+let sound = new Audio("../Assets/switch.mp3");
+
+function flicker() {
+  sound.volume = 1;
+  sound.play();
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    flicker();
+  }, 1001);
+
+  setTimeout(() => {
+    flicker();
+  }, 1501);
+
+  setTimeout(() => {
+    flicker();
+  }, 2001);
+});
