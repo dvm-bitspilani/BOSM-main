@@ -19,6 +19,9 @@ body {
   user-select: none;
   background-color: #000;
   position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* NavBar */
@@ -57,6 +60,7 @@ main {
 
 .line {
   position: absolute;
+  transform: scale(0.8);
   top: 20rem;
   right: 20rem;
 }
@@ -230,6 +234,7 @@ main {
 }
 
 .time {
+  z-index: 1001;
   color: white;
   font-family: "Montserrat", sans-serif;
   margin: 2rem 2.5rem;
@@ -292,7 +297,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -2rem;
+  /* margin-top: -2rem; */
 }
 
 .scrollNav {

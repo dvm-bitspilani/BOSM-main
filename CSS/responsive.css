@@ -1,7 +1,8 @@
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .text > h2 {
     font-size: 14rem;
   }
+
   .text > h3 {
     font-size: 2rem;
   }
@@ -11,22 +12,32 @@
   .text > h2 {
     font-size: 6rem;
   }
+
   .text > h3 {
     margin-top: 0rem;
     font-size: 1.2rem;
   }
+
   .scrollNav {
     display: none;
   }
+
   .hamburger {
     margin: 2rem 0rem;
   }
+
   #phoneRegist {
     display: block;
     z-index: 1000;
     font-family: "Montserrat", sans-serif;
   }
+
   #desktopRegist {
     display: none;
   }
+}
+
+
+@media (max-width: 400px) {
+
 }
