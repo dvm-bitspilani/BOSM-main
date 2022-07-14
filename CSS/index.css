@@ -70,7 +70,7 @@ main > h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 0.05em;
-
+  z-index: 1001;
   filter: blur(0.04rem);
 }
 
@@ -277,6 +277,10 @@ img.light {
   position: absolute;
   z-index: 25;
   animation: flicker 3s;
+}
+
+.player{
+  z-index: 1001 !important;
 }
 
 #lightRed {
