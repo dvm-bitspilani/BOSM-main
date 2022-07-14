@@ -61,14 +61,12 @@ const add_stars = () => {
 
     if (class_int < 0.5) {
       stars = `${stars}\n
-      <div class="star-type1 star" style="left: ${offset_x * width}px; top: ${
-        offset_y * height
-      }px"></div>`;
+      <div class="star-type1 star" style="left: ${offset_x * width}px; top: ${offset_y * height
+        }px"></div>`;
     } else {
       stars = `${stars}\n
-      <div class="star-type2 star" style="left: ${offset_x * width}px; top: ${
-        offset_y * height
-      }px"></div>`;
+      <div class="star-type2 star" style="left: ${offset_x * width}px; top: ${offset_y * height
+        }px"></div>`;
     }
   }
   stars_cont.innerHTML = stars;
@@ -98,3 +96,13 @@ window.addEventListener("DOMContentLoaded", () => {
     flicker();
   }, 2001);
 });
+
+//Lines
+
+// const lines = document.getElementsByClassName('lines')
+// let scroll = window.pageYOffset;
+// let rate = (scroll * 0.5) - 750;
+// lines[0].style.transform = 'translate3d(0px,' + rate + 'px,0px)';
+// document.addEventListener('scroll', () => {
+//   lines[0].style.transform = 'translate3d(0px,' + rate + 'px,0px)';
+// })
