@@ -11,6 +11,7 @@
   -webkit-backdrop-filter: blur(8px);
   color: #EEECEC;
   padding: 20px 50px;
+  overflow: scroll;
 }
 
 #form_close {
@@ -133,10 +134,15 @@ input.form-input[type="radio"] {
 #gender-cont {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 #gender-cont label {
   margin-bottom: 20px;
+}
+
+#gender-cont .lbl-small {
+  margin-right: 30px;
 }
 
 @media (max-width: 800px) {

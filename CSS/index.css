@@ -22,7 +22,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* NavBar */
@@ -114,7 +114,6 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 0.05em;
-  z-index: 1001;
   filter: blur(0.04rem);
   z-index: 30;
 }
@@ -127,7 +126,7 @@ main {
   -webkit-text-stroke-width: 1px;
   color: black;
   letter-spacing: 0.11em;
-  z-index: 1001;
+  z-index: 30;
 }
 
 .text {
@@ -236,7 +235,7 @@ main {
 }
 
 .time {
-  z-index: 1001;
+  z-index: 30;
   color: white;
   font-family: "Montserrat", sans-serif;
   margin: 2rem 2.5rem;
@@ -338,7 +337,7 @@ img.light {
 }
 
 .player {
-  z-index: 1001 !important;
+  z-index: 30 !important;
 }
 
 #lightRed {
