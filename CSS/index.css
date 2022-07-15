@@ -234,16 +234,17 @@ transform: translateY(0);
   cursor: pointer;
   transition: 0.3s;
 }
-.regist>a{
+.regist{
   text-decoration: none;
 }
 
 .regist:hover{
   background-color: white;
-}
-.regist:hover > a{
   color:#000;
   transition: 0.3s;
+}
+.regist:hover{
+  
 }
 
 /* Hamburger */
