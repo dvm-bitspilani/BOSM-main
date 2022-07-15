@@ -171,6 +171,27 @@ main {
 
 .leftImg {
   margin-right: -8rem;
+
+}
+.rp{
+  animation: MoveUpDown 2s linear infinite;
+}
+
+.yp{
+  animation: MoveUpDown 2s linear infinite;
+
+}
+.bp{
+  animation: MoveUpDown 2s linear infinite;
+
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 .rightImg {
