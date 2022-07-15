@@ -107,18 +107,20 @@ select{
     font-size: 1.2em;
     background: none;
     color: white;
-    padding-top: 0px !important;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 0 !important;
 }
 .selected-sports{
   border: 1px solid white;
-  padding: 1rem;
-  margin-left: 3rem;
+  padding: 0.4rem 1rem;
+  margin-left: 2rem;
 }
 option {
   font-weight: normal;
   display: block;
   white-space: nowrap;
   background-color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
 input[type=number] {
@@ -216,5 +218,60 @@ input.form-input[type="radio"] {
   .form-input {
     width: 100%;
     font-size: 1rem;
+  }
+  #reg-form{
+    padding: 20px 32px;
+    width: 75%;
+  }
+  .selected-sports {
+    border: 1px solid white;
+    padding: 0.4rem;
+    margin-right: 3rem;
+    margin-block: 0.8rem;
+}
+select{
+  padding-bottom: 8px !important;
+  padding-top: 4px !important;
+  margin-top:0.2rem;
+}
+}
+/* responsive */
+
+@media (max-width: 400px) {
+  .form-header {
+    margin-bottom: 20px;
+  }
+  .form-header h2 {
+    font-size: 1.2rem;
+  }
+
+  #form_close_img {
+    width: 20px;
+    height: 20px;
+    margin-left: -1.2rem;
+  }
+
+  .form-input-cont {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .lbl-small {
+    font-size: 0.75rem;
+  }
+
+  .form-input {
+    width: 100%;
+    font-size: 0.75rem;
+  }
+  
+  .form-lbl{
+    font-size: 0.75rem;
   }
 }
