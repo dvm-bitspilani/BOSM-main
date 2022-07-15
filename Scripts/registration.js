@@ -130,15 +130,6 @@ sport_inpt.addEventListener("input", (evt) => {
   }
 });
 
-// document.body.addEventListener("keyup", (evt) => {
-//   if (evt.key === "Escape") {
-//     if (display_form) {
-//       display_form = false;
-//       form_toggle();
-//     }
-//   }
-// });
-
 form_cont.addEventListener("click", (evt) => {
   if (!form.contains(evt.target)) {
     display_form = false;
@@ -167,57 +158,63 @@ get_elems();
 
 
 // added from BOSM-19
-function getyosvalue() {
-  const val = document.getElementById("yos_opt").value;
-  yos_value = parseInt(val);
-}
 
-function getsportsvalue() {
-  if (sportsarr.length == 0) {
-    selected_sport.innerHTML = "";
-  }
-  const val = document.getElementById("sports_opt").value;
-  const sports_id = document.getElementById("sports_opt")[
-    document.getElementById("sports_opt").selectedIndex
-  ].id;
-  var div = document.createElement("div");
-  div.className += "sports";
-  var span = document.createElement("span");
-  span.className += "sports-name";
-  span.innerHTML = val;
-  div.appendChild(span);
-  selected_sport.appendChild(div);
-  div.innerHTML +=
-    '<i class="fas fa-times" style="padding-left:1vh;color:#34aafc"></i>';
-  div.onclick = function () {
-    this.parentNode.removeChild(this);
-    const x = this.getElementsByTagName("span");
-    console.log(x[0].innerHTML);
-    console.log(document.getElementsByClassName("sports-tag")[5]);
-    for (var i = 1; i < no_of_sports; i++) {
-      if (
-        x[0].innerHTML ==
-        document.getElementsByClassName("sports-tag")[i].innerHTML
-      ) {
-        document.getElementsByClassName("sports-tag")[i].disabled = false;
-        for (var j = 0; j < sportsarr.length; j++) {
-          if (
-            sportsarr[j] ==
-            parseInt(document.getElementsByClassName("sports-tag")[i].id)
-          ) {
-            sportsarr.splice(j, 1);
-            j--;
-          }
-        }
-        console.log(sportsarr);
-      }
-    }
-  };
-  document.getElementById("sports_opt").options[
-    document.getElementById("sports_opt").selectedIndex
-  ].disabled = true;
-  console.log(val);
-  console.log(sports_id);
-  sportsarr.push(parseInt(sports_id));
-  console.log(sportsarr);
-}
+// function getyosvalue() {
+//   const val = document.getElementById("yos_opt").value;
+//   yos_value = parseInt(val);
+// }
+
+// let sportsarr = ['Cricket', 'Football'];
+// let selected_sport = document.getElementsByClassName("selected-sports")[0];
+// let sports_opt = document.getElementById("sports_opt");
+// let college_opt = document.getElementById("college_opt");
+// let a = [];
+// function getsportsvalue() {
+//   if (sportsarr.length == 0) {
+//     selected_sport.innerHTML = "";
+//   }
+//   const val = document.getElementById("sports_opt").value;
+//   const sports_id = document.getElementById("sports_opt")[
+//     document.getElementById("sports_opt").selectedIndex
+//   ].id;
+//   let div = document.createElement("div");
+//   div.className += "sports";
+//   let span = document.createElement("span");
+//   span.className += "sports-name";
+//   span.innerHTML = val;
+//   div.appendChild(span);
+//   selected_sport.appendChild(div);
+//   div.innerHTML +=
+//     '<i class="fas fa-times" style="padding-left:1vh;color:#34aafc"></i>';
+//   div.onclick = function () {
+//     this.parentNode.removeChild(this);
+//     const x = this.getElementsByTagName("span");
+//     console.log(x[0].innerHTML);
+//     console.log(document.getElementsByClassName("sports-tag")[5]);
+//     for (let i = 1; i < no_of_sports; i++) {
+//       if (
+//         x[0].innerHTML ==
+//         document.getElementsByClassName("sports-tag")[i].innerHTML
+//       ) {
+//         document.getElementsByClassName("sports-tag")[i].disabled = false;
+//         for (let j = 0; j < sportsarr.length; j++) {
+//           if (
+//             sportsarr[j] ==
+//             parseInt(document.getElementsByClassName("sports-tag")[i].id)
+//           ) {
+//             sportsarr.splice(j, 1);
+//             j--;
+//           }
+//         }
+//         console.log(sportsarr);
+//       }
+//     }
+//   };
+//   document.getElementById("sports_opt").options[
+//     document.getElementById("sports_opt").selectedIndex
+//   ].disabled = true;
+//   console.log(val);
+//   console.log(sports_id);
+//   sportsarr.push(parseInt(sports_id));
+//   console.log(sportsarr);
+// }
