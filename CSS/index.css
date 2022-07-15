@@ -297,7 +297,7 @@ main {
   display: flex;
   flex-direction: column;
   color: white;
-  margin-right: 2rem;
+  margin-right: 3.2rem;
 }
 
 .socials i {
@@ -309,7 +309,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: -2rem; */
+  margin-top: -2rem;
 }
 
 .scrollNav {
@@ -319,7 +319,7 @@ footer {
   gap: 1rem;
   font-family: "Montserrat", sans-serif;
   top: 51vh;
-  left: -10vw;
+  left: -8vw;
   background-color: black;
   padding: 20px;
   z-index: 20;
