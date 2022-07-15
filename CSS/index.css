@@ -170,6 +170,8 @@ main {
 
 /* Registration */
 .regist {
+  height: max-content;
+  width: max-content;
   padding: 10px 20px;
   border: 1px solid white;
   margin: 2rem 2.8rem;
@@ -243,11 +245,11 @@ main {
 
 .card-flip {
   animation: card-flip 0.6s;
-  background-color: rgba(1000, 1000, 1000, 0.4);
 }
 
 @keyframes card-flip {
   0% {
+    background-color: rgba(1000, 1000, 1000, 0.4);
     transform: rotateX(0deg);
   }
 
@@ -302,19 +304,19 @@ footer {
 }
 
 .scrollNav {
-  display: flex;
   position: absolute;
+  display: flex;
   transform: rotate(-90deg);
+  gap: 1rem;
   font-family: "Montserrat", sans-serif;
-  top: 50%;
-  left: -10%;
+  top: 51vh;
+  left: -10vw;
   background-color: black;
   padding: 20px;
   z-index: 20;
 }
 
 .navBut {
-  margin-inline: 1rem;
   cursor: pointer;
 }
 
@@ -393,6 +395,7 @@ img.light {
   justify-content: center;
   z-index: 35;
   transition: clip-path 100ms ease;
+  display: none;
 }
 
 @keyframes flicker {
