@@ -4,19 +4,22 @@
     font-size: 0.8rem;
   }
 
-  .text h2{
+  .text h2 {
     font-size: 11rem;
     margin-bottom: 1rem;
   }
+
   #phoneRegist {
     display: block;
     z-index: 25;
     font-family: "Montserrat", sans-serif;
   }
-  footer{
+
+  footer {
     transform: translateY(-3rem);
   }
-  .text h3{
+
+  .text h3 {
     font-size: 2rem;
   }
 
@@ -56,7 +59,7 @@
     font-size: 1.25rem;
   }
 
-  footer{
+  footer {
     padding: 0 1rem;
   }
 
@@ -155,36 +158,36 @@
 }
 
 @media screen and (max-width: 650px) {
-
-  .text h2{
+  .text h2 {
     font-size: 8rem;
   }
 
-  .text h3{
+  .text h3 {
     font-size: 1.6rem;
   }
 
-  footer{
+  footer {
     transform: translateY(-3rem);
   }
-
 }
 
 @media screen and (max-width: 500px) {
-
   .line {
     transform: scale(0.7) translateY(-35px);
     z-index: 0 !important;
   }
 
-  #l1, #l4, #l5{    
+  #l1,
+  #l4,
+  #l5 {
     transform: scale(0.7) translateY(-40px);
   }
 
-  .time{
-  z-index: 10001;}
+  .time {
+    z-index: 10001;
+  }
 
-  .left img{
+  .left img {
     width: 50px;
   }
 
@@ -192,11 +195,11 @@
     font-size: 6rem;
   }
 
-  #l4{
+  #l4 {
     left: 18vw !important;
   }
 
-  footer{
+  footer {
     transform: translateY(-4rem);
   }
 
