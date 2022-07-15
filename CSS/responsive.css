@@ -185,6 +185,22 @@
     top: 11vh !important;
     left: 12vw !important;
   }
+  #l9{
+    left: 19rem !important;
+    top: 11rem !important;
+  }
+  #l8{
+    left: 23rem !important;
+    top: 8rem !important;
+  }
+  #l10{
+    left: 7rem !important;
+    top: 7rem !important;
+  }
+  #l11 {
+    top: 4rem !important;
+    left: 14rem !important;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -216,18 +232,21 @@
     width: 50px;
   }
   #l9{
-    left: 19rem !important;
-    top: 11rem !important;
+    left: 24rem !important;
+    top: 7rem !important;
   }
   #l8{
-    left: 16rem !important;
-    top: 24rem !important;
+    left: 27rem !important;
+    top: 28rem !important;
   }
   #l10{
     left: 7rem !important;
     top: 7rem !important;
   }
-  
+  #l11 {
+    top: 4rem !important;
+    left: 14rem !important;
+  }
   .text h2 {
     font-size: 6rem;
   }
@@ -255,7 +274,7 @@
 
   #phoneRegist {
     display: block;
-    z-index: 25;
+    z-index: 30;
     font-family: "Montserrat", sans-serif;
   }
 

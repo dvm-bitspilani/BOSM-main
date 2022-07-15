@@ -84,31 +84,27 @@ main {
 #l3 {
   top: 16rem;
   left: 6rem;
-  filter: hue-rotate(300deg);
 }
 
 #l4 {
   top: 25rem;
   left: 24rem;
-  filter: hue-rotate(300deg);
+
 }
 
 #l5 {
   top: 23rem;
   left: 50rem;
-  filter: hue-rotate(200deg);
 }
 
 #l6 {
   top: 16rem;
   right: 50rem;
-  filter: hue-rotate(200deg);
 }
 
 #l7 {
   top: 2rem;
   left: 30rem;
-  filter: hue-rotate(300deg);
 }
 #l8{
   top: 32rem;
@@ -121,7 +117,10 @@ main {
 #l10 {
   top: 38rem;
   left: 14rem;
-  filter: hue-rotate(300deg);
+}
+#l11 {
+  top: 4rem;
+  left: 50rem;
 }
 
 .text>h2 {
