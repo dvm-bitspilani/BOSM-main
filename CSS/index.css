@@ -404,7 +404,6 @@ img.light {
   justify-content: center;
   z-index: 35;
   transition: clip-path 100ms ease;
-  display: none;
 }
 
 @keyframes flicker {
