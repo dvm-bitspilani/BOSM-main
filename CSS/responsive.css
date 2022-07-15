@@ -170,15 +170,15 @@
 
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
   .line {
-    transform: translateY(-35px);
+    transform: scale(0.7) translateY(-35px);
     z-index: 0 !important;
   }
 
   #l1, #l4, #l5{    
-    transform: translateY(-40px);
+    transform: scale(0.7) translateY(-40px);
   }
 
   .time{
