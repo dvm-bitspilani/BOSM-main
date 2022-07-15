@@ -8,8 +8,9 @@ const sport_inpt = document.getElementById("sports");
 const sport_sel_list = document.getElementById("sport-sel-list");
 const sport_list = document.getElementById("sport-list");
 const college_list = document.getElementById("college");
+const sub_but = document.getElementById("form-submit")
 
-let display_form = false;
+let display_form = true;
 let avail_sports = [];
 let sel_sports = [];
 let colleges = [];
@@ -120,21 +121,6 @@ form.addEventListener("submit", (evt) => {
   submit_form();
 });
 
-reg_btn_desktop.addEventListener("click", () => {
-  display_form = true;
-  form_toggle();
-});
-
-reg_btn_mob.addEventListener("click", () => {
-  display_form = true;
-  form_toggle();
-});
-
-back_btn.addEventListener("click", () => {
-  display_form = false;
-  form_toggle();
-});
-
 sport_inpt.addEventListener("input", (evt) => {
   if (avail_sports.includes(evt.target.value)) {
     sel_sports.push(evt.target.value);
@@ -144,14 +130,14 @@ sport_inpt.addEventListener("input", (evt) => {
   }
 });
 
-document.body.addEventListener("keyup", (evt) => {
-  if (evt.key === "Escape") {
-    if (display_form) {
-      display_form = false;
-      form_toggle();
-    }
-  }
-});
+// document.body.addEventListener("keyup", (evt) => {
+//   if (evt.key === "Escape") {
+//     if (display_form) {
+//       display_form = false;
+//       form_toggle();
+//     }
+//   }
+// });
 
 form_cont.addEventListener("click", (evt) => {
   if (!form.contains(evt.target)) {
@@ -159,6 +145,13 @@ form_cont.addEventListener("click", (evt) => {
     form_toggle();
   }
 });
+
+sub_but.addEventListener('click',() =>{
+  sub_but.style.backgroundColor = "rgba(41, 41, 41, 0.9)"
+  setTimeout(()=>{
+    sub_but.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+  },2000)
+})
 
 document.querySelectorAll(".sport-item").forEach((ele) => {
   ele.addEventListener("click", (evt) => {
@@ -171,3 +164,55 @@ document.querySelectorAll(".sport-item").forEach((ele) => {
 form_toggle();
 set_sport_list();
 get_elems();
+
+
+// added from BOSM-19
+function getsportsvalue() {
+  if (sportsarr.length == 0) {
+    selected_sport.innerHTML = "";
+  }
+  const val = document.getElementById("sports_opt").value;
+  const sports_id = document.getElementById("sports_opt")[
+    document.getElementById("sports_opt").selectedIndex
+  ].id;
+  var div = document.createElement("div");
+  div.className += "sports";
+  var span = document.createElement("span");
+  span.className += "sports-name";
+  span.innerHTML = val;
+  div.appendChild(span);
+  selected_sport.appendChild(div);
+  div.innerHTML +=
+    '<i class="fas fa-times" style="padding-left:1vh;color:#34aafc"></i>';
+  div.onclick = function() {
+    this.parentNode.removeChild(this);
+    const x = this.getElementsByTagName("span");
+    console.log(x[0].innerHTML);
+    console.log(document.getElementsByClassName("sports-tag")[5]);
+    for (var i = 1; i < no_of_sports; i++) {
+      if (
+        x[0].innerHTML ==
+        document.getElementsByClassName("sports-tag")[i].innerHTML
+      ) {
+        document.getElementsByClassName("sports-tag")[i].disabled = false;
+        for (var j = 0; j < sportsarr.length; j++) {
+          if (
+            sportsarr[j] ==
+            parseInt(document.getElementsByClassName("sports-tag")[i].id)
+          ) {
+            sportsarr.splice(j, 1);
+            j--;
+          }
+        }
+        console.log(sportsarr);
+      }
+    }
+  };
+  document.getElementById("sports_opt").options[
+    document.getElementById("sports_opt").selectedIndex
+  ].disabled = true;
+  console.log(val);
+  console.log(sports_id);
+  sportsarr.push(parseInt(sports_id));
+  console.log(sportsarr);
+}

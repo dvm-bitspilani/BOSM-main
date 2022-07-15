@@ -71,8 +71,8 @@ main {
 .line {
   position: absolute;
   transform: scale(0.8);
-  top: 20rem;
-  right: 23rem;
+  top: 40rem;
+  right: 28rem;
 }
 
 #l2 {
@@ -81,8 +81,8 @@ main {
 }
 
 #l3 {
-  top: 20rem;
-  left: 16rem;
+  top: 16rem;
+  left: 6rem;
   filter: hue-rotate(300deg);
 }
 
@@ -105,8 +105,21 @@ main {
 }
 
 #l7 {
-  top: 8rem;
+  top: 2rem;
   left: 30rem;
+  filter: hue-rotate(300deg);
+}
+#l8{
+  top: 32rem;
+  right: 10rem;
+}
+#l9 {
+  top: 6rem;
+  right: 14rem;
+}
+#l10 {
+  top: 38rem;
+  left: 14rem;
   filter: hue-rotate(300deg);
 }
 
@@ -199,20 +212,26 @@ transform: translateY(0);
 }
 
 /* Registration */
-.regist {
+.regist{
   height: max-content;
   width: max-content;
-  padding: 10px 20px;
+  padding: 1rem 1.8rem;
   border: 1px solid white;
   margin: 2rem 2.8rem;
   border-radius: 40px;
   cursor: pointer;
   transition: 0.3s;
 }
+.regist>a{
+  text-decoration: none;
+}
 
-.regist:hover {
-  color: #000;
+.regist:hover{
   background-color: white;
+}
+.regist:hover > a{
+  color:#000;
+  transition: 0.3s;
 }
 
 /* Hamburger */
@@ -261,7 +280,7 @@ transform: translateY(0);
 }
 
 .numbers>div {
-  margin-inline: 2rem;
+  margin-inline: 1.2rem;
   font-size: 1.2rem;
   padding: 0.4rem;
   border-radius: 5px;
@@ -271,11 +290,25 @@ transform: translateY(0);
   z-index: 30;
   color: white;
   font-family: "Montserrat", sans-serif;
-  margin: 2rem 2.5rem;
+  margin: 2rem 1.2rem;
 }
 
 .card-flip {
   animation: card-flip 0.6s;
+}
+
+.labels {
+  margin-top: 1rem;
+  margin-left: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+  transform: translateY(-0.5rem);
+}
+.labels>div{
+  margin-inline: 1rem;
 }
 
 @keyframes card-flip {
@@ -296,16 +329,6 @@ transform: translateY(0);
   }
 }
 
-.labels {
-  margin-top: 1rem;
-  margin-left: 1.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 0.4rem;
-  font-size: 0.7rem;
-  transform: translateY(-0.5rem);
-}
 
 .label-2 {
   transform: translateX(-0.2rem);

@@ -13,11 +13,27 @@
   padding: 20px 50px;
   overflow-y: auto;
 }
-
+.bgImage{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+body{
+  background-color: black;
+  overflow: hidden;
+}
 #form_close {
   cursor: pointer;
 }
-
+#reg-cont{
+  border: 1px solid white;
+  background: rgba(172, 172, 172, 0.02);
+  opacity: 0.8;
+  height: 90vh;
+  width: 80%;
+  margin: 3rem auto;
+backdrop-filter: blur(15px);
+}
 #form_close_img {
   width: 30px;
   height: 30px;
@@ -29,6 +45,7 @@
   display: flex;
   width: 100%;
   text-align: center;
+  align-items: center;
   height: min-content;
 }
 
@@ -59,7 +76,7 @@ label {
 
 .form-input-cont:focus-within .form-lbl,
 .form-input:not(:placeholder-shown) + .form-lbl {
-  transform: scale(0.8) translateY(calc(-100% - 5px));
+  transform: scale(0.8) translateY(calc(-100% - 10px)) translateX(-20px);
   font-weight: 300;
 }
 
@@ -83,9 +100,25 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+select{
+    width: 90%;
+    height: 80%;
+    border: none;
+    font-size: 1.2em;
+    padding-top: 0px !important;
+}
+option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  background-color: black;
+}
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+.form-select{
+  transform: translateY(-50%);
 }
 
 input.form-input[type="radio"] {
@@ -120,16 +153,15 @@ input.form-input[type="radio"] {
   padding: 10px 30px;
   background: rgba(0, 0, 0, 0.5);
   outline: none;
+  color: white;
   border: 2px solid #EEECEC;
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   transition: all 500ms ease;
   cursor: pointer;
 }
-
-#form-submit:hover,
-#form-submit:active {
-  background: rgba(128, 128, 128, 0.5);
+#yos_opt{
+  color: #EEECEC;
 }
 
 #gender-cont {
