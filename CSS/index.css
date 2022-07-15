@@ -416,7 +416,7 @@ img.light {
   left: 10%;
   top: 0;
   animation-delay: 1s;
-  height: 98vh;
+  height: 100vh;
   width: 35%;
 }
 
@@ -424,7 +424,7 @@ img.light {
   left: 35%;
   animation-delay: 1.5s;
   top: 0;
-  height: 98vh;
+  height: 100vh;
   width: 30%;
 }
 
@@ -432,7 +432,7 @@ img.light {
   left: 55%;
   animation-delay: 1.3s;
   top: 0;
-  height: 98vh;
+  height: 99vh;
   width: 30%;
 }
 
