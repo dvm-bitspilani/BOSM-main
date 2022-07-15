@@ -311,6 +311,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-top: -1.1rem;
+  position: relative;
+  z-index: 30;
 }
 
 .scrollNav {

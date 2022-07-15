@@ -9,11 +9,6 @@
     margin-bottom: 1rem;
   }
 
-  #phoneRegist {
-    display: block;
-    z-index: 25;
-    font-family: "Montserrat", sans-serif;
-  }
 
   footer {
     transform: translateY(-3rem);
@@ -182,11 +177,6 @@
   #l5 {
     transform: scale(0.7) translateY(-40px);
   }
-
-  .time {
-    z-index: 10001;
-  }
-
   .left img {
     width: 50px;
   }
@@ -218,7 +208,7 @@
 
   #phoneRegist {
     display: block;
-    z-index: 1000;
+    z-index: 25;
     font-family: "Montserrat", sans-serif;
   }
 
