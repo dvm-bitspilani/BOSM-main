@@ -203,6 +203,7 @@ main {
   border-radius: 1px;
   cursor: pointer;
   position: relative;
+  display: none !important;
 }
 
 .hamCont {
@@ -323,6 +324,7 @@ footer {
   background-color: black;
   padding: 20px;
   z-index: 20;
+  display: none !important;
 }
 
 .navBut {
