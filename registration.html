@@ -11,18 +11,18 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
     <title>Registration</title>
-    <script defer src="../Scripts/registration.js"></script>
-    <link href="../CSS/registration.css" rel="stylesheet">
-    <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <script defer src="./Scripts/registration.js"></script>
+    <link href="./CSS/registration.css" rel="stylesheet">
+    <link href="./Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 
 <body>
-    <img class="bgImage" src="../Assets/RegisterBG.png" alt="">
+    <img class="bgImage" src="./Assets/RegisterBG.png" alt="">
     <div id="reg-cont">
         <form action="post" id="reg-form">
             <div class="form-header">
-                <div id="form_close"><a href="../index.html"><img alt="" id="form_close_img"
-                            src="../Assets/Back.svg"></a></div>
+                <div id="form_close"><a href="./index.html"><img alt="" id="form_close_img" src="./Assets/Back.svg"></a>
+                </div>
                 <h2>REGISTRATION</h2>
             </div>
             <div class="form-input-cont">
@@ -36,13 +36,13 @@
                 <ul id="sport-sel-list">
                 </ul>
             </div> -->
-            <div class="form-input-cont">
-                <select id="sports_opt" class="form-input" onchange="getsportsvalue()">
-                <option value="" selected disabled>SPORTS</option>
+            <div class="select-wrapper">
+                <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
+                    <option value="" selected disabled>SPORTS</option>
                 </select>
-                <div class="selected-sports">
-                <span class="form-lbl"></span>
-                </div>
+            </div>
+            <div class="selected-sports">
+                <span class="label-text">You can select multiple sports</span>
             </div>
             <div class="form-input-cont">
                 <input class="form-input" id="email" name="email" placeholder=" " required type="email">
@@ -75,19 +75,19 @@
                     <label class="lbl-small" for="other">OTHER</label>
                 </div>
             </div>
-            
+
             <div class="form-input-cont">
                 <input class="form-input" id="state" name="state" placeholder=" " required>
                 <label class="form-lbl" for="state">STATE</label>
             </div>
             <div class="form-input-cont">
                 <select id="yos_opt" class="form-input" onchange="getyosvalue()">
-                <option value="" selected disabled>YEAR OF STUDY</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                    <option value="" selected disabled>YEAR OF STUDY</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
                 <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
             </div>

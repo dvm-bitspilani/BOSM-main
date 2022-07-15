@@ -146,11 +146,11 @@ form_cont.addEventListener("click", (evt) => {
   }
 });
 
-sub_but.addEventListener('click',() =>{
+sub_but.addEventListener('click', () => {
   sub_but.style.backgroundColor = "rgba(41, 41, 41, 0.9)"
-  setTimeout(()=>{
+  setTimeout(() => {
     sub_but.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
-  },2000)
+  }, 2000)
 })
 
 document.querySelectorAll(".sport-item").forEach((ele) => {
@@ -167,6 +167,11 @@ get_elems();
 
 
 // added from BOSM-19
+function getyosvalue() {
+  const val = document.getElementById("yos_opt").value;
+  yos_value = parseInt(val);
+}
+
 function getsportsvalue() {
   if (sportsarr.length == 0) {
     selected_sport.innerHTML = "";
@@ -184,7 +189,7 @@ function getsportsvalue() {
   selected_sport.appendChild(div);
   div.innerHTML +=
     '<i class="fas fa-times" style="padding-left:1vh;color:#34aafc"></i>';
-  div.onclick = function() {
+  div.onclick = function () {
     this.parentNode.removeChild(this);
     const x = this.getElementsByTagName("span");
     console.log(x[0].innerHTML);
