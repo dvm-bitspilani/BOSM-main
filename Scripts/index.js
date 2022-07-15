@@ -47,7 +47,7 @@ let count = setInterval(() => {
 // Stars spawning randomly
 
 let stars = "";
-const sc_factor = Math.random() * 0.1 + 0.2;
+const sc_factor = Math.random() * 0.1 + 0.25;
 let height = window.innerHeight;
 let width = window.innerWidth;
 let star_count = (height * width * sc_factor) / 1000;
@@ -56,8 +56,8 @@ const add_stars = () => {
 	stars = "";
 	for (let i = 0; i < star_count; i++) {
 		let class_int = Math.random();
-		let offset_x = Math.random() * 0.9 + 0.05;
-		let offset_y = Math.random() * 0.9 + 0.05;
+		let offset_x = Math.random() * 1;
+		let offset_y = Math.random() * 1;
 
 		if (class_int < 0.5) {
 			stars = `${stars}\n
