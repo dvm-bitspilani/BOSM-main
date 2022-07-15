@@ -106,3 +106,17 @@ window.addEventListener("DOMContentLoaded", () => {
 // document.addEventListener('scroll', () => {
 //   lines[0].style.transform = 'translate3d(0px,' + rate + 'px,0px)';
 // })
+
+// Lights
+
+setInterval(() => {
+	document.getElementById('lightRed').style.opacity = 1
+}, 3000);
+
+setInterval(() => {
+	document.getElementById('lightBlue').style.opacity = 1
+}, 3500);
+
+setInterval(() => {
+	document.getElementById('lightYellow').style.opacity = 1
+}, 3300);
