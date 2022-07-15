@@ -1,7 +1,8 @@
 const END_POINT = "https://www.bitsbosm.org/2022";
 const form_cont = document.getElementById("reg-cont");
 const form = document.getElementById("reg-form");
-const reg_btn = document.getElementById("desktopRegist");
+const reg_btn_desktop = document.getElementById("desktopRegist");
+const reg_btn_mob = document.getElementById("phoneRegist")
 const back_btn = document.getElementById("form_close");
 const sport_inpt = document.getElementById("sports");
 const sport_sel_list = document.getElementById("sport-sel-list");
@@ -118,7 +119,12 @@ form.addEventListener("submit", (evt) => {
 	submit_form();
 });
 
-reg_btn.addEventListener("click", () => {
+reg_btn_desktop.addEventListener("click", () => {
+	display_form = true;
+	form_toggle();
+});
+
+reg_btn_mob.addEventListener("click", () => {
 	display_form = true;
 	form_toggle();
 });

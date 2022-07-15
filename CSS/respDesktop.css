@@ -5,9 +5,6 @@
     .text>h3{
         font-size: 2rem;
     }
-    footer{
-        margin-top: 1rem;
-    }
 }
 @media (min-width: 1150px) and (max-width:1450px) {
     .scrollNav{

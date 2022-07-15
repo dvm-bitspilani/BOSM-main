@@ -72,7 +72,7 @@ main {
   position: absolute;
   transform: scale(0.8);
   top: 20rem;
-  right: 20rem;
+  right: 23rem;
 }
 
 #l2 {
@@ -87,13 +87,13 @@ main {
 }
 
 #l4 {
-  top: 35rem;
+  top: 25rem;
   left: 24rem;
   filter: hue-rotate(300deg);
 }
 
 #l5 {
-  top: 34rem;
+  top: 23rem;
   left: 50rem;
   filter: hue-rotate(200deg);
 }
@@ -309,7 +309,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -2rem;
+  margin-top: -1.1rem;
 }
 
 .scrollNav {
@@ -355,7 +355,7 @@ img.light {
   left: 10%;
   top: 0;
   animation-delay: 1s;
-  height: 105vh;
+  height: 98vh;
   width: 35%;
 }
 
@@ -363,7 +363,7 @@ img.light {
   left: 35%;
   animation-delay: 1.5s;
   top: 0;
-  height: 105vh;
+  height: 98vh;
   width: 30%;
 }
 
@@ -371,7 +371,7 @@ img.light {
   left: 55%;
   animation-delay: 1.3s;
   top: 0;
-  height: 105vh;
+  height: 98vh;
   width: 30%;
 }
 
