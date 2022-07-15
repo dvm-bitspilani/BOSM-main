@@ -3,45 +3,45 @@ const stars_cont = document.getElementById("stars-cont");
 let prev_days, prev_hrs, prev_min, days, hrs, min;
 
 let count = setInterval(() => {
-  const current_time = new Date().getTime();
+	const current_time = new Date().getTime();
 
-  // updating number of days left
-  days = Math.floor((bosm - current_time) / (1000 * 60 * 60 * 24));
-  days = days < 10 ? `0${days}` : days;
+	// updating number of days left
+	days = Math.floor((bosm - current_time) / (1000 * 60 * 60 * 24));
+	days = days < 10 ? `0${days}` : days;
 
-  // updating number of hours left (in that day)
-  hrs = Math.floor((bosm - current_time) / (1000 * 60 * 60)) - days * 24;
-  hrs = hrs < 10 ? `0${hrs}` : hrs;
+	// updating number of hours left (in that day)
+	hrs = Math.floor((bosm - current_time) / (1000 * 60 * 60)) - days * 24;
+	hrs = hrs < 10 ? `0${hrs}` : hrs;
 
-  // updating number of minutes left (in that hour)
-  min =
-    Math.floor((bosm - current_time) / (1000 * 60)) - days * 24 * 60 - hrs * 60;
-  min = min < 10 ? `0${min}` : min;
+	// updating number of minutes left (in that hour)
+	min =
+		Math.floor((bosm - current_time) / (1000 * 60)) - days * 24 * 60 - hrs * 60;
+	min = min < 10 ? `0${min}` : min;
 
-  // when timer is completed (BOSM arrives)
-  if (days < 0) {
-    days = "00";
-    hrs = "00";
-    min = "00";
-  }
+	// when timer is completed (BOSM arrives)
+	if (days < 0) {
+		days = "00";
+		hrs = "00";
+		min = "00";
+	}
 
-  // adding animation to timer cards
-  document.getElementById("days").style.animation =
-    prev_days != days ? "card-flip 0.6s" : "none";
-  document.getElementById("hours").style.animation =
-    prev_hrs != hrs ? "card-flip 0.6s" : "none";
-  document.getElementById("mins").style.animation =
-    prev_min != min ? "card-flip 0.6s" : "none";
+	// adding animation to timer cards
+	document.getElementById("days").style.animation =
+		prev_days != days ? "card-flip 0.6s" : "none";
+	document.getElementById("hours").style.animation =
+		prev_hrs != hrs ? "card-flip 0.6s" : "none";
+	document.getElementById("mins").style.animation =
+		prev_min != min ? "card-flip 0.6s" : "none";
 
-  // updating the temporary variables
-  prev_days = days;
-  prev_hrs = hrs;
-  prev_min = min;
+	// updating the temporary variables
+	prev_days = days;
+	prev_hrs = hrs;
+	prev_min = min;
 
-  // updating the divs
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hrs;
-  document.getElementById("mins").innerHTML = min;
+	// updating the divs
+	document.getElementById("days").innerHTML = days;
+	document.getElementById("hours").innerHTML = hrs;
+	document.getElementById("mins").innerHTML = min;
 }, 2000);
 
 // Stars spawning randomly
@@ -53,23 +53,23 @@ let width = window.innerWidth;
 let star_count = (height * width * sc_factor) / 1000;
 
 const add_stars = () => {
-  stars = "";
-  for (let i = 0; i < star_count; i++) {
-    let class_int = Math.random();
-    let offset_x = Math.random() * 0.9 + 0.05;
-    let offset_y = Math.random() * 0.9 + 0.05;
+	stars = "";
+	for (let i = 0; i < star_count; i++) {
+		let class_int = Math.random();
+		let offset_x = Math.random() * 0.9 + 0.05;
+		let offset_y = Math.random() * 0.9 + 0.05;
 
-    if (class_int < 0.5) {
-      stars = `${stars}\n
+		if (class_int < 0.5) {
+			stars = `${stars}\n
       <div class="star-type1 star" style="left: ${offset_x * width}px; top: ${offset_y * height
-        }px"></div>`;
-    } else {
-      stars = `${stars}\n
+			}px"></div>`;
+		} else {
+			stars = `${stars}\n
       <div class="star-type2 star" style="left: ${offset_x * width}px; top: ${offset_y * height
-        }px"></div>`;
-    }
-  }
-  stars_cont.innerHTML = stars;
+			}px"></div>`;
+		}
+	}
+	stars_cont.innerHTML = stars;
 };
 
 add_stars();
@@ -79,22 +79,22 @@ add_stars();
 let sound = new Audio("../Assets/switch.mp3");
 
 function flicker() {
-  sound.volume = 1;
-  sound.play();
+	sound.volume = 1;
+	sound.play();
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    flicker();
-  }, 1001);
+	setTimeout(() => {
+		flicker();
+	}, 1001);
 
-  setTimeout(() => {
-    flicker();
-  }, 1501);
+	setTimeout(() => {
+		flicker();
+	}, 1501);
 
-  setTimeout(() => {
-    flicker();
-  }, 2001);
+	setTimeout(() => {
+		flicker();
+	}, 2001);
 });
 
 //Lines
