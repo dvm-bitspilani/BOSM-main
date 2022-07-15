@@ -42,13 +42,14 @@ body {
 }
 
 .left>img {
-  width: 5rem;
+  width: 4.2rem;
 }
 
 .nav {
   display: flex;
   color: white;
   justify-content: space-between;
+  align-items: center;
 }
 
 .right {
@@ -140,6 +141,17 @@ main {
   z-index: 30;
 }
 
+.text{
+  z-index: 30;
+  margin-top:-16rem;
+}
+.text>img{
+  max-width: 95%;
+  height: auto;
+}
+#bosmRise{
+  margin-top: -2rem;
+}
 .text>h3 {
   font-family: Striker;
   font-size: 3rem;

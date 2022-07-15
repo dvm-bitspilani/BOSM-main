@@ -1,4 +1,4 @@
-@media screen and (min-width: 1400px) and (max-width: 1800px) {
+@media screen and (min-width: 1450px) and (max-width: 1800px) {
   .text > h2 {
     font-size: 12rem;
   }
@@ -13,13 +13,8 @@
     top: 46%;
     left: -10%;
   }
-
-  .text > h2 {
-    font-size: 11rem;
-  }
-
-  .text > h3 {
-    font-size: 2rem;
+  .text>img{
+    width: 75%;
   }
 }
 
@@ -29,13 +24,8 @@
     left: -14%;
   }
 
-  .text > h2 {
-    font-size: 10rem;
-  }
-
-  .text > h3 {
-    font-size: 2rem;
-    margin-top: 0;
+  .text>img{
+    width: 60%;
   }
 
   footer {
@@ -61,4 +51,11 @@
         z-index: -1;
     }
  }
-
+@media screen and (max-width: 800px) {
+  .text>img{
+    width: 60%;
+  }  
+  #bosmRise{
+    margin-top:0.4rem;
+  }
+}

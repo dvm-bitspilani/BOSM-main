@@ -32,7 +32,6 @@
     margin-top: 0.4rem;
     margin-left: 2.6rem;
     padding: 0;
-    gap: 1rem;
     justify-content: center;
   }
 
@@ -44,10 +43,13 @@
     margin-inline: 0.5rem;
     font-size: 0.8rem;
   }
-
+  main{
+    margin-top: 5rem;
+  }
   .labels div {
     font-size: 0.55rem;
     transform: none;
+    margin-inline: 0.4rem;
   }
 
   footer .fa {
@@ -74,20 +76,23 @@
 
   .light {
     top: -8vh !important;
-    height: 100vh !important;
+    height: 80vh !important;
     width: 40vw !important;
   }
 
   #lightRed {
     transform: translateX(-2.4rem) rotate(5.29deg);
+    left: 5%;
   }
 
   #lightBlue {
     transform: translateX(-1.4rem);
+    
   }
 
   #lightYellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
+    left: 60%;
   }
 
   .bp {
@@ -192,13 +197,13 @@
   }
 
   footer {
-    transform: translateY(-3rem);
+    transform: translateY(0rem) !important;
   }
 }
 
 @media screen and (max-width: 500px) {
   .line {
-    transform: scale(0.7) translateY(-35px);
+    transform: scale(0.6) translateY(-35px);
     z-index: 0 !important;
   }
 
@@ -210,7 +215,19 @@
   .left img {
     width: 50px;
   }
-
+  #l9{
+    left: 19rem !important;
+    top: 11rem !important;
+  }
+  #l8{
+    left: 16rem !important;
+    top: 24rem !important;
+  }
+  #l10{
+    left: 7rem !important;
+    top: 7rem !important;
+  }
+  
   .text h2 {
     font-size: 6rem;
   }
