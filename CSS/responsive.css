@@ -42,9 +42,11 @@
     margin-inline: 0.5rem;
     font-size: 0.8rem;
   }
+
   main {
     margin-top: 5rem;
   }
+
   .labels div {
     font-size: 0.55rem;
     transform: none;
@@ -184,18 +186,22 @@
     top: 11vh !important;
     left: 12vw !important;
   }
+
   #l9 {
     left: 19rem !important;
     top: 11rem !important;
   }
+
   #l8 {
     left: 23rem !important;
     top: 8rem !important;
   }
+
   #l10 {
     left: 7rem !important;
     top: 7rem !important;
   }
+
   #l11 {
     top: 4rem !important;
     left: 14rem !important;
@@ -227,25 +233,31 @@
   #l5 {
     transform: scale(0.7) translateY(-40px);
   }
+
   .left img {
     width: 50px;
   }
+
   #l9 {
     left: 24rem !important;
     top: 7rem !important;
   }
+
   #l8 {
     left: 27rem !important;
     top: 28rem !important;
   }
+
   #l10 {
     left: 7rem !important;
     top: 7rem !important;
   }
+
   #l11 {
     top: 4rem !important;
     left: 14rem !important;
   }
+
   .text h2 {
     font-size: 6rem;
   }

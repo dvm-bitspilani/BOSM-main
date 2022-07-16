@@ -1,21 +1,18 @@
-const END_POINT = "https://www.bitsbosm.org/2022";
+const END_POINT = "https://www.bitsbosm.org/2022/registrations";
 const form_cont = document.getElementById("reg-cont");
 const form = document.getElementById("reg-form");
-const reg_btn_desktop = document.getElementById("desktopRegist");
-const reg_btn_mob = document.getElementById("phoneRegist");
-const back_btn = document.getElementById("form_close");
 const sport_inpt = document.getElementById("sports");
 const sport_sel_list = document.getElementById("sport-sel-list");
 const sport_list = document.getElementById("sport-list");
-const college_list = document.getElementById("college");
+const college_list = document.getElementById("college-list");
+const col_inpt = document.getElementById("college");
 const sub_but = document.getElementById("form-submit");
 
-let display_form = true;
 let avail_sports = [];
 let sel_sports = [];
-let colleges = [];
 let sports_avail_html = ``;
 let sports_sel_html = ``;
+let avail_colleges = [];
 let college_html = ``;
 
 const get_elems = async () => {
@@ -32,54 +29,89 @@ const get_elems = async () => {
 
     let college_list_json = await college_res.json();
     let sport_list_json = await sports_res.json();
-    colleges = college_list_json.colleges;
-    avail_sports = sport_list_json.sports;
+    avail_colleges = await college_list_json.data;
+    avail_sports = await sport_list_json.data;
     let college_pat = ``;
-    colleges.forEach((val) => {
-      college_html = `${college_html}<option value="${val}>${val}</option>`;
-      college_pat = `${college_pat}|${val}`;
+    avail_colleges.forEach((val) => {
+      college_html = `${college_html}<option value="${val.name}">${val.name}</option>`;
+      college_pat = `${college_pat}|${val.name}`;
     });
     college_list.innerHTML = college_html;
     document.getElementById("college").pattern = college_pat;
   } catch (e) {
-    console.log("Failure in getting data");
+    alert("Failure in getting data");
   }
 };
 
 const submit_form = async () => {
   try {
     let genders = document.getElementsByName("gender");
+    let name = document.getElementById("name").value.trim();
+    let email_id = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
     let gender;
+    let yos = parseInt(document.getElementById("yos").value.trim());
+    let college_id;
+    let city = document.getElementById("city").value.trim();
+    let state = document.getElementById("state").value.trim();
+    let sports_ids = sel_sports.map((sport) => sport.id);
+    let is_coach = document.getElementById("coach").checked;
+    avail_colleges.some((college, idx) => {
+      let col_name = document.getElementById("college").value;
+      if (college.name === col_name) {
+        college_id = college.id;
+        return;
+      }
+    });
     genders.forEach((gender_elem) => {
       if (gender_elem.checked) {
         gender = gender_elem.value;
       }
     });
 
+    if (
+      name === "" ||
+      phone === "" ||
+      gender === "" ||
+      yos === null ||
+      city === "" ||
+      state === "" ||
+      sports_ids === []
+    ) {
+      alert("Fill all the mentioned fields");
+      return;
+    }
+
+    grecaptcha.execute();
+    let capt = grecaptcha.getResponse();
+
     let data = {
-      name: document.getElementById("name").value,
-      email_id: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
+      name: name,
+      email_id: email_id,
+      phone: phone,
       gender: gender,
-      year_of_study: document.getElementById("yos").value,
-      college_id: document.getElementById("college").value,
-      city: document.getElementById("city").value,
-      state: document.getElementById("state").value,
-      sports_ids: JSON.stringify(sel_sports),
-      is_coach: document.getElementById("coach").checked,
+      year_of_study: yos,
+      college_id: college_id,
+      city: city,
+      state: state,
+      sports_ids: sports_ids,
+      is_coach: is_coach,
+      captcha: capt,
     };
 
     console.log(data);
 
-    let submit_res = await fetch(`${END_POINT}/register`, {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(data),
-    });
+    // let submit_res = await fetch(`${END_POINT}/register`, {
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json, text/plain, */*",
+    //     "Content-Type": "application/json",
+    //   },
+    //   mode: "cors",
+    //   body: JSON.stringify(data),
+    // });
 
     alert("SUCCESS");
-    display_form = false;
-    form_toggle();
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("phone").value = "";
@@ -95,53 +127,43 @@ const submit_form = async () => {
   }
 };
 
-const form_toggle = () => {
-  if (display_form) {
-    form_cont.style.clipPath = "polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)";
-  } else {
-    form_cont.style.clipPath = "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)";
-  }
-};
-
 const set_sport_list = () => {
   sports_avail_html = ``;
   sports_sel_html = ``;
   avail_sports.forEach((val) => {
-    sports_avail_html = `${sports_avail_html}<option value = "${val}">${val}</option>`;
+    sports_avail_html = `${sports_avail_html}<option value = "${val.name}">${val.name}</option>`;
   });
   sport_list.innerHTML = sports_avail_html;
   sel_sports.forEach((val) => {
-    sports_sel_html = `${sports_sel_html}<li class="sport-item">${val}</li>`;
+    sports_sel_html = `${sports_sel_html}<li class="sport-item">${val.name}</li>`;
   });
   sport_sel_list.innerHTML = sports_sel_html;
+  if (sel_sports.length === 0) {
+    sport_sel_list.style.display = "none";
+  } else {
+    sport_sel_list.style.display = "flex";
+  }
 };
 
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  submit_form();
+  // submit_form();
 });
 
 sport_inpt.addEventListener("input", (evt) => {
-  if (avail_sports.includes(evt.target.value)) {
-    sel_sports.push(evt.target.value);
-    avail_sports.splice(avail_sports.indexOf(evt.target.value), 1);
+  let col_idx = -1;
+  avail_sports.some((sport, idx) => {
+    if (sport.name === evt.target.value) {
+      col_idx = idx;
+      return;
+    }
+  });
+  if (col_idx >= 0) {
+    sel_sports.push(avail_sports[col_idx]);
+    avail_sports.splice(col_idx, 1);
     evt.target.value = "";
     set_sport_list();
   }
-});
-
-form_cont.addEventListener("click", (evt) => {
-  if (!form.contains(evt.target)) {
-    display_form = false;
-    form_toggle();
-  }
-});
-
-sub_but.addEventListener("click", () => {
-  sub_but.style.backgroundColor = "rgba(41, 41, 41, 0.9)";
-  setTimeout(() => {
-    sub_but.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-  }, 2000);
 });
 
 document.querySelectorAll(".sport-item").forEach((ele) => {
@@ -152,68 +174,4 @@ document.querySelectorAll(".sport-item").forEach((ele) => {
   });
 });
 
-form_toggle();
-set_sport_list();
-get_elems();
-
-// added from BOSM-19
-
-// function getyosvalue() {
-//   const val = document.getElementById("yos_opt").value;
-//   yos_value = parseInt(val);
-// }
-
-// let sportsarr = ['Cricket', 'Football'];
-// let selected_sport = document.getElementsByClassName("selected-sports")[0];
-// let sports_opt = document.getElementById("sports_opt");
-// let college_opt = document.getElementById("college_opt");
-// let a = [];
-// function getsportsvalue() {
-//   if (sportsarr.length == 0) {
-//     selected_sport.innerHTML = "";
-//   }
-//   const val = document.getElementById("sports_opt").value;
-//   const sports_id = document.getElementById("sports_opt")[
-//     document.getElementById("sports_opt").selectedIndex
-//   ].id;
-//   let div = document.createElement("div");
-//   div.className += "sports";
-//   let span = document.createElement("span");
-//   span.className += "sports-name";
-//   span.innerHTML = val;
-//   div.appendChild(span);
-//   selected_sport.appendChild(div);
-//   div.innerHTML +=
-//     '<i class="fas fa-times" style="padding-left:1vh;color:#34aafc"></i>';
-//   div.onclick = function () {
-//     this.parentNode.removeChild(this);
-//     const x = this.getElementsByTagName("span");
-//     console.log(x[0].innerHTML);
-//     console.log(document.getElementsByClassName("sports-tag")[5]);
-//     for (let i = 1; i < no_of_sports; i++) {
-//       if (
-//         x[0].innerHTML ==
-//         document.getElementsByClassName("sports-tag")[i].innerHTML
-//       ) {
-//         document.getElementsByClassName("sports-tag")[i].disabled = false;
-//         for (let j = 0; j < sportsarr.length; j++) {
-//           if (
-//             sportsarr[j] ==
-//             parseInt(document.getElementsByClassName("sports-tag")[i].id)
-//           ) {
-//             sportsarr.splice(j, 1);
-//             j--;
-//           }
-//         }
-//         console.log(sportsarr);
-//       }
-//     }
-//   };
-//   document.getElementById("sports_opt").options[
-//     document.getElementById("sports_opt").selectedIndex
-//   ].disabled = true;
-//   console.log(val);
-//   console.log(sports_id);
-//   sportsarr.push(parseInt(sports_id));
-//   console.log(sportsarr);
-// }
+get_elems().then(get_sport_list());

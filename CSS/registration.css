@@ -1,17 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 500;
+  scrollbar-color: #eeecec transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #eeecec;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+body {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 #reg-form {
   font-family: "Montserrat", sans-serif;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 3px #eeecec;
   border-radius: 30px;
+  outline: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #eeecec;
   padding: 20px 50px;
   overflow-y: auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .bgImage {
@@ -20,23 +57,14 @@
   width: 100vw;
 }
 
-body {
-  background-color: black;
-  overflow: hidden;
-}
-
 #form_close {
   cursor: pointer;
 }
 
 #reg-cont {
-  border: 1px solid white;
   background: rgba(172, 172, 172, 0.02);
-  opacity: 0.8;
   height: 90vh;
-  width: 80%;
-  margin: 3rem auto;
-  backdrop-filter: blur(15px);
+  width: 80vw;
 }
 
 #form_close_img {
@@ -61,8 +89,9 @@ body {
 }
 
 .form-input-cont {
-  width: 50%;
+  width: 100%;
   position: relative;
+  margin-bottom: 35px;
 }
 
 label {
@@ -72,16 +101,18 @@ label {
 .form-lbl {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 0;
   margin: auto 0;
-  transform: translateY(50%);
+  transform: translateY(25%);
   transition: all 200ms ease;
   pointer-events: none;
+  transform-origin: 0%;
 }
 
 .form-input-cont:focus-within .form-lbl,
-.form-input:not(:placeholder-shown) + .form-lbl {
-  transform: scale(0.8) translateY(calc(-100% - 10px)) translateX(-20px);
+.form-input:not(:placeholder-shown) + .form-lbl,
+.form-input-cont:valid + .form-lbl {
+  transform: scale(0.8) translateY(calc(-105%));
   font-weight: 300;
 }
 
@@ -92,35 +123,19 @@ label {
 
 .form-input {
   font-size: 1.25rem;
-  padding-top: 20px;
+  padding: 5px 0;
   background-color: rgba(128, 128, 128, 0.1);
   outline: none;
   border: none;
   border-bottom: 2px solid #eeecec;
   width: 80%;
+  color: #eeecec;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-select {
-  width: 100%;
-  height: 80%;
-  border: none;
-  font-size: 1.2em;
-  background: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  padding-top: 0 !important;
-}
-
-.selected-sports {
-  border: 1px solid white;
-  padding: 0.4rem 1rem;
-  margin-left: 2rem;
 }
 
 option {
@@ -145,6 +160,7 @@ input.form-input[type="radio"] {
 }
 
 #sport-sel-list {
+  display: flex;
   background: rgba(128, 128, 128, 0.1);
   max-height: 200px;
   width: 80%;
@@ -189,18 +205,19 @@ input.form-input[type="radio"] {
   align-items: flex-start;
 }
 
-#gender-cont label {
-  margin-bottom: 20px;
+#gender-lbl {
+  margin-bottom: 10px;
 }
 
 #gender-cont .lbl-small {
-  margin-right: 30px;
+  margin-right: clamp(10px, 5%, 30px);
 }
 
 @media (max-width: 800px) {
   .form-header {
     margin-bottom: 20px;
   }
+
   .form-header h2 {
     font-size: 1.5rem;
   }
@@ -210,11 +227,15 @@ input.form-input[type="radio"] {
     height: 20px;
   }
 
-  .form-input-cont {
-    width: 100%;
+  .col {
+    width: 80%;
     align-items: center;
     justify-content: center;
+  }
+
+  .form-input-cont {
     margin-bottom: 20px;
+    width: 100%;
   }
 
   label {
@@ -229,21 +250,23 @@ input.form-input[type="radio"] {
     width: 100%;
     font-size: 1rem;
   }
+
   #reg-form {
     padding: 20px 32px;
-    width: 75%;
   }
+
   .selected-sports {
     border: 1px solid white;
     padding: 0.4rem;
     margin-right: 3rem;
     margin-block: 0.8rem;
   }
-  select {
-    padding-bottom: 8px !important;
-    padding-top: 4px !important;
-    margin-top: 0.2rem;
-  }
+
+  /*select {*/
+  /*  padding-bottom: 8px !important;*/
+  /*  padding-top: 4px !important;*/
+  /*  margin-top: 0.2rem;*/
+  /*}*/
 }
 
 /* responsive */
@@ -252,6 +275,7 @@ input.form-input[type="radio"] {
   .form-header {
     margin-bottom: 20px;
   }
+
   .form-header h2 {
     font-size: 1.2rem;
   }
@@ -263,7 +287,6 @@ input.form-input[type="radio"] {
   }
 
   .form-input-cont {
-    width: 80%;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.2rem;
