@@ -76,10 +76,10 @@ add_stars();
 
 // Audio Files
 
-let sound = new Audio("../Assets/LightSound.mp3");
+let sound = new Audio("../Assets/switchsound.mp3");
 
 function flicker() {
-	sound.volume = 1;
+	sound.volume = 0.6;
 	sound.play();
 }
 
@@ -87,14 +87,6 @@ window.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {
 		flicker();
 	}, 500);
-
-	setTimeout(() => {
-		flicker();
-	}, 2000);
-
-	setTimeout(() => {
-		flicker();
-	}, 3500);
 });
 
 //Lines
