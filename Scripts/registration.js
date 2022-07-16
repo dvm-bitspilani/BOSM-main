@@ -19,12 +19,10 @@ const get_elems = async () => {
   try {
     let college_res = await fetch(`${END_POINT}/get_colleges`, {
       method: "GET",
-      mode: "cors",
     });
 
     let sports_res = await fetch(`${END_POINT}/get_sports`, {
       method: "GET",
-      mode: "cors",
     });
 
     let college_list_json = await college_res.json();
@@ -33,7 +31,7 @@ const get_elems = async () => {
     avail_sports = await sport_list_json.data;
     let college_pat = ``;
     avail_colleges.forEach((val) => {
-      college_html = `${college_html}<option value="${val.name}">${val.name}</option>`;
+      college_html = `${college_html}<option label="${val.name}" value="${val.name}" />`;
       college_pat = `${college_pat}|${val.name}`;
     });
     college_list.innerHTML = college_html;
@@ -43,7 +41,7 @@ const get_elems = async () => {
   }
 };
 
-const submit_form = async () => {
+async function submit_form() {
   try {
     let genders = document.getElementsByName("gender");
     let name = document.getElementById("name").value.trim();
@@ -82,7 +80,6 @@ const submit_form = async () => {
       return;
     }
 
-    grecaptcha.execute();
     let capt = grecaptcha.getResponse();
 
     let data = {
@@ -99,39 +96,49 @@ const submit_form = async () => {
       captcha: capt,
     };
 
-    console.log(data);
+    let res = await fetch(`${END_POINT}/register/`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-    // let submit_res = await fetch(`${END_POINT}/register`, {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json, text/plain, */*",
-    //     "Content-Type": "application/json",
-    //   },
-    //   mode: "cors",
-    //   body: JSON.stringify(data),
-    // });
+    let res_json = await res.json();
 
-    alert("SUCCESS");
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("yos").value = "";
-    document.getElementById("college").value = "";
-    document.getElementById("city").value = "";
-    document.getElementById("state").value = "";
-    document.getElementById("sports").value = "";
-    avail_sports = [...avail_sports, ...sel_sports];
-    sel_sports = [];
+    alert(res_json.message);
+
+    if (res.ok) {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("yos").value = "";
+      document.getElementById("college").value = "";
+      document.getElementById("city").value = "";
+      document.getElementById("state").value = "";
+      document.getElementById("sports").value = "";
+      avail_sports = [...avail_sports, ...sel_sports];
+      sel_sports = [];
+    } else {
+      grecaptcha.reset();
+    }
   } catch (e) {
-    alert("FAILURE");
+    console.log(e);
   }
+}
+
+const submit_handler = (evt) => {
+  evt.preventDefault();
+  console.log("SUBMITTING");
+  grecaptcha.execute();
 };
 
 const set_sport_list = () => {
   sports_avail_html = ``;
   sports_sel_html = ``;
   avail_sports.forEach((val) => {
-    sports_avail_html = `${sports_avail_html}<option value = "${val.name}">${val.name}</option>`;
+    sports_avail_html = `${sports_avail_html}<option label="${val.name}" value="${val.name}" />`;
   });
   sport_list.innerHTML = sports_avail_html;
   sel_sports.forEach((val) => {
@@ -145,10 +152,10 @@ const set_sport_list = () => {
   }
 };
 
-form.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-  // submit_form();
-});
+const init_form = async () => {
+  await get_elems();
+  set_sport_list();
+};
 
 sport_inpt.addEventListener("input", (evt) => {
   let col_idx = -1;
@@ -166,6 +173,8 @@ sport_inpt.addEventListener("input", (evt) => {
   }
 });
 
+form.addEventListener("submit", submit_handler);
+
 document.querySelectorAll(".sport-item").forEach((ele) => {
   ele.addEventListener("click", (evt) => {
     avail_sports.push(ele.textContent);
@@ -174,4 +183,4 @@ document.querySelectorAll(".sport-item").forEach((ele) => {
   });
 });
 
-get_elems().then(get_sport_list());
+init_form();

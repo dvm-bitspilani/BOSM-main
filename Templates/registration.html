@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <title>Registration</title>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld-RfUgAAAAAOlmX18LDGHoHHgiA9JBtIkFfR6b"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="../Scripts/registration.js"></script>
     <link href="../CSS/registration.css" rel="stylesheet" />
     <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
@@ -25,7 +25,7 @@
   <body>
     <img alt="" class="bgImage" src="../Assets/RegisterBG.png" />
     <div id="reg-cont">
-      <form action="post" id="reg-form">
+      <form method="post" id="reg-form">
         <div class="form-header">
           <div id="form_close">
             <a href="../index.html"
@@ -69,8 +69,8 @@
             <label class="form-lbl" for="phone">PHONE</label>
           </div>
           <div class="form-input-cont" id="gender-cont">
-            <label id="gender-lbl">GENDER</label>
-            <div style="display: flex">
+            <label class="form-lbl" id="gender-lbl">GENDER</label>
+            <div>
               <input
                 class="form-input"
                 id="male"
@@ -124,7 +124,6 @@
               list="sport-list"
               name="sports"
               placeholder=" "
-              required
             />
             <label class="form-lbl" for="sports">SPORTS</label>
             <datalist id="sport-list"></datalist>
@@ -170,6 +169,13 @@
           </div>
         </div>
         <div id="form-submit-cont">
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LdSBPYgAAAAAFSZA0FHo_TK-jDXqyYDI-nL-4W_"
+            data-callback="submit_form"
+            data-size="invisible"
+          ></div>
+
           <button id="form-submit" type="submit">REGISTER</button>
         </div>
       </form>

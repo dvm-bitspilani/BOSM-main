@@ -111,7 +111,8 @@ label {
 
 .form-input-cont:focus-within .form-lbl,
 .form-input:not(:placeholder-shown) + .form-lbl,
-.form-input-cont:valid + .form-lbl {
+.form-input-cont:valid + .form-lbl,
+#gender-lbl {
   transform: scale(0.8) translateY(calc(-105%));
   font-weight: 300;
 }
@@ -161,10 +162,10 @@ input.form-input[type="radio"] {
 
 #sport-sel-list {
   display: flex;
+  flex-wrap: wrap;
   background: rgba(128, 128, 128, 0.1);
-  max-height: 200px;
+  max-height: calc(1rem + 23px);
   width: 80%;
-  padding: 10px 20px;
   overflow-y: auto;
 }
 
@@ -174,6 +175,8 @@ input.form-input[type="radio"] {
   background-color: rgba(200, 200, 200, 0.4);
   padding: 5px 10px;
   border-radius: 5px;
+  margin: 5px;
+  font-size: 1rem;
 }
 
 #form-submit-cont {
@@ -199,18 +202,8 @@ input.form-input[type="radio"] {
   color: #eeecec;
 }
 
-#gender-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#gender-lbl {
-  margin-bottom: 10px;
-}
-
 #gender-cont .lbl-small {
-  margin-right: clamp(10px, 5%, 30px);
+  margin-right: clamp(10px, 3%, 30px);
 }
 
 @media (max-width: 800px) {
@@ -228,17 +221,18 @@ input.form-input[type="radio"] {
   }
 
   .col {
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
 
   .form-input-cont {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
   }
 
-  label {
+  label,
+  #gender-lbl {
     font-size: 1rem;
   }
 
@@ -255,18 +249,20 @@ input.form-input[type="radio"] {
     padding: 20px 32px;
   }
 
-  .selected-sports {
-    border: 1px solid white;
-    padding: 0.4rem;
-    margin-right: 3rem;
-    margin-block: 0.8rem;
+  #sport-sel-list {
+    max-height: calc(0.75rem + 18px);
+    width: 100%;
   }
 
-  /*select {*/
-  /*  padding-bottom: 8px !important;*/
-  /*  padding-top: 4px !important;*/
-  /*  margin-top: 0.2rem;*/
-  /*}*/
+  .sport-item {
+    padding: 3px 8px;
+    font-size: 0.75rem;
+  }
+
+  #form-submit {
+    font-size: 1.25rem;
+    padding: 5px 15px;
+  }
 }
 
 /* responsive */
@@ -292,7 +288,8 @@ input.form-input[type="radio"] {
     margin-bottom: 1.2rem;
   }
 
-  label {
+  label,
+  #gender-lbl {
     font-size: 1rem;
   }
 
