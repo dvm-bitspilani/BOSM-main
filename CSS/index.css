@@ -126,48 +126,18 @@ main {
   left: 50rem;
 }
 
-.text > h2 {
-  font-family: Zona;
-  margin-top: -12rem;
-  font-size: 18rem;
-  background: radial-gradient(
-    77.96% 176.3% at 48.29% -5.99%,
-    #ffffff 0%,
-    #cacaca 55.46%,
-    #e5e5e5 69.99%,
-    #32322f 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 0.05em;
-  filter: blur(0.04rem);
-  z-index: 30;
-}
-
 .text {
   z-index: 30;
   margin-top: -16rem;
 }
 
 .text > img {
-  max-width: 84%;
+  width: 84%;
   height: auto;
 }
 
 #bosmRise {
   margin-top: -2rem;
-}
-
-.text > h3 {
-  font-family: Striker;
-  font-size: 3rem;
-  margin-top: -2rem;
-  -webkit-text-stroke-color: #ffffff;
-  -webkit-text-stroke-width: 1px;
-  color: black;
-  letter-spacing: 0.11em;
-  z-index: 30;
 }
 
 .text {

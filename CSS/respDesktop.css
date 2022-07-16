@@ -54,12 +54,3 @@
   }
 }
 
-@media screen and (max-width: 800px) {
-  .text > img {
-    width: 60%;
-  }
-
-  #bosmRise {
-    margin-top: 0.4rem;
-  }
-}
