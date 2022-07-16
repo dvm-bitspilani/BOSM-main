@@ -222,6 +222,7 @@ main {
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(5px);
   }
@@ -519,28 +520,34 @@ img.light {
     filter: blur(5px);
     opacity: 1;
   }
+
   100% {
     filter: blur(5px);
     opacity: 1;
   }
+
   /* 
   105% {
     filter: blur(5px);
     opacity: 0;
   }
 
+
   115% {
     filter: blur(5px);
     opacity: 1;
   }
+
 
   121% {
     filter: blur(5px);
     opacity: 0;
   }
 
+
   140% {
     filter: blur(5px);
     opacity: 1;
-  } */
+  }
+   */
 }
