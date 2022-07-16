@@ -81,7 +81,7 @@
     width: 40vw !important;
   }
 
-  #lightRed {
+  #lightRed, .fall-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 5%;
   }
@@ -90,7 +90,7 @@
     transform: translateX(-1.4rem);
   }
 
-  #lightYellow {
+  #lightYellow, .fall-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
