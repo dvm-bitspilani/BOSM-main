@@ -1,105 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Registration</title>
     <script defer src="./Scripts/registration.js"></script>
-    <link href="./CSS/registration.css" rel="stylesheet">
+    <link href="./CSS/registration.css" rel="stylesheet" />
     <link href="./Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
-</head>
+  </head>
 
-<body>
-    <img class="bgImage" src="./Assets/RegisterBG.png" alt="">
+  <body>
+    <img class="bgImage" src="./Assets/RegisterBG.png" alt="" />
     <div id="reg-cont">
-        <form action="post" id="reg-form">
-            <div class="form-header">
-                <div id="form_close"><a href="./index.html"><img alt="" id="form_close_img" src="./Assets/Back.svg"></a>
-                </div>
-                <h2>REGISTRATION</h2>
-            </div>
-            <div class="form-input-cont">
-                <input class="form-input" id="name" name="name" placeholder=" " required type="text">
-                <label class="form-lbl" for="name">NAME</label>
-            </div>
-            <!-- <div class="form-input-cont">
+      <form action="post" id="reg-form">
+        <div class="form-header">
+          <div id="form_close">
+            <a href="./index.html"
+              ><img alt="" id="form_close_img" src="./Assets/Back.svg"
+            /></a>
+          </div>
+          <h2>REGISTRATION</h2>
+        </div>
+        <div class="form-input-cont">
+          <input
+            class="form-input"
+            id="name"
+            name="name"
+            placeholder=" "
+            required
+            type="text"
+          />
+          <label class="form-lbl" for="name">NAME</label>
+        </div>
+        <!-- <div class="form-input-cont">
                 <input class="form-input" id="sports" list="sport-list" name="sports" placeholder=" ">
                 <label class="form-lbl" for="sports">SPORTS</label>
                 <datalist id="sport-list"></datalist>
                 <ul id="sport-sel-list">
                 </ul>
             </div> -->
-            <div class="select-wrapper">
-                <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
-                    <option value="" selected disabled>SPORTS</option>
-                </select>
-            </div>
-            <div class="selected-sports">
-                <span class="label-text">You can select multiple sports</span>
-            </div>
-            <div class="form-input-cont">
-                <input class="form-input" id="email" name="email" placeholder=" " required type="email">
-                <label class="form-lbl" for="email">EMAIL</label>
-            </div>
-            <div class="form-input-cont">
-                <input class="form-input" id="college" list="college-list" name="college" placeholder=" " required>
-                <label class="form-lbl" for="college">COLLEGE</label>
-                <datalist id="college-list"></datalist>
-            </div>
-            <div class="form-input-cont">
-                <input class="form-input" id="phone" name="phone" placeholder=" " required type="number">
-                <label class="form-lbl" for="phone">PHONE</label>
-            </div>
-            <div class="form-input-cont">
-                <input class="form-input" id="city" name="city" placeholder=" " required type="text">
-                <label class="form-lbl" for="city">CITY</label>
-            </div>
-            <div class="form-input-cont" id="gender-cont">
-                <label>GENDER</label>
-                <div style="display: flex">
-                    <input class="form-input" id="male" name="gender" placeholder=" " required type="radio"
-                        value="male">
-                    <label style="margin-left: 0.4rem; transform: translateY(10px);" class="lbl-small" for="male">MALE</label>
-                    <input class="form-input" id="female" name="gender" placeholder=" " required type="radio"
-                        value="female">
-                    <label style="margin-left: 0.4rem; transform: translateY(10px);" class="lbl-small" for="female">FEMALE</label>
-                    <input class="form-input" id="other" name="gender" placeholder=" " required type="radio"
-                        value="other">
-                    <label style="margin-left: 0.4rem; transform: translateY(10px);" class="lbl-small" for="other">OTHER</label>
-                </div>
-            </div>
+        <div class="select-wrapper">
+          <select
+            id="sports_opt"
+            class="select-input"
+            onchange="getsportsvalue()"
+          >
+            <option value="" selected disabled>SPORTS</option>
+          </select>
+        </div>
+        <div class="selected-sports">
+          <span class="label-text">You can select multiple sports</span>
+        </div>
+        <div class="form-input-cont">
+          <input
+            class="form-input"
+            id="email"
+            name="email"
+            placeholder=" "
+            required
+            type="email"
+          />
+          <label class="form-lbl" for="email">EMAIL</label>
+        </div>
+        <div class="form-input-cont">
+          <input
+            class="form-input"
+            id="college"
+            list="college-list"
+            name="college"
+            placeholder=" "
+            required
+          />
+          <label class="form-lbl" for="college">COLLEGE</label>
+          <datalist id="college-list"></datalist>
+        </div>
+        <div class="form-input-cont">
+          <input
+            class="form-input"
+            id="phone"
+            name="phone"
+            placeholder=" "
+            required
+            type="number"
+          />
+          <label class="form-lbl" for="phone">PHONE</label>
+        </div>
+        <div class="form-input-cont">
+          <input
+            class="form-input"
+            id="city"
+            name="city"
+            placeholder=" "
+            required
+            type="text"
+          />
+          <label class="form-lbl" for="city">CITY</label>
+        </div>
+        <div class="form-input-cont" id="gender-cont">
+          <label>GENDER</label>
+          <div style="display: flex">
+            <input
+              class="form-input"
+              id="male"
+              name="gender"
+              placeholder=" "
+              required
+              type="radio"
+              value="male"
+            />
+            <label
+              style="margin-left: 0.4rem; transform: translateY(10px)"
+              class="lbl-small"
+              for="male"
+              >MALE</label
+            >
+            <input
+              class="form-input"
+              id="female"
+              name="gender"
+              placeholder=" "
+              required
+              type="radio"
+              value="female"
+            />
+            <label
+              style="margin-left: 0.4rem; transform: translateY(10px)"
+              class="lbl-small"
+              for="female"
+              >FEMALE</label
+            >
+            <input
+              class="form-input"
+              id="other"
+              name="gender"
+              placeholder=" "
+              required
+              type="radio"
+              value="other"
+            />
+            <label
+              style="margin-left: 0.4rem; transform: translateY(10px)"
+              class="lbl-small"
+              for="other"
+              >OTHER</label
+            >
+          </div>
+        </div>
 
-            <div class="form-input-cont">
-                <input class="form-input" id="state" name="state" placeholder=" " required>
-                <label class="form-lbl" for="state">STATE</label>
-            </div>
-            <div class="form-input-cont">
-                <select id="yos_opt" class="form-input" onchange="getyosvalue()">
-                    <option value="" selected disabled>YEAR OF STUDY</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
-            </div>
-            <div class="form-input-cont">
-                <input id="coach" name="coach" placeholder=" " type="checkbox">
-                <label class="lbl-small" for="coach">Are you a coach?</label>
-            </div>
-            <div id="form-submit-cont">
-                <button id="form-submit" type="submit">REGISTER</button>
-            </div>
-        </form>
+        <div class="form-input-cont">
+          <input
+            class="form-input"
+            id="state"
+            name="state"
+            placeholder=" "
+            required
+          />
+          <label class="form-lbl" for="state">STATE</label>
+        </div>
+        <div class="form-input-cont">
+          <select id="yos_opt" class="form-input" onchange="getyosvalue()">
+            <option value="" selected disabled>YEAR OF STUDY</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
+        </div>
+        <div class="form-input-cont">
+          <input id="coach" name="coach" placeholder=" " type="checkbox" />
+          <label class="lbl-small" for="coach">Are you a coach?</label>
+        </div>
+        <div id="form-submit-cont">
+          <button id="form-submit" type="submit">REGISTER</button>
+        </div>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>

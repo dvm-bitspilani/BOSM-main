@@ -8,7 +8,7 @@ const sport_inpt = document.getElementById("sports");
 const sport_sel_list = document.getElementById("sport-sel-list");
 const sport_list = document.getElementById("sport-list");
 const college_list = document.getElementById("college");
-const sub_but = document.getElementById("form-submit")
+const sub_but = document.getElementById("form-submit");
 
 let display_form = true;
 let avail_sports = [];
@@ -137,12 +137,12 @@ form_cont.addEventListener("click", (evt) => {
   }
 });
 
-sub_but.addEventListener('click', () => {
-  sub_but.style.backgroundColor = "rgba(41, 41, 41, 0.9)"
+sub_but.addEventListener("click", () => {
+  sub_but.style.backgroundColor = "rgba(41, 41, 41, 0.9)";
   setTimeout(() => {
-    sub_but.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
-  }, 2000)
-})
+    sub_but.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  }, 2000);
+});
 
 document.querySelectorAll(".sport-item").forEach((ele) => {
   ele.addEventListener("click", (evt) => {
@@ -155,7 +155,6 @@ document.querySelectorAll(".sport-item").forEach((ele) => {
 form_toggle();
 set_sport_list();
 get_elems();
-
 
 // added from BOSM-19
 

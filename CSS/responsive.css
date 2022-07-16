@@ -9,7 +9,6 @@
     margin-bottom: 1rem;
   }
 
-
   footer {
     transform: translateY(-3rem);
   }
@@ -43,7 +42,7 @@
     margin-inline: 0.5rem;
     font-size: 0.8rem;
   }
-  main{
+  main {
     margin-top: 5rem;
   }
   .labels div {
@@ -87,7 +86,6 @@
 
   #lightBlue {
     transform: translateX(-1.4rem);
-    
   }
 
   #lightYellow {
@@ -103,17 +101,16 @@
   .rp {
     transform: scale(1.1) translateY(-3rem) translateX(-2rem);
     animation: MoveUpDown2 2s linear infinite;
-
   }
 
   .yp {
     transform: scale(1.1) translateY(-3rem) translateX(2rem);
     animation: MoveUpDown3 2s linear infinite;
-
   }
 
   @keyframes MoveUpDown1 {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1.3) translateY(0rem);
     }
     50% {
@@ -121,7 +118,8 @@
     }
   }
   @keyframes MoveUpDown2 {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1.1) translateY(-3rem) translateX(-2rem);
     }
     50% {
@@ -129,7 +127,8 @@
     }
   }
   @keyframes MoveUpDown3 {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1.1) translateY(-3rem) translateX(2rem);
     }
     50% {
@@ -185,15 +184,15 @@
     top: 11vh !important;
     left: 12vw !important;
   }
-  #l9{
+  #l9 {
     left: 19rem !important;
     top: 11rem !important;
   }
-  #l8{
+  #l8 {
     left: 23rem !important;
     top: 8rem !important;
   }
-  #l10{
+  #l10 {
     left: 7rem !important;
     top: 7rem !important;
   }
@@ -231,15 +230,15 @@
   .left img {
     width: 50px;
   }
-  #l9{
+  #l9 {
     left: 24rem !important;
     top: 7rem !important;
   }
-  #l8{
+  #l8 {
     left: 27rem !important;
     top: 28rem !important;
   }
-  #l10{
+  #l10 {
     left: 7rem !important;
     top: 7rem !important;
   }
