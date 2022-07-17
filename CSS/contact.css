@@ -16,7 +16,7 @@
 
 .contact>h2 {
     font-size: 3.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;    
     font-weight: 600;
 }
 
@@ -85,19 +85,35 @@
         align-items: center;
     }
     .contDiv{
-        width: 80%;
+        width: 80% !important;
     }
     .contact>h2{
-        margin-inline: 0.5rem;
+        margin-inline: 1rem;
         font-size: 3rem;
     }
     .contactCont{
         margin-bottom: 3rem;
     }
 }
+@media (max-width: 400px) {
+    .contact>h2{
+        padding-left: 1rem;
+        font-size: 2.5rem;
+    }
+}
 @media (max-width: 1200px) {
     .contact>img{
         transform: translateY(13rem);
     }
+    .contDiv{
+        margin-inline: 3rem;
+        width: 30%;
+    }
     
+}
+@media (min-width:1200px) and (max-width:1400px) {
+    .contDiv{
+        margin-inline: 3rem;
+        width: 19%;
+    }
 }
