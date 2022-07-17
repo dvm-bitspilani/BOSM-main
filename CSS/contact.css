@@ -17,6 +17,7 @@
 .contact>h2 {
     font-size: 3.4rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .contactCont {
@@ -72,9 +73,8 @@
 
 .contactImgCont {
     mix-blend-mode: overlay;
-    background: #8E8E8E;
+    background: transparent;
     opacity: 0.9;
-    box-shadow: inset -1px 2px 4px #fffcfc, inset 6px -8px 10px #2e2e2e;
     border-radius: 34px;
     width: 60%;
 }
@@ -86,6 +86,13 @@
     }
     .contDiv{
         width: 80%;
+    }
+    .contact>h2{
+        margin-inline: 0.5rem;
+        font-size: 3rem;
+    }
+    .contactCont{
+        margin-bottom: 3rem;
     }
 }
 @media (max-width: 1200px) {
