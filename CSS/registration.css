@@ -29,26 +29,28 @@ body {
 
 #reg-form {
   font-family: "Montserrat", sans-serif;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 0 3px #eeecec;
   border-radius: 30px;
   outline: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: #eeecec;
   padding: 20px 50px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .col {
   display: flex;
   flex-direction: column;
   width: 50%;
+  align-content: center;
+  justify-content: center;
 }
 
 .bgImage {
@@ -89,7 +91,7 @@ body {
 }
 
 .form-input-cont {
-  width: 100%;
+  width: 80%;
   position: relative;
   margin-bottom: 35px;
 }
@@ -103,7 +105,7 @@ label {
   top: 0;
   left: 0;
   margin: auto 0;
-  transform: translateY(25%);
+  transform: translateY(40%);
   transition: all 200ms ease;
   pointer-events: none;
   transform-origin: 0%;
@@ -111,7 +113,6 @@ label {
 
 .form-input-cont:focus-within .form-lbl,
 .form-input:not(:placeholder-shown) + .form-lbl,
-.form-input-cont:valid + .form-lbl,
 #gender-lbl {
   transform: scale(0.8) translateY(calc(-105%));
   font-weight: 300;
@@ -124,11 +125,11 @@ label {
 
 .form-input {
   font-size: 1.25rem;
-  padding: 5px 0;
+  padding: 10px 0;
   background-color: rgba(128, 128, 128, 0.1);
   outline: none;
   border: none;
-  border-bottom: 2px solid #eeecec;
+  border-bottom: 1px solid #cccccc;
   width: 80%;
   color: #eeecec;
 }
@@ -167,6 +168,8 @@ input.form-input[type="radio"] {
   height: calc(1rem + 23px);
   width: 80%;
   overflow-y: auto;
+  margin-top: 5px;
+  border: 1px solid #cccccc;
 }
 
 .sport-item {

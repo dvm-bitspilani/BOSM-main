@@ -1,12 +1,12 @@
 const END_POINT = "https://www.bitsbosm.org/2022/registrations";
-const form_cont = document.getElementById("reg-cont");
 const form = document.getElementById("reg-form");
 const sport_inpt = document.getElementById("sports");
 const sport_sel_list = document.getElementById("sport-sel-list");
 const sport_list = document.getElementById("sport-list");
 const college_list = document.getElementById("college-list");
 const col_inpt = document.getElementById("college");
-const sub_but = document.getElementById("form-submit");
+const yos_inpt = document.getElementById("yos");
+const yos_lbl = document.querySelector(".form-lbl[for='yos']");
 
 let avail_sports = [];
 let sel_sports = [];
@@ -35,7 +35,7 @@ const get_elems = async () => {
       college_pat = `${college_pat}|${val.name}`;
     });
     college_list.innerHTML = college_html;
-    document.getElementById("college").pattern = college_pat;
+    col_inpt.pattern = college_pat;
   } catch (e) {
     alert("Failure in getting data");
   }
@@ -191,6 +191,23 @@ sport_inpt.addEventListener("input", (evt) => {
   }
 });
 
+yos_inpt.addEventListener("input", (evt) => {
+  if (evt.target.value === "") {
+    yos_lbl.style.transform = "translateY(40%)";
+    yos_lbl.style.fontWeight = "500";
+  } else {
+    yos_lbl.style.transform = "scale(0.8) translateY(calc(-105%))";
+    yos_lbl.style.fontWeight = "300";
+  }
+});
+
 form.addEventListener("submit", submit_handler);
 
+if (yos_inpt.value === "") {
+  yos_lbl.style.transform = "translateY(40%)";
+  yos_lbl.style.fontWeight = "500";
+} else {
+  yos_lbl.style.transform = "scale(0.8) translateY(calc(-105%))";
+  yos_lbl.style.fontWeight = "300";
+}
 init_form();
