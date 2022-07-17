@@ -460,7 +460,7 @@ img.light {
 @keyframes fall-yellow {
   from {
     transform: translateY(-70vh);
-  }
+  } 
   to {
     transform: translateY(30vh) translateX(10vw);
   }
