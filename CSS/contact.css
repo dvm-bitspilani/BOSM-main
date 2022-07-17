@@ -42,7 +42,7 @@
 
 .name {
     margin-top: 0.8rem;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     line-height: 1.7rem;
 
 }
@@ -54,13 +54,13 @@
 }
 
 .number {
-    opacity: 0.75;
+    opacity: 0.5;
     margin-top: 0.8rem;
     font-size: 1.1rem;
 }
 
 .mail {
-    opacity: 0.8;
+    opacity: 0.5;
     margin-top: 0.8rem;
     font-size: 0.9rem;
 }
