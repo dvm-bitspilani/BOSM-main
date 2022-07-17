@@ -93,10 +93,11 @@ body {
 .form-input-cont {
   width: 80%;
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
-label {
+label,
+#gender-lbl {
   font-size: 1.25rem;
 }
 
@@ -109,6 +110,10 @@ label {
   transition: all 200ms ease;
   pointer-events: none;
   transform-origin: 0%;
+}
+
+#gender-lbl {
+  margin-bottom: 10px;
 }
 
 .form-input-cont:focus-within .form-lbl,
@@ -337,7 +342,8 @@ input.form-input[type="radio"] {
     font-size: 0.75rem;
   }
 
-  .form-lbl {
+  .form-lbl,
+  #gender-lbl {
     font-size: 0.75rem;
   }
 }
