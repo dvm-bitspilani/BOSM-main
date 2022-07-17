@@ -433,14 +433,6 @@ img.light {
   width: 30%;
 }
 
-#lightYellow {
-  left: 55%;
-  animation-delay: 1.5s;
-  top: 0;
-  height: 99vh;
-  width: 30%;
-}
-
 @keyframes fall-blue {
   from {
     transform: none;
@@ -450,9 +442,16 @@ img.light {
   }
 }
 
-#lightYellow,
-.fall-yellow {
+#lightYellow, .fall-yellow {
   background-image: url("../Assets/ys.png");
+  left: 55%;
+  animation-delay: 1.5s;
+  top: 0;
+  height: 99vh;
+  width: 30%;
+}
+
+.fall-yellow {
   animation: fall-yellow 15s linear infinite;
   transform: rotate(-25deg) !important;
 }
