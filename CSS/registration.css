@@ -164,19 +164,51 @@ input.form-input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
   background: rgba(128, 128, 128, 0.1);
-  max-height: calc(1rem + 23px);
+  height: calc(1rem + 23px);
   width: 80%;
   overflow-y: auto;
 }
 
 .sport-item {
   list-style-type: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   background-color: rgba(200, 200, 200, 0.4);
+  align-items: center;
+  justify-content: center;
   padding: 5px 10px;
   border-radius: 5px;
   margin: 5px;
   font-size: 1rem;
+}
+
+.cross {
+  width: 13px;
+  height: 13px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.cross::before {
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  top: 0;
+  background-color: white;
+  content: "";
+  transform: rotate(45deg);
+  transform-origin: 0;
+}
+
+.cross::after {
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  bottom: 0;
+  background-color: white;
+  content: "";
+  transform: rotate(-45deg);
+  transform-origin: 0;
 }
 
 #form-submit-cont {
