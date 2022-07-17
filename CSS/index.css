@@ -395,6 +395,8 @@ img.light {
 .fall-yellow {
   background-image: none !important;
   height: 80vh !important;
+  transform: translateY(-80vh);
+  opacity: 0;
   position: absolute;
   animation: fall-blue 40s linear infinite;
 }
@@ -415,10 +417,10 @@ img.light {
 
 @keyframes fall-red {
   from {
-    transform: translateY(-10vh);
+    transform: translateY(-10vh) translateX(5vw);
   }
   to {
-    transform: translateY(30vh) translateX(-10vw);
+    transform: translateY(30vh) translateX(0vw);
   }
 }
 
