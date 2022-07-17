@@ -1,0 +1,80 @@
+.contact {
+    margin-top: 15rem;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.contact>img {
+    position: absolute;
+    top: -20rem;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.contact>h2 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+}
+
+.contactCont {
+    display: flex;
+    flex-wrap: wrap;
+    width: 86%;
+    justify-content: center;
+}
+
+.contDiv {
+    margin-top: 3rem;
+    z-index: 2;
+    border-radius: 40px;
+    padding: 0.4rem;
+    width: 15%;
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.name {
+    margin-top: 0.8rem;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+
+}
+
+.dept {
+    opacity: 0.8;
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.number {
+    opacity: 0.75;
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.mail {
+    opacity: 0.8;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.contactImg {
+    mix-blend-mode: overlay;
+    width: 100%;
+    border-radius: 34px;
+}
+
+.contactImgCont {
+    mix-blend-mode: overlay;
+    background: #8E8E8E;
+    opacity: 0.9;
+    box-shadow: inset -1px 2px 4px #fffcfc, inset 6px -8px 10px #2e2e2e;
+    border-radius: 34px;
+    width: 60%;
+}
