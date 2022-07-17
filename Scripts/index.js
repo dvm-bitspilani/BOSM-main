@@ -104,14 +104,18 @@ window.addEventListener("DOMContentLoaded", () => {
 // })
 
 ////////// SPOTLIGHT EFFECT
+
 setInterval(() => {
   document.getElementById("lightRed").style.opacity = 1;
+  document.querySelector(".fall-red").style.opacity = 1;
 }, 3000);
 
 setInterval(() => {
   document.getElementById("lightBlue").style.opacity = 1;
+  document.querySelector(".fall-blue").style.opacity = 1;
 }, 3500);
 
 setInterval(() => {
   document.getElementById("lightYellow").style.opacity = 1;
+  document.querySelector(".fall-yellow").style.opacity = 1;
 }, 3300);
