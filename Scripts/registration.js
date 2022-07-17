@@ -81,6 +81,7 @@ async function submit_form() {
     }
 
     let capt = grecaptcha.getResponse();
+    console.log(capt);
 
     let data = {
       name: name,
@@ -141,15 +142,32 @@ const set_sport_list = () => {
     sports_avail_html = `${sports_avail_html}<option label="${val.name}" value="${val.name}" />`;
   });
   sport_list.innerHTML = sports_avail_html;
-  sel_sports.forEach((val) => {
-    sports_sel_html = `${sports_sel_html}<li class="sport-item">${val.name}</li>`;
-  });
-  sport_sel_list.innerHTML = sports_sel_html;
   if (sel_sports.length === 0) {
-    sport_sel_list.style.display = "none";
-  } else {
-    sport_sel_list.style.display = "flex";
+    sport_sel_list.innerHTML = `<li class="sport-item">SELECT ONE OR MORE SPORTS</li>`;
+    return;
   }
+  sel_sports.forEach((val) => {
+    sports_sel_html = `${sports_sel_html}<li class="sport-item">${val.name} <div class="cross"></div></li>`;
+  });
+
+  sport_sel_list.innerHTML = sports_sel_html;
+
+  document.querySelectorAll(".sport-item").forEach((ele) => {
+    let cross = ele.querySelector(".cross");
+    let text = ele.textContent.trim();
+    cross.addEventListener("click", (evt) => {
+      let ele_idx = -1;
+      sel_sports.some((sport, idx) => {
+        if (sport.name === text) {
+          ele_idx = idx;
+          return;
+        }
+      });
+      avail_sports.push(sel_sports[ele_idx]);
+      sel_sports.splice(ele_idx, 1);
+      set_sport_list();
+    });
+  });
 };
 
 const init_form = async () => {
@@ -174,13 +192,5 @@ sport_inpt.addEventListener("input", (evt) => {
 });
 
 form.addEventListener("submit", submit_handler);
-
-document.querySelectorAll(".sport-item").forEach((ele) => {
-  ele.addEventListener("click", (evt) => {
-    avail_sports.push(ele.textContent);
-    sel_sports.splice(sel_sports.indexOf(ele.textContent), 1);
-    set_sport_list();
-  });
-});
 
 init_form();

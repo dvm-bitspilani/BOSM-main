@@ -411,15 +411,14 @@ img.light {
 
 .fall-red {
   animation: fall-red 15s linear infinite;
-  transform: rotate(25deg) !important;
 }
 
 @keyframes fall-red {
   from {
-    transform: rotate(25deg) translateY(0);
+    transform: translateY(0);
   }
   to {
-    transform: rotate(25deg) translateY(30vh) translateX(-10vw);
+    transform: translateY(30vh) translateX(-10vw);
   }
 }
 
@@ -442,7 +441,8 @@ img.light {
   }
 }
 
-#lightYellow, .fall-yellow {
+#lightYellow,
+.fall-yellow {
   background-image: url("../Assets/ys.png");
   left: 55%;
   animation-delay: 1.5s;
@@ -453,15 +453,14 @@ img.light {
 
 .fall-yellow {
   animation: fall-yellow 15s linear infinite;
-  transform: rotate(-25deg) !important;
 }
 
 @keyframes fall-yellow {
   from {
-    transform: rotate(-25deg) translateY(0);
+    transform: translateY(0);
   }
   to {
-    transform: rotate(-25deg) translateY(30vh) translateX(10vw);
+    transform: translateY(30vh) translateX(10vw);
   }
 }
 
