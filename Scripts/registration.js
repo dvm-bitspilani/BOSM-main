@@ -81,6 +81,7 @@ async function submit_form() {
     }
 
     let capt = grecaptcha.getResponse();
+    console.log(capt);
 
     let data = {
       name: name,
@@ -150,6 +151,21 @@ const set_sport_list = () => {
   } else {
     sport_sel_list.style.display = "flex";
   }
+
+  document.querySelectorAll(".sport-item").forEach((ele) => {
+    ele.addEventListener("click", (evt) => {
+      let ele_idx = -1;
+      sel_sports.some((sport, idx) => {
+        if (sport.name === ele.textContent) {
+          ele_idx = idx;
+          return;
+        }
+      });
+      avail_sports.push(sel_sports[ele_idx]);
+      sel_sports.splice(ele_idx, 1);
+      set_sport_list();
+    });
+  });
 };
 
 const init_form = async () => {
@@ -174,13 +190,5 @@ sport_inpt.addEventListener("input", (evt) => {
 });
 
 form.addEventListener("submit", submit_handler);
-
-document.querySelectorAll(".sport-item").forEach((ele) => {
-  ele.addEventListener("click", (evt) => {
-    avail_sports.push(ele.textContent);
-    sel_sports.splice(sel_sports.indexOf(ele.textContent), 1);
-    set_sport_list();
-  });
-});
 
 init_form();
