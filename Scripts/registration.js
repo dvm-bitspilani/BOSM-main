@@ -121,9 +121,9 @@ async function submit_form() {
       document.getElementById("sports").value = "";
       avail_sports = [...avail_sports, ...sel_sports];
       sel_sports = [];
-    } else {
-      grecaptcha.reset();
+      set_sport_list();
     }
+    grecaptcha.reset();
   } catch (e) {
     console.log(e);
   }
