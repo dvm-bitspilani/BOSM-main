@@ -396,7 +396,7 @@ img.light {
   background-image: none !important;
   height: 80vh !important;
   position: absolute;
-  animation: fall-blue 15s linear infinite;
+  animation: fall-blue 40s linear infinite;
 }
 
 #lightRed,
@@ -410,12 +410,12 @@ img.light {
 }
 
 .fall-red {
-  animation: fall-red 15s linear infinite;
+  animation: fall-red 40s linear infinite;
 }
 
 @keyframes fall-red {
   from {
-    transform: translateY(0);
+    transform: translateY(-10vh);
   }
   to {
     transform: translateY(30vh) translateX(-10vw);
@@ -434,7 +434,7 @@ img.light {
 
 @keyframes fall-blue {
   from {
-    transform: none;
+    transform: translateY(-10vh);
   }
   to {
     transform: translateY(30vh);
@@ -452,12 +452,12 @@ img.light {
 }
 
 .fall-yellow {
-  animation: fall-yellow 15s linear infinite;
+  animation: fall-yellow 40s linear infinite;
 }
 
 @keyframes fall-yellow {
   from {
-    transform: translateY(0);
+    transform: translateY(-10vh);
   }
   to {
     transform: translateY(30vh) translateX(10vw);
