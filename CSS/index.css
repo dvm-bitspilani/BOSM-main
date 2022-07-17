@@ -396,7 +396,7 @@ img.light {
   background-image: none !important;
   height: 80vh !important;
   position: absolute;
-  animation: fall-blue 15s linear infinite;
+  animation: fall-blue 40s linear infinite;
 }
 
 #lightRed,
@@ -410,16 +410,15 @@ img.light {
 }
 
 .fall-red {
-  animation: fall-red 15s linear infinite;
-  transform: rotate(25deg) !important;
+  animation: fall-red 40s linear infinite;
 }
 
 @keyframes fall-red {
   from {
-    transform: rotate(25deg) translateY(0);
+    transform: translateY(-10vh);
   }
   to {
-    transform: rotate(25deg) translateY(30vh) translateX(-10vw);
+    transform: translateY(30vh) translateX(-10vw);
   }
 }
 
@@ -435,14 +434,15 @@ img.light {
 
 @keyframes fall-blue {
   from {
-    transform: none;
+    transform: translateY(-10vh);
   }
   to {
     transform: translateY(30vh);
   }
 }
 
-#lightYellow, .fall-yellow {
+#lightYellow,
+.fall-yellow {
   background-image: url("../Assets/ys.png");
   left: 55%;
   animation-delay: 1.5s;
@@ -452,16 +452,15 @@ img.light {
 }
 
 .fall-yellow {
-  animation: fall-yellow 15s linear infinite;
-  transform: rotate(-25deg) !important;
+  animation: fall-yellow 40s linear infinite;
 }
 
 @keyframes fall-yellow {
   from {
-    transform: rotate(-25deg) translateY(0);
+    transform: translateY(-10vh);
   }
   to {
-    transform: rotate(-25deg) translateY(30vh) translateX(10vw);
+    transform: translateY(30vh) translateX(10vw);
   }
 }
 
