@@ -1,5 +1,7 @@
+/////////////// TIMER ANIMATION
+
+
 const bosm = new Date("October 15, 2022 23:59:59").getTime();
-const stars_cont = document.getElementById("stars-cont");
 let prev_days, prev_hrs, prev_min, days, hrs, min;
 
 let count = setInterval(() => {
@@ -44,39 +46,39 @@ let count = setInterval(() => {
   document.getElementById("mins").innerHTML = min;
 }, 2000);
 
-// Stars spawning randomly
+////////// RANDOM STARS 
 
-let stars = "";
-const sc_factor = Math.random() * 0.1 + 0.25;
-let height = window.innerHeight;
-let width = window.innerWidth;
-let star_count = (height * width * sc_factor) / 1000;
+// let stars = "";
+// const sc_factor = Math.random() * 0.1 + 0.25;
+// let height = window.innerHeight;
+// let width = window.innerWidth;
+// let star_count = (height * width * sc_factor) / 1000;
 
-const add_stars = () => {
-  stars = "";
-  for (let i = 0; i < star_count; i++) {
-    let class_int = Math.random();
-    let offset_x = Math.random() * 1;
-    let offset_y = Math.random() * 1;
+// const add_stars = () => {
+//   stars = "";
+//   for (let i = 0; i < star_count; i++) {
+//     let class_int = Math.random();
+//     let offset_x = Math.random() * 1;
+//     let offset_y = Math.random() * 1;
 
-    if (class_int < 0.5) {
-      stars = `${stars}\n
-      <div class="star-type1 star" style="left: ${offset_x * width}px; top: ${
-        offset_y * height
-      }px"></div>`;
-    } else {
-      stars = `${stars}\n
-      <div class="star-type2 star" style="left: ${offset_x * width}px; top: ${
-        offset_y * height
-      }px"></div>`;
-    }
-  }
-  stars_cont.innerHTML = stars;
-};
+//     if (class_int < 0.5) {
+//       stars = `${stars}\n
+//       <div class="star-type1 star" style="left: ${offset_x * width}px; top: ${
+//         offset_y * height
+//       }px"></div>`;
+//     } else {
+//       stars = `${stars}\n
+//       <div class="star-type2 star" style="left: ${offset_x * width}px; top: ${
+//         offset_y * height
+//       }px"></div>`;
+//     }
+//   }
+//   stars_cont.innerHTML = stars;
+// };
 
-add_stars();
+// add_stars();
 
-// Audio Files
+////////// AUDIO FILES
 
 let sound = new Audio("../Assets/switchsound.mp3");
 
@@ -91,7 +93,8 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 500);
 });
 
-//Lines
+////////// LINES Transform
+
 // const lines = document.getElementsByClassName('lines')
 // let scroll = window.pageYOffset;
 // let rate = (scroll * 0.5) - 750;
@@ -100,8 +103,7 @@ window.addEventListener("DOMContentLoaded", () => {
 //   lines[0].style.transform = 'translate3d(0px,' + rate + 'px,0px)';
 // })
 
-// Light animation
-
+////////// SPOTLIGHT EFFECT
 setInterval(() => {
   document.getElementById("lightRed").style.opacity = 1;
 }, 3000);

@@ -126,48 +126,18 @@ main {
   left: 50rem;
 }
 
-.text > h2 {
-  font-family: Zona;
-  margin-top: -12rem;
-  font-size: 18rem;
-  background: radial-gradient(
-    77.96% 176.3% at 48.29% -5.99%,
-    #ffffff 0%,
-    #cacaca 55.46%,
-    #e5e5e5 69.99%,
-    #32322f 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 0.05em;
-  filter: blur(0.04rem);
-  z-index: 30;
-}
-
 .text {
   z-index: 30;
   margin-top: -16rem;
 }
 
 .text > img {
-  max-width: 87%;
+  width: 84%;
   height: auto;
 }
 
 #bosmRise {
   margin-top: -2rem;
-}
-
-.text > h3 {
-  font-family: Striker;
-  font-size: 3rem;
-  margin-top: -2rem;
-  -webkit-text-stroke-color: #ffffff;
-  -webkit-text-stroke-width: 1px;
-  color: black;
-  letter-spacing: 0.11em;
-  z-index: 30;
 }
 
 .text {
@@ -185,7 +155,7 @@ main {
   display: flex;
   width: 100%;
   height: 50vh;
-  margin-top: 4rem;
+  margin-top: 3rem;
   justify-content: center;
   width: 75%;
 }
@@ -420,7 +390,18 @@ img.light {
   z-index: 30 !important;
 }
 
-#lightRed {
+.fall-blue,
+.fall-red,
+.fall-yellow {
+  background-image: none !important;
+  height: 80vh !important;
+  position: absolute;
+  animation: fall-blue 15s linear infinite;
+}
+
+#lightRed,
+.fall-red {
+  background-image: url("../Assets/rs.png");
   left: 10%;
   top: 0;
   animation-delay: 1s;
@@ -428,7 +409,23 @@ img.light {
   width: 35%;
 }
 
-#lightBlue {
+.fall-red {
+  animation: fall-red 15s linear infinite;
+  transform: rotate(25deg) !important;
+}
+
+@keyframes fall-red {
+  from {
+    transform: rotate(25deg) translateY(0);
+  }
+  to {
+    transform: rotate(25deg) translateY(30vh) translateX(-10vw);
+  }
+}
+
+#lightBlue,
+.fall-blue {
+  background-image: url("../Assets/bs.png");
   left: 35%;
   animation-delay: 2.3s;
   top: 0;
@@ -436,12 +433,36 @@ img.light {
   width: 30%;
 }
 
-#lightYellow {
+@keyframes fall-blue {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateY(30vh);
+  }
+}
+
+#lightYellow, .fall-yellow {
+  background-image: url("../Assets/ys.png");
   left: 55%;
   animation-delay: 1.5s;
   top: 0;
   height: 99vh;
   width: 30%;
+}
+
+.fall-yellow {
+  animation: fall-yellow 15s linear infinite;
+  transform: rotate(-25deg) !important;
+}
+
+@keyframes fall-yellow {
+  from {
+    transform: rotate(-25deg) translateY(0);
+  }
+  to {
+    transform: rotate(-25deg) translateY(30vh) translateX(10vw);
+  }
 }
 
 .star {

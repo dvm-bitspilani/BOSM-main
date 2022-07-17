@@ -81,7 +81,7 @@
     width: 40vw !important;
   }
 
-  #lightRed {
+  #lightRed, .fall-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 5%;
   }
@@ -90,7 +90,7 @@
     transform: translateX(-1.4rem);
   }
 
-  #lightYellow {
+  #lightYellow, .fall-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
@@ -111,28 +111,36 @@
   }
 
   @keyframes MoveUpDown1 {
+
     0%,
     100% {
       transform: scale(1.3) translateY(0rem);
     }
+
     50% {
       transform: scale(1.3) translateY(4px);
     }
   }
+
   @keyframes MoveUpDown2 {
+
     0%,
     100% {
       transform: scale(1.1) translateY(-3rem) translateX(-2rem);
     }
+
     50% {
       transform: scale(1.1) translateY(-2.75rem) translateX(-2rem);
     }
   }
+
   @keyframes MoveUpDown3 {
+
     0%,
     100% {
       transform: scale(1.1) translateY(-3rem) translateX(2rem);
     }
+
     50% {
       transform: scale(1.1) translateY(-2.75rem) translateX(2rem);
     }
@@ -158,7 +166,7 @@
   #l2 {
     top: 5vh !important;
     z-index: 21;
-    left: 92vw !important;
+    left: 74vw !important;
   }
 
   #l3 {
@@ -244,8 +252,8 @@
   }
 
   #l8 {
-    left: 27rem !important;
-    top: 28rem !important;
+    left: 22rem !important;
+    top: 19rem !important;
   }
 
   #l10 {
@@ -266,10 +274,6 @@
     left: 18vw !important;
   }
 
-  footer {
-    transform: translateY(-4rem);
-  }
-
   .text h3 {
     margin-top: -1rem;
     font-size: 1.2rem;
@@ -287,9 +291,65 @@
     display: block;
     z-index: 30;
     font-family: "Montserrat", sans-serif;
+    margin-top: 3.4rem;
   }
 
   #desktopRegist {
     display: none;
   }
-}
+
+  .light {
+    top: -8vh !important;
+    height: 80vh !important;
+    width: 40vw !important;
+  }
+
+  main {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  #lightRed {
+    transform: translateX(-2.4rem) rotate(5.29deg);
+    left: 15%;
+  }
+
+  #lightBlue {
+    transform: translateX(-1.4rem);
+    left: 40%;
+  }
+
+  .text>img {
+    width: 94%;
+  }
+  .text{
+    width: 100%;
+  }
+
+  #bosmRise {
+    margin-top: 0.4rem;
+    width: 70%;
+  }
+
+  #lightYellow {
+    transform: translateX(0.2rem) rotate(-5.29deg);
+    left: 60%;
+  }
+
+  .pictures img {
+    width: 95%;
+  }
+  .bp{
+    margin-left: 1rem;
+  }
+  #phoneRegist{
+    padding: 1.2rem 2.8rem;
+    margin-top: 5rem;
+  }
+  footer{
+    padding: 0;
+  }
+  .time{
+    margin-left: -1rem;
+  }
+  }
