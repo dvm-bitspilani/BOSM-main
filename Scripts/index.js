@@ -108,6 +108,7 @@ setTimeout(() => {
   for (let i = 0; i < 3; i++) {
     document.getElementsByClassName("fall-red")[i].style.opacity = 1;
   }
+
   document.querySelector(".bg-red").style.opacity = 1;
   document.getElementById("lightRed").style.opacity = 1;
 }, 3000);
@@ -116,10 +117,8 @@ setTimeout(() => {
   for (let i = 0; i < 3; i++) {
     document.getElementsByClassName("fall-blue")[i].style.opacity = 1;
   }
+
   document.getElementById("lightBlue").style.opacity = 1;
-  document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
-  document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
-  document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
   document.querySelector(".bg-blue").style.opacity = 1;
 }, 3500);
 
@@ -127,9 +126,7 @@ setTimeout(() => {
   for (let i = 0; i < 3; i++) {
     document.getElementsByClassName("fall-yellow")[i].style.opacity = 1;
   }
+  
   document.getElementById("lightYellow").style.opacity = 1;
-  document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
-  document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
-  document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
   document.querySelector(".bg-yellow").style.opacity = 1;
 }, 3300);
