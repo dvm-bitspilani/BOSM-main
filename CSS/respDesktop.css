@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: 1150px) and (max-width: 1450px) {
+@media (min-width: 1200px) and (max-width: 1450px) {
   .scrollNav {
     top: 46%;
     left: -10%;
@@ -19,7 +19,7 @@
   }
 }
 
-@media (min-width: 800px) and (max-width: 1150px) {
+@media (min-width: 800px) and (max-width: 1200px) {
   .scrollNav {
     top: 46%;
     left: -14%;

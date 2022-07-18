@@ -1,6 +1,5 @@
 /////////////// TIMER ANIMATION
 
-
 const bosm = new Date("October 15, 2022 23:59:59").getTime();
 let prev_days, prev_hrs, prev_min, days, hrs, min;
 
@@ -46,7 +45,7 @@ let count = setInterval(() => {
   document.getElementById("mins").innerHTML = min;
 }, 2000);
 
-////////// RANDOM STARS 
+////////// RANDOM STARS
 
 // let stars = "";
 // const sc_factor = Math.random() * 0.1 + 0.25;
@@ -105,20 +104,35 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ////////// SPOTLIGHT EFFECT
 
-setInterval(() => {
+setTimeout(() => {
   document.getElementById("lightRed").style.opacity = 1;
-  document.querySelector(".fall-red").style.opacity = 1;
   document.querySelector(".bg-red").style.opacity = 1;
 }, 3000);
 
-setInterval(() => {
+setTimeout(() => {
   document.getElementById("lightBlue").style.opacity = 1;
-  document.querySelector(".fall-blue").style.opacity = 1;
   document.querySelector(".bg-blue").style.opacity = 1;
 }, 3500);
 
-setInterval(() => {
+setTimeout(() => {
   document.getElementById("lightYellow").style.opacity = 1;
-  document.querySelector(".fall-yellow").style.opacity = 1;
   document.querySelector(".bg-yellow").style.opacity = 1;
 }, 3300);
+
+setTimeout(() => {
+  document.getElementsByClassName("fall-red")[0].style.opacity = 1;
+  document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
+  document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
+}, 2400);
+
+setTimeout(() => {
+  document.getElementsByClassName("fall-red")[1].style.opacity = 1;
+  document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
+  document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
+}, 20000);
+
+setTimeout(() => {
+  document.getElementsByClassName("fall-red")[2].style.opacity = 1;
+  document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
+  document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
+}, 40000);

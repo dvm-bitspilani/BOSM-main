@@ -63,6 +63,7 @@ body {
 
 /* Landing Content */
 main {
+  /* visibility: hidden; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -74,6 +75,10 @@ main {
   transform: scale(0.8);
   top: 40rem;
   right: 28rem;
+}
+
+#l1 {
+  top: 18rem;
 }
 
 #l2 {
@@ -101,13 +106,17 @@ main {
   right: 50rem;
 }
 
+.phoneBgMain {
+  display: none;
+}
+
 #l7 {
   top: 2rem;
   left: 30rem;
 }
 
 #l8 {
-  top: 32rem;
+  top: 24rem;
   right: 10rem;
 }
 
@@ -117,7 +126,7 @@ main {
 }
 
 #l10 {
-  top: 38rem;
+  top: 25rem;
   left: 14rem;
 }
 
@@ -137,7 +146,8 @@ main {
 }
 
 #bosmRise {
-  margin-top: -2rem;
+  margin-top: -1.2rem;
+  width: 54%;
 }
 
 .text {
@@ -271,7 +281,7 @@ main {
 
 .numbers > div {
   margin-inline: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.4rem;
   border-radius: 5px;
 }
@@ -337,14 +347,14 @@ main {
 
 .socials i {
   margin-block: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -1.1rem;
+  margin-top: -3.5rem;
   position: relative;
   z-index: 30;
 }
@@ -404,7 +414,8 @@ img.light,
 .fall-yellow {
   background-image: none !important;
   height: 80vh !important;
-  transform: translateY(-80vh);
+  animation-delay: 2.4s !important;
+  transform: translateY(-60vh);
   opacity: 0;
   position: absolute;
   animation: fall-blue 60s linear infinite;
@@ -426,10 +437,11 @@ img.light,
 
 @keyframes fall-red {
   from {
-    transform: scale(0.4) translateY(-80vh) translateX(5rem);
+    transform: scale(0.4) translate(20rem, -60vh);
   }
+
   to {
-    transform: scale(1) translateY(30vh) translateX(-5rem);
+    transform: scale(1) translate(0rem, 30vh);
   }
 }
 
@@ -443,12 +455,17 @@ img.light,
   width: 30%;
 }
 
+.bg-blue {
+  transform: scale(0.8);
+}
+
 @keyframes fall-blue {
   from {
-    transform: translateY(-80vh);
+    transform: scale(0.7) translateY(-60vh);
   }
+
   to {
-    transform: translateY(30vh);
+    transform: scale(0.9) translateY(30vh);
   }
 }
 
@@ -468,10 +485,11 @@ img.light,
 
 @keyframes fall-yellow {
   from {
-    transform: scale(0.7) translateY(-80vh) translateX(0);
+    transform: scale(0.7) translate(-15rem, -60vh);
   }
+
   to {
-    transform: scale(1) translateY(30vh) translateX(10rem);
+    transform: scale(1) translate(0rem, 30vh);
   }
 }
 
@@ -504,6 +522,14 @@ img.light,
   justify-content: center;
   z-index: 100001;
   transition: clip-path 100ms ease;
+}
+
+.late-1 {
+  animation-delay: 20s !important;
+}
+
+.late-2 {
+  animation-delay: 40s !important;
 }
 
 @keyframes flicker {

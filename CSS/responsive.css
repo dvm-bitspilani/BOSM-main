@@ -81,16 +81,16 @@
     width: 40vw !important;
   }
 
-  #lightRed, .fall-red {
+  #lightRed, .bg-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 5%;
   }
 
-  #lightBlue {
+  #lightBlue, .bg-blue {
     transform: translateX(-1.4rem);
   }
 
-  #lightYellow, .fall-yellow {
+  #lightYellow, .bg-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
@@ -225,17 +225,21 @@
     font-size: 1.6rem;
   }
 
-  footer {
-    transform: translateY(0rem) !important;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .line {
     transform: scale(0.6) translateY(-35px);
     z-index: 0 !important;
+    display: none;
   }
+  .phoneBgMain{
+    display: block;
+    position: absolute;
+    top: -3rem;
+    left: -2rem;
 
+  }
   #l1,
   #l4,
   #l5 {
@@ -247,13 +251,13 @@
   }
 
   #l9 {
-    left: 24rem !important;
+    left: 20rem !important;
     top: 7rem !important;
   }
 
   #l8 {
-    left: 22rem !important;
-    top: 19rem !important;
+    left: 16rem !important;
+    top: 13rem !important;
   }
 
   #l10 {
@@ -307,14 +311,15 @@
   main {
     width: 100%;
     margin-inline: auto;
+    margin-top: 3.5rem;
   }
 
-  #lightRed {
+  #lightRed, .bg-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 15%;
   }
 
-  #lightBlue {
+  #lightBlue, .bg-blue {
     transform: translateX(-1.4rem);
     left: 40%;
   }
@@ -331,7 +336,7 @@
     width: 70%;
   }
 
-  #lightYellow {
+  #lightYellow, .bg-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
@@ -344,7 +349,7 @@
   }
   #phoneRegist{
     padding: 1.2rem 2.8rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   footer{
     padding: 0;

@@ -1,5 +1,5 @@
 .contact {
-    margin-top: 15rem;
+    margin-top: 8rem;
     font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
@@ -9,9 +9,15 @@
 
 .contact>img {
     position: absolute;
-    top: -20rem;
+    top: -3rem;
     max-width: 100%;
     z-index: 1;
+}
+.contactBg{
+    top:-19rem !important;
+}
+.contactBgPhone{
+    display: none;
 }
 
 .contact>h2 {
@@ -23,7 +29,7 @@
 .contactCont {
     display: flex;
     flex-wrap: wrap;
-    width: 86%;
+    width: 92%;
     justify-content: center;
 }
 
@@ -32,7 +38,7 @@
     z-index: 2;
     border-radius: 40px;
     padding: 0.4rem;
-    width: 15%;
+    width: 16%;
     margin-inline: 2rem;
     display: flex;
     flex-direction: column;
@@ -42,9 +48,9 @@
 
 .name {
     margin-top: 0.8rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.7rem;
-
+    font-weight: 600;
 }
 
 .dept {
@@ -57,12 +63,14 @@
     opacity: 0.5;
     margin-top: 0.8rem;
     font-size: 1.1rem;
+    font-weight: 400;
 }
 
 .mail {
     opacity: 0.5;
     margin-top: 0.8rem;
     font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .contactImg {
@@ -79,41 +87,84 @@
     width: 60%;
 }
 
+@media (max-width: 400px) {
+    .contDiv{
+        margin-inline: 0.2rem !important;
+    }
+    .name{
+        font-size: 1rem !important;
+    }
+    .dept{
+        font-size: 0.9rem !important;
+    }
+    .mail{
+        font-size: 0.8rem !important;
+    }
+    .number{
+        font-size: 0.9rem !important;
+    }
+}
 @media (max-width: 800px) {
-    .contactCont{
-        flex-direction: column;
-        align-items: center;
+    .contact>h2{
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
+    .contactImgCont{
+        width: 80%;
+    }
+    .contactBgPhone{
+        display: block;
+        top: 0rem !important;
+    }
+    .contactBg{
+        display: none;
+    }
+    .contact{
+        margin-top: 2rem;
+    }
+    .name{
+        font-size: 1.2rem;
     }
     .contDiv{
-        width: 80% !important;
-    }
-    .contact>h2{
+        width: 45%;
         margin-inline: 1rem;
-        font-size: 3rem;
     }
+    
     .contactCont{
+        width: 100%;
         margin-bottom: 3rem;
     }
 }
-@media (max-width: 400px) {
-    .contact>h2{
-        padding-left: 1rem;
-        font-size: 2.5rem;
+@media (max-width: 800px) and (min-width: 400px) {
+    .contactImgCont{
+        width: 56% !important;
     }
+    .contDiv{
+        width: 40%;
+    }
+    
 }
-@media (max-width: 1200px) {
+@media (min-width:800px) and (max-width: 1200px) {
     .contact>img{
         transform: translateY(13rem);
     }
     .contDiv{
         margin-inline: 3rem;
-        width: 30%;
+        width: 21%;
+    }
+    .contactImgCont{
+        width:70%;
     }
     
 }
 @media (min-width:1200px) and (max-width:1400px) {
     .contDiv{
         margin-inline: 3rem;
-        width: 19%;
+        width: 16%;
     }
+}
+.transition{
+    
+    width: 100vw;
+    height: 25rem;
 }
