@@ -142,7 +142,8 @@ main {
 }
 
 #bosmRise {
-  margin-top: -2rem;
+  margin-top: -1.2rem;
+  width: 54%;
 }
 
 .text {
@@ -276,7 +277,7 @@ main {
 
 .numbers > div {
   margin-inline: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.4rem;
   border-radius: 5px;
 }
@@ -291,6 +292,7 @@ main {
 .card-flip {
   animation: card-flip 0.6s;
 }
+
 
 .labels {
   margin-top: 1rem;
@@ -342,7 +344,7 @@ main {
 
 .socials i {
   margin-block: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 footer {
