@@ -81,16 +81,16 @@
     width: 40vw !important;
   }
 
-  #lightRed, .fall-red {
+  #lightRed, .bg-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 5%;
   }
 
-  #lightBlue {
+  #lightBlue, .bg-blue {
     transform: translateX(-1.4rem);
   }
 
-  #lightYellow, .fall-yellow {
+  #lightYellow, .bg-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
@@ -314,12 +314,12 @@
     margin-top: 3.5rem;
   }
 
-  #lightRed {
+  #lightRed, .bg-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 15%;
   }
 
-  #lightBlue {
+  #lightBlue, .bg-blue {
     transform: translateX(-1.4rem);
     left: 40%;
   }
@@ -336,7 +336,7 @@
     width: 70%;
   }
 
-  #lightYellow {
+  #lightYellow, .bg-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
