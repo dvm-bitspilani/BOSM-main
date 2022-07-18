@@ -42,9 +42,9 @@
 
 .name {
     margin-top: 0.8rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.7rem;
-
+    font-weight: 600;
 }
 
 .dept {
@@ -57,12 +57,14 @@
     opacity: 0.5;
     margin-top: 0.8rem;
     font-size: 1.1rem;
+    font-weight: 400;
 }
 
 .mail {
     opacity: 0.5;
     margin-top: 0.8rem;
     font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .contactImg {
@@ -79,29 +81,61 @@
     width: 60%;
 }
 
+@media (max-width: 400px) {
+    .contDiv{
+        margin-inline: 0.2rem !important;
+    }
+    .name{
+        font-size: 1rem !important;
+    }
+    .dept{
+        font-size: 0.9rem !important;
+    }
+    .mail{
+        font-size: 0.8rem !important;
+    }
+    .number{
+        font-size: 0.9rem !important;
+    }
+}
 @media (max-width: 800px) {
-    .contactCont{
-        flex-direction: column;
-        align-items: center;
+    .contact>h2{
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
+    .contactImgCont{
+        width: 80%;
+    }
+    .contactBgPhone{
+        display: block;
+        top: 0rem !important;
+    }
+    .contactBg{
+        display: none;
+    }
+    .name{
+        font-size: 1.2rem;
     }
     .contDiv{
-        width: 80% !important;
-    }
-    .contact>h2{
+        width: 45%;
         margin-inline: 1rem;
-        font-size: 3rem;
     }
+    
     .contactCont{
+        width: 100%;
         margin-bottom: 3rem;
     }
 }
-@media (max-width: 400px) {
-    .contact>h2{
-        padding-left: 1rem;
-        font-size: 2.5rem;
+@media (max-width: 800px) and (min-width: 400px) {
+    .contactImgCont{
+        width: 56% !important;
     }
+    .contDiv{
+        width: 40%;
+    }
+    
 }
-@media (max-width: 1200px) {
+@media (min-width:800px) and (max-width: 1200px) {
     .contact>img{
         transform: translateY(13rem);
     }
