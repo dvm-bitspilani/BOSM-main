@@ -225,9 +225,6 @@
     font-size: 1.6rem;
   }
 
-  footer {
-    transform: translateY(-0.25rem) !important;
-  }
 }
 
 @media screen and (max-width: 500px) {
