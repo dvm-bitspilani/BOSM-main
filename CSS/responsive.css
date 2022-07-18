@@ -226,7 +226,7 @@
   }
 
   footer {
-    transform: translateY(0rem) !important;
+    transform: translateY(-0.25rem) !important;
   }
 }
 
@@ -234,8 +234,15 @@
   .line {
     transform: scale(0.6) translateY(-35px);
     z-index: 0 !important;
+    display: none;
   }
+  .phoneBgMain{
+    display: block;
+    position: absolute;
+    top: -3rem;
+    left: -2rem;
 
+  }
   #l1,
   #l4,
   #l5 {
@@ -247,7 +254,7 @@
   }
 
   #l9 {
-    left: 24rem !important;
+    left: 20rem !important;
     top: 7rem !important;
   }
 
@@ -307,6 +314,7 @@
   main {
     width: 100%;
     margin-inline: auto;
+    margin-top: 3.5rem;
   }
 
   #lightRed {
@@ -344,7 +352,7 @@
   }
   #phoneRegist{
     padding: 1.2rem 2.8rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   footer{
     padding: 0;
