@@ -5,6 +5,10 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/5397743099.js"
+      crossorigin="anonymous"
+    ></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -100,14 +104,17 @@
             </div>
           </div>
           <div class="form-input-cont">
-            <select class="form-input" id="yos" required>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
+            <input
+              class="form-input"
+              id="yos"
+              type="number"
+              pattern="1|2|3|4|5"
+              placeholder=" "
+              required
+            />
             <label class="form-lbl" for="yos">YEAR OF STUDY</label>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="form-list" id="yos-list"></ul>
             <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
           </div>
         </div>
@@ -116,25 +123,27 @@
             <input
               class="form-input"
               id="sports"
-              list="sport-list"
               name="sports"
               placeholder=" "
+              autocomplete="off"
             />
             <label class="form-lbl" for="sports">SPORTS</label>
-            <datalist id="sport-list"></datalist>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="form-list" id="sport-list"></ul>
             <ul id="sport-sel-list"></ul>
           </div>
           <div class="form-input-cont">
             <input
               class="form-input"
               id="college"
-              list="college-list"
               name="college"
               placeholder=" "
+              autocomplete="off"
               required
             />
             <label class="form-lbl" for="college">COLLEGE</label>
-            <datalist id="college-list"></datalist>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="form-list" id="college-list"></ul>
           </div>
           <div class="form-input-cont">
             <input

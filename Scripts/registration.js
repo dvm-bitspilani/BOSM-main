@@ -5,15 +5,23 @@ const sport_sel_list = document.getElementById("sport-sel-list");
 const sport_list = document.getElementById("sport-list");
 const college_list = document.getElementById("college-list");
 const col_inpt = document.getElementById("college");
+const yos_list = document.getElementById("yos-list");
 const yos_inpt = document.getElementById("yos");
 const yos_lbl = document.querySelector(".form-lbl[for='yos']");
 
+let win_height = window.innerHeight;
+let win_width = window.innerWidth;
 let avail_sports = [];
 let sel_sports = [];
+let mat_sports = [];
 let sports_avail_html = ``;
 let sports_sel_html = ``;
 let avail_colleges = [];
+let mat_colleges = [];
 let college_html = ``;
+let avail_yos = [1, 2, 3, 4, 5];
+let mat_yos = [...avail_yos];
+let yos_html = ``;
 
 const get_elems = async () => {
   try {
@@ -29,16 +37,44 @@ const get_elems = async () => {
     let sport_list_json = await sports_res.json();
     avail_colleges = await college_list_json.data;
     avail_sports = await sport_list_json.data;
-    let college_pat = ``;
-    avail_colleges.forEach((val) => {
-      college_html = `${college_html}<option label="${val.name}" value="${val.name}" />`;
-      college_pat = `${college_pat}|${val.name}`;
-    });
-    college_list.innerHTML = college_html;
-    col_inpt.pattern = college_pat;
+    mat_sports = [...avail_sports];
+    mat_colleges = [...avail_colleges];
   } catch (e) {
     alert("Failure in getting data");
   }
+};
+
+const set_college_ul = () => {
+  let college_pat = ``;
+  college_html = ``;
+  mat_colleges.forEach((val) => {
+    college_html = `${college_html}<li>${val.name}</li>`;
+    college_pat = `${college_pat}|${val.name}`;
+  });
+  college_list.innerHTML = college_html;
+  col_inpt.pattern = college_pat;
+  document.querySelectorAll("#college-list>li").forEach((ele) => {
+    ele.addEventListener("click", () => {
+      console.log("FIRED");
+      col_inpt.value = ele.textContent;
+      col_inpt.dispatchEvent(new Event("input"));
+    });
+  });
+};
+
+const set_yos_ul = () => {
+  yos_html = ``;
+  mat_yos.forEach((val) => {
+    yos_html = `${yos_html}<li>${val}</li>`;
+  });
+  yos_list.innerHTML = yos_html;
+  document.querySelectorAll("#yos-list>li").forEach((ele) => {
+    ele.addEventListener("click", () => {
+      console.log("FIRED");
+      yos_inpt.value = ele.textContent;
+      yos_inpt.dispatchEvent(new Event("input"));
+    });
+  });
 };
 
 async function submit_form() {
@@ -135,13 +171,58 @@ const submit_handler = (evt) => {
   grecaptcha.execute();
 };
 
+const set_list_coord = () => {
+  if (
+    win_height - yos_inpt.getBoundingClientRect().bottom >
+    yos_list.getBoundingClientRect().height + 20
+  ) {
+    yos_list.style.top = "100%";
+    yos_list.style.bottom = "auto";
+  } else {
+    yos_list.style.top = "auto";
+    yos_list.style.bottom = "100%";
+  }
+  if (
+    win_height - col_inpt.getBoundingClientRect().bottom >
+    college_list.getBoundingClientRect().height
+  ) {
+    college_list.style.top = "100%";
+    college_list.style.bottom = "auto";
+  } else {
+    college_list.style.top = "auto";
+    college_list.style.bottom = "100%";
+    ("polygon(0 100%, 100% 100%, 100% 100%, 0 100%)");
+  }
+  if (
+    win_height - sport_inpt.getBoundingClientRect().bottom >
+    sport_list.getBoundingClientRect().height + 20
+  ) {
+    sport_list.style.top = "30%";
+    sport_list.style.bottom = "auto";
+  } else {
+    sport_list.style.top = "auto";
+    sport_list.style.bottom = "100%";
+  }
+};
+
 const set_sport_list = () => {
   sports_avail_html = ``;
   sports_sel_html = ``;
-  avail_sports.forEach((val) => {
-    sports_avail_html = `${sports_avail_html}<option label="${val.name}" value="${val.name}" />`;
+
+  mat_sports.forEach((val) => {
+    sports_avail_html = `${sports_avail_html}<li>${val.name}</li>`;
   });
+
   sport_list.innerHTML = sports_avail_html;
+
+  document.querySelectorAll("#sport-list>li").forEach((ele) => {
+    ele.addEventListener("click", () => {
+      console.log("FIRED");
+      sport_inpt.value = ele.textContent;
+      sport_inpt.dispatchEvent(new Event("input"));
+    });
+  });
+
   if (sel_sports.length === 0) {
     sport_sel_list.innerHTML = `<li class="sport-item">SELECT ONE OR MORE SPORTS</li>`;
     return;
@@ -173,6 +254,11 @@ const set_sport_list = () => {
 const init_form = async () => {
   await get_elems();
   set_sport_list();
+  set_yos_ul();
+  set_college_ul();
+  yos_list.style.display = "none";
+  college_list.style.display = "none";
+  sport_list.style.display = "none";
 };
 
 sport_inpt.addEventListener("input", (evt) => {
@@ -187,27 +273,62 @@ sport_inpt.addEventListener("input", (evt) => {
     sel_sports.push(avail_sports[col_idx]);
     avail_sports.splice(col_idx, 1);
     evt.target.value = "";
+    mat_sports = avail_sports.filter((elem) =>
+      elem.name.toLowerCase().includes(evt.target.value)
+    );
     set_sport_list();
   }
 });
 
+col_inpt.addEventListener("input", (evt) => {
+  mat_colleges = avail_colleges.filter((elem) =>
+    elem.name.toLowerCase().includes(evt.target.value.toLowerCase())
+  );
+  set_college_ul();
+});
+
 yos_inpt.addEventListener("input", (evt) => {
-  if (evt.target.value === "") {
-    yos_lbl.style.transform = "translateY(40%) translateX(10px)";
-    yos_lbl.style.fontWeight = "500";
-  } else {
-    yos_lbl.style.transform = "scale(0.7) translateY(calc(-105%))";
-    yos_lbl.style.fontWeight = "300";
-  }
+  mat_yos = avail_yos.filter((elem) =>
+    elem.toString().toLowerCase().includes(evt.target.value)
+  );
+  set_yos_ul();
 });
 
 form.addEventListener("submit", submit_handler);
 
-if (yos_inpt.value === "") {
-  yos_lbl.style.transform = "translateY(40%) translateX(10px)";
-  yos_lbl.style.fontWeight = "500";
-} else {
-  yos_lbl.style.transform = "scale(0.7) translateY(calc(-105%))";
-  yos_lbl.style.fontWeight = "300";
-}
+window.addEventListener("resize", () => {
+  win_height = window.innerHeight;
+  win_width = window.innerWidth;
+});
+
+form.addEventListener("scroll", () => {
+  set_list_coord();
+  college_list.style.display = "none";
+  yos_list.style.display = "none";
+  sport_list.style.display = "none";
+});
+
+document.addEventListener("click", (evt) => {
+  if (col_inpt.contains(evt.target) || college_list.contains(evt.target)) {
+    college_list.style.display = "grid";
+    yos_list.style.display = "none";
+    sport_list.style.display = "none";
+  } else if (yos_inpt.contains(evt.target) || yos_list.contains(evt.target)) {
+    college_list.style.display = "none";
+    yos_list.style.display = "grid";
+    sport_list.style.display = "none";
+  } else if (
+    sport_inpt.contains(evt.target) ||
+    sport_list.contains(evt.target)
+  ) {
+    college_list.style.display = "none";
+    yos_list.style.display = "none";
+    sport_list.style.display = "grid";
+  } else {
+    college_list.style.display = "none";
+    yos_list.style.display = "none";
+    sport_list.style.display = "none";
+  }
+});
+
 init_form();
