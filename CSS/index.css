@@ -414,6 +414,7 @@ img.light,
 .fall-yellow {
   background-image: none !important;
   height: 80vh !important;
+  animation-delay: 2.4s !important;
   transform: translateY(-60vh);
   opacity: 0;
   position: absolute;
@@ -524,11 +525,11 @@ img.light,
 }
 
 .late-1 {
-  animation-delay: 20s;
+  animation-delay: 20s !important;
 }
 
 .late-2 {
-  animation-delay: 40s;
+  animation-delay: 40s !important;
 }
 
 @keyframes flicker {

@@ -105,22 +105,25 @@ window.addEventListener("DOMContentLoaded", () => {
 ////////// SPOTLIGHT EFFECT
 
 setTimeout(() => {
-  document.getElementsByClassName("fall-red")[0].style.opacity = 1;
-  document.querySelector(".bg-red").style.opacity = 1;
   document.getElementById("lightRed").style.opacity = 1;
+  document.querySelector(".bg-red").style.opacity = 1;
 }, 3000);
 
 setTimeout(() => {
-  document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
   document.getElementById("lightBlue").style.opacity = 1;
   document.querySelector(".bg-blue").style.opacity = 1;
 }, 3500);
 
 setTimeout(() => {
-  document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
   document.getElementById("lightYellow").style.opacity = 1;
   document.querySelector(".bg-yellow").style.opacity = 1;
 }, 3300);
+
+setTimeout(() => {
+  document.getElementsByClassName("fall-red")[0].style.opacity = 1;
+  document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
+  document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
+}, 2400);
 
 setTimeout(() => {
   document.getElementsByClassName("fall-red")[1].style.opacity = 1;
