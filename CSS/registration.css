@@ -49,8 +49,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  align-content: center;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 100%;
 }
 
 .bgImage {
@@ -61,6 +62,10 @@ body {
 
 #form_close {
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 #reg-cont {
@@ -82,23 +87,39 @@ body {
   text-align: center;
   align-items: center;
   height: min-content;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 .form-header h2 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   width: 100%;
 }
 
 .form-input-cont {
-  width: 80%;
+  width: 90%;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+}
+
+div.flex-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 label,
 #gender-lbl {
   font-size: 1.25rem;
+  width: max-content;
 }
 
 .form-lbl {
@@ -106,25 +127,30 @@ label,
   top: 0;
   left: 0;
   margin: auto 0;
-  transform: translateY(40%);
+  transform: translateY(40%) translateX(10px);
   transition: all 200ms ease;
   pointer-events: none;
   transform-origin: 0%;
 }
 
-#gender-lbl {
-  margin-bottom: 10px;
+#gender-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#gender-input-cont {
+  margin-top: 20px;
 }
 
 .form-input-cont:focus-within .form-lbl,
-.form-input:not(:placeholder-shown) + .form-lbl,
-#gender-lbl {
-  transform: scale(0.8) translateY(calc(-105%));
+.form-input:not(:placeholder-shown) + .form-lbl {
+  transform: scale(0.7) translateY(calc(-105%));
   font-weight: 300;
 }
 
 .lbl-small {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
@@ -137,6 +163,10 @@ label,
   border-bottom: 1px solid #cccccc;
   width: 80%;
   color: #eeecec;
+}
+
+.form-input-cont:last-child {
+  margin-bottom: 0;
 }
 
 input::-webkit-outer-spin-button,
@@ -170,7 +200,7 @@ input.form-input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
   background: rgba(128, 128, 128, 0.1);
-  height: calc(1rem + 23px);
+  height: calc(2 * (0.75rem + 23px));
   width: 80%;
   overflow-y: auto;
   margin-top: 5px;
@@ -184,10 +214,11 @@ input.form-input[type="radio"] {
   background-color: rgba(200, 200, 200, 0.4);
   align-items: center;
   justify-content: center;
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 5px;
   margin: 5px;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  height: min-content;
 }
 
 .cross {
@@ -224,11 +255,13 @@ input.form-input[type="radio"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
 
 #form-submit {
   padding: 10px 30px;
   background: rgba(0, 0, 0, 0.5);
+  height: min-content;
   outline: none;
   color: white;
   border: 2px solid #eeecec;
@@ -290,7 +323,7 @@ input.form-input[type="radio"] {
   }
 
   #sport-sel-list {
-    max-height: calc(0.75rem + 18px);
+    max-height: calc(2 * (0.75rem + 18px));
     width: 100%;
   }
 
@@ -319,7 +352,6 @@ input.form-input[type="radio"] {
   #form_close_img {
     width: 20px;
     height: 20px;
-    margin-left: -1.2rem;
   }
 
   .form-input-cont {

@@ -193,10 +193,10 @@ sport_inpt.addEventListener("input", (evt) => {
 
 yos_inpt.addEventListener("input", (evt) => {
   if (evt.target.value === "") {
-    yos_lbl.style.transform = "translateY(40%)";
+    yos_lbl.style.transform = "translateY(40%) translateX(10px)";
     yos_lbl.style.fontWeight = "500";
   } else {
-    yos_lbl.style.transform = "scale(0.8) translateY(calc(-105%))";
+    yos_lbl.style.transform = "scale(0.7) translateY(calc(-105%))";
     yos_lbl.style.fontWeight = "300";
   }
 });
@@ -204,10 +204,10 @@ yos_inpt.addEventListener("input", (evt) => {
 form.addEventListener("submit", submit_handler);
 
 if (yos_inpt.value === "") {
-  yos_lbl.style.transform = "translateY(40%)";
+  yos_lbl.style.transform = "translateY(40%) translateX(10px)";
   yos_lbl.style.fontWeight = "500";
 } else {
-  yos_lbl.style.transform = "scale(0.8) translateY(calc(-105%))";
+  yos_lbl.style.transform = "scale(0.7) translateY(calc(-105%))";
   yos_lbl.style.fontWeight = "300";
 }
 init_form();
