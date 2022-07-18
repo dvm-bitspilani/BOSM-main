@@ -63,6 +63,7 @@ body {
 
 /* Landing Content */
 main {
+  /* visibility: hidden; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -404,7 +405,7 @@ img.light,
 .fall-yellow {
   background-image: none !important;
   height: 80vh !important;
-  transform: translateY(-80vh);
+  transform: translateY(-90vh);
   opacity: 0;
   position: absolute;
   animation: fall-blue 60s linear infinite;
@@ -426,7 +427,7 @@ img.light,
 
 @keyframes fall-red {
   from {
-    transform: scale(0.4) translateY(-80vh) translateX(5rem);
+    transform: scale(0.4) translateY(-90vh) translateX(5rem);
   }
   to {
     transform: scale(1) translateY(30vh) translateX(-5rem);
@@ -443,12 +444,16 @@ img.light,
   width: 30%;
 }
 
+.bg-blue {
+  transform: scale(0.8);
+}
+
 @keyframes fall-blue {
   from {
-    transform: translateY(-80vh);
+    transform: scale(0.7) translateY(-90vh);
   }
   to {
-    transform: translateY(30vh);
+    transform: scale(0.9) translateY(30vh);
   }
 }
 
@@ -468,7 +473,7 @@ img.light,
 
 @keyframes fall-yellow {
   from {
-    transform: scale(0.7) translateY(-80vh) translateX(0);
+    transform: scale(0.7) translateY(-90vh) translateX(0);
   }
   to {
     transform: scale(1) translateY(30vh) translateX(10rem);
@@ -504,6 +509,14 @@ img.light,
   justify-content: center;
   z-index: 100001;
   transition: clip-path 100ms ease;
+}
+
+.late-1 {
+  animation-delay: 20s;
+}
+
+.late-2 {
+  animation-delay: 40s;
 }
 
 @keyframes flicker {
