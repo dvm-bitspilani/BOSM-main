@@ -75,7 +75,9 @@ main {
   top: 40rem;
   right: 28rem;
 }
-
+#l1{
+  top:18rem;
+}
 #l2 {
   top: 10rem;
   right: 36rem;
@@ -100,14 +102,16 @@ main {
   top: 16rem;
   right: 50rem;
 }
-
+.phoneBgMain{
+  display: none;
+}
 #l7 {
   top: 2rem;
   left: 30rem;
 }
 
 #l8 {
-  top: 32rem;
+  top: 24rem;
   right: 10rem;
 }
 
@@ -117,7 +121,7 @@ main {
 }
 
 #l10 {
-  top: 38rem;
+  top: 25rem;
   left: 14rem;
 }
 
