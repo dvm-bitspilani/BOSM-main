@@ -102,7 +102,7 @@ input[type="checkbox"] {
 }
 
 .form-input-cont {
-  width: 90%;
+  width: 80%;
   position: relative;
   margin-bottom: 40px;
 }
@@ -160,13 +160,13 @@ label,
   outline: none;
   border: none;
   border-bottom: 1px solid #cccccc;
-  width: 80%;
+  width: 100%;
   color: #eeecec;
 }
 
 .fa-angle-down {
   position: absolute;
-  right: 25%;
+  right: 5%;
   top: 0;
   transform: translateY(60%);
   pointer-events: none;
@@ -198,7 +198,7 @@ input.form-input[type="radio"] {
 #sport-sel-list {
   background: rgba(128, 128, 128, 0.1);
   height: calc(3 * (0.75rem + 25px));
-  width: 80%;
+  width: 100%;
   overflow-y: auto;
   margin-top: 5px;
   border: 1px solid #cccccc;
@@ -229,7 +229,7 @@ input.form-input[type="radio"] {
 .cross::before {
   position: absolute;
   height: 2px;
-  width: 15px;
+  width: 115%;
   top: 0;
   background-color: white;
   content: "";
@@ -240,7 +240,7 @@ input.form-input[type="radio"] {
 .cross::after {
   position: absolute;
   height: 2px;
-  width: 15px;
+  width: 115%;
   bottom: 0;
   background-color: white;
   content: "";
@@ -262,7 +262,7 @@ input.form-input[type="radio"] {
   grid-auto-rows: min-content;
   max-height: calc(5 * (1rem + 20px));
   overflow-y: scroll;
-  width: 80%;
+  width: 100%;
   position: absolute;
   z-index: 20;
   top: 105%;
@@ -363,7 +363,6 @@ datalist {
   }
 
   .form-input {
-    width: 100%;
     font-size: 0.9rem;
   }
 
@@ -373,15 +372,12 @@ datalist {
 
   #sport-sel-list {
     max-height: calc(2 * (0.75rem + 18px));
-    width: 100%;
   }
 
-  .fa-angle-down {
-    right: 5%;
-  }
-
-  .form-list {
-    width: 100%;
+  .cross {
+    height: 10px;
+    width: 10px;
+    margin-left: 10px;
   }
 
   .form-list li {
@@ -424,6 +420,7 @@ datalist {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    width: 100%;
   }
 
   label,
@@ -436,7 +433,6 @@ datalist {
   }
 
   .form-input {
-    width: 100%;
     font-size: 0.75rem;
   }
 
