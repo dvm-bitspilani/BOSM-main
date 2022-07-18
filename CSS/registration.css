@@ -70,8 +70,8 @@ body {
 
 #reg-cont {
   background: rgba(172, 172, 172, 0.02);
-  height: 90vh;
-  width: 80vw;
+  height: 95vh;
+  width: 90vw;
 }
 
 #form_close_img {
@@ -105,13 +105,13 @@ input[type="checkbox"] {
 .form-input-cont {
   width: 90%;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 div.flex-cont {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
@@ -155,7 +155,7 @@ label,
 }
 
 .form-input {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 10px 0;
   background-color: rgba(128, 128, 128, 0.1);
   outline: none;
@@ -200,7 +200,7 @@ input.form-input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
   background: rgba(128, 128, 128, 0.1);
-  height: calc(2 * (0.75rem + 23px));
+  height: calc(3 * (0.75rem + 25px));
   width: 80%;
   overflow-y: auto;
   margin-top: 5px;
@@ -265,7 +265,7 @@ input.form-input[type="radio"] {
   outline: none;
   color: white;
   border: 2px solid #eeecec;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-family: "Montserrat", sans-serif;
   transition: all 500ms ease;
   cursor: pointer;
@@ -304,6 +304,10 @@ input.form-input[type="radio"] {
     width: 100%;
   }
 
+  .form-input-cont:last-child {
+    margin-bottom: 30px;
+  }
+
   label,
   #gender-lbl {
     font-size: 1rem;
@@ -333,7 +337,7 @@ input.form-input[type="radio"] {
   }
 
   #form-submit {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 5px 15px;
   }
 }
@@ -354,10 +358,14 @@ input.form-input[type="radio"] {
     height: 20px;
   }
 
+  .form-input-cont:last-child {
+    margin-bottom: 20px;
+  }
+
   .form-input-cont {
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 20px;
   }
 
   label,
@@ -377,5 +385,9 @@ input.form-input[type="radio"] {
   .form-lbl,
   #gender-lbl {
     font-size: 0.75rem;
+  }
+
+  #form-submit {
+    font-size: 0.9rem;
   }
 }
