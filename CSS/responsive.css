@@ -12,7 +12,7 @@
   footer {
     transform: translateY(3rem);
   }
-
+  
   .text h3 {
     font-size: 2rem;
   }
@@ -83,8 +83,8 @@
 
   #lightRed,
   .bg-red {
-    transform: translateX(-2.4rem) rotate(5.29deg);
-    left: 5%;
+    transform: translateX(-2.4rem) rotate(1.29deg);
+    left: 11%;
   }
 
   #lightBlue,
@@ -94,8 +94,8 @@
 
   #lightYellow,
   .bg-yellow {
-    transform: translateX(0.2rem) rotate(-5.29deg);
-    left: 60%;
+    transform: translateX(0.2rem) rotate(-1.29deg);
+    left: 56%;
   }
 
   .bp {
@@ -255,6 +255,12 @@
 
   .bgMain {
     display: none;
+  }
+  .fall-yellow{
+    left: 40%;
+  }
+  .fall-red{
+    left:-3%;
   }
 
   #l1,

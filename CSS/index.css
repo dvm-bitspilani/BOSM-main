@@ -7,6 +7,9 @@
   font-family: Striker;
   src: url(../Assets/Fonts/Striker.otf);
 }
+*{
+  outline: 1px solid #F00;
+}
 
 * {
   box-sizing: border-box;
