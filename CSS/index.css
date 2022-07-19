@@ -464,7 +464,7 @@ img.light,
   }
 
   to {
-    transform: scale(1.6) translate(-5rem, 30vh);
+    transform: scale(1.6) translate(-2rem, 30vh);
   }
 }
 
@@ -532,7 +532,7 @@ img.light,
   }
 
   to {
-    transform: scale(1.7) translate(5rem, 30vh);
+    transform: scale(1.7) translate(2rem, 20vh);
   }
 }
 
