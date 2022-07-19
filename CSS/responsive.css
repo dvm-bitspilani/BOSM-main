@@ -235,6 +235,7 @@
   }
   .phoneBgMain{
     display: block;
+    width: 100%;
     position: absolute;
     top: -3rem;
     left: -2rem;
@@ -250,6 +251,9 @@
 
   .left img {
     width: 50px;
+  }
+  .text{
+    margin-top: -15rem;
   }
 
   #l9 {
@@ -298,6 +302,7 @@
     z-index: 30;
     font-family: "Montserrat", sans-serif;
     margin-top: 3.4rem;
+    margin-inline: auto;
   }
 
   #desktopRegist {
@@ -321,7 +326,7 @@
   }
 
   #lightRed, .bg-red {
-    transform: translateX(-2.4rem) rotate(5.29deg);
+    transform: translateX(-2.4rem) rotate(1.29deg);
     left: 11%;
   }
 
@@ -343,7 +348,7 @@
   }
 
   #lightYellow, .bg-yellow {
-    transform: translateX(0.2rem) rotate(-5.29deg);
+    transform: translateX(0.2rem) rotate(-1.29deg);
     left: 56%;
   }
 

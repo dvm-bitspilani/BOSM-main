@@ -31,9 +31,12 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden;  
 }
 
+body::-webkit-scrollbar{
+  width:0 !important;
+}
 /* NavBar */
 .left,
 .right {

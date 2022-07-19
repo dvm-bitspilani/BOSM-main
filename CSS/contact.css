@@ -89,7 +89,8 @@
 
 @media (max-width: 400px) {
     .contDiv{
-        margin-inline: 0.2rem !important;
+        margin-inline: 0.4rem !important;
+        width: 40% !important   ;
     }
     .name{
         font-size: 1rem !important;
@@ -102,6 +103,9 @@
     }
     .number{
         font-size: 0.9rem !important;
+    }
+    .contactImgCont{
+        width:85% !important;
     }
 }
 @media (max-width: 800px) {
