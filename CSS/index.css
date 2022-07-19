@@ -369,6 +369,7 @@ footer {
   align-items: center;
   margin-top: -3.5rem;
   position: relative;
+  max-width: 100vw;
   z-index: 30;
 }
 
