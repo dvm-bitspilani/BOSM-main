@@ -66,6 +66,7 @@
   opacity: 0.5;
   margin-top: 0.8rem;
   font-size: 1.1rem;
+  cursor: pointer;
   font-weight: 400;
 }
 
@@ -73,6 +74,7 @@
   opacity: 0.5;
   margin-top: 0.8rem;
   font-size: 0.9rem;
+  cursor: pointer;
   font-weight: 400;
 }
 

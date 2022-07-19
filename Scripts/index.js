@@ -136,3 +136,21 @@ setTimeout(() => {
   document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
   document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
 }, 40000);
+
+
+//Contact PopUp
+
+const texts = document.querySelectorAll('.name')
+
+texts.forEach(text => {
+  text.addEventListener('click', () => {
+    const textarea = document.createElement('textarea')
+    textarea.setAttribute('readonly', '')
+    textarea.style.position = 'absolute'
+    textarea.value = text.innerText;
+    document.body.appendChild(textarea)
+    textarea.select();
+    // document.execCommand('copy')
+    navigator.clipboard.writeText(textarea.value)
+  })
+});
