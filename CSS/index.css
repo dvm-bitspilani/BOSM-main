@@ -428,7 +428,7 @@ img.light,
   background-image: none !important;
   height: 80vh !important;
   animation-delay: 2.4s !important;
-  transform: translateY(-95vh);
+  transform: translateY(-93vh);
   opacity: 0;
   position: absolute;
   animation: fall-blue 51s linear infinite;
@@ -450,11 +450,21 @@ img.light,
 
 @keyframes fall-red {
   from {
-    transform: scale(0.4) translate(20rem, -95vh);
+    transform: scale(0.4) translate(20rem, -93vh);
   }
 
   to {
     transform: scale(1) translate(0rem, 30vh);
+  }
+}
+
+@keyframes fall-red-2 {
+  from {
+    transform: scale(1.4) translate(10rem, -76vh);
+  }
+
+  to {
+    transform: scale(1.6) translate(-5rem, 30vh);
   }
 }
 
@@ -474,11 +484,21 @@ img.light,
 
 @keyframes fall-blue {
   from {
-    transform: scale(0.7) translateY(-95vh);
+    transform: scale(0.7) translateY(-93vh);
   }
 
   to {
     transform: scale(0.9) translateY(30vh);
+  }
+}
+
+@keyframes fall-blue-2 {
+  from {
+    transform: scale(1.3) translateY(-76vh);
+  }
+
+  to {
+    transform: scale(1.5) translateY(30vh);
   }
 }
 
@@ -498,11 +518,21 @@ img.light,
 
 @keyframes fall-yellow {
   from {
-    transform: scale(0.7) translate(-15rem, -95vh);
+    transform: scale(0.7) translate(-15rem, -93vh);
   }
 
   to {
     transform: scale(1) translate(0rem, 30vh);
+  }
+}
+
+@keyframes fall-yellow-2 {
+  from {
+    transform: scale(1.3) translate(-10rem, -76vh);
+  }
+
+  to {
+    transform: scale(1.7) translate(5rem, 30vh);
   }
 }
 

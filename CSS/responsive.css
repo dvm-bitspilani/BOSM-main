@@ -214,6 +214,18 @@
     top: 4rem !important;
     left: 14rem !important;
   }
+
+  .fall-red {
+    animation: fall-red-2 51s linear infinite;
+  }
+
+  .fall-blue {
+    animation: fall-blue-2 51s linear infinite;
+  }
+
+  .fall-yellow {
+    animation: fall-yellow-2 51s linear infinite;
+  }
 }
 
 @media screen and (max-width: 650px) {
