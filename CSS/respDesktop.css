@@ -34,21 +34,17 @@
   }
 }
 
-/* @media (max-width: 800px) {
-    .scrollNav{
-        display: none;
-    }
+/*
+@media (max-width: 800px) {
+  .scrollNav{
+      display: none;
+  }
     
-    
-    #desktopRegist{
-        display: none;
-    }
-    
-    
+  #desktopRegist{
+      display: none;
+  } 
 }
-
-
- */
+*/
 
 @media screen and (max-width: 1500px) {
   .scrollNav {

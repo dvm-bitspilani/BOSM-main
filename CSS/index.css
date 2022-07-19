@@ -428,10 +428,10 @@ img.light,
   background-image: none !important;
   height: 80vh !important;
   animation-delay: 2.4s !important;
-  transform: translateY(-60vh);
+  transform: translateY(-95vh);
   opacity: 0;
   position: absolute;
-  animation: fall-blue 60s linear infinite;
+  animation: fall-blue 51s linear infinite;
 }
 
 #lightRed,
@@ -445,12 +445,12 @@ img.light,
 }
 
 .fall-red {
-  animation: fall-red 60s linear infinite;
+  animation: fall-red 51s linear infinite;
 }
 
 @keyframes fall-red {
   from {
-    transform: scale(0.4) translate(20rem, -60vh);
+    transform: scale(0.4) translate(20rem, -95vh);
   }
 
   to {
@@ -474,7 +474,7 @@ img.light,
 
 @keyframes fall-blue {
   from {
-    transform: scale(0.7) translateY(-60vh);
+    transform: scale(0.7) translateY(-95vh);
   }
 
   to {
@@ -493,12 +493,12 @@ img.light,
 }
 
 .fall-yellow {
-  animation: fall-yellow 60s linear infinite;
+  animation: fall-yellow 51s linear infinite;
 }
 
 @keyframes fall-yellow {
   from {
-    transform: scale(0.7) translate(-15rem, -60vh);
+    transform: scale(0.7) translate(-15rem, -95vh);
   }
 
   to {
@@ -538,11 +538,11 @@ img.light,
 }
 
 .late-1 {
-  animation-delay: 20s !important;
+  animation-delay: 17s !important;
 }
 
 .late-2 {
-  animation-delay: 40s !important;
+  animation-delay: 34s !important;
 }
 
 @keyframes flicker {
