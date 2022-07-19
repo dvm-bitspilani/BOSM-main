@@ -175,9 +175,11 @@ if (screen.width < 801) {
     document
       .getElementsByClassName("fall-red")
       [i].setAttribute("src", "Assets/smol.png");
+
     document
       .getElementsByClassName("fall-yellow")
       [i].setAttribute("src", "Assets/smol.png");
+
     document
       .getElementsByClassName("fall-blue")
       [i].setAttribute("src", "Assets/smol.png");
