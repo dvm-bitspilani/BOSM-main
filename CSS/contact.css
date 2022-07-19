@@ -208,10 +208,10 @@
 
 .transition {
   width: 100vw;
-  height: 16rem;
+  height: 23rem;
   background: black;
   z-index: 26;
-  margin-top: 0rem;
+  margin-top: -2rem;
   position: relative;
   opacity: 1;
   filter: blur(29px);
