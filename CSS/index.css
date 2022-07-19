@@ -41,7 +41,7 @@ body {
   margin-inline: 2.4rem;
 }
 
-.left > img {
+.left>img {
   width: 4.2rem;
 }
 
@@ -75,6 +75,7 @@ main {
   transform: scale(0.8);
   top: 40rem;
   right: 28rem;
+  display: none;
 }
 
 #l1 {
@@ -110,6 +111,14 @@ main {
   display: none;
 }
 
+.bgMain {
+  display: block;
+  position: absolute;
+  top: -4rem;
+  left: -1rem;
+  width:100%;
+}
+
 #l7 {
   top: 2rem;
   left: 30rem;
@@ -137,10 +146,10 @@ main {
 
 .text {
   z-index: 30;
-  margin-top: -16rem;
+  margin-top: -14rem;
 }
 
-.text > img {
+.text>img {
   width: 84%;
   height: auto;
 }
@@ -198,6 +207,7 @@ main {
 }
 
 @keyframes MoveUpDown {
+
   0%,
   100% {
     transform: translateY(0);
@@ -218,7 +228,7 @@ main {
   width: max-content;
   padding: 1rem 1.8rem;
   border: 1px solid white;
-  margin: 2rem 2.8rem;
+  margin-right: 3.8rem;
   border-radius: 40px;
   cursor: pointer;
   transition: 0.3s;
@@ -279,7 +289,7 @@ main {
   align-items: center;
 }
 
-.numbers > div {
+.numbers>div {
   margin-inline: 1.2rem;
   font-size: 1.1rem;
   padding: 0.4rem;
@@ -308,7 +318,7 @@ main {
   transform: translateY(-0.5rem);
 }
 
-.labels > div {
+.labels>div {
   margin-inline: 1rem;
 }
 
@@ -382,7 +392,7 @@ footer {
   padding: 0 0 6px;
 }
 
-.socials > a {
+.socials>a {
   cursor: pointer;
   text-decoration: none;
 }

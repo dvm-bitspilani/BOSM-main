@@ -29,7 +29,7 @@
 .contactCont {
     display: flex;
     flex-wrap: wrap;
-    width: 92%;
+    width: 98%;
     justify-content: center;
 }
 
@@ -38,7 +38,7 @@
     z-index: 2;
     border-radius: 40px;
     padding: 0.4rem;
-    width: 16%;
+    width: 13%;
     margin-inline: 2rem;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@
     background: transparent;
     opacity: 0.9;
     border-radius: 34px;
-    width: 60%;
+    width: 70%;
 }
 
 @media (max-width: 400px) {
@@ -149,22 +149,34 @@
         transform: translateY(13rem);
     }
     .contDiv{
-        margin-inline: 3rem;
-        width: 21%;
+        margin-inline: 1rem;
+        width: 16%;
     }
     .contactImgCont{
-        width:70%;
+        width:80%;
     }
     
 }
 @media (min-width:1200px) and (max-width:1400px) {
     .contDiv{
-        margin-inline: 3rem;
+        margin-inline: 1rem;
         width: 16%;
     }
 }
 .transition{
     
     width: 100vw;
-    height: 25rem;
+    height: 24rem;
+    background: black;
+    z-index: 26;
+    margin-top: 5rem;
+    position: relative;
+    opacity: 0.8;
+    filter: blur(29px);
+}
+@media (min-width:1700px) {
+    .contDiv{
+        margin-inline: 3rem;
+        width: 13%;
+    }
 }
