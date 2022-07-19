@@ -460,7 +460,7 @@ img.light,
 
 @keyframes fall-red-2 {
   from {
-    transform: translate(4rem, -59vh);
+    transform: translate(4rem, -60vh);
   }
 
   to {
@@ -494,7 +494,7 @@ img.light,
 
 @keyframes fall-blue-2 {
   from {
-    transform: translateY(-59vh);
+    transform: translateY(-60vh);
   }
 
   to {
@@ -528,7 +528,7 @@ img.light,
 
 @keyframes fall-yellow-2 {
   from {
-    transform: translate(1rem, -59vh);
+    transform: translate(1rem, -60vh);
   }
 
   to {
