@@ -12,7 +12,7 @@
   footer {
     transform: translateY(3rem);
   }
-  
+
   .text h3 {
     font-size: 2rem;
   }
@@ -215,9 +215,11 @@
     left: 14rem !important;
   }
 
-.fall-red, .fall-yellow, .fall-blue{
-  height: 60vh !important;
-}
+  .fall-red,
+  .fall-yellow,
+  .fall-blue {
+    height: 60vh !important;
+  }
 
   .fall-red {
     animation: fall-red-2 51s linear infinite;
@@ -260,11 +262,13 @@
   .bgMain {
     display: none;
   }
-  .fall-yellow{
+
+  .fall-yellow {
     left: 40%;
   }
-  .fall-red{
-    left:-3%;
+
+  .fall-red {
+    left: -3%;
   }
 
   #l1,
