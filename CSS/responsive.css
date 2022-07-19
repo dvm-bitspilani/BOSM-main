@@ -215,6 +215,10 @@
     left: 14rem !important;
   }
 
+.fall-red, .fall-yellow, .fall-blue{
+  height: 60vh !important;
+}
+
   .fall-red {
     animation: fall-red-2 51s linear infinite;
   }
