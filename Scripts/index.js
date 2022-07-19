@@ -140,17 +140,33 @@ setTimeout(() => {
 
 //Contact PopUp
 
-const texts = document.querySelectorAll('.name')
-
+const texts = document.querySelectorAll('.number')
+const mails = document.querySelectorAll('.mail')
+const copied = document.getElementById("copied")
+const textarea = document.createElement('textarea')
 texts.forEach(text => {
   text.addEventListener('click', () => {
-    const textarea = document.createElement('textarea')
-    textarea.setAttribute('readonly', '')
-    textarea.style.position = 'absolute'
-    textarea.value = text.innerText;
-    document.body.appendChild(textarea)
-    textarea.select();
-    // document.execCommand('copy')
-    navigator.clipboard.writeText(textarea.value)
+    copyText(text);
   })
 });
+mails.forEach(text => {
+  text.addEventListener('click', () => {
+    copyText(text);
+  })
+});
+
+function copyText(text) {
+  console.log(text)
+  // copied.style.transform = `translateY(${})`
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'absolute'
+  textarea.style.opacity = 0;
+  textarea.style.pointerEvents = 'none';
+  textarea.value = text.innerText;
+  document.body.appendChild(textarea)
+  textarea.select();
+  navigator.clipboard.writeText(textarea.value);
+  setTimeout(() => {
+    copied.style.opacity = 0;
+  }, 1000);
+}
