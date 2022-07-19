@@ -85,9 +85,12 @@
   }
 
   .bg-red,
-  .bg-yellow,
-  .bg-blue {
+  .bg-yellow {
     height: 74vh !important;
+  }
+
+  .bg-blue {
+    height: 69vh !important;
   }
 
   #lightRed,
@@ -357,9 +360,12 @@
   }
 
   .bg-red,
-  .bg-yellow,
-  .bg-blue {
+  .bg-yellow {
     height: 74vh !important;
+  }
+
+  .bg-blue {
+    height: 69vh !important;
   }
 
   main {
@@ -370,7 +376,7 @@
 
   .transition {
     height: 25rem !important;
-    margin-top: -11rem !important;
+    margin-top: -12rem !important;
   }
 
   #lightRed,
