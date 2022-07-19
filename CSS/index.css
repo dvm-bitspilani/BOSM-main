@@ -460,11 +460,11 @@ img.light,
 
 @keyframes fall-red-2 {
   from {
-    transform: translate(4rem, -60vh);
+    transform: scale(1.2) translate(5rem, -20vh);
   }
 
   to {
-    transform: translate(3rem, 10vh);
+    transform: scale(1.2) translate(4rem, 50vh);
   }
 }
 
@@ -494,11 +494,11 @@ img.light,
 
 @keyframes fall-blue-2 {
   from {
-    transform: translateY(-60vh);
+    transform: scale(1.2) translateY(-20vh);
   }
 
   to {
-    transform: translateY(10vh);
+    transform: scale(1.2) translateY(50vh);
   }
 }
 
@@ -528,11 +528,11 @@ img.light,
 
 @keyframes fall-yellow-2 {
   from {
-    transform: translate(1rem, -60vh);
+    transform: scale(1.2) translate(1rem, -20vh);
   }
 
   to {
-    transform: translate(2rem, 10vh);
+    transform: scale(1.2) translate(2rem, 50vh);
   }
 }
 

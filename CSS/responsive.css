@@ -75,7 +75,10 @@
     margin-block: 0.7rem !important;
   }
 
-  .light {
+  .light,
+  .bg-red,
+  .bg-yellow,
+  .bg-blue {
     top: -8vh !important;
     height: 80vh !important;
     width: 40vw !important;
@@ -218,7 +221,7 @@
   .fall-red,
   .fall-yellow,
   .fall-blue {
-    height: 60vh !important;
+    height: 20vh !important;
   }
 
   .fall-red {
@@ -338,7 +341,10 @@
     display: none;
   }
 
-  .light {
+  .light,
+  .bg-blue,
+  .bg-red,
+  .bg-yellow {
     top: -8vh !important;
     height: 80vh !important;
     width: 40vw !important;
