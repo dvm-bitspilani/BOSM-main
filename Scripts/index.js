@@ -79,7 +79,7 @@ let count = setInterval(() => {
 
 ////////// AUDIO FILES
 
-let sound = new Audio("../Assets/switchsound.mp3");
+let sound = new Audio("Assets/switchsound.mp3");
 
 function flicker() {
   sound.volume = 0.6;
@@ -137,36 +137,49 @@ setTimeout(() => {
   document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
 }, 40000);
 
-
 //Contact PopUp
 
-const texts = document.querySelectorAll('.number')
-const mails = document.querySelectorAll('.mail')
-const copied = document.getElementById("copied")
-const textarea = document.createElement('textarea')
-texts.forEach(text => {
-  text.addEventListener('click', () => {
+const texts = document.querySelectorAll(".number");
+const mails = document.querySelectorAll(".mail");
+const copied = document.getElementById("copied");
+const textarea = document.createElement("textarea");
+texts.forEach((text) => {
+  text.addEventListener("click", () => {
     copyText(text);
-  })
+  });
 });
-mails.forEach(text => {
-  text.addEventListener('click', () => {
+mails.forEach((text) => {
+  text.addEventListener("click", () => {
     copyText(text);
-  })
+  });
 });
 
 function copyText(text) {
-  console.log(text)
+  console.log(text);
   // copied.style.transform = `translateY(${})`
-  textarea.setAttribute('readonly', '')
-  textarea.style.position = 'absolute'
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "absolute";
   textarea.style.opacity = 0;
-  textarea.style.pointerEvents = 'none';
+  textarea.style.pointerEvents = "none";
   textarea.value = text.innerText;
-  document.body.appendChild(textarea)
+  document.body.appendChild(textarea);
   textarea.select();
   navigator.clipboard.writeText(textarea.value);
   setTimeout(() => {
     copied.style.opacity = 0;
   }, 1000);
+}
+
+if (screen.width < 801) {
+  for (let i = 0; i < 3; i++) {
+    document
+      .getElementsByClassName("fall-red")
+      [i].setAttribute("src", "Assets/smol.png");
+    document
+      .getElementsByClassName("fall-yellow")
+      [i].setAttribute("src", "Assets/smol.png");
+    document
+      .getElementsByClassName("fall-blue")
+      [i].setAttribute("src", "Assets/smol.png");
+  }
 }
