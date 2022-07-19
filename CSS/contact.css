@@ -1,9 +1,10 @@
 .contact {
-    margin-top: 8rem;
+    margin-top: 5rem;
     font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 27;
     position: relative;
 }
 
@@ -94,6 +95,10 @@
     }
     .name{
         font-size: 1rem !important;
+        line-height: 1.4rem;    
+    }
+    .contDiv{
+        margin-top: 1.5rem;
     }
     .dept{
         font-size: 0.9rem !important;
@@ -107,10 +112,12 @@
     .contactImgCont{
         width:85% !important;
     }
+    .contact>h2{
+        font-size: 1.6rem;
+    }
 }
 @media (max-width: 800px) {
     .contact>h2{
-        padding-left: 1rem;
         font-size: 2rem;
     }
     .contactImgCont{
@@ -170,12 +177,12 @@
 .transition{
     
     width: 100vw;
-    height: 24rem;
+    height: 16rem;
     background: black;
     z-index: 26;
-    margin-top: 5rem;
+    margin-top: 0rem;
     position: relative;
-    opacity: 0.8;
+    opacity: 1;
     filter: blur(29px);
 }
 @media (min-width:1700px) {
