@@ -81,16 +81,19 @@
     width: 40vw !important;
   }
 
-  #lightRed, .bg-red {
+  #lightRed,
+  .bg-red {
     transform: translateX(-2.4rem) rotate(5.29deg);
     left: 5%;
   }
 
-  #lightBlue, .bg-blue {
+  #lightBlue,
+  .bg-blue {
     transform: translateX(-1.4rem);
   }
 
-  #lightYellow, .bg-yellow {
+  #lightYellow,
+  .bg-yellow {
     transform: translateX(0.2rem) rotate(-5.29deg);
     left: 60%;
   }
@@ -111,7 +114,6 @@
   }
 
   @keyframes MoveUpDown1 {
-
     0%,
     100% {
       transform: scale(1.3) translateY(0rem);
@@ -123,7 +125,6 @@
   }
 
   @keyframes MoveUpDown2 {
-
     0%,
     100% {
       transform: scale(1.1) translateY(-3rem) translateX(-2rem);
@@ -135,7 +136,6 @@
   }
 
   @keyframes MoveUpDown3 {
-
     0%,
     100% {
       transform: scale(1.1) translateY(-3rem) translateX(2rem);
@@ -224,7 +224,6 @@
   .text h3 {
     font-size: 1.6rem;
   }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -233,16 +232,19 @@
     z-index: 0 !important;
     display: none;
   }
-  .phoneBgMain{
+
+  .phoneBgMain {
     display: block;
     width: 100%;
     position: absolute;
     top: -3rem;
     left: -2rem;
   }
-  .bgMain{
+
+  .bgMain {
     display: none;
   }
+
   #l1,
   #l4,
   #l5 {
@@ -252,7 +254,8 @@
   .left img {
     width: 50px;
   }
-  .text{
+
+  .text {
     margin-top: -15rem;
   }
 
@@ -320,25 +323,29 @@
     margin-inline: auto;
     margin-top: 3.5rem;
   }
-  .transition{
+
+  .transition {
     height: 14rem !important;
     margin-top: 0rem !important;
   }
 
-  #lightRed, .bg-red {
+  #lightRed,
+  .bg-red {
     transform: translateX(-2.4rem) rotate(1.29deg);
     left: 11%;
   }
 
-  #lightBlue, .bg-blue {
+  #lightBlue,
+  .bg-blue {
     transform: translateX(-1.4rem);
     left: 36%;
   }
 
-  .text>img {
+  .text > img {
     width: 94%;
   }
-  .text{
+
+  .text {
     width: 100%;
   }
 
@@ -347,7 +354,8 @@
     width: 70%;
   }
 
-  #lightYellow, .bg-yellow {
+  #lightYellow,
+  .bg-yellow {
     transform: translateX(0.2rem) rotate(-1.29deg);
     left: 56%;
   }
@@ -355,17 +363,21 @@
   .pictures img {
     width: 95%;
   }
-  .bp{
+
+  .bp {
     margin-left: 1rem;
   }
-  #phoneRegist{
+
+  #phoneRegist {
     padding: 1.2rem 2.8rem;
     margin-top: 3rem;
   }
-  footer{
+
+  footer {
     padding: 0;
   }
-  .time{
+
+  .time {
     margin-left: -1rem;
   }
-  }
+}

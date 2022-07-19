@@ -1,193 +1,214 @@
 .contact {
-    margin-top: 5rem;
-    font-family: 'Montserrat';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 27;
-    position: relative;
+  margin-top: 5rem;
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 27;
+  position: relative;
 }
 
-.contact>img {
-    position: absolute;
-    top: -3rem;
-    max-width: 100%;
-    z-index: 1;
-}
-.contactBg{
-    top:-19rem !important;
-}
-.contactBgPhone{
-    display: none;
+.contact > img {
+  position: absolute;
+  top: -3rem;
+  max-width: 100%;
+  z-index: 1;
 }
 
-.contact>h2 {
-    font-size: 3.4rem;
-    margin-bottom: 1rem;    
-    font-weight: 600;
+.contactBg {
+  top: -19rem !important;
+}
+
+.contactBgPhone {
+  display: none;
+}
+
+.contact > h2 {
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .contactCont {
-    display: flex;
-    flex-wrap: wrap;
-    width: 98%;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
+  justify-content: center;
 }
 
 .contDiv {
-    margin-top: 3rem;
-    z-index: 2;
-    border-radius: 40px;
-    padding: 0.4rem;
-    width: 13%;
-    margin-inline: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  margin-top: 3rem;
+  z-index: 2;
+  border-radius: 40px;
+  padding: 0.4rem;
+  width: 13%;
+  margin-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .name {
-    margin-top: 0.8rem;
-    font-size: 1.3rem;
-    line-height: 1.7rem;
-    font-weight: 600;
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  font-weight: 600;
 }
 
 .dept {
-    opacity: 0.8;
-    margin-top: 0.8rem;
-    font-size: 1.1rem;
+  opacity: 0.8;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .number {
-    opacity: 0.5;
-    margin-top: 0.8rem;
-    font-size: 1.1rem;
-    font-weight: 400;
+  opacity: 0.5;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .mail {
-    opacity: 0.5;
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    font-weight: 400;
+  opacity: 0.5;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .contactImg {
-    mix-blend-mode: overlay;
-    width: 100%;
-    border-radius: 34px;
+  mix-blend-mode: overlay;
+  width: 100%;
+  border-radius: 34px;
 }
 
 .contactImgCont {
-    mix-blend-mode: overlay;
-    background: transparent;
-    opacity: 0.9;
-    border-radius: 34px;
-    width: 70%;
+  mix-blend-mode: overlay;
+  background: transparent;
+  opacity: 0.9;
+  border-radius: 34px;
+  width: 70%;
 }
 
 @media (max-width: 400px) {
-    .contDiv{
-        margin-inline: 0.4rem !important;
-        width: 40% !important   ;
-    }
-    .name{
-        font-size: 1rem !important;
-        line-height: 1.4rem;    
-    }
-    .contDiv{
-        margin-top: 1.5rem;
-    }
-    .dept{
-        font-size: 0.9rem !important;
-    }
-    .mail{
-        font-size: 0.8rem !important;
-    }
-    .number{
-        font-size: 0.9rem !important;
-    }
-    .contactImgCont{
-        width:85% !important;
-    }
-    .contact>h2{
-        font-size: 1.6rem;
-    }
+  .contDiv {
+    margin-inline: 0.4rem !important;
+    width: 40% !important   ;
+  }
+
+  .name {
+    font-size: 1rem !important;
+    line-height: 1.4rem;
+  }
+
+  .contDiv {
+    margin-top: 1.5rem;
+  }
+
+  .dept {
+    font-size: 0.9rem !important;
+  }
+
+  .mail {
+    font-size: 0.8rem !important;
+  }
+
+  .number {
+    font-size: 0.9rem !important;
+  }
+
+  .contactImgCont {
+    width: 85% !important;
+  }
+
+  .contact > h2 {
+    font-size: 1.6rem;
+  }
 }
+
 @media (max-width: 800px) {
-    .contact>h2{
-        font-size: 2rem;
-    }
-    .contactImgCont{
-        width: 80%;
-    }
-    .contactBgPhone{
-        display: block;
-        top: 0rem !important;
-    }
-    .contactBg{
-        display: none;
-    }
-    .contact{
-        margin-top: 2rem;
-    }
-    .name{
-        font-size: 1.2rem;
-    }
-    .contDiv{
-        width: 45%;
-        margin-inline: 1rem;
-    }
-    
-    .contactCont{
-        width: 100%;
-        margin-bottom: 3rem;
-    }
+  .contact > h2 {
+    font-size: 2rem;
+  }
+
+  .contactImgCont {
+    width: 80%;
+  }
+
+  .contactBgPhone {
+    display: block;
+    top: 0rem !important;
+  }
+
+  .contactBg {
+    display: none;
+  }
+
+  .contact {
+    margin-top: 2rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .contDiv {
+    width: 45%;
+    margin-inline: 1rem;
+  }
+
+  .contactCont {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }
+
 @media (max-width: 800px) and (min-width: 400px) {
-    .contactImgCont{
-        width: 56% !important;
-    }
-    .contDiv{
-        width: 40%;
-    }
-    
+  .contactImgCont {
+    width: 56% !important;
+  }
+
+  .contDiv {
+    width: 40%;
+  }
 }
-@media (min-width:800px) and (max-width: 1200px) {
-    .contact>img{
-        transform: translateY(13rem);
-    }
-    .contDiv{
-        margin-inline: 1rem;
-        width: 16%;
-    }
-    .contactImgCont{
-        width:80%;
-    }
-    
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .contact > img {
+    transform: translateY(13rem);
+  }
+
+  .contDiv {
+    margin-inline: 1rem;
+    width: 16%;
+  }
+
+  .contactImgCont {
+    width: 80%;
+  }
 }
-@media (min-width:1200px) and (max-width:1400px) {
-    .contDiv{
-        margin-inline: 1rem;
-        width: 16%;
-    }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .contDiv {
+    margin-inline: 1rem;
+    width: 16%;
+  }
 }
-.transition{
-    
-    width: 100vw;
-    height: 16rem;
-    background: black;
-    z-index: 26;
-    margin-top: 0rem;
-    position: relative;
-    opacity: 1;
-    filter: blur(29px);
+
+.transition {
+  width: 100vw;
+  height: 16rem;
+  background: black;
+  z-index: 26;
+  margin-top: 0rem;
+  position: relative;
+  opacity: 1;
+  filter: blur(29px);
 }
-@media (min-width:1700px) {
-    .contDiv{
-        margin-inline: 3rem;
-        width: 13%;
-    }
+
+@media (min-width: 1700px) {
+  .contDiv {
+    margin-inline: 3rem;
+    width: 13%;
+  }
 }

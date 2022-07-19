@@ -39,11 +39,14 @@
         display: none;
     }
     
+    
     #desktopRegist{
         display: none;
     }
     
+    
 }
+
 
  */
 
@@ -53,4 +56,3 @@
     z-index: -1;
   }
 }
-
