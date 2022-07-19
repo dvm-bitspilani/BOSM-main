@@ -84,6 +84,12 @@
     width: 40vw !important;
   }
 
+  .bg-red,
+  .bg-yellow,
+  .bg-blue {
+    height: 74vh !important;
+  }
+
   #lightRed,
   .bg-red {
     transform: translateX(-2.4rem) rotate(1.29deg);
@@ -348,6 +354,12 @@
     top: -8vh !important;
     height: 80vh !important;
     width: 40vw !important;
+  }
+
+  .bg-red,
+  .bg-yellow,
+  .bg-blue {
+    height: 74vh !important;
   }
 
   main {
