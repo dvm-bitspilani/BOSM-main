@@ -7,7 +7,6 @@ const college_list = document.getElementById("college-list");
 const col_inpt = document.getElementById("college");
 const yos_list = document.getElementById("yos-list");
 const yos_inpt = document.getElementById("yos");
-const yos_lbl = document.querySelector(".form-lbl[for='yos']");
 
 let win_height = window.innerHeight;
 let win_width = window.innerWidth;
@@ -22,6 +21,52 @@ let college_html = ``;
 let avail_yos = [1, 2, 3, 4, 5];
 let mat_yos = [...avail_yos];
 let yos_html = ``;
+let yos_list_disp = false;
+let col_list_disp = false;
+let sport_list_disp = false;
+let prevent_scroll = false;
+let newTop = 0;
+let scrollInterval;
+
+const set_vh = () => {
+  let vh = win_height * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+};
+
+const set_disp_list = () => {
+  if (col_list_disp) {
+    college_list.style.display = "grid";
+    yos_list.style.display = "none";
+    sport_list.style.display = "none";
+    if (win_width < 800) {
+      newTop = form.scrollTop + col_inpt.getBoundingClientRect().top - 40;
+      prevent_scroll = true;
+      form.scrollTo({ top: newTop, behavior: "smooth" });
+    }
+  } else if (yos_list_disp) {
+    college_list.style.display = "none";
+    yos_list.style.display = "grid";
+    sport_list.style.display = "none";
+    if (win_width < 800) {
+      newTop = form.scrollTop + yos_inpt.getBoundingClientRect().top - 40;
+      prevent_scroll = true;
+      form.scrollTo({ top: newTop, behavior: "smooth" });
+    }
+  } else if (sport_list_disp) {
+    college_list.style.display = "none";
+    yos_list.style.display = "none";
+    sport_list.style.display = "grid";
+    if (win_width < 800) {
+      newTop = form.scrollTop + sport_inpt.getBoundingClientRect().top - 40;
+      prevent_scroll = true;
+      form.scrollTo({ top: newTop, behavior: "smooth" });
+    }
+  } else {
+    college_list.style.display = "none";
+    yos_list.style.display = "none";
+    sport_list.style.display = "none";
+  }
+};
 
 const get_elems = async () => {
   try {
@@ -299,36 +344,48 @@ form.addEventListener("submit", submit_handler);
 window.addEventListener("resize", () => {
   win_height = window.innerHeight;
   win_width = window.innerWidth;
+  set_vh();
+  set_disp_list();
 });
 
 form.addEventListener("scroll", () => {
   set_list_coord();
-  college_list.style.display = "none";
-  yos_list.style.display = "none";
-  sport_list.style.display = "none";
+  console.log("FIRED");
+  if (!prevent_scroll) {
+    college_list.style.display = "none";
+    yos_list.style.display = "none";
+    sport_list.style.display = "none";
+  } else {
+    clearInterval(scrollInterval);
+    scrollInterval = setTimeout(() => {
+      prevent_scroll = false;
+    }, 200);
+  }
 });
 
 document.addEventListener("click", (evt) => {
   if (col_inpt.contains(evt.target) || college_list.contains(evt.target)) {
-    college_list.style.display = "grid";
-    yos_list.style.display = "none";
-    sport_list.style.display = "none";
+    col_list_disp = true;
+    yos_list_disp = false;
+    sport_list_disp = false;
   } else if (yos_inpt.contains(evt.target) || yos_list.contains(evt.target)) {
-    college_list.style.display = "none";
-    yos_list.style.display = "grid";
-    sport_list.style.display = "none";
+    col_list_disp = false;
+    yos_list_disp = true;
+    sport_list_disp = false;
   } else if (
     sport_inpt.contains(evt.target) ||
     sport_list.contains(evt.target)
   ) {
-    college_list.style.display = "none";
-    yos_list.style.display = "none";
-    sport_list.style.display = "grid";
+    col_list_disp = false;
+    yos_list_disp = false;
+    sport_list_disp = true;
   } else {
-    college_list.style.display = "none";
-    yos_list.style.display = "none";
-    sport_list.style.display = "none";
+    col_list_disp = false;
+    yos_list_disp = false;
+    sport_list_disp = false;
   }
+  set_disp_list();
 });
 
+set_vh();
 init_form();
