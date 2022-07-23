@@ -1,5 +1,4 @@
 .contact {
-  margin-top: 5rem;
   font-family: "Montserrat";
   display: flex;
   flex-direction: column;
@@ -23,7 +22,7 @@
   display: none;
 }
 
-.contact > h2 {
+.sec-header {
   font-size: 3.4rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -35,7 +34,7 @@
   width: 98%;
   justify-content: center;
 }
-#copied{
+#copied {
   background-color: rgba(255, 255, 255, 0.452);
   color: black;
   padding: 0.4rem 0.8rem;
@@ -101,44 +100,8 @@
   width: 70%;
 }
 
-@media (max-width: 400px) {
-  .contDiv {
-    margin-inline: 0.4rem !important;
-    width: 40% !important   ;
-  }
-
-  .name {
-    font-size: 1rem !important;
-    line-height: 1.4rem;
-  }
-
-  .contDiv {
-    margin-top: 1.5rem;
-  }
-
-  .dept {
-    font-size: 0.9rem !important;
-  }
-
-  .mail {
-    font-size: 0.8rem !important;
-  }
-
-  .number {
-    font-size: 0.9rem !important;
-  }
-
-  .contactImgCont {
-    width: 85% !important;
-  }
-
-  .contact > h2 {
-    font-size: 1.6rem;
-  }
-}
-
 @media (max-width: 800px) {
-  .contact > h2 {
+  .sec-header {
     font-size: 2rem;
   }
 
@@ -208,7 +171,7 @@
 
 .transition {
   width: 100vw;
-  height: 23rem;
+  height: 10rem;
   background: black;
   z-index: 26;
   margin-top: -2rem;
@@ -221,5 +184,41 @@
   .contDiv {
     margin-inline: 3rem;
     width: 13%;
+  }
+}
+
+@media (max-width: 400px) {
+  .contDiv {
+    margin-inline: 0.4rem !important;
+    width: 40% !important   ;
+  }
+
+  .name {
+    font-size: 1rem !important;
+    line-height: 1.4rem;
+  }
+
+  .contDiv {
+    margin-top: 1.5rem;
+  }
+
+  .dept {
+    font-size: 0.9rem !important;
+  }
+
+  .mail {
+    font-size: 0.8rem !important;
+  }
+
+  .number {
+    font-size: 0.9rem !important;
+  }
+
+  .contactImgCont {
+    width: 85% !important;
+  }
+
+  .sec-header {
+    font-size: 1.6rem;
   }
 }

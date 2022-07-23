@@ -257,6 +257,10 @@
 }
 
 @media screen and (max-width: 500px) {
+  section {
+    padding: 25px 0;
+  }
+
   .line {
     transform: scale(0.6) translateY(-35px);
     z-index: 0 !important;

@@ -38,6 +38,10 @@ body::-webkit-scrollbar {
   width: 0 !important;
 }
 
+section {
+  padding: 50px 0;
+}
+
 /* NavBar */
 .left,
 .right {
