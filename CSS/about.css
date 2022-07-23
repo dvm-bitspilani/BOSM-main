@@ -8,7 +8,7 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  padding-top: 100px;
+  margin-top: -60px;
   align-items: center;
 }
 
@@ -37,7 +37,7 @@
   right: 0;
   position: absolute;
   width: 2px;
-  height: 60%;
+  height: 40%;
   background-color: white;
   margin: auto;
 }
@@ -219,7 +219,8 @@
 
 @media (max-width: 500px) {
   #about-sec {
-    padding-top: 50px;
+    padding-top: 40px;
+    background-image: url("../Assets/phoneContactBg.png");
     --offX: 25px;
     --offY: 15px;
   }
