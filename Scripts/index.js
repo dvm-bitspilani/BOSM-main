@@ -1,9 +1,17 @@
 /////////////// TIMER ANIMATION
 
 const bosm = new Date("October 15, 2022 23:59:59").getTime();
-let prev_days, prev_hrs, prev_min, days, hrs, min;
+let prev_day, prev_hr, prev_min, prev_sec, days, hrs, min, sec;
+let haha = 0;
 
-let count = setInterval(() => {
+setInterval(() => {
+  document.getElementById("sec").style.animation =
+    haha % 2 == 0 ? "card-flip 0.6s" : "none";
+
+  haha++;
+}, 500);
+
+setInterval(() => {
   const current_time = new Date().getTime();
 
   // updating number of days left
@@ -19,31 +27,42 @@ let count = setInterval(() => {
     Math.floor((bosm - current_time) / (1000 * 60)) - days * 24 * 60 - hrs * 60;
   min = min < 10 ? `0${min}` : min;
 
+  // updating number of seconds left (in that min)
+  sec =
+    Math.floor((bosm - current_time) / 1000) -
+    days * 24 * 60 * 60 -
+    hrs * 60 * 60 -
+    min * 60;
+  sec = sec < 10 ? `0${sec}` : sec;
+
   // when timer is completed (BOSM arrives)
   if (days < 0) {
     days = "00";
     hrs = "00";
     min = "00";
+    sec = "00";
   }
 
   // adding animation to timer cards
   document.getElementById("days").style.animation =
-    prev_days != days ? "card-flip 0.6s" : "none";
+    prev_day != days ? "card-flip 0.6s" : "none";
   document.getElementById("hours").style.animation =
-    prev_hrs != hrs ? "card-flip 0.6s" : "none";
-  document.getElementById("mins").style.animation =
+    prev_hr != hrs ? "card-flip 0.6s" : "none";
+  document.getElementById("min").style.animation =
     prev_min != min ? "card-flip 0.6s" : "none";
 
   // updating the temporary variables
-  prev_days = days;
-  prev_hrs = hrs;
+  prev_day = days;
+  prev_hr = hrs;
   prev_min = min;
+  prev_sec = sec;
 
   // updating the divs
   document.getElementById("days").innerHTML = days;
   document.getElementById("hours").innerHTML = hrs;
-  document.getElementById("mins").innerHTML = min;
-}, 2000);
+  document.getElementById("min").innerHTML = min;
+  document.getElementById("sec").innerHTML = sec;
+}, 1000);
 
 ////////// RANDOM STARS
 
