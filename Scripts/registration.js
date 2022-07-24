@@ -39,33 +39,34 @@ const set_disp_list = () => {
     yos_list.style.display = "none";
     sport_list.style.display = "none";
     if (win_width < 800) {
-      newTop = form.scrollTop + col_inpt.getBoundingClientRect().top - 40;
+      newTop = window.pageYOffset + col_inpt.getBoundingClientRect().top - 40;
       prevent_scroll = true;
-      form.scrollTo({ top: newTop, behavior: "smooth" });
+      window.scrollTo({ top: newTop, behavior: "smooth" });
     }
   } else if (yos_list_disp) {
     college_list.style.display = "none";
     yos_list.style.display = "grid";
     sport_list.style.display = "none";
     if (win_width < 800) {
-      newTop = form.scrollTop + yos_inpt.getBoundingClientRect().top - 40;
+      newTop = window.pageYOffset + yos_inpt.getBoundingClientRect().top - 40;
       prevent_scroll = true;
-      form.scrollTo({ top: newTop, behavior: "smooth" });
+      window.scrollTo({ top: newTop, behavior: "smooth" });
     }
   } else if (sport_list_disp) {
     college_list.style.display = "none";
     yos_list.style.display = "none";
     sport_list.style.display = "grid";
     if (win_width < 800) {
-      newTop = form.scrollTop + sport_inpt.getBoundingClientRect().top - 40;
+      newTop = window.pageYOffset + sport_inpt.getBoundingClientRect().top - 40;
       prevent_scroll = true;
-      form.scrollTo({ top: newTop, behavior: "smooth" });
+      window.scrollTo({ top: newTop, behavior: "smooth" });
     }
   } else {
     college_list.style.display = "none";
     yos_list.style.display = "none";
     sport_list.style.display = "none";
   }
+  console.log(newTop);
 };
 
 const get_elems = async () => {
@@ -348,7 +349,7 @@ window.addEventListener("resize", () => {
   set_disp_list();
 });
 
-form.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
   set_list_coord();
   console.log("FIRED");
   if (!prevent_scroll) {

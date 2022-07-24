@@ -258,7 +258,7 @@
 
 @media screen and (max-width: 500px) {
   section {
-    padding: 25px 0;
+    margin: 25px 0;
   }
 
   .line {

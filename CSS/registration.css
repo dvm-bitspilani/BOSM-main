@@ -7,12 +7,15 @@
   scroll-behavior: smooth;
 }
 
+body,
 div,
 form {
   scrollbar-width: none;
 }
 
-div::-webkit-scrollbar {
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+form::-webkit-scrollbar {
   display: none;
 }
 
@@ -25,9 +28,8 @@ body {
   background-image: url("../Assets/bgReg.png");
   position: relative;
   width: 100vw;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #reg-form {
@@ -67,8 +69,7 @@ body {
 
 #reg-cont {
   background: rgba(172, 172, 172, 0.02);
-  height: 95vh;
-  height: calc(var(--vh, 1vh) * 95);
+  height: max-content;
   width: 80vw;
 }
 
@@ -421,13 +422,13 @@ datalist {
   }
 
   .form-input-cont:last-child {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   .form-input-cont {
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     width: 100%;
   }
 
