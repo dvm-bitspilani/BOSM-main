@@ -56,10 +56,10 @@ setInterval(() => {
   prev_sec = sec;
 
   // updating the divs
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hrs;
-  document.getElementById("min").innerHTML = min;
-  document.getElementById("sec").innerHTML = sec;
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hrs;
+  document.getElementById("min").innerText = min;
+  document.getElementById("sec").innerText = sec;
 }, 1000);
 
 ////////// RANDOM STARS
