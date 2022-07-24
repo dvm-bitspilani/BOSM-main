@@ -5,9 +5,7 @@ let prev_day, prev_hr, prev_min, prev_sec, days, hrs, min, sec;
 let haha = 0;
 
 setInterval(() => {
-  document.getElementById("sec").style.animation =
-    haha % 2 == 0 ? "card-flip 0.6s" : "none";
-
+  document.getElementById("sec").style.animation = haha % 2 == 0 ? "card-flip 0.6s" : "none";
   haha++;
 }, 500);
 
