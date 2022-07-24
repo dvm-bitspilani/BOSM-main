@@ -489,11 +489,11 @@ img.light,
 
 @keyframes fall-blue {
   from {
-    transform: scale(0.7) translateY(-93vh);
+    transform: scale(0.5) translateY(-93vh);
   }
 
   to {
-    transform: scale(0.9) translateY(30vh);
+    transform: scale(0.8) translateY(30vh);
   }
 }
 
