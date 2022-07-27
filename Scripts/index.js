@@ -116,9 +116,9 @@ function flicker() {
 
 ////////// SPOTLIGHT EFFECT
 
-document.querySelector(".hide").addEventListener("click", () => {
-
+document.querySelector(".loader").addEventListener("click", () => {
   document.querySelector(".loader").style.display = "none";
+  document.querySelector("body").style.overflowY = "scroll";
 
   setTimeout(() => {
     flicker();
