@@ -45,6 +45,10 @@ section {
   margin: 180px 0;
 }
 
+section.contact {
+  margin-bottom: 0;
+}
+
 .loader {
   background-color: #010001;
   position: fixed;

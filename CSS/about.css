@@ -16,7 +16,7 @@
 }
 
 #about-txt {
-  padding: 30px 80px;
+  padding: 30px 90px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -169,19 +169,18 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
-.aboutBg {
+.about-bg {
   top: -200px;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 120%;
-  transform: scale(1.5);
+  height: auto;
 }
 
-.aboutBgPhone {
+.about-bg-phone {
   display: none;
 }
 
@@ -247,7 +246,7 @@
     width: 80%;
   }
 
-  .aboutBg {
+  .about-bg {
     top: -40px;
     height: auto;
   }
@@ -256,7 +255,6 @@
 @media (max-width: 500px) {
   #about-sec {
     padding-top: 40px;
-    background-image: url("../Assets/phoneContactBg.png");
     --offX: 19px;
     --offY: 15px;
   }
@@ -276,12 +274,13 @@
     height: 200px;
   }
 
-  .aboutBgPhone {
+  .about-bg-phone {
     display: block;
-    top: 0 !important;
+    top: -40px !important;
+    max-height: 120%;
   }
 
-  .aboutBg {
+  .about-bg {
     display: none;
   }
 
