@@ -1,3 +1,9 @@
+@media screen and (max-width: 900px) {
+  .loader video {
+    width: 50vw;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .scrollNav {
     left: -9rem !important;

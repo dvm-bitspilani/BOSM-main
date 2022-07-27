@@ -59,25 +59,12 @@ section {
 
 .hide {
   margin-top: 2rem;
-  animation: appear 1s 3s;
   padding: 0.8rem 1.2rem;
   font-family: "Zona";
   position: relative;
   color: white;
   overflow: hidden;
   transition: 0.2s;
-}
-
-@keyframes appear {
-  from {
-    transform: translateY(-10px);
-    visibility: hidden;
-  }
-
-  to {
-    transform: none;
-    visibility: visible;
-  }
 }
 
 .hide:hover {
