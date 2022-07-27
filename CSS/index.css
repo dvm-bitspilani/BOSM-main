@@ -69,8 +69,7 @@ section {
   color: white;
   overflow: hidden;
   transition: 0.2s;
-  -webkit-animation: appear 6s linear;
-  animation: appear 6s linear;
+  opacity: 0;
 }
 
 @-webkit-keyframes appear {

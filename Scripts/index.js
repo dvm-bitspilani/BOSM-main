@@ -115,101 +115,113 @@ function flicker() {
 // })
 
 ////////// SPOTLIGHT EFFECT
+window.addEventListener("load", () => {
+  console.log(document.querySelector(".loader video"));
 
-document.querySelector(".loader").addEventListener("click", () => {
-  document.querySelector(".loader").style.display = "none";
-  document.querySelector("body").style.overflowY = "scroll";
+  if (document.querySelector(".loader video").readyState === 4) {
+    console.log(document.querySelector(".loader video"));
 
-  setTimeout(() => {
-    flicker();
-  }, 1000);
-
-  document.getElementsByClassName("light")[0].style.opacity = 0;
-  document.getElementsByClassName("light")[1].style.opacity = 0;
-  document.getElementsByClassName("light")[2].style.opacity = 0;
-  document.querySelector(".bg-red").style.opacity = 0;
-  document.querySelector(".bg-blue").style.opacity = 0;
-  document.querySelector(".bg-yellow").style.opacity = 0;
-
-  document.getElementsByClassName("light")[0].style.animation = "flicker 2s 1s";
-  document.getElementsByClassName("light")[1].style.animation =
-    "flicker 2s 2.3s";
-  document.getElementsByClassName("light")[2].style.animation =
-    "flicker 2s 1.5s";
-
-  document.querySelector(".bg-red").style.animation = "flicker 2s 1s";
-  document.querySelector(".bg-blue").style.animation = "flicker 2s 2.3s";
-  document.querySelector(".bg-yellow").style.animation = "flicker 2s 1.5s";
-
-  document.getElementsByClassName("fall-blue")[0].style.animation =
-    "fall-blue 51s linear 2.4s infinite";
-  document.getElementsByClassName("fall-blue")[1].style.animation =
-    "fall-blue 51s linear 2.4s infinite";
-  document.getElementsByClassName("fall-blue")[2].style.animation =
-    "fall-blue 51s linear 2.4s infinite";
-
-  document.getElementsByClassName("fall-red")[0].style.animation =
-    "fall-red 51s linear 2.4s infinite";
-  document.getElementsByClassName("fall-red")[1].style.animation =
-    "fall-red 51s linear 2.4s infinite";
-  document.getElementsByClassName("fall-red")[2].style.animation =
-    "fall-red 51s linear 2.4s infinite";
-
-  document.getElementsByClassName("fall-yellow")[0].style.animation =
-    "fall-yellow 51s linear 2.4s infinite";
-  document.getElementsByClassName("fall-yellow")[1].style.animation =
-    "fall-yellow 51s linear 2.4s infinite";
-  document.getElementsByClassName("fall-yellow")[2].style.animation =
-    "fall-yellow 51s linear 2.4s infinite";
-
-  setTimeout(() => {
-    document.getElementById("lightRed").style.opacity = 1;
-    document.querySelector(".bg-red").style.opacity = 1;
-  }, 3000);
-
-  setTimeout(() => {
-    document.getElementById("lightBlue").style.opacity = 1;
-    document.querySelector(".bg-blue").style.opacity = 1;
-  }, 3500);
-
-  setTimeout(() => {
-    document.getElementById("lightYellow").style.opacity = 1;
-    document.querySelector(".bg-yellow").style.opacity = 1;
-  }, 3300);
-
-  setTimeout(() => {
-    document.getElementsByClassName("fall-red")[0].style.opacity = 1;
-    document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
-    document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
-  }, 2400);
-
-  setTimeout(() => {
-    document.getElementsByClassName("fall-red")[1].style.opacity = 1;
-    document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
-    document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
-  }, 20000);
-
-  setTimeout(() => {
-    document.getElementsByClassName("fall-red")[2].style.opacity = 1;
-    document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
-    document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
-  }, 40000);
-
-  if (screen.width < 801) {
-    for (let i = 0; i < 3; i++) {
-      document
-        .getElementsByClassName("fall-red")
-        [i].setAttribute("src", "Assets/smol.png");
-
-      document
-        .getElementsByClassName("fall-yellow")
-        [i].setAttribute("src", "Assets/smol.png");
-
-      document
-        .getElementsByClassName("fall-blue")
-        [i].setAttribute("src", "Assets/smol.png");
-    }
+    const hide = document.querySelector(".hide");
+    hide.style.animation = "appear 6s linear";
+    hide.style.opacity = 1;
   }
+
+  document.querySelector(".loader").addEventListener("click", () => {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector("body").style.overflowY = "scroll";
+
+    setTimeout(() => {
+      flicker();
+    }, 1000);
+
+    document.getElementsByClassName("light")[0].style.opacity = 0;
+    document.getElementsByClassName("light")[1].style.opacity = 0;
+    document.getElementsByClassName("light")[2].style.opacity = 0;
+    document.querySelector(".bg-red").style.opacity = 0;
+    document.querySelector(".bg-blue").style.opacity = 0;
+    document.querySelector(".bg-yellow").style.opacity = 0;
+
+    document.getElementsByClassName("light")[0].style.animation =
+      "flicker 2s 1s";
+    document.getElementsByClassName("light")[1].style.animation =
+      "flicker 2s 2.3s";
+    document.getElementsByClassName("light")[2].style.animation =
+      "flicker 2s 1.5s";
+
+    document.querySelector(".bg-red").style.animation = "flicker 2s 1s";
+    document.querySelector(".bg-blue").style.animation = "flicker 2s 2.3s";
+    document.querySelector(".bg-yellow").style.animation = "flicker 2s 1.5s";
+
+    document.getElementsByClassName("fall-blue")[0].style.animation =
+      "fall-blue 51s linear 2.4s infinite";
+    document.getElementsByClassName("fall-blue")[1].style.animation =
+      "fall-blue 51s linear 2.4s infinite";
+    document.getElementsByClassName("fall-blue")[2].style.animation =
+      "fall-blue 51s linear 2.4s infinite";
+
+    document.getElementsByClassName("fall-red")[0].style.animation =
+      "fall-red 51s linear 2.4s infinite";
+    document.getElementsByClassName("fall-red")[1].style.animation =
+      "fall-red 51s linear 2.4s infinite";
+    document.getElementsByClassName("fall-red")[2].style.animation =
+      "fall-red 51s linear 2.4s infinite";
+
+    document.getElementsByClassName("fall-yellow")[0].style.animation =
+      "fall-yellow 51s linear 2.4s infinite";
+    document.getElementsByClassName("fall-yellow")[1].style.animation =
+      "fall-yellow 51s linear 2.4s infinite";
+    document.getElementsByClassName("fall-yellow")[2].style.animation =
+      "fall-yellow 51s linear 2.4s infinite";
+
+    setTimeout(() => {
+      document.getElementById("lightRed").style.opacity = 1;
+      document.querySelector(".bg-red").style.opacity = 1;
+    }, 3000);
+
+    setTimeout(() => {
+      document.getElementById("lightBlue").style.opacity = 1;
+      document.querySelector(".bg-blue").style.opacity = 1;
+    }, 3500);
+
+    setTimeout(() => {
+      document.getElementById("lightYellow").style.opacity = 1;
+      document.querySelector(".bg-yellow").style.opacity = 1;
+    }, 3300);
+
+    setTimeout(() => {
+      document.getElementsByClassName("fall-red")[0].style.opacity = 1;
+      document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
+      document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
+    }, 2400);
+
+    setTimeout(() => {
+      document.getElementsByClassName("fall-red")[1].style.opacity = 1;
+      document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
+      document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
+    }, 20000);
+
+    setTimeout(() => {
+      document.getElementsByClassName("fall-red")[2].style.opacity = 1;
+      document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
+      document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
+    }, 40000);
+
+    if (screen.width < 801) {
+      for (let i = 0; i < 3; i++) {
+        document
+          .getElementsByClassName("fall-red")
+          [i].setAttribute("src", "Assets/smol.png");
+
+        document
+          .getElementsByClassName("fall-yellow")
+          [i].setAttribute("src", "Assets/smol.png");
+
+        document
+          .getElementsByClassName("fall-blue")
+          [i].setAttribute("src", "Assets/smol.png");
+      }
+    }
+  });
 });
 
 //Contact PopUp
