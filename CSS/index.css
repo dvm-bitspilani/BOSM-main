@@ -46,7 +46,7 @@ section {
 }
 
 .loader {
-  background-color: black;
+  background-color: #010001;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,10 @@ section {
 .hide {
   margin-top: 2rem;
   padding: 0.8rem 1.2rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  word-spacing: 3px;
   font-family: "Zona";
   position: relative;
   color: white;
@@ -95,13 +99,13 @@ section {
   }
 }
 
-.hide:hover {
+/* .hide:hover {
   cursor: pointer;
   color: white;
   background: red;
   transition-delay: 1s;
   box-shadow: 0 0 5px red, 0 0 5px red, 0 0 5px red, 0 0 5px red;
-}
+} */
 
 .hide span {
   position: absolute;
@@ -110,9 +114,9 @@ section {
 
 .hide span:nth-child(1) {
   top: 0;
-  transform: translateX(-130%);
   width: 100%;
   height: 3px;
+  transform: translateX(-130%);
   background: linear-gradient(90deg, transparent, red);
 }
 
