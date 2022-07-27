@@ -258,7 +258,7 @@
 
 @media screen and (max-width: 500px) {
   section {
-    margin: 25px 0;
+    margin: 150px 0;
   }
 
   .line {
@@ -379,7 +379,7 @@
   }
 
   .transition {
-    height: 25rem !important;
+    height: 20rem !important;
     margin-top: -12rem !important;
   }
 
