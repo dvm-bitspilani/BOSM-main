@@ -42,6 +42,21 @@ section {
   margin: 160px 0;
 }
 
+.loader{
+  background-color: black;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000001;
+}
+
+.loader video{
+  width: 40vw;
+}
+
 /* NavBar */
 .left,
 .right {
@@ -345,14 +360,6 @@ main {
     background-color: rgba(1000, 1000, 1000, 0);
     transform: rotateX(360deg);
   }
-}
-
-.label-2 {
-  /* transform: translateX(-0.2rem); */
-}
-
-.label-3 {
-  /* transform: translateX(-1rem); */
 }
 
 .socials {
