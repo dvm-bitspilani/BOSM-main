@@ -39,13 +39,15 @@
   .scrollNav{
       display: none;
   }
-    
+  
+
   #desktopRegist{
       display: none;
-  } 
+  }
+   
 }
-*/
 
+*/
 @media screen and (max-width: 1500px) {
   .scrollNav {
     font-size: 0.8rem;
@@ -59,3 +61,4 @@
     padding: 1rem 1.5rem;
   }
 }
+/*# sourceMappingURL=respDesktop.css.map */
