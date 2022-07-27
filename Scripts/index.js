@@ -5,7 +5,8 @@ let prev_day, prev_hr, prev_min, prev_sec, days, hrs, min, sec;
 let haha = 0;
 
 setInterval(() => {
-  document.getElementById("sec").style.animation = haha % 2 == 0 ? "card-flip 0.6s" : "none";
+  document.getElementById("sec").style.animation =
+    haha % 2 == 0 ? "card-flip 0.6s" : "none";
   haha++;
 }, 500);
 
@@ -99,15 +100,9 @@ setInterval(() => {
 let sound = new Audio("Assets/switchsound.mp3");
 
 function flicker() {
-  sound.volume = 0.6;
+  sound.volume = 0.4;
   sound.play();
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    flicker();
-  }, 500);
-});
 
 ////////// LINES Transform
 
@@ -121,38 +116,101 @@ window.addEventListener("DOMContentLoaded", () => {
 
 ////////// SPOTLIGHT EFFECT
 
-setTimeout(() => {
-  document.getElementById("lightRed").style.opacity = 1;
-  document.querySelector(".bg-red").style.opacity = 1;
-}, 3000);
+document.querySelector(".hide").addEventListener("click", () => {
 
-setTimeout(() => {
-  document.getElementById("lightBlue").style.opacity = 1;
-  document.querySelector(".bg-blue").style.opacity = 1;
-}, 3500);
+  document.querySelector(".loader").style.display = "none";
 
-setTimeout(() => {
-  document.getElementById("lightYellow").style.opacity = 1;
-  document.querySelector(".bg-yellow").style.opacity = 1;
-}, 3300);
+  setTimeout(() => {
+    flicker();
+  }, 1000);
 
-setTimeout(() => {
-  document.getElementsByClassName("fall-red")[0].style.opacity = 1;
-  document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
-  document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
-}, 2400);
+  document.getElementsByClassName("light")[0].style.opacity = 0;
+  document.getElementsByClassName("light")[1].style.opacity = 0;
+  document.getElementsByClassName("light")[2].style.opacity = 0;
+  document.querySelector(".bg-red").style.opacity = 0;
+  document.querySelector(".bg-blue").style.opacity = 0;
+  document.querySelector(".bg-yellow").style.opacity = 0;
 
-setTimeout(() => {
-  document.getElementsByClassName("fall-red")[1].style.opacity = 1;
-  document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
-  document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
-}, 20000);
+  document.getElementsByClassName("light")[0].style.animation = "flicker 2s 1s";
+  document.getElementsByClassName("light")[1].style.animation =
+    "flicker 2s 2.3s";
+  document.getElementsByClassName("light")[2].style.animation =
+    "flicker 2s 1.5s";
 
-setTimeout(() => {
-  document.getElementsByClassName("fall-red")[2].style.opacity = 1;
-  document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
-  document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
-}, 40000);
+  document.querySelector(".bg-red").style.animation = "flicker 2s 1s";
+  document.querySelector(".bg-blue").style.animation = "flicker 2s 2.3s";
+  document.querySelector(".bg-yellow").style.animation = "flicker 2s 1.5s";
+
+  document.getElementsByClassName("fall-blue")[0].style.animation =
+    "fall-blue 51s linear 2.4s infinite";
+  document.getElementsByClassName("fall-blue")[1].style.animation =
+    "fall-blue 51s linear 2.4s infinite";
+  document.getElementsByClassName("fall-blue")[2].style.animation =
+    "fall-blue 51s linear 2.4s infinite";
+
+  document.getElementsByClassName("fall-red")[0].style.animation =
+    "fall-red 51s linear 2.4s infinite";
+  document.getElementsByClassName("fall-red")[1].style.animation =
+    "fall-red 51s linear 2.4s infinite";
+  document.getElementsByClassName("fall-red")[2].style.animation =
+    "fall-red 51s linear 2.4s infinite";
+
+  document.getElementsByClassName("fall-yellow")[0].style.animation =
+    "fall-yellow 51s linear 2.4s infinite";
+  document.getElementsByClassName("fall-yellow")[1].style.animation =
+    "fall-yellow 51s linear 2.4s infinite";
+  document.getElementsByClassName("fall-yellow")[2].style.animation =
+    "fall-yellow 51s linear 2.4s infinite";
+
+  setTimeout(() => {
+    document.getElementById("lightRed").style.opacity = 1;
+    document.querySelector(".bg-red").style.opacity = 1;
+  }, 3000);
+
+  setTimeout(() => {
+    document.getElementById("lightBlue").style.opacity = 1;
+    document.querySelector(".bg-blue").style.opacity = 1;
+  }, 3500);
+
+  setTimeout(() => {
+    document.getElementById("lightYellow").style.opacity = 1;
+    document.querySelector(".bg-yellow").style.opacity = 1;
+  }, 3300);
+
+  setTimeout(() => {
+    document.getElementsByClassName("fall-red")[0].style.opacity = 1;
+    document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
+    document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
+  }, 2400);
+
+  setTimeout(() => {
+    document.getElementsByClassName("fall-red")[1].style.opacity = 1;
+    document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
+    document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
+  }, 20000);
+
+  setTimeout(() => {
+    document.getElementsByClassName("fall-red")[2].style.opacity = 1;
+    document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
+    document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
+  }, 40000);
+
+  if (screen.width < 801) {
+    for (let i = 0; i < 3; i++) {
+      document
+        .getElementsByClassName("fall-red")
+        [i].setAttribute("src", "Assets/smol.png");
+
+      document
+        .getElementsByClassName("fall-yellow")
+        [i].setAttribute("src", "Assets/smol.png");
+
+      document
+        .getElementsByClassName("fall-blue")
+        [i].setAttribute("src", "Assets/smol.png");
+    }
+  }
+});
 
 //Contact PopUp
 
@@ -185,20 +243,4 @@ function copyText(text) {
   setTimeout(() => {
     copied.style.opacity = 0;
   }, 1000);
-}
-
-if (screen.width < 801) {
-  for (let i = 0; i < 3; i++) {
-    document
-      .getElementsByClassName("fall-red")
-      [i].setAttribute("src", "Assets/smol.png");
-
-    document
-      .getElementsByClassName("fall-yellow")
-      [i].setAttribute("src", "Assets/smol.png");
-
-    document
-      .getElementsByClassName("fall-blue")
-      [i].setAttribute("src", "Assets/smol.png");
-  }
 }
