@@ -27,9 +27,11 @@
 }
 
 .about-par {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.2;
   margin: 20px 0;
+  letter-spacing: 0.5px;
+  font-weight: 400;
 }
 
 #about-line {
@@ -211,8 +213,9 @@
   }
 
   .about-par {
-    text-align: center;
     margin: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
   }
 
   #about-line {
@@ -254,12 +257,13 @@
   #about-sec {
     padding-top: 40px;
     background-image: url("../Assets/phoneContactBg.png");
-    --offX: 21px;
+    --offX: 19px;
     --offY: 15px;
   }
 
   #about-txt {
     padding: 20px 40px;
+    margin-bottom: 40px;
   }
 
   .about-par {
@@ -279,6 +283,10 @@
 
   .aboutBg {
     display: none;
+  }
+
+  #about-dots-cont {
+    padding: 0 6px;
   }
 
   .dot {

@@ -23,7 +23,7 @@
 }
 
 .sec-header {
-  font-size: 3.4rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -59,21 +59,22 @@
 
 .name {
   margin-top: 0.8rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.7rem;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .dept {
   opacity: 0.8;
   margin-top: 0.8rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .number {
   opacity: 0.5;
   margin-top: 0.8rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   font-weight: 400;
 }
@@ -118,12 +119,8 @@
     display: none;
   }
 
-  .contact {
-    margin-top: 2rem;
-  }
-
   .name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .contDiv {
@@ -171,7 +168,7 @@
 
 .transition {
   width: 100vw;
-  height: 160px;
+  height: 180px;
   background: black;
   z-index: 26;
   margin-top: -2rem;
