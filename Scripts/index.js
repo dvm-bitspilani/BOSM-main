@@ -120,9 +120,11 @@ function flicker() {
 window.addEventListener("load", () => {
   if (document.querySelector(".loader video").readyState === 4) {
     const hide = document.querySelector(".hide");
+    hide.style.animation = "appear 3s";
 
-    hide.style.animation = "appear 3s linear";
-    hide.style.opacity = 1;
+    setTimeout(() => {
+      hide.style.opacity = 0.9;
+    }, 2901);
   }
 
   document.querySelector(".loader").addEventListener("click", () => {
