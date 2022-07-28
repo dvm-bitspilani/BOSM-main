@@ -118,6 +118,10 @@ function flicker() {
 ////////// LOADER EVENTS
 
 window.addEventListener("load", () => {
+
+  const loader = document.querySelector(".loader");
+  const light = document.getElementsByClassName("light");
+
   if (document.querySelector(".loader video").readyState === 4) {
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
@@ -127,7 +131,7 @@ window.addEventListener("load", () => {
     }, 2901);
   }
 
-  document.querySelector(".loader").addEventListener("click", () => {
+  loader.addEventListener("click", () => {
     const fred = document.getElementsByClassName("fall-red");
     const fblue = document.getElementsByClassName("fall-blue");
     const fyellow = document.getElementsByClassName("fall-yellow");
@@ -138,15 +142,17 @@ window.addEventListener("load", () => {
     const byellow = document.querySelector(".bg-yellow");
     let loop2 = [bred, bblue, byellow];
 
-    const light = document.getElementsByClassName("light");
-
     const appear = [
       document.querySelector("#bosm"),
       document.querySelector("#bosmr"),
     ];
 
-    document.querySelector(".loader").style.display = "none";
+    loader.style.animation = "fade-out 1s ease-out";
     document.querySelector("body").style.overflowY = "scroll";
+
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 1000);
 
     setTimeout(() => {
       flicker();
@@ -198,7 +204,7 @@ window.addEventListener("load", () => {
     }, 3300);
 
     setTimeout(() => {
-      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 1.7s";
+      for (let i = 0; i < 2; i++) appear[i].style.animation = "fade-in 1.7s";
     }, 3000);
 
     setTimeout(() => {
