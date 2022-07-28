@@ -114,7 +114,7 @@
   animation: play-anim 500ms ease, play-anim-opac 500ms ease;
 }
 
-@keyframes play-anim {
+@-webkit-keyframes play-anim {
   0% {
     transform: translate(var(--offX), var(--offY));
   }
@@ -125,17 +125,6 @@
 }
 
 @-webkit-keyframes play-anim-opac {
-  0%,
-  20% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes play-anim-opac {
   0%,
   20% {
     opacity: 0;
