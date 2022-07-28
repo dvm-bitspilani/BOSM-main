@@ -122,7 +122,7 @@ window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
   const light = document.getElementsByClassName("light");
 
-  if (document.querySelector(".loader video").readyState === 4) {
+  if (document.getElementById('video').readyState === 4) {
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
 

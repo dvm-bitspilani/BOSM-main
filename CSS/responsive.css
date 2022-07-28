@@ -1,6 +1,7 @@
 @media screen and (max-width: 900px) {
-  .loader video {
-    width: 40vw;
+  .video-wrapper {
+    width: 45vw;
+    height: 45vw;
   }
 }
 
