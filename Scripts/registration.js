@@ -66,7 +66,6 @@ const set_disp_list = () => {
     yos_list.style.display = "none";
     sport_list.style.display = "none";
   }
-  console.log(newTop);
 };
 
 const get_elems = async () => {
@@ -101,7 +100,6 @@ const set_college_ul = () => {
   col_inpt.pattern = college_pat;
   document.querySelectorAll("#college-list>li").forEach((ele) => {
     ele.addEventListener("click", () => {
-      console.log("FIRED");
       col_inpt.value = ele.textContent;
       col_inpt.dispatchEvent(new Event("input"));
     });
@@ -116,7 +114,6 @@ const set_yos_ul = () => {
   yos_list.innerHTML = yos_html;
   document.querySelectorAll("#yos-list>li").forEach((ele) => {
     ele.addEventListener("click", () => {
-      console.log("FIRED");
       yos_inpt.value = ele.textContent;
       yos_inpt.dispatchEvent(new Event("input"));
     });
@@ -213,7 +210,6 @@ async function submit_form() {
 
 const submit_handler = (evt) => {
   evt.preventDefault();
-  console.log("SUBMITTING");
   grecaptcha.execute();
 };
 
@@ -263,7 +259,6 @@ const set_sport_list = () => {
 
   document.querySelectorAll("#sport-list>li").forEach((ele) => {
     ele.addEventListener("click", () => {
-      console.log("FIRED");
       sport_inpt.value = ele.textContent;
       sport_inpt.dispatchEvent(new Event("input"));
     });
@@ -319,11 +314,11 @@ sport_inpt.addEventListener("input", (evt) => {
     sel_sports.push(avail_sports[col_idx]);
     avail_sports.splice(col_idx, 1);
     evt.target.value = "";
-    mat_sports = avail_sports.filter((elem) =>
-      elem.name.toLowerCase().includes(evt.target.value)
-    );
-    set_sport_list();
   }
+  mat_sports = avail_sports.filter((elem) =>
+    elem.name.toLowerCase().includes(evt.target.value)
+  );
+  set_sport_list();
 });
 
 col_inpt.addEventListener("input", (evt) => {
@@ -351,7 +346,6 @@ window.addEventListener("resize", () => {
 
 document.addEventListener("scroll", () => {
   set_list_coord();
-  console.log("FIRED");
   if (!prevent_scroll) {
     college_list.style.display = "none";
     yos_list.style.display = "none";
