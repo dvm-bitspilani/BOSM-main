@@ -64,7 +64,7 @@ section.contact {
 .hide {
   margin-top: 2rem;
   padding: 0.8rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   word-spacing: 3px;
   font-family: "zona-pro-thin", sans-serif;
@@ -301,7 +301,7 @@ main {
 
   to {
     opacity: 1;
-    transform: none;
+    /* transform: none; */
   }
 }
 

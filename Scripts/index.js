@@ -139,9 +139,6 @@ window.addEventListener("load", () => {
     const appear = [
       document.querySelector("#bosm"),
       document.querySelector("#bosmr"),
-      // document.querySelector(".rp"),
-      // document.querySelector(".bp"),
-      // document.querySelector(".yp"),
     ];
 
     document.querySelector(".loader").style.display = "none";
@@ -188,12 +185,12 @@ window.addEventListener("load", () => {
     }, 3300);
 
     setTimeout(() => {
-      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 2s";
-    }, 4000);
+      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 2.5s";
+    }, 3000);
 
     setTimeout(() => {
-      for (let i = 0; i < 2; i++) appear[i].style.opacity = 1 ;
-    }, 6000);
+      for (let i = 0; i < 2; i++) appear[i].style.opacity = 1;
+    }, 5500);
 
     if (screen.width < 801)
       for (let i = 0; i < 3; i++)
