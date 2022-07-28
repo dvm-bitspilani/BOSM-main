@@ -118,7 +118,11 @@ function flicker() {
 ////////// LOADER EVENTS
 
 window.addEventListener("load", () => {
-  if (document.querySelector(".loader video").readyState === 4) {
+
+  const loader = document.querySelector(".loader");
+  const light = document.getElementsByClassName("light");
+
+  if (document.getElementById('video').readyState === 4) {
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
 
@@ -127,7 +131,7 @@ window.addEventListener("load", () => {
     }, 2901);
   }
 
-  document.querySelector(".loader").addEventListener("click", () => {
+  loader.addEventListener("click", () => {
     const fred = document.getElementsByClassName("fall-red");
     const fblue = document.getElementsByClassName("fall-blue");
     const fyellow = document.getElementsByClassName("fall-yellow");
@@ -138,15 +142,18 @@ window.addEventListener("load", () => {
     const byellow = document.querySelector(".bg-yellow");
     let loop2 = [bred, bblue, byellow];
 
-    const light = document.getElementsByClassName("light");
-
     const appear = [
       document.querySelector("#bosm"),
       document.querySelector("#bosmr"),
     ];
 
-    document.querySelector(".loader").style.display = "none";
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    loader.style.animation = "fade-out 1s ease-out";
     document.querySelector("body").style.overflowY = "scroll";
+
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 1000);
 
     setTimeout(() => {
       flicker();
@@ -198,17 +205,25 @@ window.addEventListener("load", () => {
     }, 3300);
 
     setTimeout(() => {
-      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 1.7s";
+      for (let i = 0; i < 2; i++) appear[i].style.animation = "fade-in 1.7s";
     }, 3000);
 
     setTimeout(() => {
       for (let i = 0; i < 2; i++) appear[i].style.opacity = 1;
     }, 4700);
 
-    if (screen.width < 801)
+    if (screen.width < 801) {
+      
+      for (let i = 0; i < 3; i++) {
+        fred[i].style.animation = "fall-red-2 51s linear 2.4s infinite";
+        fblue[i].style.animation = "fall-blue-2 51s linear 2.4s infinite";
+        fyellow[i].style.animation = "fall-yellow-2 51s linear 2.4s infinite";
+      }
+
       for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
           loop1[i][j].setAttribute("src", "Assets/smol.png");
+    }
   });
 });
 

@@ -41,7 +41,13 @@
 
   <body>
     <div class="loader">
-      <video src="Assets/loader.mp4" autoplay loop muted></video>
+
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline id="video" width="100%">
+          <source src="Assets/loader.mp4" type="video/mp4" />
+        </video>
+        <div class="shadow"></div>
+      </div>
 
       <div class="hide">
         <!-- <span></span>
