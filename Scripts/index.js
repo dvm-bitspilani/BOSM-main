@@ -205,10 +205,18 @@ window.addEventListener("load", () => {
       for (let i = 0; i < 2; i++) appear[i].style.opacity = 1;
     }, 4700);
 
-    if (screen.width < 801)
+    if (screen.width < 801) {
+      
+      for (let i = 0; i < 3; i++) {
+        fred[i].style.animation = "fall-red-2 51s linear 2.4s infinite";
+        fblue[i].style.animation = "fall-blue-2 51s linear 2.4s infinite";
+        fyellow[i].style.animation = "fall-yellow-2 51s linear 2.4s infinite";
+      }
+
       for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
           loop1[i][j].setAttribute("src", "Assets/smol.png");
+    }
   });
 });
 
