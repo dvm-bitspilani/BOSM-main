@@ -37,6 +37,14 @@ body {
   overflow: hidden;
 }
 
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+}
+
 body::-webkit-scrollbar {
   width: 0 !important;
 }
@@ -293,15 +301,23 @@ main {
   width: 54%;
 }
 
-@keyframes fadeInUp {
+@keyframes fade-in {
   from {
     opacity: 0;
-    /* transform: translate3d(0, 100%, 0); */
   }
 
   to {
     opacity: 1;
-    /* transform: none; */
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 
