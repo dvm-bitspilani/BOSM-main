@@ -131,11 +131,13 @@ window.addEventListener("load", () => {
     const fred = document.getElementsByClassName("fall-red");
     const fblue = document.getElementsByClassName("fall-blue");
     const fyellow = document.getElementsByClassName("fall-yellow");
-    const loop = [fred, fblue, fyellow];
+    const loop1 = [fred, fblue, fyellow];
 
     const bred = document.querySelector(".bg-red");
     const bblue = document.querySelector(".bg-blue");
     const byellow = document.querySelector(".bg-yellow");
+    let loop2 = [bred, bblue, byellow];
+
     const light = document.getElementsByClassName("light");
 
     const appear = [
@@ -150,10 +152,6 @@ window.addEventListener("load", () => {
       flicker();
     }, 1000);
 
-    bred.style.opacity = 0;
-    bblue.style.opacity = 0;
-    byellow.style.opacity = 0;
-
     light[0].style.animation = "flicker 2s 1s";
     light[1].style.animation = "flicker 2s 2.3s";
     light[2].style.animation = "flicker 2s 1.5s";
@@ -162,6 +160,7 @@ window.addEventListener("load", () => {
     bblue.style.animation = "flicker 2s 2.3s";
     byellow.style.animation = "flicker 2s 1.5s";
 
+    for (let i = 0; i < 3; i++) loop2[i].style.opacity = 0;
     for (let i = 0; i < 2; i++) appear[i].style.opacity = 0;
 
     for (let i = 0; i < 3; i++) {
@@ -170,6 +169,18 @@ window.addEventListener("load", () => {
       fblue[i].style.animation = "fall-blue 51s linear 2.4s infinite";
       fyellow[i].style.animation = "fall-yellow 51s linear 2.4s infinite";
     }
+
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) loop1[i][0].style.opacity = 1;
+    }, 3000);
+
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) loop1[i][1].style.opacity = 1;
+    }, 3500);
+
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) loop1[i][2].style.opacity = 1;
+    }, 3300);
 
     setTimeout(() => {
       document.getElementById("lightRed").style.opacity = 1;
@@ -187,17 +198,17 @@ window.addEventListener("load", () => {
     }, 3300);
 
     setTimeout(() => {
-      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 2.5s";
+      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 1.7s";
     }, 3000);
 
     setTimeout(() => {
       for (let i = 0; i < 2; i++) appear[i].style.opacity = 1;
-    }, 5500);
+    }, 4700);
 
     if (screen.width < 801)
       for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
-          loop[i][j].setAttribute("src", "Assets/smol.png");
+          loop1[i][j].setAttribute("src", "Assets/smol.png");
   });
 });
 
