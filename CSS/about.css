@@ -124,6 +124,17 @@
   }
 }
 
+@-webkit-keyframes play-anim-opac {
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes play-anim-opac {
   0%,
   20% {

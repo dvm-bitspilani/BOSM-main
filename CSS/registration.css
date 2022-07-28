@@ -20,6 +20,9 @@ form::-webkit-scrollbar {
 }
 
 body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   display: flex;
   justify-content: center;
@@ -69,6 +72,8 @@ body {
 
 #reg-cont {
   background: rgba(172, 172, 172, 0.02);
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   width: 80vw;
 }
@@ -85,6 +90,8 @@ body {
   width: 100%;
   text-align: center;
   align-items: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   margin-bottom: 25px;
   position: relative;
@@ -118,6 +125,8 @@ div.flex-cont {
 label,
 #gender-lbl {
   font-size: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -140,6 +149,16 @@ label,
 
 #gender-input-cont {
   margin-top: 20px;
+}
+
+.form-input:not(:-moz-placeholder-shown) + .form-lbl {
+  transform: scale(0.9) translateY(calc(-100% - 5px));
+  font-weight: 300;
+}
+
+.form-input:not(:-ms-input-placeholder) + .form-lbl {
+  transform: scale(0.9) translateY(calc(-100% - 5px));
+  font-weight: 300;
 }
 
 .form-input-cont:focus-within .form-lbl,
@@ -191,6 +210,8 @@ input[type="number"] {
 }
 
 input.form-input[type="radio"] {
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   background: black;
 }
@@ -216,6 +237,8 @@ input.form-input[type="radio"] {
   border-radius: 5px;
   margin: 5px 2px;
   font-size: 0.75rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
 }
 
@@ -259,6 +282,7 @@ input.form-input[type="radio"] {
 .form-list {
   display: none;
   grid-template-columns: 1fr;
+  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
   max-height: calc(5 * (1rem + 20px));
   overflow-y: scroll;
@@ -266,7 +290,9 @@ input.form-input[type="radio"] {
   position: absolute;
   z-index: 20;
   top: 105%;
+  transition: -webkit-clip-path 200ms ease;
   transition: clip-path 200ms ease;
+  transition: clip-path 200ms ease, -webkit-clip-path 200ms ease;
 }
 
 #yos-list {
@@ -298,6 +324,8 @@ input.form-input[type="radio"] {
 #form-submit {
   padding: 10px 30px;
   background: rgba(0, 0, 0, 0.5);
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   outline: none;
   color: white;
@@ -402,7 +430,6 @@ datalist {
 }
 
 /* responsive */
-
 @media (max-width: 400px) {
   #reg-form {
     padding: 10px 10px;
@@ -439,6 +466,14 @@ datalist {
 
   .lbl-small {
     font-size: 0.75rem;
+  }
+
+  .form-input:not(:-moz-placeholder-shown) + .form-lbl {
+    transform: scale(0.9) translateY(calc(-100% - 3px));
+  }
+
+  .form-input:not(:-ms-input-placeholder) + .form-lbl {
+    transform: scale(0.9) translateY(calc(-100% - 3px));
   }
 
   .form-input-cont:focus-within .form-lbl,

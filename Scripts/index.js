@@ -4,11 +4,11 @@ const bosm = new Date("October 14, 2022 23:59:59").getTime();
 let prev_day, prev_hr, prev_min, prev_sec, days, hrs, min, sec;
 let haha = 0;
 
-setInterval(() => {
-  document.getElementById("sec").style.animation =
-    haha % 2 == 0 ? "card-flip 0.6s" : "none";
-  haha++;
-}, 500);
+// setInterval(() => {
+//   document.getElementById("sec").style.animation =
+//     haha % 2 == 0 ? "card-flip 0.6s" : "none";
+//   haha++;
+// }, 500);
 
 setInterval(() => {
   const current_time = new Date().getTime();
@@ -26,20 +26,20 @@ setInterval(() => {
     Math.floor((bosm - current_time) / (1000 * 60)) - days * 24 * 60 - hrs * 60;
   min = min < 10 ? `0${min}` : min;
 
-  // updating number of seconds left (in that min)
-  sec =
-    Math.floor((bosm - current_time) / 1000) -
-    days * 24 * 60 * 60 -
-    hrs * 60 * 60 -
-    min * 60;
-  sec = sec < 10 ? `0${sec}` : sec;
+  // // updating number of seconds left (in that min)
+  // sec =
+  //   Math.floor((bosm - current_time) / 1000) -
+  //   days * 24 * 60 * 60 -
+  //   hrs * 60 * 60 -
+  //   min * 60;
+  // sec = sec < 10 ? `0${sec}` : sec;
 
   // when timer is completed (BOSM arrives)
   if (days < 0) {
     days = "00";
     hrs = "00";
     min = "00";
-    sec = "00";
+    // sec = "00";
   }
 
   // adding animation to timer cards
@@ -54,13 +54,13 @@ setInterval(() => {
   prev_day = days;
   prev_hr = hrs;
   prev_min = min;
-  prev_sec = sec;
+  // prev_sec = sec;
 
   // updating the divs
   document.getElementById("days").innerText = days;
   document.getElementById("hours").innerText = hrs;
   document.getElementById("min").innerText = min;
-  document.getElementById("sec").innerText = sec;
+  // document.getElementById("sec").innerText = sec;
 }, 1000);
 
 ////////// RANDOM STARS
@@ -100,7 +100,8 @@ setInterval(() => {
 let sound = new Audio("Assets/switchsound.mp3");
 
 function flicker() {
-  sound.volume = 0.4;
+  sound.volume = 0.3;
+  sound.playbackRate = 1.2;
   sound.play();
 }
 
@@ -114,19 +115,36 @@ function flicker() {
 //   lines[0].style.transform = 'translate3d(0px,' + rate + 'px,0px)';
 // })
 
-////////// SPOTLIGHT EFFECT
+////////// LOADER EVENTS
+
 window.addEventListener("load", () => {
-  console.log(document.querySelector(".loader video"));
-
   if (document.querySelector(".loader video").readyState === 4) {
-    console.log(document.querySelector(".loader video"));
-
     const hide = document.querySelector(".hide");
-    hide.style.animation = "appear 6s linear";
-    hide.style.opacity = 1;
+    hide.style.animation = "appear 3s";
+
+    setTimeout(() => {
+      hide.style.opacity = 0.9;
+    }, 2901);
   }
 
   document.querySelector(".loader").addEventListener("click", () => {
+    const fred = document.getElementsByClassName("fall-red");
+    const fblue = document.getElementsByClassName("fall-blue");
+    const fyellow = document.getElementsByClassName("fall-yellow");
+    const loop1 = [fred, fblue, fyellow];
+
+    const bred = document.querySelector(".bg-red");
+    const bblue = document.querySelector(".bg-blue");
+    const byellow = document.querySelector(".bg-yellow");
+    let loop2 = [bred, bblue, byellow];
+
+    const light = document.getElementsByClassName("light");
+
+    const appear = [
+      document.querySelector("#bosm"),
+      document.querySelector("#bosmr"),
+    ];
+
     document.querySelector(".loader").style.display = "none";
     document.querySelector("body").style.overflowY = "scroll";
 
@@ -134,107 +152,79 @@ window.addEventListener("load", () => {
       flicker();
     }, 1000);
 
-    document.getElementsByClassName("light")[0].style.opacity = 0;
-    document.getElementsByClassName("light")[1].style.opacity = 0;
-    document.getElementsByClassName("light")[2].style.opacity = 0;
-    document.querySelector(".bg-red").style.opacity = 0;
-    document.querySelector(".bg-blue").style.opacity = 0;
-    document.querySelector(".bg-yellow").style.opacity = 0;
+    light[0].style.animation = "flicker 2s 1s";
+    light[1].style.animation = "flicker 2s 2.3s";
+    light[2].style.animation = "flicker 2s 1.5s";
 
-    document.getElementsByClassName("light")[0].style.animation =
-      "flicker 2s 1s";
-    document.getElementsByClassName("light")[1].style.animation =
-      "flicker 2s 2.3s";
-    document.getElementsByClassName("light")[2].style.animation =
-      "flicker 2s 1.5s";
+    bred.style.animation = "flicker 2s 1s";
+    bblue.style.animation = "flicker 2s 2.3s";
+    byellow.style.animation = "flicker 2s 1.5s";
 
-    document.querySelector(".bg-red").style.animation = "flicker 2s 1s";
-    document.querySelector(".bg-blue").style.animation = "flicker 2s 2.3s";
-    document.querySelector(".bg-yellow").style.animation = "flicker 2s 1.5s";
+    for (let i = 0; i < 3; i++) loop2[i].style.opacity = 0;
+    for (let i = 0; i < 2; i++) appear[i].style.opacity = 0;
 
-    document.getElementsByClassName("fall-blue")[0].style.animation =
-      "fall-blue 51s linear 2.4s infinite";
-    document.getElementsByClassName("fall-blue")[1].style.animation =
-      "fall-blue 51s linear 2.4s infinite";
-    document.getElementsByClassName("fall-blue")[2].style.animation =
-      "fall-blue 51s linear 2.4s infinite";
+    for (let i = 0; i < 3; i++) {
+      light[i].style.opacity = 0;
+      fred[i].style.animation = "fall-red 51s linear 2.4s infinite";
+      fblue[i].style.animation = "fall-blue 51s linear 2.4s infinite";
+      fyellow[i].style.animation = "fall-yellow 51s linear 2.4s infinite";
+    }
 
-    document.getElementsByClassName("fall-red")[0].style.animation =
-      "fall-red 51s linear 2.4s infinite";
-    document.getElementsByClassName("fall-red")[1].style.animation =
-      "fall-red 51s linear 2.4s infinite";
-    document.getElementsByClassName("fall-red")[2].style.animation =
-      "fall-red 51s linear 2.4s infinite";
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) loop1[i][0].style.opacity = 1;
+    }, 3000);
 
-    document.getElementsByClassName("fall-yellow")[0].style.animation =
-      "fall-yellow 51s linear 2.4s infinite";
-    document.getElementsByClassName("fall-yellow")[1].style.animation =
-      "fall-yellow 51s linear 2.4s infinite";
-    document.getElementsByClassName("fall-yellow")[2].style.animation =
-      "fall-yellow 51s linear 2.4s infinite";
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) loop1[i][1].style.opacity = 1;
+    }, 3500);
+
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) loop1[i][2].style.opacity = 1;
+    }, 3300);
 
     setTimeout(() => {
       document.getElementById("lightRed").style.opacity = 1;
-      document.querySelector(".bg-red").style.opacity = 1;
+      bred.style.opacity = 1;
     }, 3000);
 
     setTimeout(() => {
       document.getElementById("lightBlue").style.opacity = 1;
-      document.querySelector(".bg-blue").style.opacity = 1;
+      bblue.style.opacity = 1;
     }, 3500);
 
     setTimeout(() => {
       document.getElementById("lightYellow").style.opacity = 1;
-      document.querySelector(".bg-yellow").style.opacity = 1;
+      byellow.style.opacity = 1;
     }, 3300);
 
     setTimeout(() => {
-      document.getElementsByClassName("fall-red")[0].style.opacity = 1;
-      document.getElementsByClassName("fall-blue")[0].style.opacity = 1;
-      document.getElementsByClassName("fall-yellow")[0].style.opacity = 1;
-    }, 2400);
+      for (let i = 0; i < 2; i++) appear[i].style.animation = "fadeInUp 1.7s";
+    }, 3000);
 
     setTimeout(() => {
-      document.getElementsByClassName("fall-red")[1].style.opacity = 1;
-      document.getElementsByClassName("fall-blue")[1].style.opacity = 1;
-      document.getElementsByClassName("fall-yellow")[1].style.opacity = 1;
-    }, 20000);
+      for (let i = 0; i < 2; i++) appear[i].style.opacity = 1;
+    }, 4700);
 
-    setTimeout(() => {
-      document.getElementsByClassName("fall-red")[2].style.opacity = 1;
-      document.getElementsByClassName("fall-blue")[2].style.opacity = 1;
-      document.getElementsByClassName("fall-yellow")[2].style.opacity = 1;
-    }, 40000);
-
-    if (screen.width < 801) {
-      for (let i = 0; i < 3; i++) {
-        document
-          .getElementsByClassName("fall-red")
-          [i].setAttribute("src", "Assets/smol.png");
-
-        document
-          .getElementsByClassName("fall-yellow")
-          [i].setAttribute("src", "Assets/smol.png");
-
-        document
-          .getElementsByClassName("fall-blue")
-          [i].setAttribute("src", "Assets/smol.png");
-      }
-    }
+    if (screen.width < 801)
+      for (let i = 0; i < 3; i++)
+        for (let j = 0; j < 3; j++)
+          loop1[i][j].setAttribute("src", "Assets/smol.png");
   });
 });
 
-//Contact PopUp
+////////// CONTACT POP-UP
 
 const texts = document.querySelectorAll(".number");
 const mails = document.querySelectorAll(".mail");
 const copied = document.getElementById("copied");
 const textarea = document.createElement("textarea");
+
 texts.forEach((text) => {
   text.addEventListener("click", () => {
     copyText(text);
   });
 });
+
 mails.forEach((text) => {
   text.addEventListener("click", () => {
     copyText(text);
@@ -243,15 +233,18 @@ mails.forEach((text) => {
 
 function copyText(text) {
   console.log(text);
+
   // copied.style.transform = `translateY(${})`
   textarea.setAttribute("readonly", "");
   textarea.style.position = "absolute";
   textarea.style.opacity = 0;
   textarea.style.pointerEvents = "none";
   textarea.value = text.innerText;
+
   document.body.appendChild(textarea);
-  textarea.select();
   navigator.clipboard.writeText(textarea.value);
+  textarea.select();
+
   setTimeout(() => {
     copied.style.opacity = 0;
   }, 1000);
