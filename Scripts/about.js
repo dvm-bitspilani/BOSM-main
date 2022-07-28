@@ -1,12 +1,18 @@
 const carousel = document.getElementById("about-car");
 const selCont = document.getElementById("about-dots-cont");
+const loader = document.querySelector(".loader");
 
 const links = ["4lv-Ji3W9oU", "3lbRUfKTwWc", "5sH7FRg-7_Q"];
 
 const vidsCount = links.length;
 
+const carOptions = {
+  root: null,
+  rootMargin: "12px",
+  threshold: 0.5,
+};
+
 let curVid = 0;
-let prevVid = 0;
 let vidTimer;
 let vidsList = [];
 let playersList = [];
@@ -30,11 +36,12 @@ links.forEach((link, idx) => {
 
 const changeActive = (evt) => {
   let idx = sels.indexOf(evt.target);
-  prevVid = curVid;
-  curVid = idx;
-  setTransform();
-  clearInterval(vidTimer);
-  vidTimer = setInterval(incrementTimer, 5000);
+  if (idx !== curVid) {
+    curVid = idx;
+    setTransform();
+    clearInterval(vidTimer);
+    vidTimer = setInterval(incrementTimer, 5000);
+  }
 };
 
 const setTransform = () => {
@@ -42,32 +49,29 @@ const setTransform = () => {
     if (vid.classList.contains("play-active")) {
       vid.classList.remove("play-active");
       sels[idx].classList.remove("active");
-    } else if (vid.classList.contains("play-next")) {
-      vid.classList.remove("play-next");
-    } else if (vid.classList.contains("play-prev")) {
-      vid.classList.remove("play-prev");
     }
-    if (idx >= curVid) {
-      vid.style.setProperty("--offset", idx - curVid);
-    } else if (idx < curVid) {
-      vid.style.setProperty("--offset", vidsCount - curVid + idx);
-    }
-    if (idx - curVid === 0) {
+    if (idx === curVid) {
       vid.classList.add("play-active");
-      vid.style.visibility = "visible";
       sels[idx].classList.add("active");
-    } else if (idx - curVid === 1 || (curVid === vidsCount - 1 && idx === 0)) {
-      vid.classList.add("play-next");
-      vid.style.visibility = "visible";
-    } else if (curVid - idx === 1 || (curVid === 0 && idx === vidsCount - 1)) {
-      vid.classList.add("play-prev");
-      setTimeout(() => (vid.style.visibility = "hidden"), 500);
     }
   });
 };
 
+const carObsCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.target === carousel && loader.style.display === "none") {
+      vidsList[0].classList.add("play-init");
+      setTransform();
+      vidTimer = setInterval(incrementTimer, 5000);
+      observer.unobserve(carousel);
+    }
+  });
+};
+
+let carObserver = new IntersectionObserver(carObsCallback, carOptions);
+carObserver.observe(carousel);
+
 const incrementTimer = () => {
-  prevVid = curVid;
   curVid++;
   if (curVid >= vidsCount) {
     curVid = 0;
@@ -78,8 +82,6 @@ const incrementTimer = () => {
 sels.forEach((sel) => {
   sel.addEventListener("click", changeActive);
 });
-
-vidTimer = setInterval(incrementTimer, 5000);
 
 // Load the IFrame Player API code asynchronously.
 var tag = document.createElement("script");
