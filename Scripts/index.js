@@ -147,6 +147,7 @@ window.addEventListener("load", () => {
       document.querySelector("#bosmr"),
     ];
 
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     loader.style.animation = "fade-out 1s ease-out";
     document.querySelector("body").style.overflowY = "scroll";
 
