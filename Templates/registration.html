@@ -1,186 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
-    <script
-      src="https://kit.fontawesome.com/5397743099.js"
-      crossorigin="anonymous"
-    ></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Registration</title>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script defer src="../Scripts/registration.js"></script>
-    <link href="../CSS/registration.css" rel="stylesheet" />
-    <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
-  </head>
 
-  <body>
-    <div id="form-close">
-      <a href="../index.html"
-        ><img alt="" id="form-close-img" src="../Assets/Back.svg"
-      /></a>
-    </div>
-    <div id="reg-cont">
-      <form id="reg-form" method="post" name="reg-form">
-        <div class="form-header">
-          <h2>REGISTRATION</h2>
-        </div>
-        <div class="col">
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="name"
-              name="name"
-              placeholder=" "
-              required
-              type="text"
-            />
-            <label class="form-lbl" for="name">NAME</label>
-          </div>
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="email"
-              name="email"
-              placeholder=" "
-              required
-              type="email"
-            />
-            <label class="form-lbl" for="email">EMAIL</label>
-          </div>
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="phone"
-              name="phone"
-              placeholder=" "
-              required
-              type="number"
-            />
-            <label class="form-lbl" for="phone">PHONE</label>
-          </div>
-          <div class="form-input-cont" id="gender-cont">
-            <label id="gender-lbl">GENDER</label>
-            <div class="flex-cont" id="gender-input-cont">
-              <input
-                class="form-input"
-                id="male"
-                name="gender"
-                placeholder=" "
-                required
-                type="radio"
-                value="M"
-              />
-              <label class="lbl-small" for="male">MALE</label>
-              <input
-                class="form-input"
-                id="female"
-                name="gender"
-                placeholder=" "
-                required
-                type="radio"
-                value="F"
-              />
-              <label class="lbl-small" for="female">FEMALE</label>
-              <input
-                class="form-input"
-                id="other"
-                name="gender"
-                placeholder=" "
-                required
-                type="radio"
-                value="O"
-              />
-              <label class="lbl-small" for="other">OTHER</label>
-            </div>
-          </div>
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="yos"
-              type="number"
-              pattern="1|2|3|4|5"
-              placeholder=" "
-              required
-            />
-            <label class="form-lbl" for="yos">YEAR OF STUDY</label>
-            <i class="fa-solid fa-angle-down"></i>
-            <ul class="form-list" id="yos-list"></ul>
-            <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="sports"
-              name="sports"
-              placeholder=" "
-              autocomplete="off"
-            />
-            <label class="form-lbl" for="sports">SPORTS</label>
-            <i class="fa-solid fa-angle-down"></i>
-            <ul class="form-list" id="sport-list"></ul>
-            <ul id="sport-sel-list"></ul>
-          </div>
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="college"
-              name="college"
-              placeholder=" "
-              autocomplete="off"
-              required
-            />
-            <label class="form-lbl" for="college">COLLEGE</label>
-            <i class="fa-solid fa-angle-down"></i>
-            <ul class="form-list" id="college-list"></ul>
-          </div>
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="city"
-              name="city"
-              placeholder=" "
-              required
-              type="text"
-            />
-            <label class="form-lbl" for="city">CITY</label>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/5397743099.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet" />
+  <title>Registration</title>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script defer src="../Scripts/registration.js"></script>
+  <link href="../CSS/registration.css" rel="stylesheet" />
+  <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+</head>
 
-          <div class="form-input-cont">
-            <input
-              class="form-input"
-              id="state"
-              name="state"
-              placeholder=" "
-              required
-            />
-            <label class="form-lbl" for="state">STATE</label>
-          </div>
-          <div class="form-input-cont flex-cont">
-            <input id="coach" name="coach" placeholder=" " type="checkbox" />
-            <label class="lbl-small" for="coach">Are you a coach? </label>
+<body>
+  <div id="form-close">
+    <a href="../index.html"><img alt="" id="form-close-img" src="../Assets/Back.svg" /></a>
+  </div>
+  <div id="reg-cont">
+    <form id="reg-form" method="post" name="reg-form">
+      <div class="form-header">
+        <h2>REGISTRATION</h2>
+      </div>
+      <div class="col">
+        <div class="form-input-cont">
+          <input class="form-input" id="name" name="name" placeholder=" " required type="text" />
+          <label class="form-lbl" for="name">NAME</label>
+        </div>
+        <div class="form-input-cont">
+          <input class="form-input" id="email" name="email" placeholder=" " required type="email" />
+          <label class="form-lbl" for="email">EMAIL</label>
+        </div>
+        <div class="form-input-cont">
+          <input class="form-input" id="phone" name="phone" placeholder=" " required type="number" />
+          <label class="form-lbl" for="phone">PHONE</label>
+        </div>
+        <div class="form-input-cont" id="gender-cont">
+          <label id="gender-lbl">GENDER</label>
+          <div class="flex-cont" id="gender-input-cont">
+            <input class="form-input" id="male" name="gender" placeholder=" " required type="radio" value="M" />
+            <label class="lbl-small" for="male">MALE</label>
+            <input class="form-input" id="female" name="gender" placeholder=" " required type="radio" value="F" />
+            <label class="lbl-small" for="female">FEMALE</label>
+            <input class="form-input" id="other" name="gender" placeholder=" " required type="radio" value="O" />
+            <label class="lbl-small" for="other">OTHER</label>
           </div>
         </div>
-        <div id="form-submit-cont">
-          <button id="form-submit" type="submit">REGISTER</button>
+        <div class="form-input-cont">
+          <input class="form-input" id="yos" type="number" pattern="1|2|3|4|5" placeholder=" " required />
+          <label class="form-lbl" for="yos">YEAR OF STUDY</label>
+          <i class="fa-solid fa-angle-down"></i>
+          <ul class="form-list" id="yos-list"></ul>
+          <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
         </div>
-      </form>
-    </div>
-    <div
-      class="g-recaptcha"
-      data-sitekey="6LdSBPYgAAAAAFSZA0FHo_TK-jDXqyYDI-nL-4W_"
-      data-callback="submit_form"
-      data-size="invisible"
-    ></div>
-  </body>
+      </div>
+      <div class="col">
+        <div class="form-input-cont">
+          <input class="form-input" id="sports" name="sports" placeholder=" " autocomplete="off" />
+          <label class="form-lbl" for="sports">SPORTS</label>
+          <i class="fa-solid fa-angle-down"></i>
+          <ul class="form-list" id="sport-list"></ul>
+          <ul id="sport-sel-list"></ul>
+        </div>
+        <div class="form-input-cont">
+          <input class="form-input" id="college" name="college" placeholder=" " autocomplete="off" required />
+          <label class="form-lbl" for="college">COLLEGE</label>
+          <i class="fa-solid fa-angle-down"></i>
+          <ul class="form-list" id="college-list"></ul>
+        </div>
+        <div class="form-input-cont">
+          <input class="form-input" id="city" name="city" placeholder=" " required type="text" />
+          <label class="form-lbl" for="city">CITY</label>
+        </div>
+
+        <div class="form-input-cont">
+          <input class="form-input" id="state" name="state" placeholder=" " required />
+          <label class="form-lbl" for="state">STATE</label>
+        </div>
+        <div class="form-input-cont flex-cont">
+          <input id="coach" name="coach" placeholder=" " type="checkbox" />
+          <label class="lbl-small" for="coach">Are you a coach? </label>
+        </div>
+      </div>
+      <div id="form-submit-cont">
+        <button id="form-submit" type="submit">REGISTER</button>
+      </div>
+    </form>
+  </div>
+  <div class="g-recaptcha" data-sitekey="6LdSBPYgAAAAAFSZA0FHo_TK-jDXqyYDI-nL-4W_" data-callback="submit_form"
+    data-size="invisible"></div>
+</body>
+
 </html>

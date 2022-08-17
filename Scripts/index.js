@@ -118,11 +118,10 @@ function flicker() {
 ////////// LOADER EVENTS
 
 window.addEventListener("load", () => {
-
   const loader = document.querySelector(".loader");
   const light = document.getElementsByClassName("light");
 
-  if (document.getElementById('video').readyState === 4) {
+  if (document.getElementById("video").readyState === 4) {
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
 
@@ -152,7 +151,7 @@ window.addEventListener("load", () => {
     document.querySelector("body").style.overflowY = "scroll";
 
     setTimeout(() => {
-      loader.style.display = 'none';
+      loader.style.display = "none";
     }, 1000);
 
     setTimeout(() => {
@@ -213,7 +212,6 @@ window.addEventListener("load", () => {
     }, 4700);
 
     if (screen.width < 801) {
-      
       for (let i = 0; i < 3; i++) {
         fred[i].style.animation = "fall-red-2 51s linear 2.4s infinite";
         fblue[i].style.animation = "fall-blue-2 51s linear 2.4s infinite";
