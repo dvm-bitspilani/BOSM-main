@@ -133,7 +133,7 @@ window.addEventListener("resize", () => {
 });
 
 evtArrLeft.addEventListener("click", () => {
-  evtActive -= 3;
+  evtActive -= lengths;
   if (evtActive >= evtElems.length) {
     evtActive = 0;
   } else if (evtActive < 0) {
@@ -145,7 +145,7 @@ evtArrLeft.addEventListener("click", () => {
 });
 
 evtArrRight.addEventListener("click", () => {
-  evtActive += 3;
+  evtActive += lengths;
   if (evtActive >= evtElems.length) {
     evtActive = 0;
   } else if (evtActive < 0) {
