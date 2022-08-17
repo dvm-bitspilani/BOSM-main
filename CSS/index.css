@@ -172,13 +172,13 @@ section.contact {
   transition: 1s 0.75s;
 }
 
-.video-wrapper{
+.video-wrapper {
   position: relative;
   width: 20vw;
   height: 20vw;
 }
 
-#video{
+#video {
   width: 100%;
   height: 100%;
 }
@@ -618,6 +618,11 @@ img.light,
 .bg-red,
 .bg-blue {
   z-index: 26;
+  transform: scaleX(0.65);
+}
+
+.bg-blue {
+  transform: scaleX(0.55);
 }
 
 .player {
@@ -653,7 +658,7 @@ img.light,
   }
 
   to {
-    transform: scale(1) translate(0rem, 30vh);
+    transform: scale(0.9) translate(0rem, 30vh);
   }
 }
 
@@ -663,7 +668,7 @@ img.light,
   }
 
   to {
-    transform: scale(1) translate(0rem, 30vh);
+    transform: scale(0.9) translate(0rem, 30vh);
   }
 }
 
@@ -698,17 +703,13 @@ img.light,
   width: 30%;
 }
 
-.bg-blue {
-  transform: scale(0.8);
-}
-
 @-webkit-keyframes fall-blue {
   from {
     transform: scale(0.4) translateY(-98vh);
   }
 
   to {
-    transform: scale(0.8) translateY(30vh);
+    transform: scale(0.7) translateY(30vh);
   }
 }
 
@@ -718,7 +719,7 @@ img.light,
   }
 
   to {
-    transform: scale(0.8) translateY(30vh);
+    transform: scale(0.7) translateY(30vh);
   }
 }
 
@@ -759,7 +760,7 @@ img.light,
   }
 
   to {
-    transform: scale(0.8) translate(0rem, 30vh);
+    transform: scale(0.7) translate(0rem, 30vh);
   }
 }
 
@@ -769,7 +770,7 @@ img.light,
   }
 
   to {
-    transform: scale(0.8) translate(0rem, 30vh);
+    transform: scale(0.7) translate(0rem, 30vh);
   }
 }
 
