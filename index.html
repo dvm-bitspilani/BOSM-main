@@ -7,8 +7,8 @@
 
     <title>BOSM | Rise To Glory</title>
     <meta
-      name="description"
       content="One of the biggest sports extravaganzas in the Country, BITS Open Sports Meet (BOSM'22), is back with its 35th edition this winter to provide a stage for college teams to showcase their supremacy by competing amongst the nation's best talents."
+      name="description"
     />
 
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -34,16 +34,17 @@
     <link href="CSS/respDesktop.css" rel="stylesheet" />
     <link href="CSS/contact.css" rel="stylesheet" />
     <link href="CSS/about.css" rel="stylesheet" />
+    <link href="CSS/events.css" rel="stylesheet" />
 
     <script defer src="Scripts/index.js"></script>
-    <script defer src="Scripts/about.js"></script>
+    <script defer src="Scripts/events.js"></script>
+    <script defer type="module" src="Scripts/about.js"></script>
   </head>
 
   <body>
     <div class="loader">
-
       <div class="video-wrapper">
-        <video autoplay loop muted playsinline id="video" width="100%">
+        <video autoplay id="video" loop muted playsinline width="100%">
           <source src="Assets/loader.mp4" type="video/mp4" />
         </video>
         <div class="shadow"></div>
@@ -51,9 +52,9 @@
 
       <div class="hide">
         <!-- <span></span>
-        <span></span>
-        <span></span>
-        <span></span> -->
+			<span></span>
+			<span></span>
+			<span></span> -->
         CLICK TO CONTINUE
       </div>
     </div>
@@ -263,6 +264,19 @@
         <div id="about-tweet"></div>
       </div>
     </section>
+
+    <section class="events">
+      <img class="events-bg" src="./Assets/bgAbout.png" />
+      <img class="events-bg-phone" src="./Assets/bgAboutPhone.png" />
+      <h2 class="sec-header">EVENTS</h2>
+      <div id="evt-cont">
+        <div id="evt-arrow-left"></div>
+        <div id="evt-arrow-right"></div>
+        <div id="events-cont"></div>
+        <div id="event-dots-cont"></div>
+      </div>
+    </section>
+
     <section class="contact">
       <img class="contactBg" src="./Assets/bgContact.png" />
       <img class="contactBgPhone" src="./Assets/phoneContactBg.png" />

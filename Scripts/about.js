@@ -26,7 +26,7 @@ links.forEach((link, idx) => {
   vidPlayer.id = `yt-play-${idx + 1}`;
   vidPlayer.classList.add(`yt-play`);
   let sel = document.createElement("div");
-  sel.classList.add("dot");
+  sel.classList.add("about-dot");
   selCont.appendChild(sel);
   sels.push(sel);
   vidNode.appendChild(vidPlayer);
