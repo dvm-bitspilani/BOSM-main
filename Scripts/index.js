@@ -309,21 +309,21 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamImg.style.animation = "span-right 0.45s linear";
     hamText.style.animation = "span-left 0.45s linear";
     hamLogo.style.animation = "come-up 0.45s linear";
-    hamIcons.style.animation = "come-up 0.45s linear";
-    hamLinks.style.animation = "come-up 0.45s linear";
+    hamIcons.style.animation = "come-down 0.45s linear";
+    hamLinks.style.animation = "come-down 0.45s linear";
 
     // links appear
     for (let i = 1; i <= 4; i++) {
-      hamLink[i - 1].style.animation = `link-up 0.3s ${i * 0.3}s`;
+      hamLink[i - 1].style.animation = `link-up 0.2s ${i * 0.2}s`;
       setTimeout(() => {
         hamLink[i - 1].style.opacity = 1;
-      }, 300 + i * 300);
+      }, 200 + i * 200);
     }
 
     // icons appear
-    hamIcon[0].style.animation = `link-up 0.3s 0.3s`;
-    hamIcon[1].style.animation = `link-up 0.3s 0.3s`;
-    hamLogoImg.style.animation = `link-up 0.3s 0.3s`;
+    hamIcon[0].style.animation = `link-up 0.2s 0.2s`;
+    hamIcon[1].style.animation = `link-up 0.2s 0.2s`;
+    hamLogoImg.style.animation = `link-up 0.2s 0.2s`;
 
     setTimeout(() => {
       hamIcon[0].style.opacity = 1;
@@ -332,9 +332,9 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     }, 500);
 
     // hamburger animations
-    hamLine[0].style.animation = "ham-up-1 0.15s linear";
+    hamLine[0].style.animation = "ham-up-1 0.05s linear";
     hamLine[1].style.opacity = 0;
-    hamLine[2].style.animation = "ham-down-1 0.15s linear";
+    hamLine[2].style.animation = "ham-down-1 0.10s linear";
 
     setTimeout(() => {
       hamLine[2].style.width = "25px";
@@ -344,7 +344,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
       hamLine[0].style.width = "25px";
       hamLine[0].style.top = "13.2px";
       hamLine[0].style.transform = "rotate(45deg)";
-    }, 150);
+    }, 100);
     
   } else {
     // hamburger menu closes
@@ -363,8 +363,8 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamImg.style.animation = "span-go-right 0.5s linear";
     hamText.style.animation = "span-go-left 0.5s linear";
     hamLogo.style.animation = "go-down 0.5s linear";
-    hamIcons.style.animation = "go-down 0.5s linear";
-    hamLinks.style.animation = "go-down 0.5s linear";
+    hamIcons.style.animation = "go-up 0.5s linear";
+    hamLinks.style.animation = "go-up 0.5s linear";
 
     // links disappear
     for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
