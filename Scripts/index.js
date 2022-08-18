@@ -295,7 +295,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     // right nav position
     right.style.position = "fixed";
     right.style.top = "1rem";
-    right.style.right = "1rem";
+    right.style.right = "0";
 
     // opening animations
     hamImg.style.animation = "come-right 1s linear";
