@@ -310,20 +310,20 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamText.style.animation = "span-left 0.45s linear";
     hamLogo.style.animation = "come-up 0.45s linear";
     hamIcons.style.animation = "come-down 0.45s linear";
-    hamLinks.style.animation = "come-down 0.45s linear";
+    hamLinks.style.animation = "come-up 0.45s linear";
 
     // links appear
     for (let i = 1; i <= 4; i++) {
-      hamLink[i - 1].style.animation = `link-up 0.2s ${i * 0.2}s`;
+      hamLink[i - 1].style.animation = `link-up 0.2s linear 0.45s`;
       setTimeout(() => {
         hamLink[i - 1].style.opacity = 1;
-      }, 200 + i * 200);
+      }, 650);
     }
 
     // icons appear
-    hamIcon[0].style.animation = `link-up 0.2s 0.2s`;
-    hamIcon[1].style.animation = `link-up 0.2s 0.2s`;
-    hamLogoImg.style.animation = `link-up 0.2s 0.2s`;
+    hamIcon[0].style.animation = `link-up 0.2s linear 0.45s`;
+    hamIcon[1].style.animation = `link-up 0.2s linear 0.45s`;
+    hamLogoImg.style.animation = `link-up 0.2s linear 0.45s`;
 
     setTimeout(() => {
       hamIcon[0].style.opacity = 1;
@@ -364,7 +364,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamText.style.animation = "span-go-left 0.5s linear";
     hamLogo.style.animation = "go-down 0.5s linear";
     hamIcons.style.animation = "go-up 0.5s linear";
-    hamLinks.style.animation = "go-up 0.5s linear";
+    hamLinks.style.animation = "go-down 0.5s linear";
 
     // links disappear
     for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
