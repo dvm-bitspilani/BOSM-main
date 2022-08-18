@@ -579,17 +579,22 @@ footer {
 }
 
 .scrollNav {
-  position: absolute;
+  position: fixed;
   display: flex;
   transform: rotate(-90deg);
   gap: 1rem;
   font-family: "Montserrat", sans-serif;
-  top: 51vh;
+  top: 44vh;
   left: -8vw;
-  background-color: black;
+  background-color: transparent;
   padding: 20px;
-  z-index: 20;
-  display: none !important;
+  z-index: 999;
+}
+.navBut{
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .navBut {

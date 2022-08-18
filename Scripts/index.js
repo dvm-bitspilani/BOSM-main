@@ -390,3 +390,17 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     }, 100);
   }
 });
+
+
+//SideBar Navigation
+const sideScroll = document.getElementById('sideScroll')
+scrollElems = Array.from(document.getElementsByClassName('navBut'))
+
+sideScroll.addEventListener("click", (e)=>{
+  scrollElems.forEach(element => {
+    if(element.classList.contains("active")){
+      element.classList.remove("active")
+    }
+  });
+  console.log(e.target.classList.add("active"));
+})
