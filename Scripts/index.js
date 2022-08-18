@@ -296,32 +296,34 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     open = true;
     hamGrid.style.display = "grid";
     body.style.overflowY = "hidden";
+    
+    // links disappear
+    for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
 
     // right nav position
     right.style.position = "fixed";
-    right.style.top = "1.1rem";
+    right.style.top = "1.06rem";
     right.style.right = "0";
 
     // opening animations
-    hamImg.style.animation = "span-right 0.6s linear";
-    hamText.style.animation = "span-left 0.6s linear";
-    hamLogo.style.animation = "come-down 0.6s linear";
-    hamIcons.style.animation = "come-up 0.6s linear";
-    hamLinks.style.animation = "come-up 0.6s linear";
+    hamImg.style.animation = "span-right 0.45s linear";
+    hamText.style.animation = "span-left 0.45s linear";
+    hamLogo.style.animation = "come-down 0.45s linear";
+    hamIcons.style.animation = "come-up 0.45s linear";
+    hamLinks.style.animation = "come-up 0.45s linear";
 
     // links appear
-    for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
     for (let i = 1; i <= 4; i++) {
-      hamLink[i - 1].style.animation = `link-up 0.4s ${i * 0.4}s`;
+      hamLink[i - 1].style.animation = `link-up 0.3s ${i * 0.3}s`;
       setTimeout(() => {
         hamLink[i - 1].style.opacity = 1;
-      }, 400 + i * 400);
+      }, 300 + i * 300);
     }
 
     // icons appear
-    hamIcon[0].style.animation = `link-up 0.4s 0.4s`;
-    hamIcon[1].style.animation = `link-up 0.4s 0.4s`;
-    hamLogoImg.style.animation = `link-up 0.4s 0.4s`;
+    hamIcon[0].style.animation = `link-up 0.3s 0.3s`;
+    hamIcon[1].style.animation = `link-up 0.3s 0.3s`;
+    hamLogoImg.style.animation = `link-up 0.3s 0.3s`;
 
     setTimeout(() => {
       hamIcon[0].style.opacity = 1;
@@ -330,9 +332,9 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     }, 800);
 
     // hamburger animations
-    hamLine[0].style.animation = "ham-up-1 0.4s linear";
+    hamLine[0].style.animation = "ham-up-1 0.15s linear";
     hamLine[1].style.opacity = 0;
-    hamLine[2].style.animation = "ham-down-1 0.4s linear";
+    hamLine[2].style.animation = "ham-down-1 0.15s linear";
 
     setTimeout(() => {
       hamLine[2].style.width = "25px";
@@ -342,14 +344,15 @@ document.querySelector(".hamburger").addEventListener("click", () => {
       hamLine[0].style.width = "25px";
       hamLine[0].style.top = "13.2px";
       hamLine[0].style.transform = "rotate(45deg)";
-    }, 400);
+    }, 150);
+    
   } else {
     // hamburger menu closes
     open = false;
     setTimeout(() => {
       hamGrid.style.display = "none";
       body.style.overflowY = "scroll";
-    }, 700);
+    }, 500);
 
     // right nav position
     right.style.position = "relative";
@@ -357,11 +360,11 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     right.style.right = "0";
 
     // closing animations
-    hamImg.style.animation = "span-go-right 0.7s linear";
-    hamText.style.animation = "span-go-left 0.7s linear";
-    hamLogo.style.animation = "go-up 0.7s linear";
-    hamIcons.style.animation = "go-down 0.7s linear";
-    hamLinks.style.animation = "go-down 0.7s linear";
+    hamImg.style.animation = "span-go-right 0.5s linear";
+    hamText.style.animation = "span-go-left 0.5s linear";
+    hamLogo.style.animation = "go-up 0.5s linear";
+    hamIcons.style.animation = "go-down 0.5s linear";
+    hamLinks.style.animation = "go-down 0.5s linear";
 
     // links disappear
     for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
@@ -372,9 +375,9 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamLogoImg.style.opacity = 0;
 
     // hamburger animations
-    hamLine[0].style.animation = "ham-up-2 0.4s linear";
+    hamLine[0].style.animation = "ham-up-2 0.1s linear";
     hamLine[1].style.opacity = 1;
-    hamLine[2].style.animation = "ham-down-2 0.4s linear";
+    hamLine[2].style.animation = "ham-down-2 0.1s linear";
 
     setTimeout(() => {
       hamLine[2].style.width = "13px";
@@ -384,6 +387,6 @@ document.querySelector(".hamburger").addEventListener("click", () => {
       hamLine[0].style.width = "35px";
       hamLine[0].style.top = "1px";
       hamLine[0].style.transform = "none";
-    }, 400);
+    }, 100);
   }
 });
