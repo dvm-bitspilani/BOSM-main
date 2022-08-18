@@ -308,7 +308,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     // opening animations
     hamImg.style.animation = "span-right 0.45s linear";
     hamText.style.animation = "span-left 0.45s linear";
-    hamLogo.style.animation = "come-down 0.45s linear";
+    hamLogo.style.animation = "come-up 0.45s linear";
     hamIcons.style.animation = "come-up 0.45s linear";
     hamLinks.style.animation = "come-up 0.45s linear";
 
@@ -329,7 +329,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
       hamIcon[0].style.opacity = 1;
       hamIcon[1].style.opacity = 1;
       hamLogoImg.style.opacity = 1;
-    }, 800);
+    }, 500);
 
     // hamburger animations
     hamLine[0].style.animation = "ham-up-1 0.15s linear";
@@ -362,7 +362,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     // closing animations
     hamImg.style.animation = "span-go-right 0.5s linear";
     hamText.style.animation = "span-go-left 0.5s linear";
-    hamLogo.style.animation = "go-up 0.5s linear";
+    hamLogo.style.animation = "go-down 0.5s linear";
     hamIcons.style.animation = "go-down 0.5s linear";
     hamLinks.style.animation = "go-down 0.5s linear";
 
