@@ -212,10 +212,11 @@ section.contact {
 
 .right {
   display: flex;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   justify-content: space-around;
   position: relative;
-  z-index: 20;
+  z-index: 100001;
   background-color: black;
 }
 
@@ -440,41 +441,45 @@ main {
 }
 
 /* Hamburger */
-.hamburger {
-  width: 25px;
-  margin: 3rem 2rem;
-  background: white;
-  height: 3px;
-  border-radius: 1px;
-  cursor: pointer;
+
+.ham-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  display: none !important;
 }
 
-.hamCont {
+.hamburger {
+  height: 30px;
+  width: 35px;
+  position: relative;
   cursor: pointer;
 }
 
-.hamburger:before {
-  content: "";
-  position: absolute;
-  width: 35px;
-  background: white;
-  height: 3px;
+.hamburger span {
   right: 0;
-  top: -10px;
-  border-radius: 1px;
+  height: 3.6px;
+  border-radius: 1.5px;
+  background: white;
+  position: absolute;
 }
 
-.hamburger:after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  top: 10px;
-  right: 0;
-  background: white;
-  height: 3px;
-  border-radius: 1px;
+.ham-1 {
+  width: 35px;
+  top: 1px;
+  animation: ham-up 0.4s linear;
+}
+
+.ham-2 {
+  width: 23px;
+  top: 13.2px;
+}
+
+.ham-3 {
+  width: 13px;
+  top: 25.4px;
+  height: 3.4px !important;
+  animation: ham-down 0.4s linear;
 }
 
 /* Timer */
@@ -768,7 +773,7 @@ img.light,
   }
 }
 
-@keyframes fall-yellow{
+@keyframes fall-yellow {
   from {
     transform: scale(0.4, 0.8) translate(-27rem, -110vh);
   }
@@ -917,6 +922,234 @@ img.light,
   50%,
   100% {
     /* filter: blur(5px); */
+    opacity: 1;
+  }
+}
+
+/* HAMGURGER MENU */
+
+.ham-grid {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100001;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  grid-template-columns: 32vw 30vw auto;
+  grid-template-rows: 66vh 34vh;
+}
+
+.ham-grid div {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.ham-grid img {
+  max-height: 100%;
+}
+
+.ham-text img,
+.ham-img img {
+  width: 100%;
+}
+
+.ham-logo img {
+  height: 23vh;
+}
+
+.ham-icons,
+.ham-logo {
+  background: rgba(43, 0, 0, 0.3);
+  backdrop-filter: blur(45px);
+}
+
+.ham-icons {
+  gap: 2rem;
+}
+
+.ham-icon {
+  height: 5vh;
+  width: 5vh;
+}
+
+.ham-links {
+  grid-column: 3;
+  grid-row: 1 / a 2;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(45px);
+}
+
+.ham-links > div {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ham-links a {
+  font-family: "Montserrat";
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  opacity: 0;
+}
+
+@keyframes come-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes come-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes come-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes come-right {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes go-up {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes go-down {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes go-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes go-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes ham-up-1 {
+  from {
+    transform: none;
+    width: 35px;
+    top: 1px;
+  }
+  to {
+    transform: rotate(45deg);
+    width: 25px;
+    top: 13.2px;
+  }
+}
+
+@keyframes ham-down-1 {
+  from {
+    transform: none;
+    width: 13px;
+    top: 25.4px;
+  }
+  to {
+    transform: rotate(-45deg);
+    width: 25px;
+    top: 13.2px;
+  }
+}
+
+@keyframes ham-up-2 {
+  from {
+    transform: rotate(45deg);
+    width: 25px;
+    top: 13.2px;
+  }
+
+  to {
+    transform: none;
+    width: 35px;
+    top: 1px;
+  }
+}
+
+@keyframes ham-down-2 {
+  from {
+    transform: rotate(-45deg);
+    width: 25px;
+    top: 13.2px;
+  }
+
+  to {
+    transform: none;
+    width: 13px;
+    top: 25.4px;
+  }
+}
+
+@keyframes link-up {
+  
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }

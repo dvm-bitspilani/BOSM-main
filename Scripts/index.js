@@ -118,6 +118,8 @@ function flicker() {
 
 ////////// LOADER EVENTS
 
+let body = document.querySelector("body");
+
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
   const light = document.getElementsByClassName("light");
@@ -149,7 +151,7 @@ window.addEventListener("load", () => {
 
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     loader.style.animation = "fade-out 1s ease-out";
-    document.querySelector("body").style.overflowY = "scroll";
+    body.style.overflowY = "scroll";
 
     setTimeout(() => {
       loader.style.display = "none";
@@ -269,3 +271,99 @@ function copyText(text) {
     copied.style.opacity = 0;
   }, 1000);
 }
+
+////////// HAMBURGER EVENTS
+
+let open = false;
+let right = document.querySelector(".right");
+let hamGrid = document.querySelector(".ham-grid");
+let hamImg = document.querySelector(".ham-img img");
+let hamText = document.querySelector(".ham-text img");
+let hamLogo = document.querySelector(".ham-logo");
+let hamIcons = document.querySelector(".ham-icons");
+let hamLinks = document.querySelector(".ham-links");
+let hamLine = document.querySelectorAll(".hamburger span");
+let hamLink = document.querySelectorAll(".ham-links div a");
+
+document.querySelector(".hamburger").addEventListener("click", () => {
+  if (!open) {
+    // hamburger menu opens
+    open = true;
+    hamGrid.style.display = "grid";
+    body.style.overflowY = "hidden";
+
+    // right nav position
+    right.style.position = "fixed";
+    right.style.top = "1rem";
+    right.style.right = "1rem";
+
+    // opening animations
+    hamImg.style.animation = "come-right 1s linear";
+    hamText.style.animation = "come-left 1s linear";
+    hamLogo.style.animation = "come-down 1s linear";
+    hamIcons.style.animation = "come-up 1s linear";
+    hamLinks.style.animation = "come-up 1s linear";
+
+    // links appear
+    for (let i = 1; i <= 4; i++) {
+      hamLink[i - 1].style.animation = `link-up 0.4s ${0.4 + i * 0.4}s`;
+      setTimeout(() => {
+        hamLink[i - 1].style.opacity = 1;
+      }, 800 + i * 400);
+    }
+
+    // hamburger animations
+    hamLine[0].style.animation = "ham-up-1 0.4s linear";
+    hamLine[1].style.opacity = 0;
+    hamLine[2].style.animation = "ham-down-1 0.4s linear";
+
+    setTimeout(() => {
+      hamLine[2].style.width = "25px";
+      hamLine[2].style.top = "13.2px";
+      hamLine[2].style.transform = "rotate(-45deg)";
+
+      hamLine[0].style.width = "25px";
+      hamLine[0].style.top = "13.2px";
+      hamLine[0].style.transform = "rotate(45deg)";
+    }, 400);
+  } else {
+    // hamburger menu closes
+    open = false;
+    setTimeout(() => {
+      hamGrid.style.display = "none";
+      body.style.overflowY = "scroll";
+    }, 700);
+
+    // right nav position
+    right.style.position = "relative";
+    right.style.top = "0";
+    right.style.right = "0";
+
+    // closing animations
+    hamImg.style.animation = "go-left 0.7s linear";
+    hamText.style.animation = "go-right 0.7s linear";
+    hamLogo.style.animation = "go-up 0.7s linear";
+    hamIcons.style.animation = "go-down 0.7s linear";
+    hamLinks.style.animation = "go-down 0.7s linear";
+
+    // links disappear
+    for (let i = 1; i <= 4; i++) {
+      hamLink[i - 1].style.opacity = 0;
+    }
+
+    // hamburger animations
+    hamLine[0].style.animation = "ham-up-2 0.4s linear";
+    hamLine[1].style.opacity = 1;
+    hamLine[2].style.animation = "ham-down-2 0.4s linear";
+
+    setTimeout(() => {
+      hamLine[2].style.width = "13px";
+      hamLine[2].style.top = "25.4px";
+      hamLine[2].style.transform = "none";
+
+      hamLine[0].style.width = "35px";
+      hamLine[0].style.top = "1px";
+      hamLine[0].style.transform = "none";
+    }, 400);
+  }
+});
