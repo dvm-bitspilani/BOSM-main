@@ -662,7 +662,7 @@ img.light,
   }
 
   to {
-    transform: scale(0.9, 0.8) translate(1rem, 45vh);
+    transform: scale(0.9, 0.8) translate(-3rem, 45vh);
   }
 }
 
@@ -672,7 +672,7 @@ img.light,
   }
 
   to {
-    transform: scale(0.9, 0.8) translate(1rem, 45vh);
+    transform: scale(0.9, 0.8) translate(-3rem, 45vh);
   }
 }
 
@@ -760,21 +760,21 @@ img.light,
 
 @-webkit-keyframes fall-yellow {
   from {
-    transform: scale(0.4, 0.8) translate(-24rem, -110vh);
+    transform: scale(0.4, 0.8) translate(-27rem, -110vh);
   }
 
   to {
-    transform: scale(0.6, 0.8) translate(5rem, 45vh);
+    transform: scale(0.6, 0.8) translate(10rem, 45vh);
   }
 }
 
 @keyframes fall-yellow{
   from {
-    transform: scale(0.4, 0.8) translate(-24rem, -110vh);
+    transform: scale(0.4, 0.8) translate(-27rem, -110vh);
   }
 
   to {
-    transform: scale(0.6, 0.8) translate(5rem, 45vh);
+    transform: scale(0.6, 0.8) translate(10rem, 45vh);
   }
 }
 

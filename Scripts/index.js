@@ -172,9 +172,9 @@ window.addEventListener("load", () => {
 
     for (let i = 0; i < 3; i++) {
       light[i].style.opacity = 0;
-      fred[i].style.animation = "fall-red 40s linear 2.4s infinite";
-      fblue[i].style.animation = "fall-blue 40s linear 2.4s infinite";
-      fyellow[i].style.animation = "fall-yellow 40s linear 2.4s infinite";
+      fred[i].style.animation = "fall-red 52s linear 2.4s infinite";
+      fblue[i].style.animation = "fall-blue 52s linear 2.4s infinite";
+      fyellow[i].style.animation = "fall-yellow 52s linear 2.4s infinite";
     }
 
     setTimeout(() => {
@@ -214,9 +214,9 @@ window.addEventListener("load", () => {
 
     if (screen.width < 801) {
       for (let i = 0; i < 3; i++) {
-        fred[i].style.animation = "fall-red-2 40s linear 2.4s infinite";
-        fblue[i].style.animation = "fall-blue-2 40s linear 2.4s infinite";
-        fyellow[i].style.animation = "fall-yellow-2 40s linear 2.4s infinite";
+        fred[i].style.animation = "fall-red-2 52s linear 2.4s infinite";
+        fblue[i].style.animation = "fall-blue-2 52s linear 2.4s infinite";
+        fyellow[i].style.animation = "fall-yellow-2 52s linear 2.4s infinite";
       }
 
       for (let i = 0; i < 3; i++)
