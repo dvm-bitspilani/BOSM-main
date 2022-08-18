@@ -618,11 +618,15 @@ img.light,
 .bg-red,
 .bg-blue {
   z-index: 26;
-  transform: scaleX(0.65);
+  transform: scaleX(0.55) scaleY(0.8);
 }
 
-.bg-blue {
-  transform: scaleX(0.55);
+.bg-red {
+  transform: scaleX(0.65) rotate(7deg);
+}
+
+.bg-yellow {
+  transform: scaleX(0.65) rotate(-10deg);
 }
 
 .player {
@@ -636,7 +640,7 @@ img.light,
   height: 80vh !important;
   -webkit-animation-delay: 2.4s !important;
   animation-delay: 2.4s !important;
-  transform: translateY(-98vh);
+  transform: translateY(-110vh);
   opacity: 0;
   position: absolute;
 }
@@ -654,21 +658,21 @@ img.light,
 
 @-webkit-keyframes fall-red {
   from {
-    transform: scale(0.4) translate(20rem, -98vh);
+    transform: scale(0.4, 0.8) translate(28rem, -110vh);
   }
 
   to {
-    transform: scale(0.9) translate(0rem, 30vh);
+    transform: scale(0.9, 0.8) translate(1rem, 45vh);
   }
 }
 
 @keyframes fall-red {
   from {
-    transform: scale(0.4) translate(20rem, -98vh);
+    transform: scale(0.4, 0.8) translate(28rem, -110vh);
   }
 
   to {
-    transform: scale(0.9) translate(0rem, 30vh);
+    transform: scale(0.9, 0.8) translate(1rem, 45vh);
   }
 }
 
@@ -705,21 +709,21 @@ img.light,
 
 @-webkit-keyframes fall-blue {
   from {
-    transform: scale(0.4) translateY(-98vh);
+    transform: scale(0.3, 0.65) translateY(-110vh);
   }
 
   to {
-    transform: scale(0.7) translateY(30vh);
+    transform: scale(0.6, 0.65) translateY(45vh);
   }
 }
 
 @keyframes fall-blue {
   from {
-    transform: scale(0.4) translateY(-98vh);
+    transform: scale(0.3, 0.65) translateY(-110vh);
   }
 
   to {
-    transform: scale(0.7) translateY(30vh);
+    transform: scale(0.6, 0.65) translateY(45vh);
   }
 }
 
@@ -756,21 +760,21 @@ img.light,
 
 @-webkit-keyframes fall-yellow {
   from {
-    transform: scale(0.5) translate(-15rem, -98vh);
+    transform: scale(0.4, 0.8) translate(-24rem, -110vh);
   }
 
   to {
-    transform: scale(0.7) translate(0rem, 30vh);
+    transform: scale(0.6, 0.8) translate(5rem, 45vh);
   }
 }
 
-@keyframes fall-yellow {
+@keyframes fall-yellow{
   from {
-    transform: scale(0.5) translate(-15rem, -98vh);
+    transform: scale(0.4, 0.8) translate(-24rem, -110vh);
   }
 
   to {
-    transform: scale(0.7) translate(0rem, 30vh);
+    transform: scale(0.6, 0.8) translate(5rem, 45vh);
   }
 }
 

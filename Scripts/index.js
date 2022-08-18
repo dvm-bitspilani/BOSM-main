@@ -1,13 +1,14 @@
 /////////////// TIMER ANIMATION
 
 const bosm = new Date("October 14, 2022 23:59:59").getTime();
-let prev_day, prev_hr, prev_min, prev_sec, days, hrs, min, sec;
-let haha = 0;
+let prev_day, prev_hr, prev_min, prev_sec;
+let days, hrs, min, sec;
+let temp = 0;
 
 // setInterval(() => {
 //   document.getElementById("sec").style.animation =
-//     haha % 2 == 0 ? "card-flip 0.6s" : "none";
-//   haha++;
+//     temp % 2 == 0 ? "card-flip 0.6s" : "none";
+//   temp++;
 // }, 500);
 
 setInterval(() => {
@@ -171,9 +172,9 @@ window.addEventListener("load", () => {
 
     for (let i = 0; i < 3; i++) {
       light[i].style.opacity = 0;
-      fred[i].style.animation = "fall-red 51s linear 2.4s infinite";
-      fblue[i].style.animation = "fall-blue 51s linear 2.4s infinite";
-      fyellow[i].style.animation = "fall-yellow 51s linear 2.4s infinite";
+      fred[i].style.animation = "fall-red 40s linear 2.4s infinite";
+      fblue[i].style.animation = "fall-blue 40s linear 2.4s infinite";
+      fyellow[i].style.animation = "fall-yellow 40s linear 2.4s infinite";
     }
 
     setTimeout(() => {
@@ -213,14 +214,20 @@ window.addEventListener("load", () => {
 
     if (screen.width < 801) {
       for (let i = 0; i < 3; i++) {
-        fred[i].style.animation = "fall-red-2 51s linear 2.4s infinite";
-        fblue[i].style.animation = "fall-blue-2 51s linear 2.4s infinite";
-        fyellow[i].style.animation = "fall-yellow-2 51s linear 2.4s infinite";
+        fred[i].style.animation = "fall-red-2 40s linear 2.4s infinite";
+        fblue[i].style.animation = "fall-blue-2 40s linear 2.4s infinite";
+        fyellow[i].style.animation = "fall-yellow-2 40s linear 2.4s infinite";
       }
 
       for (let i = 0; i < 3; i++)
         for (let j = 0; j < 3; j++)
           loop1[i][j].setAttribute("src", "Assets/smol.png");
+    } else {
+      for (let i = 0; i < 3; i++) {
+        fred[i].setAttribute("src", "Assets/fall-red-big.png");
+        fblue[i].setAttribute("src", "Assets/fall-blue-big.png");
+        fyellow[i].setAttribute("src", "Assets/fall-yellow-big.png");
+      }
     }
   });
 });
