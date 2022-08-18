@@ -975,6 +975,7 @@ img.light,
 
 .ham-text img,
 .ham-img img {
+  height: 100%;
   width: 100%;
 }
 
