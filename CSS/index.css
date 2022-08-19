@@ -189,23 +189,24 @@ section.contact {
 /* NavBar */
 .left,
 .right {
-  margin-block: 1.2rem;
+  margin-top: 2.4rem;
+}
+.right{
   margin-inline: 0.4rem;
 }
-
 .left > img {
   width: 4.2rem;
 }
 
 .left{
-  margin-inline: 3.4rem !important;
+  margin-inline: 3.4rem;
 }
 
 .nav {
   display: flex;
   color: white;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .right {
@@ -589,14 +590,15 @@ footer {
   transform: rotate(-90deg);
   font-family: "Montserrat", sans-serif;
   top: 44vh;
-  left: -8vw;
+  left: -7%;
   background-color: transparent;
   z-index: 999;
   font-size: 0.8rem;  
 }
 .navBut{
   text-decoration: none;
-  border-bottom: 3px solid transparent !important;
+  border-bottom: 2px solid transparent !important;
+  transform: scaleX(0);
   padding: 7px 14px 6px;
 }
 html {
@@ -608,11 +610,11 @@ html {
 }
 
 .active {
-  border-bottom: 3px solid white !important;
+  border-bottom: 2px solid white !important;
   padding: 7px 14px 6px;
 }
 .active{
-  transition: all 1s;
+  transition: all 0.1s;
 }
 
 .socials > a {

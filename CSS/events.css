@@ -130,7 +130,7 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  left: 30px;
+  left: 40px;
   cursor: pointer;
 }
 
@@ -162,7 +162,7 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  right: 30px;
+  right: 40px;
   cursor: pointer;
 }
 

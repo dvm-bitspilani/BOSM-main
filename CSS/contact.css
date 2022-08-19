@@ -45,7 +45,7 @@
   transition: all 0.4s;
 }
 .contDiv {
-  margin-top: 3rem;
+  margin-top: 2rem;
   z-index: 2;
   border-radius: 40px;
   padding: 0.4rem;
@@ -59,29 +59,29 @@
 
 .name {
   margin-top: 0.8rem;
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .dept {
   opacity: 0.8;
-  margin-top: 0.8rem;
-  font-size: 1rem;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
 }
 
 .number {
   opacity: 0.5;
-  margin-top: 0.8rem;
-  font-size: 1rem;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
   cursor: pointer;
   font-weight: 400;
 }
 
 .mail {
   opacity: 0.5;
-  margin-top: 0.8rem;
+  margin-top: 0.4rem;
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: 400;

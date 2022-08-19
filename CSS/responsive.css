@@ -323,6 +323,9 @@
   section {
     margin: 150px 0;
   }
+  footer{
+    margin-top: -3rem;
+  }
 
   .line {
     transform: scale(0.6) translateY(-35px);
