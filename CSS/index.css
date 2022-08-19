@@ -444,6 +444,7 @@ main {
 /* Hamburger */
 .ham-cont {
   display: flex;
+  display: none;
   transform: scale(0.8);
   justify-content: center;
   align-items: center;
@@ -1211,7 +1212,7 @@ img.light,
     top: 1px;
   }
   to {
-    transform: rotate(45deg);
+    transform: rotate(405deg);
     width: 25px;
     top: 13.2px;
   }
@@ -1223,7 +1224,7 @@ img.light,
     top: 1px;
   }
   to {
-    transform: rotate(45deg);
+    transform: rotate(405deg);
     width: 25px;
     top: 13.2px;
   }
@@ -1235,7 +1236,7 @@ img.light,
     top: 25.4px;
   }
   to {
-    transform: rotate(-45deg);
+    transform: rotate(-405deg);
     width: 25px;
     top: 13.2px;
   }
@@ -1247,14 +1248,14 @@ img.light,
     top: 25.4px;
   }
   to {
-    transform: rotate(-45deg);
+    transform: rotate(-405deg);
     width: 25px;
     top: 13.2px;
   }
 }
 @-webkit-keyframes ham-up-2 {
   from {
-    transform: rotate(45deg);
+    transform: rotate(405deg);
     width: 25px;
     top: 13.2px;
   }
@@ -1266,7 +1267,7 @@ img.light,
 }
 @keyframes ham-up-2 {
   from {
-    transform: rotate(45deg);
+    transform: rotate(405deg);
     width: 25px;
     top: 13.2px;
   }
@@ -1278,7 +1279,7 @@ img.light,
 }
 @-webkit-keyframes ham-down-2 {
   from {
-    transform: rotate(-45deg);
+    transform: rotate(-405deg);
     width: 25px;
     top: 13.2px;
   }
@@ -1290,7 +1291,7 @@ img.light,
 }
 @keyframes ham-down-2 {
   from {
-    transform: rotate(-45deg);
+    transform: rotate(-405deg);
     width: 25px;
     top: 13.2px;
   }

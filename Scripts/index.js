@@ -296,7 +296,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     open = true;
     hamGrid.style.display = "grid";
     body.style.overflowY = "hidden";
-    
+
     // links disappear
     for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
 
@@ -317,7 +317,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
       hamLink[i - 1].style.animation = `link-up 0.2s linear 0.45s`;
       setTimeout(() => {
         hamLink[i - 1].style.opacity = 1;
-      }, 650);
+      }, 605);
     }
 
     // icons appear
@@ -332,20 +332,19 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     }, 500);
 
     // hamburger animations
-    hamLine[0].style.animation = "ham-up-1 0.05s linear";
+    hamLine[0].style.animation = "ham-up-1 0.15s linear";
     hamLine[1].style.opacity = 0;
-    hamLine[2].style.animation = "ham-down-1 0.10s linear";
+    hamLine[2].style.animation = "ham-down-1 0.15s linear";
 
     setTimeout(() => {
       hamLine[2].style.width = "25px";
       hamLine[2].style.top = "13.2px";
-      hamLine[2].style.transform = "rotate(-45deg)";
+      hamLine[2].style.transform = "rotate(-405deg)";
 
       hamLine[0].style.width = "25px";
       hamLine[0].style.top = "13.2px";
-      hamLine[0].style.transform = "rotate(45deg)";
-    }, 100);
-    
+      hamLine[0].style.transform = "rotate(405deg)";
+    }, 150);
   } else {
     // hamburger menu closes
     open = false;
@@ -375,9 +374,9 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamLogoImg.style.opacity = 0;
 
     // hamburger animations
-    hamLine[0].style.animation = "ham-up-2 0.1s linear";
+    hamLine[0].style.animation = "ham-up-2 0.15s linear";
     hamLine[1].style.opacity = 1;
-    hamLine[2].style.animation = "ham-down-2 0.1s linear";
+    hamLine[2].style.animation = "ham-down-2 0.15s linear";
 
     setTimeout(() => {
       hamLine[2].style.width = "13px";
@@ -387,20 +386,19 @@ document.querySelector(".hamburger").addEventListener("click", () => {
       hamLine[0].style.width = "35px";
       hamLine[0].style.top = "1px";
       hamLine[0].style.transform = "none";
-    }, 100);
+    }, 150);
   }
 });
 
-
 //SideBar Navigation
-const sideScroll = document.getElementById('sideScroll')
-scrollElems = Array.from(document.getElementsByClassName('navBut'))
+const sideScroll = document.getElementById("sideScroll");
+scrollElems = Array.from(document.getElementsByClassName("navBut"));
 
-sideScroll.addEventListener("click", (e)=>{
-  scrollElems.forEach(element => {
-    if(element.classList.contains("active")){
-      element.classList.remove("active")
+sideScroll.addEventListener("click", (e) => {
+  scrollElems.forEach((element) => {
+    if (element.classList.contains("active")) {
+      element.classList.remove("active");
     }
   });
   console.log(e.target.classList.add("active"));
-})
+});
