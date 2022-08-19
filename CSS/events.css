@@ -130,7 +130,8 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  left: 0;
+  left: 30px;
+  cursor: pointer;
 }
 
 #evt-arrow-left::before {
@@ -161,7 +162,8 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  right: 0;
+  right: 30px;
+  cursor: pointer;
 }
 
 #evt-arrow-right::before {

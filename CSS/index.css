@@ -583,16 +583,17 @@ footer {
   position: fixed;
   display: flex;
   transform: rotate(-90deg);
-  gap: 1rem;
   font-family: "Montserrat", sans-serif;
   top: 44vh;
   left: -8vw;
   background-color: transparent;
-  padding: 20px;
   z-index: 999;
+  font-size: 0.8rem;  
 }
 .navBut{
   text-decoration: none;
+  border-bottom: 3px solid transparent !important;
+  padding: 7px 14px 6px;
 }
 html {
   scroll-behavior: smooth;
@@ -603,8 +604,11 @@ html {
 }
 
 .active {
-  border-bottom: 3px solid white;
-  padding: 0 0 6px;
+  border-bottom: 3px solid white !important;
+  padding: 7px 14px 6px;
+}
+.active{
+  transition: all 1s;
 }
 
 .socials > a {
