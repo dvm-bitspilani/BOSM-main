@@ -68,7 +68,7 @@ section.contact {
 }
 
 .hide {
-  margin-top: 2rem;
+  margin-top: 0rem;
   padding: 0.8rem 1.2rem;
   font-size: 0.65rem;
   letter-spacing: 1px;
@@ -190,7 +190,7 @@ section.contact {
 .left,
 .right {
   margin-block: 1.2rem;
-  margin-inline: 2.4rem;
+  margin-inline: 0.4rem;
 }
 
 .left > img {
@@ -573,7 +573,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -3.5rem;
+  margin-top: -2rem;
   position: relative;
   max-width: 100vw;
   z-index: 30;
