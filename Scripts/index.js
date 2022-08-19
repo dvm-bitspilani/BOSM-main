@@ -400,5 +400,41 @@ sideScroll.addEventListener("click", (e) => {
       element.classList.remove("active");
     }
   });
-  console.log(e.target.classList.add("active"));
+  e.target.classList.add("active")
 });
+
+const headers = Array.from(document.getElementsByClassName("sec-head"));
+document.addEventListener("scroll", (e) => {
+  let windowHeight = window.innerHeight;
+ headers.forEach((e) =>{
+  let revealTop = e.getBoundingClientRect().top;
+  let revealPoint = 160;
+  let index = headers.indexOf(e)
+  if(revealTop < windowHeight - revealPoint){
+    console.log(index);
+    scrollElems.forEach((element) => {
+      if (element.classList.contains("active")) {
+        element.classList.remove("active");
+      }
+    }
+    );
+    scrollElems[3-index].classList.add("active")
+  }
+ })
+})
+
+// window.addEventListener('scroll', reveal);
+// function reveal() {
+
+//     var reveals = document.querySelectorAll('.reveal');
+
+//     for (var i = 0; i < reveals.length; i++) {
+
+//         var windowHeight = window.innerHeight;
+//         var revealTop = reveals[i].getBoundingClientRect().top;
+//         var revealPoint = 60;
+//         if (revealTop < windowHeight - revealPoint) {
+//             reveals[i].classList.add('active');
+//         }
+//     }
+// }

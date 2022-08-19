@@ -197,6 +197,10 @@ section.contact {
   width: 4.2rem;
 }
 
+.left{
+  margin-inline: 3.4rem !important;
+}
+
 .nav {
   display: flex;
   color: white;
