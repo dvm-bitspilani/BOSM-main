@@ -118,9 +118,15 @@ body::-webkit-scrollbar {
 }
 
 .dev-links {
-  width: 90%;
+  width: 70%;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.dev-link{
+  display: flex;
+  width: 90%;
   justify-content: center;
 }
 
@@ -145,6 +151,10 @@ body::-webkit-scrollbar {
     margin: 3rem 0 1rem 0;
   }
 
+  .centre{
+    transform: translateX(calc(17.5vw + 2rem));
+  }
+
   .six,
   .five {
     gap: 3rem;
@@ -156,7 +166,7 @@ body::-webkit-scrollbar {
   }
 
   .dev-links {
-    gap: 1rem;
+    gap: 0rem;
   }
 
   .dev-link img {
@@ -181,6 +191,10 @@ body::-webkit-scrollbar {
   .dev-head {
     font-size: 2.8rem;
     margin: 2rem 0 0rem 0;
+  }
+
+  .centre{
+    transform: none;
   }
 
   body {
