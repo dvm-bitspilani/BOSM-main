@@ -102,7 +102,7 @@ let sound = new Audio("Assets/switchsound.mp3");
 
 function flicker() {
   sound.volume = 0.3;
-  sound.playbackRate = 1.2;
+  sound.playbackRate = 1.3;
   sound.play();
 }
 
