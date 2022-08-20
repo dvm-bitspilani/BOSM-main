@@ -125,6 +125,7 @@ window.addEventListener("load", () => {
   const light = document.getElementsByClassName("light");
 
   if (document.getElementById("video").readyState === 4) {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
 
@@ -390,7 +391,8 @@ document.querySelector(".hamburger").addEventListener("click", () => {
   }
 });
 
-//SideBar Navigation
+////////// SIDEBAR NAVIGATION
+
 const sideScroll = document.getElementById("sideScroll");
 scrollElems = Array.from(document.getElementsByClassName("navBut"));
 
