@@ -6,6 +6,11 @@
   z-index: 27;
   position: relative;
 }
+#contactUs {
+  background: url(../Assets/bgContact.png) center center no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
 
 .contact > img {
   position: absolute;
@@ -31,9 +36,22 @@
 .contactCont {
   display: flex;
   flex-wrap: wrap;
-  width: 98%;
+  width: 93%;
   justify-content: center;
 }
+.donut2{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+.donut1{
+  position: absolute;
+  left: 0;
+  top: -20rem;
+  z-index: 20;
+}
+
 #copied {
   background-color: rgba(255, 255, 255, 0.452);
   color: black;
@@ -45,12 +63,12 @@
   transition: all 0.4s;
 }
 .contDiv {
-  margin-top: 3rem;
+  margin-top: 2rem;
   z-index: 2;
   border-radius: 40px;
   padding: 0.4rem;
   width: 13%;
-  margin-inline: 2rem;
+  margin-inline: 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,29 +77,29 @@
 
 .name {
   margin-top: 0.8rem;
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .dept {
   opacity: 0.8;
-  margin-top: 0.8rem;
-  font-size: 1rem;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
 }
 
 .number {
   opacity: 0.5;
-  margin-top: 0.8rem;
-  font-size: 1rem;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
   cursor: pointer;
   font-weight: 400;
 }
 
 .mail {
   opacity: 0.5;
-  margin-top: 0.8rem;
+  margin-top: 0.4rem;
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: 400;
@@ -105,9 +123,19 @@
   .sec-header {
     font-size: 2rem;
   }
+  #contactUs {
+    background: url(../Assets/phoneContactBg.png) center center no-repeat;
+    background-size: cover;
+  }
 
   .contactImgCont {
     width: 80%;
+  }
+  .donut1{
+    display: none;
+  }
+  .donut2{
+    display: none;
   }
 
   .contactBgPhone {
@@ -170,11 +198,12 @@
   width: 100vw;
   height: 180px;
   background: black;
+  /* border: 1px solid yellow; */
   z-index: 26;
-  margin-top: -2rem;
+  margin: -4.5rem 0 -2rem 0;
   position: relative;
   opacity: 1;
-  filter: blur(29px);
+  filter: blur(6px);
 }
 
 @media (min-width: 1700px) {

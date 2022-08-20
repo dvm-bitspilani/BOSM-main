@@ -102,7 +102,7 @@ let sound = new Audio("Assets/switchsound.mp3");
 
 function flicker() {
   sound.volume = 0.3;
-  sound.playbackRate = 1.2;
+  sound.playbackRate = 1.3;
   sound.play();
 }
 
@@ -125,6 +125,7 @@ window.addEventListener("load", () => {
   const light = document.getElementsByClassName("light");
 
   if (document.getElementById("video").readyState === 4) {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
 
@@ -390,7 +391,8 @@ document.querySelector(".hamburger").addEventListener("click", () => {
   }
 });
 
-//SideBar Navigation
+////////// SIDEBAR NAVIGATION
+
 const sideScroll = document.getElementById("sideScroll");
 scrollElems = Array.from(document.getElementsByClassName("navBut"));
 
@@ -400,5 +402,67 @@ sideScroll.addEventListener("click", (e) => {
       element.classList.remove("active");
     }
   });
-  console.log(e.target.classList.add("active"));
+  e.target.classList.add("active")
 });
+
+const headers = Array.from(document.getElementsByClassName("sec-head"));
+let rate = 0.085;
+document.addEventListener("scroll", (e) => {
+  let windowHeight = window.innerHeight;
+  let y = window.pageYOffset
+  let scrolled = -y * rate + 'px';
+  sideScroll.style.setProperty(
+    '--sideScroll', scrolled);
+  headers.forEach((e) => {
+    let revealTop = e.getBoundingClientRect().top;
+    let revealPoint = 160;
+    let index = headers.indexOf(e)
+    if (revealTop < windowHeight - revealPoint) {
+      scrollElems.forEach((element) => {
+        if (element.classList.contains("active")) {
+          element.classList.remove("active");
+        }
+      }
+      );
+      scrollElems[3 - index].classList.add("active")
+    }
+  })
+})
+// let offsets = []
+// headers.forEach((e) => {
+//   offsets.push(e.offsetTop)
+// })
+// // console.log(offsets);
+// let offset = 0;
+// setInterval(() => {
+//   offset = window.pageYOffset;
+// }, 5);
+// setInterval(()=> {
+// document.addEventListener("scroll", (e) => {
+//   let y = window.pageYOffset
+//     if(y>offset){
+//       if (y > 700 && y < 872) {
+//         window.scrollTo(0, offsets[1])
+//       }
+//       else if (y > 872 && y < 1740) {
+//         window.scrollTo(0, offsets[2])
+//       }
+//       else if (y > 1740 && y < 2321) {
+//         window.scrollTo(0, offsets[3])
+//       }
+//     }
+//     else{
+//       if (y > 700 && y < 872) {
+//         window.scrollTo(0, offsets[0])
+//       }
+//       else if (y > 872 && y < 1740) {
+//         window.scrollTo(0, offsets[1])
+//       }
+//       else if (y > 1740 && y < 2321) {
+//         window.scrollTo(0, offsets[2])
+//       }
+//     }
+
+// }, 2)
+// })
+// [176, 872, 1740, 2321]

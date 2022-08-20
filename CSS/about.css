@@ -9,6 +9,7 @@
   flex-direction: row;
   margin-top: 0;
   align-items: center;
+  padding-top: 120px;
 }
 
 #about-sec * {
@@ -16,7 +17,7 @@
 }
 
 #about-txt {
-  padding: 30px 90px;
+  padding: 30px 86px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -28,8 +29,9 @@
 
 .about-par {
   font-size: 1rem;
+  transform: translateX(2rem);
   line-height: 1.2;
-  margin: 20px 0;
+  margin: 14px 0;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
@@ -210,6 +212,7 @@
     --offX: 24px;
     --offY: 18px;
   }
+  
 
   #about-txt {
     width: 100%;
@@ -220,6 +223,7 @@
     margin: 10px 0;
     text-align: center;
     font-size: 0.9rem;
+    transform: none;
   }
 
   #about-line {
