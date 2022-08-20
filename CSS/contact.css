@@ -51,6 +51,7 @@
   top: -20rem;
   z-index: 20;
 }
+
 #copied {
   background-color: rgba(255, 255, 255, 0.452);
   color: black;
@@ -129,6 +130,12 @@
 
   .contactImgCont {
     width: 80%;
+  }
+  .donut1{
+    display: none;
+  }
+  .donut2{
+    display: none;
   }
 
   .contactBgPhone {
