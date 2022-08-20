@@ -223,6 +223,7 @@
     margin: 10px 0;
     text-align: center;
     font-size: 0.9rem;
+    transform: none;
   }
 
   #about-line {
