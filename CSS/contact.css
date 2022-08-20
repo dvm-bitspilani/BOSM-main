@@ -36,8 +36,20 @@
 .contactCont {
   display: flex;
   flex-wrap: wrap;
-  width: 98%;
+  width: 93%;
   justify-content: center;
+}
+.donut2{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+.donut1{
+  position: absolute;
+  left: 0;
+  top: -20rem;
+  z-index: 20;
 }
 #copied {
   background-color: rgba(255, 255, 255, 0.452);
@@ -55,7 +67,7 @@
   border-radius: 40px;
   padding: 0.4rem;
   width: 13%;
-  margin-inline: 1.9rem;
+  margin-inline: 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;

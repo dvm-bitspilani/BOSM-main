@@ -589,7 +589,7 @@ footer {
   display: flex;
   transform: rotate(-90deg);
   font-family: "Montserrat", sans-serif;
-  top: 44vh;
+  top: 49vh;
   left: -5%;
   background-color: transparent;
   z-index: 999;
@@ -626,10 +626,10 @@ html {
   padding-block: 0.8rem;
   font-size: 0.9rem;
   width: 100%;
+  z-index: 30;
   text-align: center;
   font-family: 'Montserrat';
   background-color: rgb(12, 11, 11);
-  border-top: 1px solid rgb(141, 141, 141);
 }
 .foot>i{
   color: red;
