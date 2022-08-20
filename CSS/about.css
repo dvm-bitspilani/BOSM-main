@@ -29,6 +29,7 @@
 
 .about-par {
   font-size: 1rem;
+  transform: translateX(2rem);
   line-height: 1.2;
   margin: 14px 0;
   letter-spacing: 0.5px;

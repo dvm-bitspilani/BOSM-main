@@ -36,7 +36,8 @@
 }
 
 #evt-cont {
-  width: 100%;
+  width: 84%;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -247,6 +248,13 @@
     display: none;
     transform: scaleX(0);
   }
+}
+
+@media (max-width: 1700px) and (min-width:1300px) {
+  #evt-cont{
+    width: 100vw;
+    margin: 0;
+  }  
 }
 
 @media (max-width: 1300px) {
