@@ -141,26 +141,30 @@ body::-webkit-scrollbar {
 
 @media screen and (min-width: 0px) {
   .dev-head {
-    font-size: 3rem;
+    font-size: 3rem 4rem;
     margin: 3rem 0 1rem 0;
   }
 
   .six,
   .five {
-    gap: 3rem 2rem;
+    gap: 3rem;
     grid-template-columns: 1fr 1fr;
   }
 
   .dev-name {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  .dev-links{
+    gap: 1rem;
   }
 
   .dev-link img {
-    width: 130%;
+    width: 150%;
   }
 
   .dev-dept {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .dev-profile {
