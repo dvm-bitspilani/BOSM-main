@@ -48,11 +48,11 @@ const setTransform = () => {
   vidsList.forEach((vid, idx) => {
     if (vid.classList.contains("play-active")) {
       vid.classList.remove("play-active");
-      sels[idx].classList.remove("active");
+      sels[idx].classList.remove("about-dot-active");
     }
     if (idx === curVid) {
       vid.classList.add("play-active");
-      sels[idx].classList.add("active");
+      sels[idx].classList.add("about-dot-active");
     }
   });
 };

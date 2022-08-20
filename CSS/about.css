@@ -199,7 +199,7 @@
   background: white;
 }
 
-.about-dot.active {
+.about-dot.about-dot-active {
   background: rgba(0, 0, 0, 0.8);
 }
 
