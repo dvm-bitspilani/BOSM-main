@@ -9,10 +9,6 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1450px) {
-  .scrollNav {
-    top: 46%;
-    left: -10%;
-  }
 
   .text > img {
     width: 75%;
@@ -20,10 +16,6 @@
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
-  .scrollNav {
-    top: 46%;
-    left: -14%;
-  }
 
   .text > img {
     width: 60%;
@@ -51,7 +43,7 @@
 @media screen and (max-width: 1500px) {
   .scrollNav {
     font-size: 0.8rem;
-    z-index: -1;
+    /* z-index: -1; */
   }
 }
 
