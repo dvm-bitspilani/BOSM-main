@@ -188,11 +188,12 @@
 }
 
 .transition {
-  width: 86vw;
+  width: 100vw;
   height: 180px;
   background: black;
+  /* border: 1px solid yellow; */
   z-index: 26;
-  margin-top: -5rem;
+  margin: -4.5rem 0 -2rem 0;
   position: relative;
   opacity: 1;
   filter: blur(6px);
