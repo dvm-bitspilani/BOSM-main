@@ -410,22 +410,59 @@ let rate = 0.085;
 document.addEventListener("scroll", (e) => {
   let windowHeight = window.innerHeight;
   let y = window.pageYOffset
-  let scrolled = -y*rate + 'px';
-  console.log(scrolled);
+  let scrolled = -y * rate + 'px';
   sideScroll.style.setProperty(
-    '--sideScroll',scrolled);
- headers.forEach((e) =>{
-  let revealTop = e.getBoundingClientRect().top;
-  let revealPoint = 160;
-  let index = headers.indexOf(e)
-  if(revealTop < windowHeight - revealPoint){
-    scrollElems.forEach((element) => {
-      if (element.classList.contains("active")) {
-        element.classList.remove("active");
+    '--sideScroll', scrolled);
+  headers.forEach((e) => {
+    let revealTop = e.getBoundingClientRect().top;
+    let revealPoint = 160;
+    let index = headers.indexOf(e)
+    if (revealTop < windowHeight - revealPoint) {
+      scrollElems.forEach((element) => {
+        if (element.classList.contains("active")) {
+          element.classList.remove("active");
+        }
       }
+      );
+      scrollElems[3 - index].classList.add("active")
     }
-    );
-    scrollElems[3-index].classList.add("active")
-  }
- })
+  })
 })
+// let offsets = []
+// headers.forEach((e) => {
+//   offsets.push(e.offsetTop)
+// })
+// // console.log(offsets);
+// let offset = 0;
+// setInterval(() => {
+//   offset = window.pageYOffset;
+// }, 5);
+// setInterval(()=> {
+// document.addEventListener("scroll", (e) => {
+//   let y = window.pageYOffset
+//     if(y>offset){
+//       if (y > 700 && y < 872) {
+//         window.scrollTo(0, offsets[1])
+//       }
+//       else if (y > 872 && y < 1740) {
+//         window.scrollTo(0, offsets[2])
+//       }
+//       else if (y > 1740 && y < 2321) {
+//         window.scrollTo(0, offsets[3])
+//       }
+//     }
+//     else{
+//       if (y > 700 && y < 872) {
+//         window.scrollTo(0, offsets[0])
+//       }
+//       else if (y > 872 && y < 1740) {
+//         window.scrollTo(0, offsets[1])
+//       }
+//       else if (y > 1740 && y < 2321) {
+//         window.scrollTo(0, offsets[2])
+//       }
+//     }
+
+// }, 2)
+// })
+// [176, 872, 1740, 2321]
