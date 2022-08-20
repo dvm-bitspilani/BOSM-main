@@ -211,12 +211,7 @@
     --offX: 24px;
     --offY: 18px;
   }
-  .donut1{
-    display: none;
-  }
-  .donut2{
-    display: none;
-  }
+  
 
   #about-txt {
     width: 100%;
