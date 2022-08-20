@@ -110,7 +110,7 @@ body::-webkit-scrollbar {
 }
 
 .img-wrapper {
-  width: 80%;
+  width: 75%;
   opacity: 0.9;
   border-radius: 2rem;
   mix-blend-mode: overlay;
@@ -151,15 +151,15 @@ body::-webkit-scrollbar {
     grid-template-columns: 1fr 1fr;
   }
 
-  .dev-name{
+  .dev-name {
     font-size: 1.5rem;
   }
 
-  .dev-link img{
+  .dev-link img {
     width: 130%;
   }
 
-  .dev-dept{
+  .dev-dept {
     font-size: 1.2rem;
   }
 
@@ -167,7 +167,6 @@ body::-webkit-scrollbar {
     max-width: 35vw;
   }
 }
-
 
 @media screen and (min-width: 999px) {
   .dev-head {
@@ -181,24 +180,24 @@ body::-webkit-scrollbar {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
-  .five{
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+  .five {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
-  .dev-name{
-    font-size: 1.35rem;
+  .dev-name {
+    font-size: 1.25rem;
   }
 
-  .dev-link img{
+  .dev-link img {
     width: 110%;
   }
 
-  .dev-dept{
-    font-size: 0.9rem;
+  .dev-dept {
+    font-size: 0.8rem;
   }
 
   .dev-profile {
-    max-width: calc((98vw - 8rem) / 6);
+    max-width: calc((98vw - 10rem) / 6);
   }
 }
 
@@ -223,3 +222,4 @@ body::-webkit-scrollbar {
     gap: 3rem;
   }
 }
+/*# sourceMappingURL=developers.css.map */
