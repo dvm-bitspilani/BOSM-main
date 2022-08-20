@@ -45,6 +45,10 @@
   z-index: 200;
   padding: 50px 0 0;
 }
+#eventsHere{
+  margin: 0;
+  padding: 100px 0;
+}
 
 .evt {
   height: var(--evtSize);

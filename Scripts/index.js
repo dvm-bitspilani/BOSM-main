@@ -406,14 +406,19 @@ sideScroll.addEventListener("click", (e) => {
 });
 
 const headers = Array.from(document.getElementsByClassName("sec-head"));
+let rate = 0.085;
 document.addEventListener("scroll", (e) => {
   let windowHeight = window.innerHeight;
+  let y = window.pageYOffset
+  let scrolled = -y*rate + 'px';
+  console.log(scrolled);
+  sideScroll.style.setProperty(
+    '--sideScroll',scrolled);
  headers.forEach((e) =>{
   let revealTop = e.getBoundingClientRect().top;
   let revealPoint = 160;
   let index = headers.indexOf(e)
   if(revealTop < windowHeight - revealPoint){
-    console.log(index);
     scrollElems.forEach((element) => {
       if (element.classList.contains("active")) {
         element.classList.remove("active");
@@ -424,19 +429,3 @@ document.addEventListener("scroll", (e) => {
   }
  })
 })
-
-// window.addEventListener('scroll', reveal);
-// function reveal() {
-
-//     var reveals = document.querySelectorAll('.reveal');
-
-//     for (var i = 0; i < reveals.length; i++) {
-
-//         var windowHeight = window.innerHeight;
-//         var revealTop = reveals[i].getBoundingClientRect().top;
-//         var revealPoint = 60;
-//         if (revealTop < windowHeight - revealPoint) {
-//             reveals[i].classList.add('active');
-//         }
-//     }
-// }

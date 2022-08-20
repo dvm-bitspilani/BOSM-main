@@ -6,6 +6,11 @@
   z-index: 27;
   position: relative;
 }
+#contactUs{
+  background: url(../Assets/bgContact.png) center center no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
 
 .contact > img {
   position: absolute;
@@ -105,6 +110,10 @@
   .sec-header {
     font-size: 2rem;
   }
+  #contactUs{
+    background: url(../Assets/phoneContactBg.png) center center no-repeat;
+    background-size: cover;
+  }
 
   .contactImgCont {
     width: 80%;
@@ -174,7 +183,7 @@
   margin-top: -2rem;
   position: relative;
   opacity: 1;
-  filter: blur(29px);
+  filter: blur(6px);
 }
 
 @media (min-width: 1700px) {
