@@ -9,7 +9,7 @@
   flex-direction: row;
   margin-top: 0;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 #about-sec * {
@@ -17,7 +17,7 @@
 }
 
 #about-txt {
-  padding: 30px 100px;
+  padding: 30px 86px;
   width: 50%;
   display: flex;
   flex-direction: column;
