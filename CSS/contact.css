@@ -6,7 +6,7 @@
   z-index: 27;
   position: relative;
 }
-#contactUs{
+#contactUs {
   background: url(../Assets/bgContact.png) center center no-repeat;
   background-size: cover;
   padding-bottom: 100px;
@@ -110,7 +110,7 @@
   .sec-header {
     font-size: 2rem;
   }
-  #contactUs{
+  #contactUs {
     background: url(../Assets/phoneContactBg.png) center center no-repeat;
     background-size: cover;
   }
@@ -177,7 +177,6 @@
 
 .transition {
   width: 86vw;
-  /* border: 1px solid red; */
   height: 180px;
   background: black;
   z-index: 26;
