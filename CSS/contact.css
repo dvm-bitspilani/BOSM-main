@@ -196,19 +196,23 @@
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   .contDiv {
-    margin-inline: 1rem;
     width: 16%;
+    margin-inline: 1rem;
   }
 }
 
 .transition {
+  z-index: 26;
   width: 100vw;
   height: 15rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 50.07%, #000000 100%);
-  /* border: 1px solid yellow; */
-  z-index: 26;
-  margin: -10rem 0 -2rem 0;
   position: relative;
+  margin: -10rem 0 -2rem 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #000000 50.07%,
+    #000000 100%
+  );
 }
 
 @media (min-width: 1700px) {
