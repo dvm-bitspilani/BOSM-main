@@ -6,6 +6,7 @@
   z-index: 27;
   position: relative;
 }
+
 #contactUs {
   background: url(../Assets/bgContact.png) center center no-repeat;
   background-size: cover;
@@ -39,13 +40,15 @@
   width: 93%;
   justify-content: center;
 }
-.donut2{
+
+.donut2 {
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 20;
 }
-.donut1{
+
+.donut1 {
   position: absolute;
   left: 0;
   top: -20rem;
@@ -62,6 +65,7 @@
   pointer-events: none;
   transition: all 0.4s;
 }
+
 .contDiv {
   margin-top: 2rem;
   z-index: 2;
@@ -123,6 +127,7 @@
   .sec-header {
     font-size: 2rem;
   }
+
   #contactUs {
     background: url(../Assets/phoneContactBg.png) center center no-repeat;
     background-size: cover;
@@ -131,10 +136,12 @@
   .contactImgCont {
     width: 80%;
   }
-  .donut1{
+
+  .donut1 {
     display: none;
   }
-  .donut2{
+
+  .donut2 {
     display: none;
   }
 

@@ -1,25 +1,28 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background: url('../Assets/galleryBg.png') center center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    background-color: black;
-    font-family: 'Montserrat';
-    color: white;
+
+body {
+  background: url("../Assets/galleryBg.png") center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Montserrat";
+  color: white;
 }
-.heading{
-    text-align: center;
-    padding-top: 3rem;
-    font-size: 2.4rem;
+
+.heading {
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 2.4rem;
 }
-.galleryCont{
-    width: 80%;
-    margin-top: 2.4rem;
-    height: 70vh;
-    margin-inline: auto;
-    border: 1px solid white;
+
+.galleryCont {
+  width: 80%;
+  margin-top: 2.4rem;
+  height: 70vh;
+  margin-inline: auto;
+  border: 1px solid white;
 }

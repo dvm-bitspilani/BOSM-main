@@ -323,7 +323,8 @@
   section {
     margin: 150px 0;
   }
-  footer{
+
+  footer {
     margin-top: -3rem;
   }
 
@@ -408,7 +409,7 @@
     transform: scale(0.58);
   }
 
-  .ham-links div{
+  .ham-links div {
     transform: translateY(-5rem);
   }
 
