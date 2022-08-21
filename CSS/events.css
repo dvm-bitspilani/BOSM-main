@@ -1,7 +1,6 @@
 .events {
   --numDisplay: 3;
-  --translateMul: 3;
-  --evtSize: clamp(200px, 19vw, 300px);
+  --evtSize: clamp(200px, 19vw, 260px);
   --evtLogoSize: 30px;
   --evtPadding: 15px;
   --evtMargin: 20px;
@@ -21,7 +20,6 @@
   max-width: 100vw;
   text-align: center;
   z-index: 200;
-  margin-bottom: 30px;
 }
 
 #events-cont {
@@ -38,7 +36,7 @@
 }
 
 #evt-cont {
-  width: 84%;
+  width: 84vw;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -47,69 +45,31 @@
   align-items: center;
   z-index: 200;
   padding: 50px 0 0;
+  transform: translateX(20px);
 }
-
-#eventsHere {
+#eventsHere{
   margin: 0;
   padding: 140px 0 80px 0;
 }
 
-#events-cont,
-#evt-arrow-left,
-#evt-arrow-right {
-  transform: translateX(20px);
-}
-
 .evt {
-  height: var(--evtSize);
-  min-width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-  width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
   display: flex;
   flex-direction: row;
   align-items: end;
-  background-size: var(--evtSize) calc(var(--evtSize) + 20px);
-  margin: 0 var(--evtMargin);
+  height: var(--evtSize);
+  min-width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
+  width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
   padding: var(--evtPadding) calc(var(--evtPadding) * 1.5);
+  background-size: var(--evtSize) calc(var(--evtSize) + 10px);
+  margin: 0 var(--evtMargin);
   border-radius: 20px;
   background-position: center;
+  transition: min-width 1200ms ease, width 1200ms ease, transform 1200ms ease;
 }
 
 .evt.evt-active {
   min-width: var(--evtSize);
   width: var(--evtSize);
-  transform: translateX(
-    calc(
-      0px - var(--translateMul) *
-        (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-    )
-  );
-  animation: evt-curr-in 1200ms ease;
-}
-
-.evt.evt-inactive {
-  display: none;
-}
-
-.evt.evt-next {
-  display: flex;
-  transform: translateX(
-    calc(
-      0px - var(--translateMul) *
-        (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-    )
-  );
-  animation: evt-next-in 1200ms ease;
-}
-
-.evt.evt-prev {
-  display: flex;
-  transform: translateX(
-    calc(
-      0px - var(--translateMul) *
-        (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-    )
-  );
-  animation: evt-prev-out 1200ms ease;
 }
 
 .evt-label-cont {
@@ -164,7 +124,7 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  left: 40px;
+  left: 100px;
   cursor: pointer;
 }
 
@@ -196,7 +156,7 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  right: 40px;
+  right: 100px;
   cursor: pointer;
 }
 
@@ -255,12 +215,10 @@
     display: none;
     transform: scaleX(0);
   }
-
   1% {
     display: block;
     transform: scaleX(0);
   }
-
   100% {
     display: block;
     transform: scaleX(100%);
@@ -272,127 +230,38 @@
     display: block;
     transform: scaleX(100%);
   }
-
   99% {
     display: block;
     transform: scaleX(0);
   }
-
   100% {
     display: none;
     transform: scaleX(0);
   }
 }
 
-@keyframes evt-next-in {
-  0% {
-    display: none;
-    transform: translateX(0);
-  }
-
-  1% {
-    display: flex;
-    transform: translateX(0);
-  }
-
-  100% {
-    display: flex;
-    transform: translateX(
-      calc(
-        0px - var(--translateMul) *
-          (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-      )
-    );
-  }
-}
-
-@keyframes evt-prev-out {
-  0% {
-    display: flex;
-    transform: translateX(0);
-    min-width: var(--evtSize);
-    width: var(--evtSize);
-  }
-
-  99% {
-    display: flex;
-    transform: translateX(
-      calc(
-        0px - var(--translateMul) *
-          (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-      )
-    );
-    min-width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-    width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-  }
-
-  100% {
-    display: none;
-    transform: translateX(
-      calc(
-        0px - var(--translateMul) *
-          (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-      )
-    );
-    min-width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-    width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-  }
-}
-
-@keyframes evt-curr-in {
-  0% {
-    transform: translateX(0);
-    min-width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-    width: calc(var(--evtLogoSize) + (var(--evtPadding) * 3));
-  }
-
-  100% {
-    transform: translateX(
-      calc(
-        0px - var(--translateMul) *
-          (var(--evtLogoSize) + 3 * var(--evtPadding) + 2 * var(--evtMargin))
-      )
-    );
-    min-width: var(--evtSize);
-    width: var(--evtSize);
-  }
-}
-
-@keyframes evt-mob {
-  0% {
-    display: none;
-    transform: translateX(0);
-  }
-
-  1% {
-    display: flex;
-    transform: translateX(0);
-  }
-
-  100% {
-    display: flex;
-    transform: translateX(
-      calc(
-        0px - var(--translateMul) * (2 * var(--evtSize) + 4 * var(--evtMargin))
-      )
-    );
-  }
+@media (max-width: 1700px) and (min-width:1300px) {
+  #evt-cont{
+    width: 100vw;
+    margin: 0;
+  }  
 }
 
 @media (max-width: 1300px) {
   .events {
     --numDisplay: 2;
-    --translateMul: 2;
   }
 
   .evt {
     border-radius: 15px;
   }
 
-  #events-cont,
-  #evt-arrow-left,
+  #evt-arrow-left {
+    left: 50px;
+  }
+
   #evt-arrow-right {
-    transform: translateX(10px);
+    right: 50px;
   }
 }
 
@@ -400,21 +269,18 @@
   .events {
     --evtSize: 35vw;
     --numDisplay: 0;
-    --translateMul: 1;
     --evtMargin: 10px;
     --evtLogoSize: 20px;
     --evtPadding: 10px;
     padding: 0 10px;
   }
+
   .events-bg-phone {
     display: block;
   }
-  .events-bg{
+
+  .events-bg {
     display: none;
-  }
-  
-  .events .sec-header {
-    margin-bottom: 15px;
   }
 
   #evt-cont {
@@ -450,17 +316,6 @@
     animation: none;
   }
 
-  .evt.evt-active,
-  .evt.evt-next,
-  .evt.evt-prev {
-    transform: translateX(
-      calc(
-        0px - var(--translateMul) * (2 * var(--evtSize) + 4 * var(--evtMargin))
-      )
-    );
-    animation: evt-mob 1200ms ease;
-  }
-
   .evt.evt-active .evt-label,
   .evt.evt-inactive .evt-label {
     display: block;
@@ -480,12 +335,6 @@
   .event-dot {
     width: 8px;
     height: 8px;
-  }
-
-  #events-cont,
-  #evt-arrow-left,
-  #evt-arrow-right {
-    transform: translateX(0);
   }
 }
 
