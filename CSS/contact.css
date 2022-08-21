@@ -205,7 +205,7 @@
   width: 100vw;
   height: 15rem;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 50.07%, #000000 100%);
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   z-index: 26;
   margin: -10rem 0 -2rem 0;
   position: relative;
