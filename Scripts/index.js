@@ -428,41 +428,51 @@ document.addEventListener("scroll", (e) => {
     }
   })
 })
-// let offsets = []
-// headers.forEach((e) => {
-//   offsets.push(e.offsetTop)
-// })
-// // console.log(offsets);
-// let offset = 0;
-// setInterval(() => {
-//   offset = window.pageYOffset;
-// }, 5);
-// setInterval(()=> {
+let offsets = []
+headers.forEach((e) => {
+  offsets.push(e.offsetTop)
+})
+console.log(offsets);
+// console.log(offsets);
+let offset = 0;
+setInterval(() => {
+  offset = window.pageYOffset;
+}, 50);
+
 // document.addEventListener("scroll", (e) => {
 //   let y = window.pageYOffset
+//   console.log(y);
 //     if(y>offset){
-//       if (y > 700 && y < 872) {
-//         window.scrollTo(0, offsets[1])
-//       }
-//       else if (y > 872 && y < 1740) {
-//         window.scrollTo(0, offsets[2])
-//       }
-//       else if (y > 1740 && y < 2321) {
-//         window.scrollTo(0, offsets[3])
-//       }
+//       setTimeout(() => {
+//         if (y > 200 && y < 700) {
+//           window.scrollTo(0, offsets[1])
+//         }
+//         else if (y > 900 && y < 1600) {
+//           window.scrollTo(0, offsets[2])
+//         }
+//         else if (y > 1800 && y < 2297) {
+//           window.scrollTo(0, offsets[3]+300)
+//         }
+//       }, 600);
 //     }
 //     else{
-//       if (y > 700 && y < 872) {
-//         window.scrollTo(0, offsets[0])
-//       }
-//       else if (y > 872 && y < 1740) {
-//         window.scrollTo(0, offsets[1])
-//       }
-//       else if (y > 1740 && y < 2321) {
-//         window.scrollTo(0, offsets[2])
-//       }
+//       setTimeout(() => {
+//         if (y > 200 && y < 700) {
+//           window.scrollTo(0, 0)
+//         }
+//         else if (y > 900 && y < 1600) {
+//           window.scrollTo(0, offsets[1])
+//         }
+//         else if (y > 1800 && y < 2297) {
+//           window.scrollTo(0, offsets[2])
+//         }
+//       }, 600);
 //     }
 
-// }, 2)
+
 // })
 // [176, 872, 1740, 2321]
+// 176
+// 1: 848
+// 2: 1716
+// 3: 2297

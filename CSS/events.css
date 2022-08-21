@@ -246,6 +246,7 @@
 
 .events-bg-phone {
   display: none;
+  top: -200px;
 }
 
 @keyframes evt-label-expand {
@@ -393,7 +394,13 @@
     --evtPadding: 10px;
     padding: 0 10px;
   }
-
+  .events-bg-phone {
+    display: block;
+  }
+  .events-bg{
+    display: none;
+  }
+  
   .events .sec-header {
     margin-bottom: 15px;
   }
