@@ -9,14 +9,12 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1450px) {
-
   .text > img {
     width: 75%;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
-
   .text > img {
     width: 60%;
   }
@@ -32,12 +30,15 @@
       display: none;
   }
   
+  
 
   #desktopRegist{
       display: none;
   }
+  
    
 }
+
 
 */
 @media screen and (max-width: 1500px) {

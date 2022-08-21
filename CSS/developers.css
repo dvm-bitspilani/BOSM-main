@@ -124,7 +124,7 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
-.dev-link{
+.dev-link {
   display: flex;
   width: 90%;
   justify-content: center;
@@ -151,7 +151,7 @@ body::-webkit-scrollbar {
     margin: 3rem 0 1rem 0;
   }
 
-  .centre{
+  .centre {
     transform: translateX(calc(17.5vw + 2rem));
   }
 
@@ -184,7 +184,6 @@ body::-webkit-scrollbar {
   body {
     background-image: url(../Assets/dev-mobile.jpg);
   }
-
 }
 
 @media screen and (min-width: 999px) {
@@ -193,7 +192,7 @@ body::-webkit-scrollbar {
     margin: 2rem 0 0rem 0;
   }
 
-  .centre{
+  .centre {
     transform: none;
   }
 
