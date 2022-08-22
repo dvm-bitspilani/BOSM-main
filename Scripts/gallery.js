@@ -7,7 +7,7 @@ gall.style.transform = 'translateX(0)';
 }
 
 const slideRight = () => {
-gall.style.transform = 'translateX(calc((-1)*((100% - 120px)/7*3 + 60px)))';
+gall.style.transform = 'translateX(calc((-1)*((100% - 140px)/2 + 80px)))';
 }
 
 leftArr.addEventListener('click', () => slideLeft());
