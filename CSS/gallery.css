@@ -12,6 +12,11 @@ body {
   background-color: black;
   font-family: "Montserrat";
   color: white;
+  position: relative;
+}
+
+:root {
+  --width: calc((100% - 60px)/4 * 8 + 140px);
 }
 
 .heading {
@@ -55,7 +60,7 @@ body {
 }
 
 .gallery-grid {
-  width: calc((100% - 60px)/4 * 8 + 140px);
+  width: var(--width);
   display: grid;
   gap: 20px;
   height: 100%;
@@ -71,52 +76,58 @@ body {
   object-fit: cover;
 }
 
-#gallery-img-1{
-  grid-area: 1 / 1 / span 2 / span 1;
+.indic {
+  display: none;
 }
 
-#gallery-img-2{
-  grid-area: 1 / 2 / span 1 / span 1;
-}
-
-#gallery-img-3{
-  grid-area: 1 / 3 / span 1 / span 1;
-}
-
-#gallery-img-4{
-  grid-area: 2 / 2 / span 1 / span 2;
-}
-
-#gallery-img-5{
-  grid-area: 1 / 4 / span 1 / span 1;
-}
-
-#gallery-img-6{
-  grid-area: 2 / 4 / span 1 / span 1;
-}
-
-#gallery-img-7{
-  grid-area: 1 / 5 / span 1 / span 1;
-}
-
-#gallery-img-8{
-  grid-area: 2 / 5 / span 1 / span 1;
-}
-
-#gallery-img-9{
-  grid-area: 1 / 6 / span 1 / span 1;
-}
-
-#gallery-img-10{
-  grid-area: 1 / 7 / span 1 / span 1;
-}
-
-#gallery-img-11{
-  grid-area: 2 / 6 / span 1 / span 2;
-}
-
-#gallery-img-12{
-  grid-area: 1 / 8 / span 2 / span 1;
+@media (min-width: 801px) {
+  #gallery-img-1{
+    grid-area: 1 / 1 / span 2 / span 1;
+  }
+  
+  #gallery-img-2{
+    grid-area: 1 / 2 / span 1 / span 1;
+  }
+  
+  #gallery-img-3{
+    grid-area: 1 / 3 / span 1 / span 1;
+  }
+  
+  #gallery-img-4{
+    grid-area: 2 / 2 / span 1 / span 2;
+  }
+  
+  #gallery-img-5{
+    grid-area: 1 / 4 / span 1 / span 1;
+  }
+  
+  #gallery-img-6{
+    grid-area: 2 / 4 / span 1 / span 1;
+  }
+  
+  #gallery-img-7{
+    grid-area: 1 / 5 / span 1 / span 1;
+  }
+  
+  #gallery-img-8{
+    grid-area: 2 / 5 / span 1 / span 1;
+  }
+  
+  #gallery-img-9{
+    grid-area: 1 / 6 / span 1 / span 1;
+  }
+  
+  #gallery-img-10{
+    grid-area: 1 / 7 / span 1 / span 1;
+  }
+  
+  #gallery-img-11{
+    grid-area: 2 / 6 / span 1 / span 2;
+  }
+  
+  #gallery-img-12{
+    grid-area: 1 / 8 / span 2 / span 1;
+  }
 }
 
 /* Vector */
@@ -132,4 +143,51 @@ body {
 
 #right-arr {
   right: -5%;
+}
+
+@media (max-width: 800px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  :root{
+    --width: calc((100% - 40px)*102 + 6100px)
+  }
+
+  .gallery-grid {
+    gap: 40px 20px;
+    grid-template-columns: repeat(306, 1fr);
+    transform: translateX(calc(-1*(50%+10px)));
+  }
+
+  .opaque-divs, .arr {
+    display: none;
+  }
+
+  .indic {
+    display: flex;
+    width: 30px;
+    margin: auto;
+    position: absolute;
+    bottom: 1rem;
+    margin-left: calc(50% - 15px);
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .disc {
+    width: 10px;
+    height: 10px;
+    clip-path: circle(50%);
+    background-color: gray;
+  }
+
+  #disc-3 {
+    display: none;
+  }
+
+  .active-disc {
+    background-color: white;
+  }
 }
