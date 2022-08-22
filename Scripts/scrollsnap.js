@@ -44,23 +44,30 @@ function updatePageStatus() {
         activeIndex = index;
         let scrollAmount = activePage.offsetTop;
         window.scrollTo({ top: scrollAmount, left: 0, behavior: "smooth" });
+        console.log("scroll executed");
       }
     }
   });
 }
 
 function checkActivePage() {
-  if (nextPage !== null && percentageInView(nextPage) >= 5 && upscroll === 1) {
-    activePage.toggleAttribute("activepage");
-    Pages[activeIndex + 1].toggleAttribute("activepage");
+  if (
+    nextPage !== null &&
+    percentageInView(nextPage) >= 5 &&
+    upscroll === 1 &&
+    downscroll === 0
+  ) {
+    activePage.removeAttribute("activepage");
+    Pages[activeIndex + 1].setAttribute("activepage", "");
   }
   if (
     previousPage !== null &&
     percentageInView(previousPage) >= 5 &&
-    downscroll === 1
+    downscroll === 1 &&
+    upscroll === 0
   ) {
-    activePage.toggleAttribute("activepage");
-    Pages[activeIndex - 1].toggleAttribute("activepage");
+    activePage.removeAttribute("activepage");
+    Pages[activeIndex - 1].setAttribute("activepage", "");
   }
 
   // if(percentageInView(previousPage) >= 10 &&)
@@ -101,11 +108,11 @@ window.addEventListener("scroll", () => {
   if (newScroll > oldScroll) {
     upscroll = 1;
     downscroll = 0;
-    console.log("up");
+    // console.log("up");
   } else {
     downscroll = 1;
     upscroll = 0;
-    console.log("down");
+    // console.log("down");
   }
   oldScroll = window.scrollY;
 
@@ -113,8 +120,8 @@ window.addEventListener("scroll", () => {
   updatePageStatus();
   activeIndex = Pages.indexOf(activePage);
 
-  console.log(percentageInView(homePage));
-  console.log(percentageInView(aboutSection));
-  console.log(percentageInView(eventsSection));
-  console.log(percentageInView(contactsSection));
+  // console.log(percentageInView(homePage));
+  // console.log(percentageInView(aboutSection));
+  // console.log(percentageInView(eventsSection));
+  // console.log(percentageInView(contactsSection));
 });
