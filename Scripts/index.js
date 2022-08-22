@@ -303,7 +303,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
     // right nav position
     right.style.position = "fixed";
-    right.style.top = "1.06rem";
+    right.style.top = "0rem";
     right.style.right = "0";
 
     // opening animations
