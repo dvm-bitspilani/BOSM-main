@@ -205,7 +205,13 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .about-par{
+   font-size: 0.9rem;
+  }  
+}
+
+@media (max-width: 800px) {
   #about-sec {
     flex-direction: column;
     position: relative;
