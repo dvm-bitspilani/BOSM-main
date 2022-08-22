@@ -24,6 +24,7 @@ const evtsCont = document.getElementById("events-cont");
 const evtsDotsCont = document.getElementById("event-dots-cont");
 const evtArrLeft = document.getElementById("evt-arrow-left");
 const evtArrRight = document.getElementById("evt-arrow-right");
+const touchThreshold = 70;
 
 let amountDisplay = parseInt(
   getComputedStyle(evtSec).getPropertyValue("--numDisplay")
@@ -34,6 +35,8 @@ let evtActive = 0;
 let evtElems = [];
 let evtDots = [];
 let i = 0;
+let touchstartX = 0;
+let touchendX = 0;
 
 const initEvtElems = () => {
   evtElems = [];
@@ -64,7 +67,6 @@ const initEvtElems = () => {
     }
   }
 
-  console.log(evtElems);
   let dotsCount = evtElems.length / (lengths * 50);
 
   for (let i = 0; i < dotsCount; i++) {
@@ -161,6 +163,41 @@ evtArrRight.addEventListener("click", () => {
   setActive();
   clearInterval(eventInterval);
   eventInterval = setInterval(appendActive, 3000);
+});
+
+function checkDirection() {
+  console.log(touchstartX - touchendX);
+  if (touchstartX - touchendX > touchThreshold) {
+    evtActive += lengths;
+    if (evtActive >= evtElems.length) {
+      evtActive = 0;
+    } else if (evtActive < 0) {
+      evtActive = evtElems.length - lengths;
+    }
+    setActive();
+    clearInterval(eventInterval);
+    eventInterval = setInterval(appendActive, 3000);
+  }
+  if (touchendX - touchstartX > touchThreshold) {
+    evtActive -= lengths;
+    if (evtActive >= evtElems.length) {
+      evtActive = 0;
+    } else if (evtActive < 0) {
+      evtActive = evtElems.length - lengths;
+    }
+    setActive();
+    clearInterval(eventInterval);
+    eventInterval = setInterval(appendActive, 3000);
+  }
+}
+
+evtsCont.addEventListener("touchstart", (e) => {
+  touchstartX = e.changedTouches[0].screenX;
+});
+
+evtsCont.addEventListener("touchend", (e) => {
+  touchendX = e.changedTouches[0].screenX;
+  checkDirection();
 });
 
 let eventInterval = setInterval(appendActive, 3000);
