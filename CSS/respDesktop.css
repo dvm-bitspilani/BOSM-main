@@ -18,6 +18,9 @@
   .text > img {
     width: 60%;
   }
+  .scrollNav{
+    left: -7%;
+  }
 
   footer {
     margin-top: 0rem;
