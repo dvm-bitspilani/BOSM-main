@@ -80,13 +80,12 @@
     font-size: 1.25rem;
   }
 
-  footer {
-    padding: 0 1rem;
+  .right{
+    transform: translateY(1rem);
   }
 
-  .right {
-    gap: 1.4rem;
-    align-items: flex-start;
+  footer {
+    padding: 0 1rem;
   }
 
   nav * {
@@ -419,6 +418,10 @@
 
   #desktopRegist {
     display: none;
+  }
+
+  .right{
+    transform: translate(0.6rem, 0.8rem);
   }
 
   .light,
