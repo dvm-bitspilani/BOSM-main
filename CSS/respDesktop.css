@@ -18,7 +18,8 @@
   .text > img {
     width: 60%;
   }
-  .scrollNav{
+
+  .scrollNav {
     left: -7%;
   }
 
@@ -46,3 +47,4 @@
     padding: 1rem 1.5rem;
   }
 }
+/*# sourceMappingURL=respDesktop.css.map */

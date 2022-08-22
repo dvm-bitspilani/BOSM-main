@@ -225,7 +225,7 @@
 @media (max-width: 400px) {
   .contDiv {
     margin-inline: 0.4rem !important;
-    width: 40% !important   ;
+    width: 40% !important;
   }
 
   .name {
@@ -257,3 +257,4 @@
     font-size: 1.6rem;
   }
 }
+/*# sourceMappingURL=contact.css.map */

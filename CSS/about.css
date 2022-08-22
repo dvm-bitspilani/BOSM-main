@@ -164,6 +164,7 @@
   left: 100%;
   height: 100%;
   width: -moz-min-content;
+  width: -webkit-min-content;
   width: min-content;
   padding: 0 10px;
   display: flex;
@@ -206,9 +207,9 @@
 }
 
 @media (max-width: 1200px) {
-  .about-par{
-   font-size: 0.9rem;
-  }  
+  .about-par {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -313,3 +314,4 @@
     width: max(60%, 300px);
   }
 }
+/*# sourceMappingURL=about.css.map */

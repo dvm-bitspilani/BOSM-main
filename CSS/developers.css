@@ -161,10 +161,10 @@ body::-webkit-scrollbar {
     font-size: 2.6rem;
     margin: 3rem 0 1rem 0;
   }
-  
+
   .centre {
     transform: translateX(calc(17vw + 2rem));
-  } 
+  }
 
   .close {
     top: calc(4.1rem - 10px);
@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
   .close {
     top: calc(3.4rem - 10px);
   }
-  
+
   .centre {
     transform: none;
   }
@@ -240,7 +240,7 @@ body::-webkit-scrollbar {
   .dev-link img {
     width: 110%;
   }
-  
+
   .dev-link {
     width: 90%;
   }
@@ -275,3 +275,4 @@ body::-webkit-scrollbar {
     gap: 3rem;
   }
 }
+/*# sourceMappingURL=developers.css.map */
