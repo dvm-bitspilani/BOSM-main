@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const homePage = document.querySelector("#home-page");
 const aboutSection = document.querySelector("#about-sec");
 const eventsSection = document.querySelector("#eventsHere");
@@ -41,34 +42,33 @@ function updatePageStatus() {
         nextPage = null;
       }
       if (index !== activeIndex) {
-        scrollToActivePage(page);
         activeIndex = index;
+        let scrollAmount = activePage.offsetTop;
+        window.scrollTo({ top: scrollAmount, left: 0, behavior: "smooth" });
       }
     }
   });
 }
 
 function checkActivePage() {
-  if (percentageInView(nextPage) >= 10 && upscroll === 1) {
+  if (nextPage !== null && percentageInView(nextPage) >= 7 && upscroll === 1) {
     activePage.toggleAttribute("activepage");
     Pages[activeIndex + 1].toggleAttribute("activepage");
-
-    downscroll = 1;
-    upscroll = 0;
   }
-  // if (percentageInView(previousPage) >= 10 && downscroll === 1) {
-  //   activePage.toggleAttribute("activepage");
-  //   Pages[activeIndex - 1].toggleAttribute("activepage");
-  //   activeIndex--;
-  //   upscroll = 1;
-  //   downscroll = 0;
-  // }
+  if (
+    previousPage !== null &&
+    percentageInView(previousPage) >= 7 &&
+    downscroll === 1
+  ) {
+    activePage.toggleAttribute("activepage");
+    Pages[activeIndex - 1].toggleAttribute("activepage");
+  }
 
   // if(percentageInView(previousPage) >= 10 &&)
 }
 
 function scrollToActivePage(page) {
-  // window.scrollTo(page.getBoundingClientRect().top);
+  // window.scrollTo(page.offsetTop);
 }
 
 function percentageInView(page) {
@@ -94,13 +94,28 @@ function percentageInView(page) {
   }
 }
 
+let newScroll = window.scrollY;
+let oldScroll = window.scrollY;
+
 window.addEventListener("scroll", () => {
+  newScroll = window.scrollY;
+  if (newScroll > oldScroll) {
+    upscroll = 1;
+    downscroll = 0;
+  } else {
+    downscroll = 1;
+    upscroll = 0;
+  }
+  oldScroll = window.scrollY;
+
   checkActivePage();
   updatePageStatus();
   activeIndex = Pages.indexOf(activePage);
 
-  console.log(percentageInView(homePage));
-  console.log(percentageInView(aboutSection));
-  console.log(percentageInView(eventsSection));
-  console.log(percentageInView(contactsSection));
+  // console.log(percentageInView(homePage));
+  // console.log(percentageInView(aboutSection));
+  // console.log(percentageInView(eventsSection));
+  // console.log(percentageInView(contactsSection));
 });
+=======
+>>>>>>> parent of c8ce06c (code for checking percentage in  view)

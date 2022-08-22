@@ -36,7 +36,7 @@
 }
 
 #evt-cont {
-  width: 84vw;
+  width: 87vw;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -45,9 +45,8 @@
   align-items: center;
   z-index: 200;
   padding: 50px 0 0;
-  transform: translateX(20px);
 }
-#eventsHere{
+#eventsHere {
   margin: 0;
   padding: 140px 0 80px 0;
 }
@@ -124,7 +123,7 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  left: 100px;
+  left: 0;
   cursor: pointer;
 }
 
@@ -156,7 +155,7 @@
   position: absolute;
   width: 20px;
   height: var(--evtSize);
-  right: 100px;
+  right: 0;
   cursor: pointer;
 }
 
@@ -238,13 +237,6 @@
     display: none;
     transform: scaleX(0);
   }
-}
-
-@media (max-width: 1700px) and (min-width:1300px) {
-  #evt-cont{
-    width: 100vw;
-    margin: 0;
-  }  
 }
 
 @media (max-width: 1300px) {

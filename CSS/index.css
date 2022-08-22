@@ -35,15 +35,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
-  scroll-snap-type: y mandatory;
-}
-
-#home-page,
-#about-sec,
-#eventsHere,
-#contactUs {
-  scroll-snap-align: start;
 }
 
 img {
@@ -235,7 +226,6 @@ section.contact {
   justify-content: space-around;
   position: relative;
   z-index: 100001;
-  background-color: black;
 }
 
 /* Landing Content */
@@ -467,6 +457,7 @@ main {
   cursor: pointer;
   transition: 0.3s;
   transform: scale(0.8);
+  background-color: black;
 }
 
 .regist {
