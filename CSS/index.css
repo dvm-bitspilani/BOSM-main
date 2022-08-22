@@ -226,7 +226,6 @@ section.contact {
   justify-content: space-around;
   position: relative;
   z-index: 100001;
-  background-color: black;
 }
 
 /* Landing Content */
@@ -458,6 +457,7 @@ main {
   cursor: pointer;
   transition: 0.3s;
   transform: scale(0.8);
+  background-color: black;
 }
 
 .regist {
