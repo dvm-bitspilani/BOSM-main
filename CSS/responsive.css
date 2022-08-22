@@ -22,10 +22,10 @@
 }
 
 @media screen and (max-width: 800px) {
-  .scrollNav {
+  /* .scrollNav {
     left: -9rem !important;
     font-size: 0.8rem;
-  }
+  } */
 
   .text h2 {
     font-size: 11rem;
@@ -399,10 +399,6 @@
   .text h3 {
     margin-top: -1rem;
     font-size: 1.2rem;
-  }
-
-  .scrollNav {
-    display: none;
   }
 
   .ham-cont {
