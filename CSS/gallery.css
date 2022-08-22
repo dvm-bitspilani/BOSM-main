@@ -151,7 +151,8 @@ body {
   }
 
   :root{
-    --width: calc((100% - 40px)*102 + 6100px)
+    --width: calc((100% - 40px)*102 + 6100px);
+    --trans: .98
   }
 
   .gallery-grid {
@@ -183,11 +184,26 @@ body {
     background-color: gray;
   }
 
-  #disc-3 {
-    display: none;
-  }
-
   .active-disc {
     background-color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --trans: .99;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(202, 1fr);
+    grid-template-rows: repeat(3, 20vh);
+    overflow-y: scroll;
+    gap: 20px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.6rem;
   }
 }
