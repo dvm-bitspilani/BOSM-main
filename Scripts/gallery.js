@@ -3,11 +3,12 @@ let leftArr = document.querySelector('#left-arr');
 let gall = document.querySelector('.gallery-grid');
 let disc1 = document.querySelector('#disc-1');
 let disc2 = document.querySelector('#disc-2');
-let resp = window.matchMedia("(max-width: 600px)");
+let resp1 = window.matchMedia("(max-width: 800px)");
+let resp2 = window.matchMedia("(max-width: 600px)");
 let touchstartX = 0;
 let touchendX = 0;
 
-let trans = (resp.matches) ? .99 : .98
+let trans = (resp2.matches) ? .99 : .98
 
 let scrObj = {
     scr: 0,
@@ -37,12 +38,12 @@ rightArr.addEventListener('click', () => slideRight(scrObj));
 const swipe = (scrObj) => {
     console.log('swipe')
     if(touchstartX > touchendX) { 
-        gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}+1) + (-1*(50%+10px))))`;
         scrObj.swipeCount += 1;
+        gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}) + (-1*(50%+10px))))`;
     }
     if(touchstartX < touchendX) {
-        gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}-1) + (-1*(50%+10px))))`;
         scrObj.swipeCount -= 1;
+        gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}) + (-1*(50%+10px))))`;
     }
 
     if(scrObj.swipeCount % 2 === 0) {
@@ -57,12 +58,16 @@ const swipe = (scrObj) => {
 }
 
 gall.addEventListener('touchstart', (event) => {
-    touchstartX = event.changedTouches[0].screenX;
+    if(resp1.matches) {
+        touchstartX = event.changedTouches[0].screenX;
+    }
 });
 
 gall.addEventListener('touchend', (event) => {
-    touchendX = event.changedTouches[0].screenX;
-    swipe(scrObj);
+    if(resp1.matches) {
+        touchendX = event.changedTouches[0].screenX;
+        swipe(scrObj);
+    }
 });
 
 for(let i=1; i<=50; i++) {
