@@ -35,15 +35,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
-  scroll-snap-type: y mandatory;
-}
-
-#home-page,
-#about-sec,
-#eventsHere,
-#contactUs {
-  scroll-snap-align: start;
 }
 
 img {

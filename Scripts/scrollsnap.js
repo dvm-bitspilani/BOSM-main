@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const homePage = document.querySelector("#home-page");
 const aboutSection = document.querySelector("#about-sec");
 const eventsSection = document.querySelector("#eventsHere");
@@ -116,3 +117,5 @@ window.addEventListener("scroll", () => {
   // console.log(percentageInView(eventsSection));
   // console.log(percentageInView(contactsSection));
 });
+=======
+>>>>>>> parent of c8ce06c (code for checking percentage in  view)
