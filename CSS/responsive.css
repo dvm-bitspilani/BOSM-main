@@ -80,7 +80,7 @@
     font-size: 1.25rem;
   }
 
-  .right{
+  .right {
     transform: translateY(1rem);
   }
 
@@ -420,7 +420,7 @@
     display: none;
   }
 
-  .right{
+  .right {
     transform: translate(0.6rem, 0.8rem);
   }
 
