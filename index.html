@@ -39,6 +39,7 @@
     <script defer src="Scripts/index.js"></script>
     <script defer src="Scripts/events.js"></script>
     <script defer src="Scripts/about.js"></script>
+    <script defer src="Scripts/scrollsnap.js"></script>
   </head>
 
   <body>
@@ -162,7 +163,7 @@
 
     <img class="bg-yellow" src="Assets/ys.png" />
 
-    <div class="home-page">
+    <div id="home-page" activepage>
       <nav class="nav">
         <div class="left">
           <img src="Assets/Logo.png" />
@@ -250,7 +251,7 @@
 
     <div class="transition"></div>
 
-    <section id="about-sec" class="sec-head">
+    <section id="about-sec" class="sec-head" nextPage>
       <img class="about-bg" src="./Assets/bgAbout.png" />
       <img class="about-bg-phone" src="./Assets/bgAboutPhone.png" />
       <div id="about-txt">
