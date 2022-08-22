@@ -73,7 +73,7 @@ img {
 #form-close {
   cursor: pointer;
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: 30px;
   z-index: 100;
 }
@@ -102,7 +102,7 @@ img {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  margin-bottom: 25px;
+  margin: 10px 0 30px;
 }
 
 input[type="radio"],
@@ -362,7 +362,7 @@ datalist {
 
 @media (max-width: 800px) {
   .form-header {
-    margin-bottom: 40px;
+    margin: 20px 0 40px;
   }
 
   .form-header h2 {
@@ -370,7 +370,7 @@ datalist {
   }
 
   #form-close {
-    top: 19px;
+    top: 39px;
     left: 20px;
   }
 
@@ -461,7 +461,7 @@ datalist {
   }
 
   #form-close {
-    top: 8px;
+    top: 28px;
     left: 10px;
   }
 
