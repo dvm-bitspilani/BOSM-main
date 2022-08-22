@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const homePage = document.querySelector("#home-page");
 const aboutSection = document.querySelector("#about-sec");
 const eventsSection = document.querySelector("#eventsHere");
@@ -14,10 +13,10 @@ let downscroll = 0;
 let upscroll = 1;
 //  = aboutSection;
 
-const homePageScrollInfo = homePage.getBoundingClientRect();
-const aboutSectionScrollInfo = aboutSection.getBoundingClientRect();
-const eventsSectionScrollInfo = eventsSection.getBoundingClientRect();
-const contactsSectionScrollInfo = contactsSection.getBoundingClientRect();
+// const homePageScrollInfo = homePage.getBoundingClientRect();
+// const aboutSectionScrollInfo = aboutSection.getBoundingClientRect();
+// const eventsSectionScrollInfo = eventsSection.getBoundingClientRect();
+// const contactsSectionScrollInfo = contactsSection.getBoundingClientRect();
 
 let windowHeight = window.innerHeight;
 let activeIndex = 0;
@@ -51,13 +50,13 @@ function updatePageStatus() {
 }
 
 function checkActivePage() {
-  if (nextPage !== null && percentageInView(nextPage) >= 7 && upscroll === 1) {
+  if (nextPage !== null && percentageInView(nextPage) >= 5 && upscroll === 1) {
     activePage.toggleAttribute("activepage");
     Pages[activeIndex + 1].toggleAttribute("activepage");
   }
   if (
     previousPage !== null &&
-    percentageInView(previousPage) >= 7 &&
+    percentageInView(previousPage) >= 5 &&
     downscroll === 1
   ) {
     activePage.toggleAttribute("activepage");
@@ -102,9 +101,11 @@ window.addEventListener("scroll", () => {
   if (newScroll > oldScroll) {
     upscroll = 1;
     downscroll = 0;
+    console.log("up");
   } else {
     downscroll = 1;
     upscroll = 0;
+    console.log("down");
   }
   oldScroll = window.scrollY;
 
@@ -112,10 +113,8 @@ window.addEventListener("scroll", () => {
   updatePageStatus();
   activeIndex = Pages.indexOf(activePage);
 
-  // console.log(percentageInView(homePage));
-  // console.log(percentageInView(aboutSection));
-  // console.log(percentageInView(eventsSection));
-  // console.log(percentageInView(contactsSection));
+  console.log(percentageInView(homePage));
+  console.log(percentageInView(aboutSection));
+  console.log(percentageInView(eventsSection));
+  console.log(percentageInView(contactsSection));
 });
-=======
->>>>>>> parent of c8ce06c (code for checking percentage in  view)
