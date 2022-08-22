@@ -43,7 +43,16 @@ function updatePageStatus() {
       if (index !== activeIndex) {
         activeIndex = index;
         let scrollAmount = activePage.offsetTop;
-        window.scrollTo({ top: scrollAmount, left: 0, behavior: "smooth" });
+
+        if ((activeIndex = 0)) {
+          window.scrollTo({
+            top: scrollAmount + 100,
+            left: 0,
+            behavior: "smooth",
+          });
+        } else {
+          window.scrollTo({ top: scrollAmount, left: 0, behavior: "smooth" });
+        }
         console.log("scroll executed");
       }
     }
@@ -53,7 +62,7 @@ function updatePageStatus() {
 function checkActivePage() {
   if (
     nextPage !== null &&
-    percentageInView(nextPage) >= 5 &&
+    percentageInView(nextPage) >= 10 &&
     upscroll === 1 &&
     downscroll === 0
   ) {
@@ -62,7 +71,7 @@ function checkActivePage() {
   }
   if (
     previousPage !== null &&
-    percentageInView(previousPage) >= 5 &&
+    percentageInView(previousPage) >= 10 &&
     downscroll === 1 &&
     upscroll === 0
   ) {
