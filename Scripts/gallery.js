@@ -5,35 +5,52 @@ let disc1 = document.querySelector('#disc-1');
 let disc2 = document.querySelector('#disc-2');
 let resp1 = window.matchMedia("(max-width: 800px)");
 let resp2 = window.matchMedia("(max-width: 600px)");
+let val = gall.clientWidth;
+let w = (document.documentElement.clientWidth)*.8;
+
+let galInt;
+
 let touchstartX = 0;
 let touchendX = 0;
 
 let trans = (resp2.matches) ? .99 : .98
 
-let scrObj = {
-    scr: 0,
-    scrollVal: `0px`,
-    swipeCount: 0
-};
+const startScrolling = (dir) => {
+    let translate = `${getTranslateX()}px`;
 
-const slideLeft = (scrObj) => {
-    if(scrObj.scr > 0) {
-        gall.style.transform = `translateX(calc(-1*${scrObj.scrollVal} + 10%))`;
-        scrObj.scr -= 10;
-        scrObj.scrollVal = `calc(${scrObj.scr}%)`;
+    if(dir === 'right' && (w-val) <= getTranslateX() - w*.1) {
+        gall.style.transform = `translateX(calc(-1*5% + ${translate}))`;
+    }
+    else if(dir === 'left' && getTranslateX() + w*.1 < 0) {
+        gall.style.transform = `translateX(calc(5% + ${translate}))`;
     }
 }
 
-const slideRight = (scrObj) => {
-    if(scrObj.scr < 50) {
-        gall.style.transform = `translateX(calc(-1*${scrObj.scrollVal} - 10%))`;
-        scrObj.scr += 10;
-        scrObj.scrollVal = `calc(${scrObj.scr}%)`;
-    }
+
+function getTranslateX() {
+    var style = window.getComputedStyle(gall);
+    var matrix = new WebKitCSSMatrix(style.transform);
+    console.log(matrix.m41)
+    return(matrix.m41);
 }
 
-leftArr.addEventListener('click', () => slideLeft(scrObj));
-rightArr.addEventListener('click', () => slideRight(scrObj));
+rightArr.addEventListener('mousedown', () => {
+    galInt = setInterval(startScrolling, 0, 'right');
+})
+
+
+rightArr.addEventListener('mouseup', () => {
+    clearInterval(galInt)
+})
+
+leftArr.addEventListener('mousedown', () => {
+    galInt = setInterval(startScrolling, 0, 'left');
+})
+
+
+leftArr.addEventListener('mouseup', () => {
+    clearInterval(galInt)
+})
 
 const swipe = (scrObj) => {
     console.log('swipe')
