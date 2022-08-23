@@ -303,7 +303,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
     // right nav position
     right.style.position = "fixed";
-    right.style.top = "1.06rem";
+    right.style.top = "0rem";
     right.style.right = "0";
 
     // opening animations
@@ -406,7 +406,7 @@ sideScroll.addEventListener("click", (e) => {
 });
 
 const headers = Array.from(document.getElementsByClassName("sec-head"));
-let rate = 0.085;
+let rate = 0.09;
 document.addEventListener("scroll", (e) => {
   let windowHeight = window.innerHeight;
   let y = window.pageYOffset

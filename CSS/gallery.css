@@ -66,7 +66,7 @@ body {
   height: 100%;
   grid-template-rows: calc((100% - 20px)/2);
   grid-auto-rows: calc((100% - 20px)/2);
-  transition: transform .6s ease-in-out;
+  transition: transform .3s;
   grid-template-columns: repeat(8, 1fr)
 }
 
@@ -134,6 +134,7 @@ body {
 .arr{
   position: absolute;
   top: calc(50% - 20px);
+  cursor: pointer;
 }
 
 #left-arr {
@@ -151,7 +152,8 @@ body {
   }
 
   :root{
-    --width: calc((100% - 40px)*102 + 6100px)
+    --width: calc((100% - 40px)*102 + 6100px);
+    --trans: .98
   }
 
   .gallery-grid {
@@ -183,11 +185,28 @@ body {
     background-color: gray;
   }
 
-  #disc-3 {
-    display: none;
-  }
-
   .active-disc {
     background-color: white;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --trans: .99;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(202, 1fr);
+    grid-template-rows: repeat(3, 20vh);
+    overflow-y: scroll;
+    gap: 20px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.6rem;
   }
 }

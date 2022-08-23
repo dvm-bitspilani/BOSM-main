@@ -42,7 +42,7 @@ const initEvtElems = () => {
   evtElems = [];
   evtDots = [];
   i = 0;
-  for (let num = 0; num < 50; num++) {
+  for (let num = 0; num < 20; num++) {
     for (let [name, label] of Object.entries(events)) {
       let evtElem = document.createElement("div");
       evtElem.classList.add("evt");
@@ -67,7 +67,7 @@ const initEvtElems = () => {
     }
   }
 
-  let dotsCount = evtElems.length / (lengths * 50);
+  let dotsCount = evtElems.length / (lengths * 20);
 
   for (let i = 0; i < dotsCount; i++) {
     let dot = document.createElement("div");

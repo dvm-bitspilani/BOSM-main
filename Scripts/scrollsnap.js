@@ -43,6 +43,9 @@ function updatePageStatus() {
       if (index !== activeIndex) {
         activeIndex = index;
         let scrollAmount = activePage.offsetTop;
+<<<<<<< HEAD
+        window.scrollTo({ top: scrollAmount, left: 0, behavior: "smooth" });
+=======
 
         if ((activeIndex = 0)) {
           window.scrollTo({
@@ -53,6 +56,7 @@ function updatePageStatus() {
         } else {
           window.scrollTo({ top: scrollAmount, left: 0, behavior: "smooth" });
         }
+>>>>>>> c493ddf0e1eff950e7c1f3429318d1d85eb6edc7
         console.log("scroll executed");
       }
     }
@@ -62,7 +66,11 @@ function updatePageStatus() {
 function checkActivePage() {
   if (
     nextPage !== null &&
+<<<<<<< HEAD
+    percentageInView(nextPage) >= 5 &&
+=======
     percentageInView(nextPage) >= 10 &&
+>>>>>>> c493ddf0e1eff950e7c1f3429318d1d85eb6edc7
     upscroll === 1 &&
     downscroll === 0
   ) {
@@ -71,7 +79,11 @@ function checkActivePage() {
   }
   if (
     previousPage !== null &&
+<<<<<<< HEAD
+    percentageInView(previousPage) >= 5 &&
+=======
     percentageInView(previousPage) >= 10 &&
+>>>>>>> c493ddf0e1eff950e7c1f3429318d1d85eb6edc7
     downscroll === 1 &&
     upscroll === 0
   ) {

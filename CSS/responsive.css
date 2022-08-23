@@ -22,10 +22,10 @@
 }
 
 @media screen and (max-width: 800px) {
-  .scrollNav {
+  /* .scrollNav {
     left: -9rem !important;
     font-size: 0.8rem;
-  }
+  } */
 
   .text h2 {
     font-size: 11rem;
@@ -80,13 +80,12 @@
     font-size: 1.25rem;
   }
 
-  footer {
-    padding: 0 1rem;
+  .right {
+    transform: translateY(1rem);
   }
 
-  .right {
-    gap: 1.4rem;
-    align-items: flex-start;
+  footer {
+    padding: 0 1rem;
   }
 
   nav * {
@@ -401,10 +400,6 @@
     font-size: 1.2rem;
   }
 
-  .scrollNav {
-    display: none;
-  }
-
   .ham-cont {
     transform: scale(0.58);
   }
@@ -423,6 +418,10 @@
 
   #desktopRegist {
     display: none;
+  }
+
+  .right {
+    transform: translate(0.6rem, 0.8rem);
   }
 
   .light,

@@ -201,7 +201,7 @@ section.contact {
 }
 
 .right {
-  margin-inline: 0.4rem;
+  margin-inline: 2rem;
 }
 
 .left > img {
@@ -223,10 +223,10 @@ section.contact {
   display: flex;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  gap: 1rem;
   justify-content: space-around;
   position: relative;
   z-index: 100001;
-  background-color: black;
 }
 
 /* Landing Content */
@@ -453,11 +453,12 @@ main {
   width: max-content;
   padding: 1rem 1.8rem;
   border: 1px solid white;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   border-radius: 40px;
   cursor: pointer;
   transition: 0.3s;
   transform: scale(0.8);
+  background-color: black;
 }
 
 .regist {
@@ -473,7 +474,7 @@ main {
 /* Hamburger */
 .ham-cont {
   display: flex;
-  display: none;
+  /* display: none; */
   transform: scale(0.8);
   justify-content: center;
   align-items: center;

@@ -3,46 +3,64 @@ let leftArr = document.querySelector('#left-arr');
 let gall = document.querySelector('.gallery-grid');
 let disc1 = document.querySelector('#disc-1');
 let disc2 = document.querySelector('#disc-2');
+let resp1 = window.matchMedia("(max-width: 800px)");
+let resp2 = window.matchMedia("(max-width: 600px)");
+let val = gall.clientWidth;
+let w = (document.documentElement.clientWidth)*.8;
+
+let galInt;
+
 let touchstartX = 0;
 let touchendX = 0;
 
-let scrObj = {
-    scr: 0,
-    scrollVal: `0px`,
-    swiped: 0,
-    swipeCount: 0
-};
+let trans = (resp2.matches) ? .99 : .98
 
-const slideLeft = (scrObj) => {
-    if(scrObj.scr > 0) {
-        gall.style.transform = `translateX(calc(-1*${scrObj.scrollVal} + 10%))`;
-        scrObj.scr -= 10;
-        scrObj.scrollVal = `calc(${scrObj.scr}%)`;
+const startScrolling = (dir) => {
+    let translate = `${getTranslateX()}px`;
+
+    if(dir === 'right' && (w-val) <= getTranslateX() - w*.1) {
+        gall.style.transform = `translateX(calc(-1*5% + ${translate}))`;
+    }
+    else if(dir === 'left' && getTranslateX() + w*.1 < 0) {
+        gall.style.transform = `translateX(calc(5% + ${translate}))`;
     }
 }
 
-const slideRight = (scrObj) => {
-    if(scrObj.scr < 50) {
-        gall.style.transform = `translateX(calc(-1*${scrObj.scrollVal} - 10%))`;
-        scrObj.scr += 10;
-        scrObj.scrollVal = `calc(${scrObj.scr}%)`;
-    }
+
+function getTranslateX() {
+    var style = window.getComputedStyle(gall);
+    var matrix = new WebKitCSSMatrix(style.transform);
+    console.log(matrix.m41)
+    return(matrix.m41);
 }
 
-leftArr.addEventListener('click', () => slideLeft(scrObj));
-rightArr.addEventListener('click', () => slideRight(scrObj));
+rightArr.addEventListener('mousedown', () => {
+    galInt = setInterval(startScrolling, 0, 'right');
+})
+
+
+rightArr.addEventListener('mouseup', () => {
+    clearInterval(galInt)
+})
+
+leftArr.addEventListener('mousedown', () => {
+    galInt = setInterval(startScrolling, 0, 'left');
+})
+
+
+leftArr.addEventListener('mouseup', () => {
+    clearInterval(galInt)
+})
 
 const swipe = (scrObj) => {
     console.log('swipe')
     if(touchstartX > touchendX) { 
-        gall.style.transform = `translateX(calc((-1)*.98%*(${scrObj.swipeCount}+1) + (-1*(50%+10px))))`;
         scrObj.swipeCount += 1;
-        console.log('swipe right');
+        gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}) + (-1*(50%+10px))))`;
     }
     if(touchstartX < touchendX) {
-        gall.style.transform = `translateX(calc((-1)*.98%*(${scrObj.swipeCount}-1) + (-1*(50%+10px))))`;
         scrObj.swipeCount -= 1;
-        console.log('swipe left');
+        gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}) + (-1*(50%+10px))))`;
     }
 
     if(scrObj.swipeCount % 2 === 0) {
@@ -57,13 +75,16 @@ const swipe = (scrObj) => {
 }
 
 gall.addEventListener('touchstart', (event) => {
-    touchstartX = event.changedTouches[0].screenX;
+    if(resp1.matches) {
+        touchstartX = event.changedTouches[0].screenX;
+    }
 });
 
 gall.addEventListener('touchend', (event) => {
-    touchendX = event.changedTouches[0].screenX;
-    swipe(scrObj)
-    // scrObj.swiped = !(scrObj.swiped);
+    if(resp1.matches) {
+        touchendX = event.changedTouches[0].screenX;
+        swipe(scrObj);
+    }
 });
 
 for(let i=1; i<=50; i++) {
