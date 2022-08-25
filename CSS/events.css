@@ -136,11 +136,10 @@
   margin-top: 30px;
   letter-spacing: 0.1rem;
   font-size: 1.2rem;
-}
-
-#evt-cont__guidelines {
   text-decoration: none;
 }
+
+
 
 #evt-cont__guidelines:hover {
   background-color: white;
