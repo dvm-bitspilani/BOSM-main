@@ -118,6 +118,35 @@
   background: #7e7e7e;
   margin: 10px;
 }
+#evt-cont__guidelines {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 2.2rem;
+  border: 1px solid white;
+  /* margin-right: 2rem; */
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(0.8);
+  background-color: black;
+  margin-top: 30px;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+
+#evt-cont__guidelines {
+  text-decoration: none;
+}
+
+#evt-cont__guidelines:hover {
+  background-color: white;
+  color: #000;
+  transition: 0.3s;
+}
 
 #evt-arrow-left {
   position: absolute;
