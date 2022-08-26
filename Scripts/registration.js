@@ -8,24 +8,24 @@ const col_inpt = document.getElementById("college");
 const yos_list = document.getElementById("yos-list");
 const yos_inpt = document.getElementById("yos");
 
-let win_height = window.innerHeight;
-let win_width = window.innerWidth;
-let avail_sports = [];
-let sel_sports = [];
-let mat_sports = [];
-let sports_avail_html = ``;
-let sports_sel_html = ``;
-let avail_colleges = [];
-let mat_colleges = [];
-let college_html = ``;
-let avail_yos = [1, 2, 3, 4, 5];
-let mat_yos = [...avail_yos];
-let yos_html = ``;
-let yos_list_disp = false;
-let col_list_disp = false;
-let sport_list_disp = false;
-let prevent_scroll = false;
-let newTop = 0;
+let win_height = window.innerHeight,
+  win_width = window.innerWidth,
+  avail_sports = [],
+  sel_sports = [],
+  mat_sports = [],
+  sports_avail_html = ``,
+  sports_sel_html = ``,
+  avail_colleges = [],
+  mat_colleges = [],
+  college_html = ``,
+  avail_yos = [1, 2, 3, 4, 5],
+  mat_yos = [...avail_yos],
+  yos_html = ``,
+  yos_list_disp = false,
+  col_list_disp = false,
+  sport_list_disp = false,
+  prevent_scroll = false,
+  newTop = 0;
 let scrollInterval;
 
 const set_vh = () => {

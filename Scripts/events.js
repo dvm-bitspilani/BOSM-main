@@ -31,12 +31,12 @@ let amountDisplay = parseInt(
 );
 let lengths = amountDisplay === 0 ? 4 : amountDisplay;
 
-let evtActive = 0;
-let evtElems = [];
-let evtDots = [];
-let i = 0;
-let touchstartX = 0;
-let touchendX = 0;
+let evtActive = 0,
+  evtElems = [],
+  evtDots = [],
+  touchstartX = 0,
+  touchendX = 0,
+  i = 0;
 
 const initEvtElems = () => {
   evtElems = [];

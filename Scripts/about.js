@@ -2,21 +2,19 @@ const carousel = document.getElementById("about-car");
 const selCont = document.getElementById("about-dots-cont");
 const loader = document.querySelector(".loader");
 
-const links = ["4lv-Ji3W9oU", "3lbRUfKTwWc", "5sH7FRg-7_Q"];
-
 const vidsCount = links.length;
-
+const links = ["4lv-Ji3W9oU", "3lbRUfKTwWc", "5sH7FRg-7_Q"];
 const carOptions = {
   root: null,
   rootMargin: "12px",
   threshold: 0.5,
 };
 
-let curVid = 0;
-let vidTimer;
-let vidsList = [];
-let playersList = [];
-let sels = [];
+let curVid = 0,
+  vidTimer,
+  vidsList = [],
+  playersList = [],
+  sels = [];
 
 links.forEach((link, idx) => {
   let vidNode = document.createElement("div");

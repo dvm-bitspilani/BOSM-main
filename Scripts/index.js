@@ -276,20 +276,20 @@ function copyText(text) {
 ////////// HAMBURGER EVENTS
 
 let open = false;
-let right = document.querySelector(".right");
+const right = document.querySelector(".right");
 
-let hamImg = document.querySelector(".ham-img span");
-let hamText = document.querySelector(".ham-text span");
-let hamLogoImg = document.querySelector(".ham-logo img");
+const hamImg = document.querySelector(".ham-img span");
+const hamText = document.querySelector(".ham-text span");
+const hamLogoImg = document.querySelector(".ham-logo img");
 
-let hamGrid = document.querySelector(".ham-grid");
-let hamLogo = document.querySelector(".ham-logo");
-let hamIcons = document.querySelector(".ham-icons");
-let hamLinks = document.querySelector(".ham-links");
+const hamGrid = document.querySelector(".ham-grid");
+const hamLogo = document.querySelector(".ham-logo");
+const hamIcons = document.querySelector(".ham-icons");
+const hamLinks = document.querySelector(".ham-links");
 
-let hamIcon = document.querySelectorAll(".ham-icon");
-let hamLine = document.querySelectorAll(".hamburger span");
-let hamLink = document.querySelectorAll(".ham-links div a");
+const hamIcon = document.querySelectorAll(".ham-icon");
+const hamLine = document.querySelectorAll(".hamburger span");
+const hamLink = document.querySelectorAll(".ham-links div a");
 
 document.querySelector(".hamburger").addEventListener("click", () => {
   if (!open) {
@@ -402,36 +402,34 @@ sideScroll.addEventListener("click", (e) => {
       element.classList.remove("active");
     }
   });
-  e.target.classList.add("active")
+  e.target.classList.add("active");
 });
 
 const headers = Array.from(document.getElementsByClassName("sec-head"));
 let rate = 0.09;
 document.addEventListener("scroll", (e) => {
   let windowHeight = window.innerHeight;
-  let y = window.pageYOffset
-  let scrolled = -y * rate + 'px';
-  sideScroll.style.setProperty(
-    '--sideScroll', scrolled);
+  let y = window.pageYOffset;
+  let scrolled = -y * rate + "px";
+  sideScroll.style.setProperty("--sideScroll", scrolled);
   headers.forEach((e) => {
     let revealTop = e.getBoundingClientRect().top;
     let revealPoint = 160;
-    let index = headers.indexOf(e)
+    let index = headers.indexOf(e);
     if (revealTop < windowHeight - revealPoint) {
       scrollElems.forEach((element) => {
         if (element.classList.contains("active")) {
           element.classList.remove("active");
         }
-      }
-      );
-      scrollElems[3 - index].classList.add("active")
+      });
+      scrollElems[3 - index].classList.add("active");
     }
-  })
-})
-let offsets = []
+  });
+});
+let offsets = [];
 headers.forEach((e) => {
-  offsets.push(e.offsetTop)
-})
+  offsets.push(e.offsetTop);
+});
 console.log(offsets);
 // console.log(offsets);
 let offset = 0;
@@ -468,7 +466,6 @@ setInterval(() => {
 //         }
 //       }, 600);
 //     }
-
 
 // })
 // [176, 872, 1740, 2321]
