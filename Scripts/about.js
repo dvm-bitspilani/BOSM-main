@@ -2,8 +2,8 @@ const carousel = document.getElementById("about-car");
 const selCont = document.getElementById("about-dots-cont");
 const loader = document.querySelector(".loader");
 
-const vidsCount = links.length;
 const links = ["4lv-Ji3W9oU", "3lbRUfKTwWc", "5sH7FRg-7_Q"];
+const vidsCount = links.length;
 const carOptions = {
   root: null,
   rootMargin: "12px",
