@@ -166,6 +166,7 @@
   .contactCont {
     width: 100%;
     margin-bottom: 3rem;
+    column-gap: 10px;
   }
 }
 
