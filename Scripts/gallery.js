@@ -13,12 +13,14 @@ let scrObj = {
   swipeCount: 0
 };
 
-let val = gall.clientWidth,
-  width = document.documentElement.clientWidth * 0.8,
-  galInt,
-  touchstartX = 0,
-  touchendX = 0,
-  trans = resp2.matches ? 0.99 : 0.98;
+let val = gall.clientWidth;
+let width = (document.documentElement.clientWidth)*.8;
+
+let galInt;
+
+let touchstartX = 0;
+let touchendX = 0;
+let trans = 1.67;
 
 const startScrolling = (dir) => {
   let translate = `${getTranslateX()}px`;
@@ -86,7 +88,7 @@ gall.addEventListener("touchend", (event) => {
   }
 });
 
-for (let i = 1; i <= 50; i++) {
+for (let i = 1; i <= 30; i++) {
   for (let j = 1; j <= 12; j++) {
     gall.innerHTML += `<div class="gallery-images" id=${j}>
             <img src="../Assets/gallery/${j}.jpg" alt="img">

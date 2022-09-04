@@ -152,13 +152,17 @@ body {
   }
 
   :root{
-    --width: calc((100% - 40px)*102 + 6100px);
-    --trans: .98
+    --width: calc((100% - 40px)*60 + 3580px);
+    --trans: 1.67
+  }
+
+  .gallery{
+    width: calc(80%-20px);
   }
 
   .gallery-grid {
     gap: 40px 20px;
-    grid-template-columns: repeat(306, 1fr);
+    grid-template-columns: repeat(180, 1fr);
     transform: translateX(calc(-1*(50%+10px)));
   }
 
@@ -194,11 +198,11 @@ body {
 
 @media (max-width: 600px) {
   :root {
-    --trans: .99;
+    --trans: 1.67;
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(202, 1fr);
+    grid-template-columns: repeat(120, 1fr);
     grid-template-rows: repeat(3, 20vh);
     /* overflow-y: scroll; */
     gap: 20px 10px;
