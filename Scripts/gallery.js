@@ -6,6 +6,13 @@ const disc2 = document.querySelector("#disc-2");
 const resp1 = window.matchMedia("(max-width: 800px)");
 const resp2 = window.matchMedia("(max-width: 600px)");
 
+let scrObj = {
+  scr: 0,
+  scrollVal: `0px`,
+  swiped: 0,
+  swipeCount: 0
+};
+
 let val = gall.clientWidth,
   width = document.documentElement.clientWidth * 0.8,
   galInt,
@@ -82,7 +89,7 @@ gall.addEventListener("touchend", (event) => {
 for (let i = 1; i <= 50; i++) {
   for (let j = 1; j <= 12; j++) {
     gall.innerHTML += `<div class="gallery-images" id=${j}>
-            <img src="../Assets/gallery/${j}.jpg" alt="img">
+            <img src="../Assets/Gallery/${j}.jpg" alt="img">
             </div>`;
   }
 }
