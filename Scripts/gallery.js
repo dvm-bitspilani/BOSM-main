@@ -35,7 +35,6 @@ const startScrolling = (dir) => {
 function getTranslateX() {
   var style = window.getComputedStyle(gall);
   var matrix = new WebKitCSSMatrix(style.transform);
-  console.log(matrix.m41);
   return matrix.m41;
 }
 
@@ -88,10 +87,53 @@ gall.addEventListener("touchend", (event) => {
   }
 });
 
-for (let i = 1; i <= 30; i++) {
-  for (let j = 1; j <= 12; j++) {
-    gall.innerHTML += `<div class="gallery-images" id=${j}>
-            <img src="../Assets/gallery/${j}.jpg" alt="img">
-            </div>`;
+if(resp2.matches) {
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 1; j <= 4; j++) {
+      gall.innerHTML += `<div class="gallery-images" id=${j}>
+              <img src="../Assets/gallery/${j}.jpg" alt="img">
+              </div>`;
+    }
+  }
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 5; j <= 8; j++) {
+      gall.innerHTML += `<div class="gallery-images" id=${j}>
+              <img src="../Assets/gallery/${j}.jpg" alt="img">
+              </div>`;
+    }
+  }
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 9; j <= 12; j++) {
+      gall.innerHTML += `<div class="gallery-images" id=${j}>
+              <img src="../Assets/gallery/${j}.jpg" alt="img">
+              </div>`;
+    }
+  }
+}
+
+else if(resp1.matches) {
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 1; j <= 6; j++) {
+      gall.innerHTML += `<div class="gallery-images" id=${j}>
+              <img src="../Assets/gallery/${j}.jpg" alt="img">
+              </div>`;
+    }
+  }
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 7; j <= 12; j++) {
+      gall.innerHTML += `<div class="gallery-images" id=${j}>
+              <img src="../Assets/gallery/${j}.jpg" alt="img">
+              </div>`;
+    }
+  }
+}
+
+else {
+  for (let i = 1; i <= 30; i++) {
+    for (let j = 1; j <= 12; j++) {
+      gall.innerHTML += `<div class="gallery-images" id=${j}>
+              <img src="../Assets/gallery/${j}.jpg" alt="img">
+              </div>`;
+    }
   }
 }
