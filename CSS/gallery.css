@@ -8,7 +8,7 @@
 body {
   background: url("../Assets/galleryBg.png") center center no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   background-color: black;
   font-family: "Montserrat";
   color: white;
@@ -200,7 +200,7 @@ body {
   .gallery-grid {
     grid-template-columns: repeat(202, 1fr);
     grid-template-rows: repeat(3, 20vh);
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     gap: 20px 10px;
   }
 }
