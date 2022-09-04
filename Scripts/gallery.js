@@ -56,9 +56,11 @@ leftArr.addEventListener("mouseup", () => {
 const swipe = (scrObj) => {
   console.log("swipe");
   if (touchstartX > touchendX + 100) {
+    scrObj.swipeCount += 1;
     gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}) + (-1*(50%+10px))))`;
   }
   if (touchstartX < touchendX - 100) {
+    scrObj.swipeCount -= 1;
     gall.style.transform = `translateX(calc((-1)*${trans}%*(${scrObj.swipeCount}) + (-1*(50%+10px))))`;
   }
 
