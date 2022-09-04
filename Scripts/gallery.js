@@ -89,7 +89,7 @@ gall.addEventListener("touchend", (event) => {
 for (let i = 1; i <= 50; i++) {
   for (let j = 1; j <= 12; j++) {
     gall.innerHTML += `<div class="gallery-images" id=${j}>
-            <img src="../Assets/Gallery/${j}.jpg" alt="img">
+            <img src="../Assets/gallery/${j}.jpg" alt="img">
             </div>`;
   }
 }
