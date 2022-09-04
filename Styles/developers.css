@@ -235,6 +235,8 @@ body::-webkit-scrollbar {
 
   .dev-name {
     font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .dev-link img {
