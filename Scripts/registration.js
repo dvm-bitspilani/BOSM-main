@@ -93,8 +93,9 @@ const set_college_ul = () => {
   let college_pat = ``;
   college_html = ``;
   mat_colleges.forEach((val) => {
+    let college_esc = val.name.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
     college_html = `${college_html}<li>${val.name}</li>`;
-    college_pat = `${college_pat}|${val.name}`;
+    college_pat = `${college_pat}|${college_esc}`;
   });
   college_list.innerHTML = college_html;
   col_inpt.pattern = college_pat;
