@@ -88,6 +88,7 @@ gall.addEventListener("touchend", (event) => {
 });
 
 if(resp2.matches) {
+  gall.innerHTML = '';
   for (let i = 1; i <= 30; i++) {
     for (let j = 1; j <= 4; j++) {
       gall.innerHTML += `<div class="gallery-images" id=${j}>
@@ -112,6 +113,7 @@ if(resp2.matches) {
 }
 
 else if(resp1.matches) {
+  gall.innerHTML = '';
   for (let i = 1; i <= 30; i++) {
     for (let j = 1; j <= 6; j++) {
       gall.innerHTML += `<div class="gallery-images" id=${j}>
@@ -128,12 +130,10 @@ else if(resp1.matches) {
   }
 }
 
-else {
-  for (let i = 1; i <= 30; i++) {
-    for (let j = 1; j <= 12; j++) {
-      gall.innerHTML += `<div class="gallery-images" id=${j}>
-              <img src="../Assets/gallery/${j}.jpg" alt="img">
-              </div>`;
-    }
-  }
-}
+// else {
+//   for (let j = 1; j <= 12; j++) {
+//     gall.innerHTML += `<div class="gallery-images" id=${j}>
+//             <img src="../Assets/gallery/${j}.jpg" alt="img">
+//             </div>`;
+//   }
+// }
