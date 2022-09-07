@@ -15,6 +15,8 @@ let scrObj = {
 
 let val = gall.clientWidth;
 let width = (document.documentElement.clientWidth)*.8;
+let opaqWidth = document.querySelector('.opaq-left').clientWidth;
+console.log(opaqWidth)
 
 let galInt;
 
@@ -25,9 +27,9 @@ let trans = 1.67;
 const startScrolling = (dir) => {
   let translate = `${getTranslateX()}px`;
 
-  if (dir === "right" && width - val <= getTranslateX() - width * 0.1) {
+  if (dir === "right" && width - val <= getTranslateX() - width * 0.1 + opaqWidth + 20) {
     gall.style.transform = `translateX(calc(-1*5% + ${translate}))`;
-  } else if (dir === "left" && getTranslateX() + width * 0.1 < 0) {
+  } else if (dir === "left" && getTranslateX() + width * 0.1 < opaqWidth + 20) {
     gall.style.transform = `translateX(calc(5% + ${translate}))`;
   }
 };

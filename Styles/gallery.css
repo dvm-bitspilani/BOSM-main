@@ -8,7 +8,7 @@
 body {
   background: url("../Assets/galleryBg.png") center center no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   background-color: black;
   font-family: "Montserrat";
   color: white;
@@ -19,10 +19,10 @@ body {
   --width: calc((100% - 60px)/4 * 8 + 140px);
 }
 
-.heading {
+.gal-head {
+  font-size: 2.8rem;
   text-align: center;
   padding-top: 3rem;
-  font-size: 2.4rem;
 }
 
 #gal-close {
@@ -82,7 +82,7 @@ body {
   grid-template-rows: calc((100% - 20px)/2);
   grid-auto-rows: calc((100% - 20px)/2);
   transition: transform .3s;
-  grid-template-columns: repeat(8, 1fr)
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .gallery-images img {
@@ -143,9 +143,12 @@ body {
   #gallery-img-12{
     grid-area: 1 / 8 / span 2 / span 1;
   }
+
+  .gallery-grid {
+    transform: translateX(calc(4% + 20px));
+  }
 }
 
-/* Vector */
 .arr{
   position: absolute;
   top: calc(50% - 20px);
@@ -161,10 +164,13 @@ body {
   right: -5%;
 }
 
-@media (max-width: 800px) {
-  .heading {
-    font-size: 2rem;
+@media (max-width: 1000px) {
+  .gal-head {
+    font-size: 2.6rem;
   }
+}
+
+@media (max-width: 800px) {
 
   :root{
     --width: calc((100% - 40px)*60 + 3580px);
@@ -183,7 +189,7 @@ body {
   .gallery-grid {
     gap: 40px 20px;
     grid-template-columns: repeat(180, 1fr);
-    transform: translateX(calc(-1*(50%+10px)));
+    transform: translateX(calc(-1*(50% + 10px)));
   }
 
   .opaque-divs, .arr {
@@ -224,19 +230,13 @@ body {
   .gallery-grid {
     grid-template-columns: repeat(120, 1fr);
     grid-template-rows: repeat(3, 20vh);
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     gap: 20px 10px;
+    transform: translateX(calc(-1*(50% + 5px)));
   }
 }
 
 @media (max-width: 400px) {
-  .heading {
-    font-size: 1.6rem;
-  }
-
-  #gal-close {
-    top: 3.7rem;
-  }
 
   #gal-close-img {
     width: 15px;
