@@ -116,6 +116,8 @@ body::-webkit-scrollbar {
   width: 100%;
   border-radius: 2rem;
   mix-blend-mode: overlay;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .img-wrapper {
