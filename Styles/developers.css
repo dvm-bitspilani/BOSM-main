@@ -81,7 +81,7 @@ body::-webkit-scrollbar {
 }
 
 .six {
-  max-width: 98vw;
+  max-width: 80vw;
 }
 
 .five {
@@ -147,6 +147,13 @@ body::-webkit-scrollbar {
   width: 110%;
 }
 
+.three{
+  display: grid;
+}
+.dev-profile{
+  margin: 0 auto;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1200px) {
   .dev-name {
@@ -164,8 +171,18 @@ body::-webkit-scrollbar {
     margin: 3rem 0 1rem 0;
   }
 
+  .dev-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* row-gap: rem; */
+    
+  }
+
   .centre {
-    transform: translateX(calc(17vw + 2rem));
+    /* transform: translateX(calc(17vw + 2rem)); */
+    margin:0 auto ;
+    grid-column: 1/-1;
+
   }
 
   .close {
@@ -176,6 +193,10 @@ body::-webkit-scrollbar {
   .five {
     gap: 3rem 6rem;
     grid-template-columns: 1fr 1fr;
+  }
+  .three{
+    grid-template-columns: 1fr 1fr ;
+    gap:3rem 6rem
   }
 
   .dev-name {
@@ -196,6 +217,13 @@ body::-webkit-scrollbar {
 
   .dev-profile {
     max-width: 34vw;
+    /* width: 50%; */
+  }
+  .dev-body{
+    max-width: 80%;
+    row-gap: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
   }
 
   body {
@@ -215,6 +243,7 @@ body::-webkit-scrollbar {
 
   .centre {
     transform: none;
+    grid-column: 3;
   }
 
   body {
@@ -224,15 +253,38 @@ body::-webkit-scrollbar {
   .dev-links {
     gap: 0.2rem;
   }
+  
 
-  .six,
+  /* .six,
   .five {
     gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
+  } */
 
-  .five {
+  .dev-body{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* gap:2rem; */
+    row-gap: 6rem;
+    width: 75%;
+  }
+  .back-1{
+    grid-column: 2/span 1;
+    /* margin-right: 1rem; */
+  }
+  .back-2{
+    grid-column: 3/span 1;
+  }
+  .back-3{
+    grid-column: 4/span 1;
+  }
+  
+  .five,.six {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap:2rem;
+  }
+  .three{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:4rem;
   }
 
   .dev-name {
@@ -256,6 +308,9 @@ body::-webkit-scrollbar {
   .dev-profile {
     max-width: calc((85vw - 10rem) / 6);
   }
+
+
+  
 }
 
 @media screen and (min-width: 1599px) {
