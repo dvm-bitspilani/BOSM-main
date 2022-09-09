@@ -2,6 +2,7 @@
     "files.associations": {
         "algorithm": "cpp",
         "utility": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "ostream": "cpp"
     }
 }

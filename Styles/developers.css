@@ -69,7 +69,7 @@ body::-webkit-scrollbar {
 .dev-body {
   width: 98vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
 }
@@ -208,7 +208,7 @@ body::-webkit-scrollbar {
   }
 
   .dev-link {
-    width: 25%;
+    width:70px;
   }
 
   .dev-dept {
@@ -298,7 +298,7 @@ body::-webkit-scrollbar {
   }
 
   .dev-link {
-    width: 90%;
+    width: 40px;
   }
 
   .dev-dept {
