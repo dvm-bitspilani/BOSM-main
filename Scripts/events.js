@@ -175,8 +175,6 @@ function checkDirection() {
       evtActive = evtElems.length - lengths;
     }
     setActive();
-    clearInterval(eventInterval);
-    eventInterval = setInterval(appendActive, 3000);
   }
   if (touchendX - touchstartX > touchThreshold) {
     evtActive -= lengths;
@@ -193,11 +191,13 @@ function checkDirection() {
 
 evtsCont.addEventListener("touchstart", (e) => {
   touchstartX = e.changedTouches[0].screenX;
+  clearInterval(eventInterval);
 });
 
 evtsCont.addEventListener("touchend", (e) => {
   touchendX = e.changedTouches[0].screenX;
   checkDirection();
+  eventInterval = setInterval(appendActive, 3000);
 });
 
 let eventInterval = setInterval(appendActive, 3000);

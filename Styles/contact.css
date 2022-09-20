@@ -123,6 +123,11 @@
   width: 78%;
 }
 
+.contact-details{
+  display:flex;
+  flex-direction: column;
+}
+
 @media (max-width: 800px) {
   .sec-header {
     font-size: 2rem;
@@ -258,4 +263,14 @@
     font-size: 1.6rem;
   }
 }
+
+@media (max-width:1201px){
+  .contact-details{
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: 0.5rem;}
+}
+
+
 /*# sourceMappingURL=contact.css.map */
