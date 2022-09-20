@@ -88,19 +88,19 @@
 }
 
 .evt .evt-label {
-  transform-origin: 0 50%;
-  transform: scaleX(0);
-  display: none;
   font-size: 1.15rem;
+  width: max-content;
+  white-space: break-spaces;
+  max-width: calc(60vw / var(--numDisplay));
   font-weight: 600;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 
 .evt.evt-active .evt-label {
-  display: block;
-  transform: scaleX(100%);
   margin-left: 10px;
   -webkit-animation: evt-label-expand 1200ms ease;
   animation: evt-label-expand 1200ms ease;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .evt.evt-inactive .evt-label {
@@ -243,69 +243,37 @@
 
 @-webkit-keyframes evt-label-expand {
   0% {
-    display: none;
-    transform: scaleX(0);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
-
-  1% {
-    display: block;
-    transform: scaleX(0);
-  }
-
   100% {
-    display: block;
-    transform: scaleX(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 @keyframes evt-label-expand {
   0% {
-    display: none;
-    transform: scaleX(0);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
-
-  1% {
-    display: block;
-    transform: scaleX(0);
-  }
-
   100% {
-    display: block;
-    transform: scaleX(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
 @-webkit-keyframes evt-label-shrink {
   0% {
-    display: block;
-    transform: scaleX(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-
-  99% {
-    display: block;
-    transform: scaleX(0);
-  }
-
   100% {
-    display: none;
-    transform: scaleX(0);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
 }
 
 @keyframes evt-label-shrink {
   0% {
-    display: block;
-    transform: scaleX(100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-
-  99% {
-    display: block;
-    transform: scaleX(0);
-  }
-
   100% {
-    display: none;
-    transform: scaleX(0);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
 }
 
@@ -325,6 +293,10 @@
   #evt-arrow-right {
     right: 50px;
   }
+
+  .evt-label {
+    max-width: calc(27vw / var(--numDisplay)) !important;
+  }
 }
 
 @media (max-width: 800px) {
@@ -333,7 +305,7 @@
     --numDisplay: 0;
     --evtMargin: 10px;
     --evtLogoSize: 20px;
-    --evtPadding: 10px;
+    --evtPadding: 5px;
     padding: 0 10px;
   }
 
@@ -385,6 +357,8 @@
     transform: scaleX(1);
     -webkit-animation: none;
     animation: none;
+    max-width: 23vw !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
   .event-bg {
