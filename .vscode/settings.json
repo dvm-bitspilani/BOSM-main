@@ -3,6 +3,9 @@
         "algorithm": "cpp",
         "utility": "cpp",
         "queue": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "string": "cpp",
+        "stack": "cpp",
+        "limits": "cpp"
     }
 }

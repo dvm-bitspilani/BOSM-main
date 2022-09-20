@@ -12,13 +12,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet" />
     <script defer src="../Scripts/gallery.js"></script>
     <link href="../Styles/gallery.css" rel="stylesheet" />
+
+    <script defer src="../Scripts/hamburger.js"></script>
+    <script defer src="../Scripts/index.js"></script>
     <title>Gallery</title>
 </head>
 
 <body>
-    <div id="gal-close">
+    <!-- <div id="gal-close">
         <a href="../index.html"><img alt="" id="gal-close-img" src="../Assets/Back.svg" /></a>
+      </div> -->
+
+      
+    <div class="ham-grid">
+        <div class="ham-logo ham-hide"><img src="../Assets/ham-logo.png" /></div>
+        <div class="ham-img ham-hide">
+          <img src="../Assets/ham-img.png" /><span></span>
+        </div>
+  
+        <div class="ham-links">
+          <div>
+            <a href="../index.html">HOME</a>
+            <a href="https://dvm-bitspilani.github.io/bosm-2019-main/"
+              >ARCHIVES</a
+            >
+            <a style="display: none" href="#">LOGIN</a>
+            <a href="./developers.html">DEVELOPERS</a>
+          </div>
+        </div>
+  
+        <div class="ham-text ham-hide">
+          <img src="../Assets/ham-text.png" /><span></span>
+        </div>
+        <div class="ham-icons ham-hide">
+          <a href="https://www.facebook.com/bosmbitspilani" target="_blank">
+            <img aria-hidden="true" src="../Assets/Facebook.png" class="ham-icon" />
+          </a>
+          <a href="https://www.instagram.com/bitsbosm/" target="_blank">
+            <img aria-hidden="true" src="../Assets/Instagram.png" class="ham-icon" />
+          </a>
+        </div>
       </div>
+  
+      <nav class="nav">
+        <div class="right">
+          <div class="ham-cont">
+            <div class="hamburger">
+              <span class="ham-1"></span>
+              <span class="ham-2"></span>
+              <span class="ham-3"></span>
+            </div>
+          </div>
+        </div>
+      </nav>
 
     <div class="heading">
         <h2 class="gal-head">GALLERY</h2>
