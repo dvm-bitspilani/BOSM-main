@@ -57,56 +57,6 @@ section.contact {
   margin-bottom: 0;
 }
 
-.loader {
-  background-color: #010001;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  z-index: 10000001;
-}
-
-.hide {
-  margin-top: 0rem;
-  padding: 0.8rem 1.2rem;
-  font-size: 0.65rem;
-  letter-spacing: 1px;
-  word-spacing: 3px;
-  font-family: "zona-pro-thin", sans-serif;
-  position: relative;
-  color: white;
-  overflow: hidden;
-  transition: 0.2s;
-  opacity: 0;
-}
-
-@-webkit-keyframes appear {
-  0% {
-    transform: translateY(-8px) scale(0.9);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.7;
-  }
-}
-
-@keyframes appear {
-  0% {
-    transform: translateY(-8px) scale(0.9);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-
 /* .hide:hover {
   cursor: pointer;
   color: white;
@@ -174,17 +124,6 @@ section.contact {
 .hide:hover span:nth-child(4) {
   transform: translateY(-130%);
   transition: 1s 0.75s;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 20vw;
-  height: 20vw;
-}
-
-#video {
-  width: 100%;
-  height: 100%;
 }
 
 .shadow {
@@ -346,26 +285,6 @@ main {
 
   to {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
   }
 }
 

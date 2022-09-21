@@ -1,146 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/5397743099.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>&nbsp;Registration</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script defer src="../Scripts/registration.js"></script>
+    <link href="../Styles/registration.css" rel="stylesheet" />
+    <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="../Styles/loader.css" rel="stylesheet" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
-  <script src="https://kit.fontawesome.com/5397743099.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet" />
-  <title>&nbsp;Registration</title>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script defer src="../Scripts/registration.js"></script>
-  <link href="../Styles/registration.css" rel="stylesheet" />
-  <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <script defer src="../Scripts/hamburger.js"></script>
+    <script defer src="../Scripts/index.js"></script>
+    <script defer src="../Scripts/loader.js"></script>
+  </head>
 
-  <script defer src="../Scripts/hamburger.js"></script>
-  <script defer src="../Scripts/index.js"></script>
-</head>
+  <body>
+    <div class="loader">
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline id="video" width="100%">
+          <source src="../Assets/loader.mp4" type="video/mp4" />
+        </video>
+        <div class="shadow"></div>
+      </div>
 
-<body>
-  <!-- <div id="form-close">
+      <div class="hide">CLICK TO CONTINUE</div>
+    </div>
+    <!-- <div id="form-close">
     <a href="../index.html"><img alt="" id="form-close-img" src="../Assets/Back.svg" /></a>
   </div> -->
 
-  
-  <div class="ham-grid">
-    <div class="ham-logo ham-hide"><img src="../Assets/ham-logo.png" /></div>
-    <div class="ham-img ham-hide">
-      <img src="../Assets/ham-img.png" /><span></span>
-    </div>
+    <div class="ham-grid">
+      <div class="ham-logo ham-hide"><img src="../Assets/ham-logo.png" /></div>
+      <div class="ham-img ham-hide">
+        <img src="../Assets/ham-img.png" /><span></span>
+      </div>
 
-    <div class="ham-links">
-      <div>
-        <a href="../index.html">HOME</a>
-        <a href="./gallery.html">GALLERY</a>
-        <a href="https://dvm-bitspilani.github.io/bosm-2019-main/"
-          >ARCHIVES</a
-        >
-        <a style="display: none" href="#">LOGIN</a>
-        <a href="./developers.html">DEVELOPERS</a>
+      <div class="ham-links">
+        <div>
+          <a href="../index.html">HOME</a>
+          <a href="./gallery.html">GALLERY</a>
+          <a href="https://dvm-bitspilani.github.io/bosm-2019-main/"
+            >ARCHIVES</a
+          >
+          <a style="display: none" href="#">LOGIN</a>
+          <a href="./developers.html">DEVELOPERS</a>
+        </div>
+      </div>
+
+      <div class="ham-text ham-hide">
+        <img src="../Assets/ham-text.png" /><span></span>
+      </div>
+      <div class="ham-icons ham-hide">
+        <a href="https://www.facebook.com/bosmbitspilani" target="_blank">
+          <img
+            aria-hidden="true"
+            src="../Assets/Facebook.png"
+            class="ham-icon"
+          />
+        </a>
+        <a href="https://www.instagram.com/bitsbosm/" target="_blank">
+          <img
+            aria-hidden="true"
+            src="../Assets/Instagram.png"
+            class="ham-icon"
+          />
+        </a>
       </div>
     </div>
 
-    <div class="ham-text ham-hide">
-      <img src="../Assets/ham-text.png" /><span></span>
-    </div>
-    <div class="ham-icons ham-hide">
-      <a href="https://www.facebook.com/bosmbitspilani" target="_blank">
-        <img aria-hidden="true" src="../Assets/Facebook.png" class="ham-icon" />
-      </a>
-      <a href="https://www.instagram.com/bitsbosm/" target="_blank">
-        <img aria-hidden="true" src="../Assets/Instagram.png" class="ham-icon" />
-      </a>
-    </div>
-  </div>
-
-  <nav class="nav">
-    <div class="right">
-      <div class="ham-cont">
-        <div class="hamburger">
-          <span class="ham-1"></span>
-          <span class="ham-2"></span>
-          <span class="ham-3"></span>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div id="reg-cont">
-    <form id="reg-form" method="post" name="reg-form">
-      <div class="form-header">
-        <h2>REGISTRATION</h2>
-      </div>
-      <div class="col">
-        <div class="form-input-cont">
-          <input class="form-input" id="name" name="name" placeholder=" " required type="text" />
-          <label class="form-lbl" for="name">NAME</label>
-        </div>
-        <div class="form-input-cont">
-          <input class="form-input" id="email" name="email" placeholder=" " required type="email" />
-          <label class="form-lbl" for="email">EMAIL</label>
-        </div>
-        <div class="form-input-cont">
-          <input class="form-input" id="phone" name="phone" placeholder=" " required type="number" />
-          <label class="form-lbl" for="phone">PHONE</label>
-        </div>
-        <div class="form-input-cont" id="gender-cont">
-          <label id="gender-lbl">GENDER</label>
-          <div class="flex-cont" id="gender-input-cont">
-            <input class="form-input" id="male" name="gender" placeholder=" " required type="radio" value="M" />
-            <label class="lbl-small" for="male">MALE</label>
-            <input class="form-input" id="female" name="gender" placeholder=" " required type="radio" value="F" />
-            <label class="lbl-small" for="female">FEMALE</label>
-            <input class="form-input" id="other" name="gender" placeholder=" " required type="radio" value="O" />
-            <label class="lbl-small" for="other">OTHER</label>
+    <nav class="nav">
+      <div class="right">
+        <div class="ham-cont">
+          <div class="hamburger">
+            <span class="ham-1"></span>
+            <span class="ham-2"></span>
+            <span class="ham-3"></span>
           </div>
         </div>
-        <div class="form-input-cont">
-          <input class="form-input" id="yos" type="number" pattern="1|2|3|4|5" placeholder=" " required />
-          <label class="form-lbl" for="yos">YEAR OF STUDY</label>
-          <i class="fa-solid fa-angle-down"></i>
-          <ul class="form-list" id="yos-list"></ul>
-          <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
-        </div>
       </div>
-      <div class="col">
-        <div class="form-input-cont">
-          <input class="form-input" id="sports" name="sports" placeholder=" " autocomplete="off" />
-          <label class="form-lbl" for="sports">SPORTS</label>
-          <i class="fa-solid fa-angle-down"></i>
-          <ul class="form-list" id="sport-list"></ul>
-          <ul id="sport-sel-list"></ul>
-        </div>
-        <div class="form-input-cont">
-          <input class="form-input" id="college" name="college" placeholder=" " autocomplete="off" required />
-          <label class="form-lbl" for="college">COLLEGE</label>
-          <i class="fa-solid fa-angle-down"></i>
-          <ul class="form-list" id="college-list"></ul>
-        </div>
-        <div class="form-input-cont">
-          <input class="form-input" id="city" name="city" placeholder=" " required type="text" />
-          <label class="form-lbl" for="city">CITY</label>
-        </div>
+    </nav>
 
-        <div class="form-input-cont">
-          <input class="form-input" id="state" name="state" placeholder=" " required />
-          <label class="form-lbl" for="state">STATE</label>
+    <div id="reg-cont">
+      <form id="reg-form" method="post" name="reg-form">
+        <div class="form-header">
+          <h2>REGISTRATION</h2>
         </div>
-        <div class="form-input-cont flex-cont">
-          <input id="coach" name="coach" placeholder=" " type="checkbox" />
-          <label class="lbl-small" for="coach">Are you a coach? </label>
+        <div class="col">
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="name"
+              name="name"
+              placeholder=" "
+              required
+              type="text"
+            />
+            <label class="form-lbl" for="name">NAME</label>
+          </div>
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="email"
+              name="email"
+              placeholder=" "
+              required
+              type="email"
+            />
+            <label class="form-lbl" for="email">EMAIL</label>
+          </div>
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="phone"
+              name="phone"
+              placeholder=" "
+              required
+              type="number"
+            />
+            <label class="form-lbl" for="phone">PHONE</label>
+          </div>
+          <div class="form-input-cont" id="gender-cont">
+            <label id="gender-lbl">GENDER</label>
+            <div class="flex-cont" id="gender-input-cont">
+              <input
+                class="form-input"
+                id="male"
+                name="gender"
+                placeholder=" "
+                required
+                type="radio"
+                value="M"
+              />
+              <label class="lbl-small" for="male">MALE</label>
+              <input
+                class="form-input"
+                id="female"
+                name="gender"
+                placeholder=" "
+                required
+                type="radio"
+                value="F"
+              />
+              <label class="lbl-small" for="female">FEMALE</label>
+              <input
+                class="form-input"
+                id="other"
+                name="gender"
+                placeholder=" "
+                required
+                type="radio"
+                value="O"
+              />
+              <label class="lbl-small" for="other">OTHER</label>
+            </div>
+          </div>
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="yos"
+              type="number"
+              pattern="1|2|3|4|5"
+              placeholder=" "
+              required
+            />
+            <label class="form-lbl" for="yos">YEAR OF STUDY</label>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="form-list" id="yos-list"></ul>
+            <!-- <i class="fa fa-caret-down dropdown" aria-hidden="true"></i>                     -->
+          </div>
         </div>
-      </div>
-      <div id="form-submit-cont">
-        <button id="form-submit" type="submit">REGISTER</button>
-      </div>
-    </form>
-  </div>
-  <div class="g-recaptcha" data-sitekey="6LdSBPYgAAAAAFSZA0FHo_TK-jDXqyYDI-nL-4W_" data-callback="submit_form"
-    data-size="invisible"></div>
-</body>
+        <div class="col">
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="sports"
+              name="sports"
+              placeholder=" "
+              autocomplete="off"
+            />
+            <label class="form-lbl" for="sports">SPORTS</label>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="form-list" id="sport-list"></ul>
+            <ul id="sport-sel-list"></ul>
+          </div>
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="college"
+              name="college"
+              placeholder=" "
+              autocomplete="off"
+              required
+            />
+            <label class="form-lbl" for="college">COLLEGE</label>
+            <i class="fa-solid fa-angle-down"></i>
+            <ul class="form-list" id="college-list"></ul>
+          </div>
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="city"
+              name="city"
+              placeholder=" "
+              required
+              type="text"
+            />
+            <label class="form-lbl" for="city">CITY</label>
+          </div>
 
+          <div class="form-input-cont">
+            <input
+              class="form-input"
+              id="state"
+              name="state"
+              placeholder=" "
+              required
+            />
+            <label class="form-lbl" for="state">STATE</label>
+          </div>
+          <div class="form-input-cont flex-cont">
+            <input id="coach" name="coach" placeholder=" " type="checkbox" />
+            <label class="lbl-small" for="coach">Are you a coach? </label>
+          </div>
+        </div>
+        <div id="form-submit-cont">
+          <button id="form-submit" type="submit">REGISTER</button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="g-recaptcha"
+      data-sitekey="6LdSBPYgAAAAAFSZA0FHo_TK-jDXqyYDI-nL-4W_"
+      data-callback="submit_form"
+      data-size="invisible"
+    ></div>
+  </body>
 </html>

@@ -12,11 +12,23 @@
     <title>&nbsp;Developers</title>
     <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="../Styles/developers.css" />
+    <link href="../Styles/loader.css" rel="stylesheet" />
     <script defer src="../Scripts/hamburger.js"></script>
     <script defer src="../Scripts/index.js"></script>
+    <script defer src="../Scripts/loader.js"></script>
   </head>
 
   <body>
+    <div class="loader">
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline id="video" width="100%">
+          <source src="../Assets/loader.mp4" type="video/mp4" />
+        </video>
+        <div class="shadow"></div>
+      </div>
+
+      <div class="hide">CLICK TO CONTINUE</div>
+    </div>
     <div class="close">
       <a href="../index.html"
         ><img class="close-img" src="../Assets/Back.svg"
@@ -45,10 +57,18 @@
       </div>
       <div class="ham-icons ham-hide">
         <a href="https://www.facebook.com/bosmbitspilani" target="_blank">
-          <img aria-hidden="true" src="../Assets/Facebook.png" class="ham-icon" />
+          <img
+            aria-hidden="true"
+            src="../Assets/Facebook.png"
+            class="ham-icon"
+          />
         </a>
         <a href="https://www.instagram.com/bitsbosm/" target="_blank">
-          <img aria-hidden="true" src="../Assets/Instagram.png" class="ham-icon" />
+          <img
+            aria-hidden="true"
+            src="../Assets/Instagram.png"
+            class="ham-icon"
+          />
         </a>
       </div>
     </div>
