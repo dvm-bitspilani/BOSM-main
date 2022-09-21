@@ -35,6 +35,7 @@ links.forEach((link, idx) => {
 const changeActive = (evt) => {
   let idx = sels.indexOf(evt.target);
   if (idx !== curVid) {
+    playersList[curVid].pauseVideo();
     curVid = idx;
     setTransform();
     clearInterval(vidTimer);
@@ -112,6 +113,7 @@ function onPlayerStateChange(evt) {
     clearInterval(vidTimer);
     // PAUSE SLIDER
   } else if (myPlayerState === 2 || myPlayerState === 0) {
+    clearInterval(vidTimer);
     vidTimer = setInterval(incrementTimer, 5000);
   }
 }
