@@ -9,7 +9,9 @@ window.addEventListener("load", () => {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     loader.style.animation = "fade-out 1s ease-out";
     body.style.overflowY = "scroll";
-    gal.style.opacity = "1";
+    if (gal !== null) {
+      gal.style.opacity = "1";
+    }
 
     setTimeout(() => {
       loader.style.display = "none";
