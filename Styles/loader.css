@@ -39,6 +39,13 @@
   height: 100%;
 }
 
+@media screen and (max-width: 900px) {
+  .video-wrapper {
+    width: 45vw;
+    height: 45vw;
+  }
+}
+
 @-webkit-keyframes appear {
   0% {
     transform: translateY(-8px) scale(0.9);
