@@ -406,36 +406,36 @@ sideScroll.addEventListener("click", (e) => {
 });
 
 const headers = Array.from(document.getElementsByClassName("sec-head"));
-let rate = 0.09;
+let rate = 0.087;
 document.addEventListener("scroll", (e) => {
   let windowHeight = window.innerHeight;
   let y = window.pageYOffset;
   let scrolled = -y * rate + "px";
   sideScroll.style.setProperty("--sideScroll", scrolled);
-  headers.forEach((e) => {
-    let revealTop = e.getBoundingClientRect().top;
-    let revealPoint = 160;
-    let index = headers.indexOf(e);
-    if (revealTop < windowHeight - revealPoint) {
-      scrollElems.forEach((element) => {
-        if (element.classList.contains("active")) {
-          element.classList.remove("active");
-        }
-      });
-      scrollElems[3 - index].classList.add("active");
-    }
-  });
+  // headers.forEach((e) => {
+  //   let revealTop = e.getBoundingClientRect().top;
+  //   let revealPoint = 160;
+  //   let index = headers.indexOf(e);
+  //   if (revealTop < windowHeight - revealPoint) {
+  //     scrollElems.forEach((element) => {
+  //       if (element.classList.contains("active")) {
+  //         element.classList.remove("active");
+  //       }
+  //     });
+  //     scrollElems[3 - index].classList.add("active");
+  //   }
+  // });
 });
-let offsets = [];
-headers.forEach((e) => {
-  offsets.push(e.offsetTop);
-});
-console.log(offsets);
+// let offsets = [];
+// headers.forEach((e) => {
+//   offsets.push(e.offsetTop);
+// });
 // console.log(offsets);
-let offset = 0;
-setInterval(() => {
-  offset = window.pageYOffset;
-}, 50);
+// console.log(offsets);
+// let offset = 0;
+// setInterval(() => {
+//   offset = window.pageYOffset;
+// }, 50);
 
 // document.addEventListener("scroll", (e) => {
 //   let y = window.pageYOffset

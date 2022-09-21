@@ -654,7 +654,7 @@ html {
   /* transform: scaleX(1);   */
   width: 80%;
   transform: translateX(var(--sideScroll));
-  transition: transform 250ms ease-in-out;
+  transition: transform 240ms ease-out;
 }
 
 #love {
