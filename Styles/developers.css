@@ -182,8 +182,8 @@ body::-webkit-scrollbar {
   }
 
   .dev-head {
-    font-size: 2.6rem;
-    margin: 3rem 0 1rem 0;
+    font-size: 1.6rem;
+    margin: 2.5rem 0 1rem 0;
   }
 
   .dev-body{
@@ -216,7 +216,7 @@ body::-webkit-scrollbar {
   }
 
   .dev-name {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .dev-links {
@@ -224,7 +224,7 @@ body::-webkit-scrollbar {
   }
 
   .dev-link {
-    width:70px;
+    width:50px;
   }
 
   .dev-dept {
@@ -237,9 +237,10 @@ body::-webkit-scrollbar {
   }
   .dev-body{
     max-width: 95%;
-    row-gap: 6rem;
+    row-gap: 4rem;
     margin-top: 2rem;
     margin-bottom: 6rem;
+    padding-bottom: 2rem;
   }
 
   body {
@@ -267,7 +268,7 @@ body::-webkit-scrollbar {
 
   .dev-head {
     font-size: 2.8rem;
-    margin: 2rem 0 0rem 0;
+    margin: 3rem 0 0rem 0;
   }
 
   .close {
