@@ -1,5 +1,19 @@
 let body = document.querySelector("body");
 
+const getCookie = (cookieName) => {
+  let name = cookieName + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let cookieArray = decodedCookie.split(";");
+  for (let i = 0; i < cookieArray.length; i++) {
+    let cookie = cookieArray[i];
+    cookie.trim();
+    if (cookie.indexOf(name) === 0) {
+      return cookie.substring(name.length, cookie.length);
+    }
+  }
+  return "";
+};
+
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
   const light = document.getElementsByClassName("light");
@@ -109,11 +123,11 @@ window.addEventListener("load", () => {
     const hide = document.querySelector(".hide");
     hide.style.animation = "appear 3s";
 
-    if (sessionStorage.getItem("showContinue") !== "false") {
+    if (getCookie("showContinue") !== "false") {
       setTimeout(() => {
         hide.style.opacity = 0.9;
       }, 2901);
-      sessionStorage.setItem("showContinue", "false");
+      document.cookie = "showContinue=false";
     } else {
       loader.click();
     }
