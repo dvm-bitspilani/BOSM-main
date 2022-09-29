@@ -5,6 +5,15 @@
   scroll-behavior: smooth;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 body {
   background: url("../Assets/galleryBg.png") center center no-repeat;
   background-size: cover;
@@ -723,6 +732,10 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .dev-body {
+    display: none;
+  }
+
   .ham-hide {
     display: none !important;
   }
