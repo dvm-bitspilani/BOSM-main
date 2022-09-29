@@ -27,7 +27,7 @@ let trans = 1.67;
 const startScrolling = (dir) => {
   let translate = `${getTranslateX()}px`;
 
-  if (dir === "right" && width - val <= getTranslateX() - width * 0.1 + opaqWidth + 20) {
+  if (dir === "right" && width - val <= getTranslateX() - width * 0.1 + opaqWidth + 10) {
     gall.style.transform = `translateX(calc(-1*5% + ${translate}))`;
   } else if (dir === "left" && getTranslateX() + width * 0.1 < opaqWidth + 20) {
     gall.style.transform = `translateX(calc(5% + ${translate}))`;

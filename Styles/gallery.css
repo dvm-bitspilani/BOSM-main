@@ -723,10 +723,6 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .dev-body {
-    display: none;
-  }
-
   .ham-hide {
     display: none !important;
   }

@@ -993,3 +993,21 @@ datalist {
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .ham-hide {
+    display: none !important;
+  }
+
+  .ham-links {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100vw;
+    height: 100vh;
+    gap: 3rem;
+  }
+
+  .ham-links a {
+    font-size: 2.2rem;
+  }
+}
