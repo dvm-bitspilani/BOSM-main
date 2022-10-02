@@ -14,8 +14,73 @@
     <link href="../Assets/Logo.png" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="../Styles/index.css">
     <link rel="stylesheet" href="../Styles/director.css">
+    <link href="../Styles/loader.css" rel="stylesheet" />
+
+    <script defer src="../Scripts/hamburger.js"></script>
+    <script defer src="../Scripts/loader.js"></script>
 </head>
 <body>
+    <div class="loader">
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline id="video" width="100%">
+            <source src="../Assets/loader.mp4" type="video/mp4" />
+          </video>
+          <div class="shadow"></div>
+        </div>
+  
+        <div class="hide">CLICK TO CONTINUE</div>
+      </div>
+
+    <div class="ham-grid">
+        <div class="ham-logo ham-hide"><img src="../Assets/ham-logo.png" /></div>
+        <div class="ham-img ham-hide">
+          <img src="../Assets/ham-img.png" /><span></span>
+        </div>
+  
+        <div class="ham-links">
+          <div>
+            <a href="../index.html">HOME</a>
+            <a href="https://dvm-bitspilani.github.io/bosm-2019-main/"
+              >ARCHIVES</a
+            >
+            <a style="display: none" href="#">LOGIN</a>
+            <a href="./developers.html">DEVELOPERS</a>
+          </div>
+        </div>
+  
+        <div class="ham-text ham-hide">
+          <img src="../Assets/ham-text.png" /><span></span>
+        </div>
+        <div class="ham-icons ham-hide">
+          <a href="https://www.facebook.com/bosmbitspilani" target="_blank">
+            <img
+              aria-hidden="true"
+              src="../Assets/Facebook.png"
+              class="ham-icon"
+            />
+          </a>
+          <a href="https://www.instagram.com/bitsbosm/" target="_blank">
+            <img
+              aria-hidden="true"
+              src="../Assets/Instagram.png"
+              class="ham-icon"
+            />
+          </a>
+        </div>
+      </div>
+
+    <nav class="nav">
+        <div class="right">
+          <div class="ham-cont">
+            <div class="hamburger">
+              <span class="ham-1"></span>
+              <span class="ham-2"></span>
+              <span class="ham-3"></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
     <div class="director director-page" id="director">
         <h2 class="sec-header">A MESSAGE FROM</h2>
         <h2 class="sec-header">THE DIRECTOR'S DESK</h2>
@@ -30,7 +95,7 @@
             </div>
   
             <p class="dir-para dir-para-page dir-name">Sudhirkumar V Barai</p>
-            <p class="dir-para dir-para-page">Director, BITS Pilani, Pilani Campus</p>
+            <p class="dir-para dir-para-page dir-intro">Director, BITS Pilani, Pilani Campus</p>
           </div>
   
           <div class="dir-msg-cont dir-msg-cont-page">

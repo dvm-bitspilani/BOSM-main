@@ -119,6 +119,10 @@ body {
     font-weight: 900;
 }
 
+.dir-intro {
+    margin: 15px 0;
+}
+
 .dir-quotes {
     width: 15%;
     position: absolute;
@@ -172,4 +176,501 @@ body {
     background-color: white;
     color: #000;
     transition: 0.3s;
+}
+
+/* Hamburger */
+.ham-cont {
+    display: flex;
+    transform: scale(0.8);
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
+  
+  .hamburger {
+    height: 30px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    right: 0;
+    height: 3.6px;
+    border-radius: 1.5px;
+    background: white;
+    position: absolute;
+  }
+  
+  .ham-1 {
+    width: 35px;
+    top: 1px;
+    -webkit-animation: ham-up 0.4s linear;
+    animation: ham-up 0.4s linear;
+  }
+  
+  .ham-2 {
+    width: 23px;
+    top: 13.2px;
+  }
+  
+  .ham-3 {
+    width: 13px;
+    top: 25.4px;
+    height: 3.4px !important;
+    -webkit-animation: ham-down 0.4s linear;
+    animation: ham-down 0.4s linear;
+  }
+  
+  /* HAMGURGER MENU */
+  .ham-grid {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100001;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    grid-template-columns: 32vw 30vw auto;
+    grid-template-rows: 66vh 34vh;
+  }
+  
+  .ham-grid div {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .ham-grid img {
+    max-height: 100%;
+    z-index: 1;
+  }
+  
+  .ham-text img,
+  .ham-img img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .ham-img,
+  .ham-text {
+    position: relative;
+  }
+  
+  .ham-img span,
+  .ham-text span {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(45px);
+    backdrop-filter: blur(45px);
+    transform: translateX(100%);
+  }
+  
+  .ham-logo img {
+    height: 23vh;
+    opacity: 0;
+  }
+  
+  .ham-icons,
+  .ham-logo {
+    background: rgba(43, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(45px);
+    backdrop-filter: blur(45px);
+  }
+  
+  .ham-icons {
+    gap: 2rem;
+  }
+  
+  .ham-icon {
+    height: 5vh;
+    width: 5vh;
+    opacity: 0;
+  }
+  
+  .ham-links {
+    grid-column: 3;
+    grid-row: 1 / a 2;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(45px);
+    backdrop-filter: blur(45px);
+  }
+  
+  .ham-links > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .ham-links a {
+    font-family: "Montserrat";
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    opacity: 0;
+  }
+  
+  .right {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    gap: 1rem;
+    justify-content: space-around;
+    position: relative;
+    z-index: 100001;
+    margin-top: 2.4rem;
+    margin-inline: 2rem;
+  }
+  
+  .nav {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  @-webkit-keyframes ham-up-1 {
+    from {
+      transform: none;
+      width: 35px;
+      top: 1px;
+    }
+  
+    to {
+      transform: rotate(405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  }
+  
+  @keyframes ham-up-1 {
+    from {
+      transform: none;
+      width: 35px;
+      top: 1px;
+    }
+  
+    to {
+      transform: rotate(405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  }
+  
+  @-webkit-keyframes ham-down-1 {
+    from {
+      transform: none;
+      width: 13px;
+      top: 25.4px;
+    }
+  
+    to {
+      transform: rotate(-405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  }
+  
+  @keyframes ham-down-1 {
+    from {
+      transform: none;
+      width: 13px;
+      top: 25.4px;
+    }
+  
+    to {
+      transform: rotate(-405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  }
+  
+  @-webkit-keyframes ham-up-2 {
+    from {
+      transform: rotate(405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  
+    to {
+      transform: none;
+      width: 35px;
+      top: 1px;
+    }
+  }
+  
+  @keyframes ham-up-2 {
+    from {
+      transform: rotate(405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  
+    to {
+      transform: none;
+      width: 35px;
+      top: 1px;
+    }
+  }
+  
+  @-webkit-keyframes ham-down-2 {
+    from {
+      transform: rotate(-405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  
+    to {
+      transform: none;
+      width: 13px;
+      top: 25.4px;
+    }
+  }
+  
+  @keyframes ham-down-2 {
+    from {
+      transform: rotate(-405deg);
+      width: 25px;
+      top: 13.2px;
+    }
+  
+    to {
+      transform: none;
+      width: 13px;
+      top: 25.4px;
+    }
+  }
+  
+  @-webkit-keyframes link-up {
+    from {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes link-up {
+    from {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes span-right {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes span-right {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @-webkit-keyframes span-left {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes span-left {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @-webkit-keyframes span-go-right {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes span-go-right {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @-webkit-keyframes span-go-left {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes span-go-left {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @-webkit-keyframes go-up {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes go-up {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes go-down {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes go-down {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes come-up {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes come-up {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes come-down {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes come-down {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .dev-body {
+      display: none;
+    }
+  
+    .ham-hide {
+      display: none !important;
+    }
+  
+    .ham-links {
+      grid-row: 1;
+      grid-column: 1;
+      width: 100vw;
+      height: 100vh;
+      gap: 3rem;
+    }
+  
+    .ham-links a {
+      font-size: 2.2rem;
+    }
+  }
+  
