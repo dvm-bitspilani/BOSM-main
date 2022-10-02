@@ -13,7 +13,7 @@ const contactDetails = [
   { number: "+917058949468", email: "" },
   { number: "+916350648125", email: "" },
   { number: "+919820075904", email: "" },
-  { number: "+919911448690", email: "webmaster@bitsbosm.org" }
+  { number: "+919911448690", email: "webmaster@bitsbosm.org" },
 ];
 
 setInterval(() => {
@@ -25,10 +25,10 @@ setInterval(() => {
       phone.innerHTML = `<i class="fa-solid fa-envelope"></i>`;
     });
   } else {
-    numberList.forEach((element,index) => {
+    numberList.forEach((element, index) => {
       element.innerHTML = contactDetails[index].number;
     });
-    emailList.forEach((phone,index) => {
+    emailList.forEach((phone, index) => {
       phone.innerHTML = contactDetails[index].email;
     });
   }
@@ -37,7 +37,7 @@ setInterval(() => {
   //         element.innerHTML=numberListCopy.
   //     })
   // }
-//   console.log("recheck");
+  //   console.log("recheck");
 }, 50);
 
 window.addEventListener("load", () => {});

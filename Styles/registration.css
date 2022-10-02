@@ -105,9 +105,34 @@ img {
   margin: 10px 0 30px;
 }
 
-input[type="radio"],
 input[type="checkbox"] {
+  width: 1.15em;
+  font: inherit;
+  height: 1.15em;
+  appearance: none;
   margin-right: 10px;
+  border: 0.15em solid;
+  border-radius: 0.15em;
+  background-color: transparent;
+  transform: translateY(-0.075em);
+}
+
+input[type="checkbox"] {
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em white;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
 .form-header h2 {
@@ -157,6 +182,8 @@ label,
 
 #gender-input-cont {
   margin-top: 20px;
+  transform: scale(0.85);
+  margin-left: -20px;
 }
 
 .form-input:not(:-moz-placeholder-shown) + .form-lbl {
@@ -224,6 +251,59 @@ input.form-input[type="radio"] {
   background: black;
 }
 
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  display: inline-block;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  content: "";
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  top: 3.5px;
+  left: 3.5px;
+  width: 13px;
+  height: 13px;
+  background: white;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 #sport-sel-list {
   background: rgba(128, 128, 128, 0.1);
   height: calc(3 * (0.75rem + 35px));
@@ -235,18 +315,18 @@ input.form-input[type="radio"] {
 }
 
 .sport-item {
+  padding: 5px;
+  margin: 5px 2px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   list-style-type: none;
   display: inline-flex;
   flex-direction: row;
   background-color: rgba(200, 200, 200, 0.4);
   align-items: center;
   justify-content: center;
-  padding: 5px;
-  border-radius: 5px;
-  margin: 5px 2px;
-  font-size: 0.75rem;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
 }
 
@@ -254,29 +334,28 @@ input.form-input[type="radio"] {
   width: 13px;
   height: 13px;
   margin-left: 15px;
+  cursor: pointer;
   position: relative;
 }
 
-.cross::before {
-  position: absolute;
-  height: 2px;
-  width: 115%;
-  top: 0;
-  background-color: white;
+.cross::before,
+.cross::after {
   content: "";
-  transform: rotate(45deg);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: white;
   transform-origin: 0;
 }
 
+.cross::before {
+  top: 1px;
+  transform: rotate(45deg);
+}
+
 .cross::after {
-  position: absolute;
-  height: 2px;
-  width: 115%;
-  bottom: 0;
-  background-color: white;
-  content: "";
+  bottom: 1px;
   transform: rotate(-45deg);
-  transform-origin: 0;
 }
 
 #form-submit-cont {
@@ -422,6 +501,10 @@ datalist {
     margin-left: 10px;
   }
 
+  .cross::before {
+    top: 0;
+  }
+
   .form-list li {
     padding: 5px 10px;
     font-size: 0.9rem;
@@ -516,9 +599,8 @@ datalist {
     font-size: 0.9rem;
   }
 }
+
 /*# sourceMappingURL=registration.css.map */
-
-
 
 /* Hamburger */
 .ham-cont {
@@ -668,8 +750,8 @@ datalist {
   justify-content: space-around;
   position: relative;
   z-index: 100001;
-    margin-top: 2.4rem;
-    margin-inline: 2rem;
+  margin-top: 2.4rem;
+  margin-inline: 2rem;
 }
 
 .nav {

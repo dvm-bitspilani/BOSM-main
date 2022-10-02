@@ -10,13 +10,13 @@ let scrObj = {
   scr: 0,
   scrollVal: `0px`,
   swiped: 0,
-  swipeCount: 0
+  swipeCount: 0,
 };
 
 let val = gall.clientWidth;
-let width = (document.documentElement.clientWidth)*.8;
-let opaqWidth = document.querySelector('.opaq-left').clientWidth;
-console.log(opaqWidth)
+let width = document.documentElement.clientWidth * 0.8;
+let opaqWidth = document.querySelector(".opaq-left").clientWidth;
+console.log(opaqWidth);
 
 let galInt;
 
@@ -27,7 +27,10 @@ let trans = 1.67;
 const startScrolling = (dir) => {
   let translate = `${getTranslateX()}px`;
 
-  if (dir === "right" && width - val <= getTranslateX() - width * 0.1 + opaqWidth + 20) {
+  if (
+    dir === "right" &&
+    width - val <= getTranslateX() - width * 0.1 + opaqWidth + 20
+  ) {
     gall.style.transform = `translateX(calc(-1*5% + ${translate}))`;
   } else if (dir === "left" && getTranslateX() + width * 0.1 < opaqWidth + 20) {
     gall.style.transform = `translateX(calc(5% + ${translate}))`;
@@ -89,8 +92,8 @@ gall.addEventListener("touchend", (event) => {
   }
 });
 
-if(resp2.matches) {
-  gall.innerHTML = '';
+if (resp2.matches) {
+  gall.innerHTML = "";
   for (let i = 1; i <= 30; i++) {
     for (let j = 1; j <= 4; j++) {
       gall.innerHTML += `<div class="gallery-images" id=${j}>
@@ -112,10 +115,8 @@ if(resp2.matches) {
               </div>`;
     }
   }
-}
-
-else if(resp1.matches) {
-  gall.innerHTML = '';
+} else if (resp1.matches) {
+  gall.innerHTML = "";
   for (let i = 1; i <= 30; i++) {
     for (let j = 1; j <= 6; j++) {
       gall.innerHTML += `<div class="gallery-images" id=${j}>
