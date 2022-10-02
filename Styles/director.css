@@ -28,7 +28,7 @@ body {
 .dir-cont {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 50px;
+    padding: 50px 5px;
 }
 
 .dir-cont-page {
@@ -146,7 +146,7 @@ body {
 
 #dir-quote-start {
     top: -40px;
-    left: calc(-15% - 30px);
+    left: calc(-12% - 30px);
 }
 
 #dir-quote-start-page {
@@ -157,7 +157,7 @@ body {
 #dir-quote-end {
     transform: rotate(180deg);
     bottom: -40px;
-    right: calc(-10% - 30px);
+    right: calc(-12% - 30px);
 }
 
 #dir-quote-end-page {
@@ -737,7 +737,7 @@ body {
 
     #dir-quote-end {
         bottom: -50px;
-        right: calc(-10% + 10px);
+        right: calc(-10% - 5px);
     }
 
     #dir-quote-start-page {
@@ -765,7 +765,7 @@ body {
     }
 
     .dir-profile {
-        width: 65%;
+        width: 60%;
     }
 
     .dir-msg-cont {
@@ -805,7 +805,7 @@ body {
     }
 
     #dir-quote-start {
-        left: -13%;
+        left: -11%;
         top: -55px;
     }
     
@@ -814,10 +814,9 @@ body {
         left: calc(-7% - 10px);
     }
     
-    
-
     #dir-quote-end {
-        right: calc(-7% + 10px);
+        right: calc(-5% + 10px);
+        bottom: -55px;
     }
 }  
 
