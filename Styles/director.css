@@ -713,7 +713,7 @@ body {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .dir-header {
         margin-bottom: .3rem !important;
     }
@@ -752,5 +752,10 @@ body {
 
     #dir-quote-start {
         left: -13%;
+        top: -55px;
+    }
+
+    #dir-quote-end {
+        right: calc(-7% + 10px);
     }
 }  
