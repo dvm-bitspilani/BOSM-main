@@ -42,6 +42,10 @@ body {
   font-weight: 600;
 }
 
+#dir-header-1 {
+    margin-bottom: .3rem;
+}
+
 .dir-profile{
     display: flex;
     flex-direction: column;
@@ -176,6 +180,10 @@ body {
     background-color: white;
     color: #000;
     transition: 0.3s;
+}
+
+#dir-more-bottom {
+    display: none;
 }
 
 /* Hamburger */
@@ -676,4 +684,73 @@ body {
       font-size: 2.2rem;
     }
   }
-  
+
+@media screen and (max-width: 800px) {
+    .dir-profile {
+        width: 35%;
+    }
+
+    .dir-name {
+        margin-top: 65px;
+    }
+
+    #dir-post {
+        margin: 5px 0;
+    }
+
+    .dir-msg-cont {
+        width: 47%;
+    }
+
+    #dir-quote-start {
+        left: -17%;
+        top: -50px;
+    }
+
+    #dir-quote-end {
+        bottom: -50px;
+        right: calc(-10% + 10px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .dir-header {
+        margin-bottom: .3rem !important;
+    }
+
+    .dir-name {
+        margin-top: 50px;
+    }
+
+    .dir-profile {
+        width: 45%;
+    }
+
+    .dir-msg-cont {
+        margin-top: 2rem;
+    }
+
+    .dir-para {
+        font-size: .6rem;
+    }
+
+    #dir-post {
+        margin: 5px 0;
+    }
+
+    #dir-para-1, #dir-para-2 {
+        font-size: .9rem;
+    }
+
+    #dir-more-top {
+        display: none;
+    }
+
+    #dir-more-bottom {
+        display: block;
+    }
+
+    #dir-quote-start {
+        left: -13%;
+    }
+}  
