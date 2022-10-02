@@ -1,3 +1,14 @@
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    position: relative;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
 .director {
     font-family: "Montserrat";
     display: flex;
@@ -5,15 +16,24 @@
     align-items: center;
     z-index: 27;
     position: relative;
-    background: url(../Assets/bgContact.png) center center no-repeat;
+    background: url(../Assets/bgContact.png) repeat-y;
     background-size: cover;
     padding-bottom: 100px;
+}
+
+.director-page {
+    padding-top: 3rem;
 }
 
 .dir-cont {
     display: flex;
     justify-content: space-evenly;
     padding-top: 50px;
+}
+
+.dir-cont-page {
+    flex-direction: column;
+    align-items: center;
 }
 
 .sec-header {
@@ -31,6 +51,10 @@
     align-items: center;
 }
 
+.dir-profile-page {
+    width: 100%;
+}
+
 .dir-img-div {
     display: flex;
     flex-direction: column;
@@ -45,6 +69,11 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.dir-msg-cont-page {
+    width: 65%;
+    margin-top: 5rem;
 }
 
 .dir-msg {
@@ -78,9 +107,16 @@
     text-align: center;
 }
 
+.dir-para-page {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 30px 0;
+}
+
 .dir-name {
     margin-top: 85px;
     margin-bottom: 0;
+    font-weight: 900;
 }
 
 .dir-quotes {
@@ -88,15 +124,30 @@
     position: absolute;
 }
 
+.dir-quotes-page {
+    width: 10%;
+}
+
 #dir-quote-start {
     top: -40px;
-    left: calc(-15% - 20px);
+    left: calc(-15% - 30px);
+}
+
+#dir-quote-start-page {
+    top: -40px;
+    left: calc(-15% - 10px);
 }
 
 #dir-quote-end {
     transform: rotate(180deg);
     bottom: -40px;
-    right: calc(-15% - 20px);
+    right: calc(-10% - 30px);
+}
+
+#dir-quote-end-page {
+    transform: rotate(180deg);
+    bottom: -40px;
+    right: calc(-10% - 10px);
 }
 
 .dir-more {
