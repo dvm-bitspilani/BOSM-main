@@ -28,7 +28,7 @@ body {
 .dir-cont {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 50px;
+  padding: 50px 5px;
 }
 
 .dir-cont-page {
@@ -40,6 +40,10 @@ body {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+.dir-header-page {
+  font-size: 3rem;
 }
 
 #dir-header-1 {
@@ -112,7 +116,7 @@ body {
 }
 
 .dir-para-page {
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1.3;
   margin: 30px 0;
 }
@@ -123,8 +127,13 @@ body {
   font-weight: 900;
 }
 
+.dir-name-page,
+.dir-intro-page {
+  font-size: 1.3rem;
+}
+
 .dir-intro {
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 .dir-quotes {
@@ -138,18 +147,18 @@ body {
 
 #dir-quote-start {
   top: -40px;
-  left: calc(-15% - 30px);
+  left: calc(-12% - 30px);
 }
 
 #dir-quote-start-page {
   top: -40px;
-  left: calc(-15% - 10px);
+  left: calc(-10% - 10px);
 }
 
 #dir-quote-end {
   transform: rotate(180deg);
   bottom: -40px;
-  right: calc(-10% - 30px);
+  right: calc(-12% - 30px);
 }
 
 #dir-quote-end-page {
@@ -686,12 +695,29 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .dir-header-page {
+    font-size: 1.5rem;
+  }
+
   .dir-profile {
     width: 35%;
   }
 
+  .dir-profile-page {
+    width: 50%;
+  }
+
+  .dir-para-page {
+    font-size: 1.1rem;
+  }
+
   .dir-name {
     margin-top: 65px;
+  }
+
+  .dir-name-page,
+  .dir-intro-page {
+    font-size: 0.9rem;
   }
 
   #dir-post {
@@ -702,6 +728,10 @@ body {
     width: 47%;
   }
 
+  .dir-msg-cont-page {
+    width: 75%;
+  }
+
   #dir-quote-start {
     left: -17%;
     top: -50px;
@@ -709,11 +739,24 @@ body {
 
   #dir-quote-end {
     bottom: -50px;
-    right: calc(-10% + 10px);
+    right: calc(-10% - 5px);
+  }
+
+  #dir-quote-start-page {
+    top: -40px;
+    left: calc(-9% - 10px);
+  }
+
+  #dir-quote-end-page {
+    right: calc(-4% - 10px);
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
+  .director-page {
+    padding-top: 2rem;
+  }
+
   .dir-header {
     margin-bottom: 0.3rem !important;
   }
@@ -723,7 +766,7 @@ body {
   }
 
   .dir-profile {
-    width: 45%;
+    width: 60%;
   }
 
   .dir-msg-cont {
@@ -731,6 +774,19 @@ body {
   }
 
   .dir-para {
+    font-size: 0.6rem;
+  }
+
+  .dir-para-page {
+    font-size: 0.8rem;
+  }
+
+  .dir-msg .dir-para-page {
+    margin: 20px 0;
+  }
+
+  .dir-name-page,
+  .dir-intro-page {
     font-size: 0.6rem;
   }
 
@@ -752,6 +808,23 @@ body {
   }
 
   #dir-quote-start {
-    left: -13%;
+    left: -11%;
+    top: -55px;
+  }
+
+  #dir-quote-start-page {
+    top: -50px;
+    left: calc(-7% - 10px);
+  }
+
+  #dir-quote-end {
+    right: calc(-5% + 10px);
+    bottom: -55px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .dir-header-page {
+    font-size: 1.3rem;
   }
 }
