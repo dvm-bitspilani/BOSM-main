@@ -1,4 +1,5 @@
 const END_POINT = "https://www.bitsbosm.org/2022/registrations";
+
 const form = document.getElementById("reg-form");
 const sport_inpt = document.getElementById("sports");
 const sport_sel_list = document.getElementById("sport-sel-list");
@@ -93,7 +94,7 @@ const set_college_ul = () => {
   let college_pat = ``;
   college_html = ``;
   mat_colleges.forEach((val) => {
-    let college_esc = val.name.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
+    let college_esc = val.name.replace(/\(/g, "\\(").replace(/\)/g, "\\)");
     college_html = `${college_html}<li>${val.name}</li>`;
     college_pat = `${college_pat}|${college_esc}`;
   });

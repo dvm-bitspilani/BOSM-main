@@ -1,5 +1,3 @@
-
-
 let open = false;
 const right = document.querySelector(".right");
 
@@ -24,7 +22,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     body.style.overflowY = "hidden";
 
     // links disappear
-    for (let i = 1; i <= 4; i++) hamLink[i - 1].style.opacity = 0;
+    for (let i = 1; i <= hamLink.length; i++) hamLink[i - 1].style.opacity = 0;
 
     // right nav position
     right.style.position = "fixed";
@@ -39,7 +37,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
     hamLinks.style.animation = "come-up 0.45s linear";
 
     // links appear
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= hamLink.length; i++) {
       hamLink[i - 1].style.animation = `link-up 0.2s linear 0.45s`;
       setTimeout(() => {
         hamLink[i - 1].style.opacity = 1;

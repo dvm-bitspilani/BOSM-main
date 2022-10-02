@@ -7,13 +7,13 @@ let temp = 0;
 const vp = window.matchMedia("(max-width: 800px)");
 
 if (vp.matches) {
-  document.querySelector('#dir-para-1').innerHTML = `
+  document.querySelector("#dir-para-1").innerHTML = `
     After two long years, the Sports Council of BITS Pilani is organizing its 35th annual BOSM (BITS Open Sports
     Meet) from the 14th to the 18th of October. A platform for the students to display their talent by competing
     against the best players across the country, I am sure the participants are ready to experience the event's
     thrill, excitement, and adrenaline rush.`;
 
-  document.querySelector('#dir-para-2').style.display = 'none';
+  document.querySelector("#dir-para-2").style.display = "none";
 }
 
 // setInterval(() => {
