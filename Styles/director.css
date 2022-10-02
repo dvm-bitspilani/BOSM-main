@@ -329,15 +329,18 @@ body {
     margin-top: 2.4rem;
     margin-inline: 2rem;
   }
+
+  .absolute{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   
   .nav {
     display: flex;
     color: white;
     justify-content: space-between;
     align-items: flex-start;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
   
   @-webkit-keyframes ham-up-1 {
