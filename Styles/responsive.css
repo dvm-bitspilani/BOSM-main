@@ -22,11 +22,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  /* .scrollNav {
-    left: -9rem !important;
-    font-size: 0.8rem;
-  }
-   */
   .text h2 {
     font-size: 11rem;
     margin-bottom: 1rem;
