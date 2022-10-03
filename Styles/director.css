@@ -23,6 +23,8 @@ body {
 
 .director-page {
   padding-top: 3rem;
+  background-attachment: fixed;
+  padding-bottom: 0;
 }
 
 .dir-cont {
@@ -695,6 +697,14 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .director {
+    background: url(../Assets/phoneContactBg.png) center center no-repeat;
+  }
+
+  .director-page {
+    background-attachment: fixed;
+  }
+
   .dir-header-page {
     font-size: 1.5rem;
   }
@@ -752,6 +762,18 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .dir-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dir-msg-cont {
+    margin-top: 2rem;
+    width: 75%;
+  }
+}
+
 @media screen and (max-width: 450px) {
     .dir-header {
         margin-bottom: .3rem !important;
@@ -764,10 +786,6 @@ body {
 
   .dir-profile {
     width: 60%;
-  }
-
-  .dir-msg-cont {
-    margin-top: 2rem;
   }
 
   .dir-para {
@@ -805,18 +823,18 @@ body {
   }
 
   #dir-quote-start {
-    left: -11%;
-    top: -55px;
+    left: -13%;
+    top: -60px;
   }
+
+  #dir-quote-end {
+    right: calc(-11% + 10px);
+    bottom: -50px;
+}
 
   #dir-quote-start-page {
     top: -50px;
     left: calc(-7% - 10px);
-  }
-
-  #dir-quote-end {
-    right: calc(-5% + 10px);
-    bottom: -55px;
   }
 }
 
