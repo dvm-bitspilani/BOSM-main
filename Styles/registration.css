@@ -85,6 +85,7 @@ img {
   height: max-content;
   width: 80vw;
   position: static;
+  display: none;
 }
 
 #form-close-img {

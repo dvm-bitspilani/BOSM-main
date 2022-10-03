@@ -1,5 +1,6 @@
 let body = document.querySelector("body");
 let gal = document.querySelector(".gallery");
+let reg = document.querySelector("#reg-cont");
 
 const getCookie = (cookieName) => {
   let name = cookieName + "=";
@@ -25,6 +26,10 @@ window.addEventListener("load", () => {
     body.style.overflowY = "scroll";
     if (gal !== null) {
       gal.style.opacity = "1";
+    }
+
+    if (reg !== null) {
+      reg.style.display = "block";
     }
 
     setTimeout(() => {
