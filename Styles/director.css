@@ -789,11 +789,11 @@ body {
   }
 
   .dir-para {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   .dir-para-page {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .dir-msg .dir-para-page {
@@ -802,7 +802,7 @@ body {
 
   .dir-name-page,
   .dir-intro-page {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   #dir-post {
