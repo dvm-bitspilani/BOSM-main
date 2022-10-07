@@ -118,8 +118,8 @@ body {
 
 @media screen and (max-width: 500px) {
     body {
-        background: black url('../Assets/bgAboutPhone.png') center center;
-        background-position: fixed;
+        background: black url('../Assets/bgAboutPhone.png') center center repeat-y;
+        background-attachment: fixed;
     }
 
     .ignition-cont {
