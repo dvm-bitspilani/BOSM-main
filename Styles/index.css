@@ -540,7 +540,7 @@ footer {
   display: flex;
   transform: rotate(-90deg);
   font-family: "Montserrat", sans-serif;
-  top: 49vh;
+  top: 55vh;
   left: -5%;
   background-color: transparent;
   z-index: 999;

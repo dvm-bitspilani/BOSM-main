@@ -190,6 +190,10 @@ body {
     --trans: 1.67;
   }
 
+  .gal-head {
+    font-size: 1.6rem;
+  }
+
   #gal-close-img {
     width: 20px;
     height: 20px;
