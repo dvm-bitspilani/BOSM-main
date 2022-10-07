@@ -127,6 +127,7 @@ body {
         align-items: center;
         gap: 3rem;
         margin-bottom: 3rem;
+        height: auto;
     }
 
     .ignition-game {
