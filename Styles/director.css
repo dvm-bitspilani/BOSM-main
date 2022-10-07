@@ -109,18 +109,18 @@ body {
 }
 
 .dir-para {
-    font-size: 1rem;
-    line-height: 1.2;
-    margin: 14px 0;
-    letter-spacing: 0.5px;
-    font-weight: 300;
-    text-align: center;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 14px 0;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .dir-para-page {
-    font-size: 1.44rem;
-    line-height: 1.3;
-    margin: 30px 0;
+  font-size: 1.44rem;
+  line-height: 1.3;
+  margin: 30px 0;
 }
 
 .dir-name {
@@ -162,9 +162,9 @@ body {
 }
 
 #dir-quote-end {
-    transform: rotate(180deg);
-    bottom: -40px;
-    right: calc(-7% - 30px);
+  transform: rotate(180deg);
+  bottom: -40px;
+  right: calc(-7% - 30px);
 }
 
 #dir-quote-end-page {
@@ -775,10 +775,9 @@ body {
 }
 
 @media screen and (max-width: 450px) {
-    .dir-header {
-        margin-bottom: .3rem !important;
-    }
-    
+  .dir-header {
+    margin-bottom: 0.3rem !important;
+  }
 
   .dir-name {
     margin-top: 20px;
@@ -830,7 +829,7 @@ body {
   #dir-quote-end {
     right: calc(-11% + 10px);
     bottom: -50px;
-}
+  }
 
   #dir-quote-start-page {
     top: -50px;

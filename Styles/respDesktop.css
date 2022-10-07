@@ -28,6 +28,12 @@
   }
 }
 
+@media (min-width: 800px) and (max-width: 1400px) {
+  .scrollNav{
+    transform: rotate(-90deg) scale(0.75) translateX(-3rem) translateY(-1rem);
+  }
+}
+
 @media (max-width: 800px) {
   .scrollNav {
     display: none;
