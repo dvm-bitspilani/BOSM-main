@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body {
+    background: url("../Assets/galleryBg.png") center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: black;
+    font-family: "Montserrat";
+    color: white;
+    position: relative;
+  }
+
+.sponz-head {
+    font-size: 2.8rem;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.sponz-cont {
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .sponz-head {
+        font-size: 1.6rem;
+    }
+
+    ul {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background: black url('../Assets/bgAboutPhone.png') center center repeat-y;
+        background-attachment: fixed;
+    }
+
+    ul{
+        grid-template-columns: 1fr;
+    }
+}
