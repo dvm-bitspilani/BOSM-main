@@ -24,6 +24,7 @@ body {
     background-image: url(../Assets/bgAbout.png);
     background-position: center;
     background-size:auto;
+    background-attachment: fixed;
     overflow-x: hidden;
     font-family: "Montserrat";
     display: flex;
@@ -590,5 +591,9 @@ body::-webkit-scrollbar {
     }
     .name{
         font-size: 1.2rem;
+    }
+    body {
+        background: black url('../Assets/bgAboutPhone.png') center center repeat-y;
+        background-attachment: fixed;
     }
 }
