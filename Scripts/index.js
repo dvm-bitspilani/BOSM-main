@@ -1,6 +1,6 @@
 /////////////// TIMER ANIMATION
 
-const bosm = new Date("October 14, 2022 23:59:59").getTime();
+const bosm = new Date("October 13, 2022 23:59:59").getTime();
 let prev_day, prev_hr, prev_min, prev_sec;
 let days, hrs, min, sec;
 let temp = 0;
