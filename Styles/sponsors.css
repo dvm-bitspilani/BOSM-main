@@ -135,6 +135,17 @@ body::-webkit-scrollbar {
     -webkit-animation: ham-up 0.4s linear;
     animation: ham-up 0.4s linear;
 }
+.ham-links a::after {
+    content: '';
+    border-bottom: 4px solid rgb(255, 255, 255);
+    display: block;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out 0s, -webkit-transform 0.25s ease-in-out 0s;
+    transform-origin: left;
+  }
+  .ham-links a:hover:after{
+    transform: scaleX(1);
+  }
 
 .ham-2 {
     width: 23px;
