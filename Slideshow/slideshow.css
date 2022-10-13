@@ -109,7 +109,8 @@ main {
 }
 
 #l1 {
-  top: 18rem;
+  top: 0;
+  left: 0;
 }
 
 #l2 {
@@ -174,6 +175,14 @@ main {
   left: 50rem;
 }
 
+#l12 {
+  top: 28rem;
+  left: 4rem;
+  display: block;
+  transform-origin: 50% 0;
+  transform: scaleY(0.6) scaleX(0.8);
+}
+
 .text {
   z-index: 30;
   margin-top: -14rem;
@@ -182,11 +191,6 @@ main {
 .text > img {
   width: 84%;
   height: auto;
-}
-
-#bosmr {
-  margin-top: -1.2rem;
-  width: 54%;
 }
 
 @-webkit-keyframes fade-in {
