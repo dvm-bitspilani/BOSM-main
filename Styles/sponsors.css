@@ -608,3 +608,42 @@ body::-webkit-scrollbar {
         background-attachment: fixed;
     }
 }
+
+@media screen and (min-width: 0px) {
+    .ham-hide {
+      display: none !important;
+    }
+  
+    .ham-links {
+      grid-row: 1 !important;
+      grid-column: 1 !important;
+      width: 100vw;
+      height: 100vh;
+      gap: 3rem;
+    }
+  
+    .ham-links a {
+      font-size: 2.2rem;
+    }
+}
+@media screen and (min-width: 999px) {
+    .ham-hide {
+      display: flex !important;
+    }
+  
+    .ham-cont {
+      transform: scale(0.8) !important;
+    }
+  
+    .ham-links {
+      grid-column: 3 !important;
+      grid-row: 1 / a 2 !important;
+      width: auto;
+      height: auto;
+      /* gap: 3rem; */
+    }
+  
+    .ham-links a {
+      font-size: 2rem;
+    }
+}  
