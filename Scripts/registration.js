@@ -212,7 +212,8 @@ async function submit_form() {
 
 const submit_handler = (evt) => {
   evt.preventDefault();
-  grecaptcha.execute();
+  alert('Registrations Closed!');
+  // grecaptcha.execute();
 };
 
 const set_list_coord = () => {

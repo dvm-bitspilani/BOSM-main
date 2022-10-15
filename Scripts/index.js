@@ -28,15 +28,18 @@ setInterval(() => {
   // updating number of days left
   days = Math.floor((bosm - current_time) / (1000 * 60 * 60 * 24));
   days = days < 10 ? `0${days}` : days;
+  days = '00';
 
   // updating number of hours left (in that day)
   hrs = Math.floor((bosm - current_time) / (1000 * 60 * 60)) - days * 24;
   hrs = hrs < 10 ? `0${hrs}` : hrs;
+  hrs = '00';
 
   // updating number of minutes left (in that hour)
   min =
     Math.floor((bosm - current_time) / (1000 * 60)) - days * 24 * 60 - hrs * 60;
   min = min < 10 ? `0${min}` : min;
+  min = '00';
 
   // // updating number of seconds left (in that min)
   // sec =
