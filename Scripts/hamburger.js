@@ -13,6 +13,7 @@ const hamLinks = document.querySelector(".ham-links");
 const hamIcon = document.querySelectorAll(".ham-icon");
 const hamLine = document.querySelectorAll(".hamburger span");
 const hamLink = document.querySelectorAll(".ham-links div a");
+const body = document.querySelector("body");
 
 document.querySelector(".hamburger").addEventListener("click", () => {
   if (!open) {
